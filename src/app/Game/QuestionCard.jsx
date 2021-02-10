@@ -35,7 +35,7 @@ const QuestionCard = prop => {
             block
             onClick={event => setSelectedOption(event.target)}
           >
-            {e}
+            <p>{e}</p>
           </Button>
         </Label>
       );
