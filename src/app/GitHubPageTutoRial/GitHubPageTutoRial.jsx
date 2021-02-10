@@ -50,11 +50,10 @@ export default function GitHubPageTutoRial() {
               </p>
             </Media>
             <Media body>
-              Agora temos que vincular o app que acabamos de criar com o
-              repositório que criamos lá no início, para isso, vá até a página
-              do repositório, copie a chave SSH e rode o comando abaixo
-              substituindo o trecho <code>SSH_DO_SEU_REPO</code> pelo código que
-              você copiou.
+              Agora temos que vincular o app com o repositório que criamos no
+              início, para isso, vá até a página do repositório, copie a chave
+              SSH e rode o comando abaixo substituindo o trecho{' '}
+              <code>SSH_DO_SEU_REPO</code> pelo código que você copiou.
               <p className="mt-2">
                 <code>git remote add origin SSH_DO_SEU_REPO</code>
               </p>
@@ -70,8 +69,8 @@ export default function GitHubPageTutoRial() {
           <hr />
           <Media body className="mb-2">
             <Media heading>Configurar o package.json</Media>
-            Vá até o arquivo package.jon que está na raiz do seu projeto e logo
-            no início adicione o código abaixo substituindo o{' '}
+            Vá até o arquivo package.json que está na raiz do seu projeto e,
+            logo no início, adicione o código abaixo substituindo o{' '}
             <code>userName</code> pelo seu nome de usuário do github. Cuidado
             para não desafazer a estrutura do objeto, coloque o código na linha
             abaixo da abertura da chave.
@@ -81,7 +80,7 @@ export default function GitHubPageTutoRial() {
               </code>
             </p>
             <Media body>
-              Em seguida adicione o código abaixo dentro do objeto "scripts"
+              Em seguida adicione os códigos abaixo dentro do objeto "scripts"
               <code>
                 <p className="mt-2">"predeploy": "npm run build"</p>
               </code>
@@ -103,8 +102,8 @@ export default function GitHubPageTutoRial() {
             <Media heading>
               Subir os arquivos para o repositório do github
             </Media>
-            Estamos quase no fim do guia, agora suba os arquivos do projeto para
-            a branch master com os comandos abaixo:
+            Suba os arquivos do projeto para a branch master com os comandos
+            abaixo:
             <code>
               <p className="mt-2">git add .</p>
             </code>
@@ -144,9 +143,14 @@ export default function GitHubPageTutoRial() {
               normalmente <code>https://seuNomeDeUsuário.github.io/</code>
             </p>
             <p>
+              Obs.: Talvez seja necessário aguardar alguns segundos para que o
+              github.io atualize o conteúdo da sua página.
+            </p>
+            <p>
               Toda vez que você fizer alguma atualização no seu projeto, você
-              terá que rodar o <code>git add/push</code> e o{' '}
-              <code>npm run deploy</code> para atualizar o github.io.
+              terá que rodar os comandos <code>git add/push</code> para subir as
+              atualizações para a master, e o comando{' '}
+              <code>npm run deploy</code> para atualizar no github.io.
             </p>
             <Media body>
               <img
@@ -157,45 +161,127 @@ export default function GitHubPageTutoRial() {
             </Media>
           </Media>
           <Media body className="mb-2">
-            <Media heading>Configurando o HashRouter</Media>
+            <Media heading>
+              Configurando o BrowserRouter (Opcional, apenas se você utilizar o
+              sistema de Route)
+            </Media>
             <p>
-              Por último, vamos configurar o HashRouter para que possamos
-              acessar o site diretamente por qualquer endereço que esteja após o
-              rot, ex.: <code>userName.github.io/news</code>.
+              Por último, vamos configurar o BrowserRouter para que possamos
+              acessar o site diretamente por qualquer url. Ex.:{' '}
+              <code>userName.github.io/news</code>.
             </p>
             <p>
-              Se você utilizar o BroweserRouter e tentar acessar diretamente um
-              link do seu site no github, provavelmente encontrará o erro 404
-              File not found, por isso iremos utilizar o{' '}
+              Se você utilizar apenas o BroweserRouter e tentar acessar
+              diretamente uma url do seu site no github, que não seja o root,
+              provavelmente encontrará o erro 404 File not found, por isso
+              iremos utilizar dois scripts feitos pelo usuário{' '}
               <a
-                href="https://reactrouter.com/web/api/HashRouter"
+                href="https://github.com/rafgraph"
                 target="_blank"
                 rel="noreferrer"
               >
-                HashHouter.
+                rafgraph{' '}
+              </a>
+              e disponibilizado no repositório{' '}
+              <a
+                href="https://github.com/rafgraph/spa-github-pages"
+                target="_blank"
+                rel="noreferrer"
+              >
+                spa-github-pages
               </a>
             </p>
-            <p>Importe o HashRouter no index.jsx do seu projeto</p>
             <p>
-              <code>{`import { HashRouter as Router } from 'react-router-dom';`}</code>
+              Até onde consegui entender, sempre que o site cair em uma página
+              de erro 404, o script vai tentar redirecionar para um componente,
+              se ele não encontrar esse componente, vai redirecionar para a
+              homepage e se encontrar, redireciona para ele.
+            </p>
+            <p>Rode esse comando para instalar o react-router-dom</p>
+            <p>
+              <code>npm install --save react-router-dom</code>
+            </p>
+            <p>
+              Importe o BrowserRouter no index.js do seu projeto. Do jeito que
+              estou fazendo a importação abaixo, chamaremos o componente por
+              Router e não por BrowserRouter
+            </p>
+            <p>
+              <code>{`import { BrowserRouter as Router } from 'react-router-dom';`}</code>
             </p>
             <p>
               Adicione a prop <code>{`basename={process.env.PUBLIC_URL}`}</code>{' '}
-              ao seu HashRouter
+              ao seu Router
             </p>
             <p>
-              Seu <code>{`<App />`}</code> ficará parecido com esse:
+              Seu <code>index.js</code> ficará parecido com esse:
             </p>
             <p>
-              <code>{`<Router basename={process.env.PUBLIC_URL}><App /></Router>`}</code>
+              <code>{`<Router basename={process.env.PUBLIC_URL}> <App /> </Router>`}</code>
             </p>
             <p>
-              Dessa maneira você poderá acessar o site adicionando o # após o
-              "/" do root ficando assim:
+              Agora temos que adicionar dois scripts, o primeiro ficará no html
+              do seu projeto, que está na pasta <code>public/index.html</code>
             </p>
             <p>
-              <code>https://userName.github.io/#/</code>
+              Entre no repositório desse link{' '}
+              <a
+                href="https://github.com/rafgraph/spa-github-pages/blob/gh-pages/index.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                spa-github-pages/index.html
+              </a>{' '}
+              e copie tudo que está entre{' '}
+              <code>{'<!-- Start Single Page Apps for GitHub Pages -->'}</code>{' '}
+              e <code>{'<!-- End Single Page Apps for GitHub Pages -->'}</code>.
             </p>
+            <p>
+              Abra o seu arquivo <code>index.html</code> na pasta public e cole
+              o código na linha anterior à que fecha a tag{' '}
+              <code>{'</head>'}</code>
+            </p>
+            <p>
+              Por último, entre nesse link do repositório{' '}
+              <a
+                href="https://github.com/rafgraph/spa-github-pages/blob/gh-pages/404.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                spa-github-pages/404.html
+              </a>{' '}
+              e copie todo o conteúdo do arquivo, navegue até a pasta{' '}
+              <code>public</code> do seu projeto, crie um arquivo chamado de{' '}
+              <code>404.html</code> e cole dentro dele o conteúdo que você
+              acabou de copiar.
+            </p>
+            <p>
+              Agora é só rodar os comandos <code>git add/push</code>, o{' '}
+              <code>npm run deploy</code> e acessar o seu site no github.
+            </p>
+            <img
+              src="FolderStructure.png"
+              alt="Estrutura de arquivos"
+              style={{ maxWidth: '100%' }}
+            />
+            <img
+              className="mt-1"
+              src="IndexHtml.png"
+              alt="Demonstração do index.html"
+              style={{ maxWidth: '100%' }}
+            />
+            <img
+              className="mt-1"
+              src="404Html.png"
+              alt="Demonstração do 404.html"
+              style={{ maxWidth: '100%' }}
+            />
+            <img
+              className="mt-1"
+              src="IndexJs.png"
+              alt="Demonstração do Index.js"
+              style={{ maxWidth: '100%' }}
+            />
           </Media>
         </Media>
       </div>
