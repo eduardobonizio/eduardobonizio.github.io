@@ -11,7 +11,7 @@ import {
   ListGroup,
   // ListGroupItem,
   FormGroup,
-  Label,
+  // Label,
   // CustomInput,
 } from 'reactstrap';
 
@@ -27,17 +27,17 @@ const QuestionCard = prop => {
     return options.map((e, i) => {
       const newKey = id + i;
       return (
-        <Label className="mt-1" for={e} key={newKey}>
-          <Button
-            className="option"
-            color="secondary"
-            size="lg"
-            block
-            onClick={event => setSelectedOption(event.target)}
-          >
-            <p>{e}</p>
-          </Button>
-        </Label>
+        <Button
+          className="option"
+          style={{ whiteSpace: 'pre-line' }}
+          color="secondary"
+          size="lg"
+          key={newKey}
+          block
+          onClick={event => setSelectedOption(event.target)}
+        >
+          {e}
+        </Button>
       );
     });
   }
@@ -71,9 +71,7 @@ const QuestionCard = prop => {
         <CardTitle tag="h5" className="mb-2">
           Tema: {theme}
         </CardTitle>
-        <CardText>
-          <p>{question}</p>
-        </CardText>
+        <CardText>{question}</CardText>
 
         <FormGroup>
           <ListGroup className="mt-2 mb-1">{mapOptions()}</ListGroup>
