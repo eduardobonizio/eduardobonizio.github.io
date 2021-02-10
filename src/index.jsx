@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import { createBrowserHistory } from 'history';
+
 import App from './app/App';
 import store from './store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+export const history = createBrowserHistory({
+  basename: process.env.PUBLIC_URL,
+});
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
