@@ -1,0 +1,79 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "eslint-plugin-import-helpers",
+    "jsx-a11y",
+    "prefer-object-spread",
+    "immutable",
+    "more",
+    "no-mixed-operators"
+  ],
+  "rules": {
+    "no-mixed-operators/no-mixed-operators": "error",
+    "more/prefer-includes": 2,
+    "more/no-void-map": 2,
+    "more/no-window": 2,
+    "more/no-filter-instead-of-find": 2,
+    "more/no-numeric-endings-for-variables": 2,
+    "prefer-object-spread/prefer-object-spread": 2,
+    "immutable/no-let": 1,
+    "immutable/no-this": 2,
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "module",
+          "/^@shared/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "prettier/prettier": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "global-require": "error",
+    "no-console": "off",
+    "import/prefer-default-export": "off",
+    "react/button-has-type": "error",
+    "react/no-access-state-in-setstate": "error",
+    "react/no-deprecated": 2,
+    "react/state-in-constructor": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".jsx", ".js"]
+      }
+    ],
+    "react/static-property-placement": "off"
+  }
+}

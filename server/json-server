@@ -1,0 +1,4 @@
+#!/bin/sh
+
+clear
+npx json-server --watch ./server/db.json

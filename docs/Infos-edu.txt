@@ -1,0 +1,45 @@
+### Setup ###
+npx react-app app-name
+cd app-name
+npm install
+npm install gh-pages --save-dev
+npm install --save bootstrap
+npm install --save reactstrap react react-dom
+
+### https://reactstrap.github.io/ ###
+
+eslint --init
+
+#Import Bootstrap CSS in the src/index.js file:
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+#Criar um novo repositorio
+acessar o link https://github.com/new e criar um novo repositorio
+
+#Adiciona o novo diretorio como remote usando o SSH
+git remote add origin SSHdoRepo
+
+#No arquivo package.json:
+Colocar a homepage na primeira propriedade do objeto:
+"homepage": "http://${userName}.github.io/${nomeDoNovoRepositorioNoGitHub}"
+
+#Adicionar essas duas propriedades no script:
+"scripts": {
+//...
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+"deploy":"gh-pages -b master -d build"
+}
+
+#Toda vez que quiser atualizar o app no github pages tem que rodar o comando abaixo:
+npm run deploy
+
+#Cobertura dos testes:
+npm run test-coverage
+
+Ao rodar o comando npm run test-coverage, será gerada uma nova pasta na raiz do seu projeto chamada coverage, após criada, abra o arquivo ./coverage/lcov-report/index.html usando a extensão Live Server do seu VSCode.
+
+## Using redux state
+## import { useSelector } from 'react-redux';
+## import trackWindowSize from '../../libs/trackWindowSize';
+## const screenSize = useSelector(state => state.screenSize);

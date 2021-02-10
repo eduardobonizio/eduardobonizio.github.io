@@ -1,0 +1,16 @@
+.center-content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center-content ol {
+  max-width: 703px;
+  align-content: flex-start;
+  padding: 0 0 0 20px;
+}
+
+.completed {
+  text-decoration: line-through;
+}

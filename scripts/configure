@@ -1,0 +1,7 @@
+#!/bin/sh
+
+npx prettier --write .
+npx eslint --fix .
+npm audit fix
+
+exit 0

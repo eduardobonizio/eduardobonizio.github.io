@@ -1,0 +1,16 @@
+.center-content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.ball {
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}

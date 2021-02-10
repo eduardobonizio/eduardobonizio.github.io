@@ -1,0 +1,8 @@
+#!/bin/sh
+
+clear
+
+#npx npm-check
+npx npm-check -u
+
+exit 0

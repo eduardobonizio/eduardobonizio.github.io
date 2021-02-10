@@ -1,0 +1,33 @@
+.center-content {
+  display: flex;
+}
+
+.center-content img {
+  max-width: 200px;
+  max-height: 261px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.center-content ul {
+  padding-left: 30px;
+}
+
+.center-content h1 {
+  box-sizing: border-box;
+  display: flex;
+  align-self: center;
+  padding: 2px 0px 10px 15px;
+}
+
+.center-content p {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  text-align: justify;
+}

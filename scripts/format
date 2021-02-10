@@ -1,0 +1,7 @@
+#!/bin/sh
+
+clear
+
+npx prettier --write .
+
+exit 0

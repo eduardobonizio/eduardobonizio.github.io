@@ -1,0 +1,100 @@
+{
+  "homepage": "https://eduardobonizio.github.io/",
+  "name": "github-pages-edu",
+  "description": "Page for Eduardo Bonizio",
+  "version": "0.1.1",
+  "private": true,
+  "author": "Eduardo Bonizio",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "./server/json-server",
+    "commit": "./scripts/commit",
+    "npm-check": "./scripts/npm-check",
+    "lint": "./scripts/lint",
+    "format": "./scripts/format",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "postinstall": "./scripts/configure",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.5.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@typescript-eslint/parser": "^4.14.2",
+    "axios": "0.21.1",
+    "bootstrap": "^4.6.0",
+    "eslint-disable": "^1.0.2",
+    "lodash": "4.17.20",
+    "moment": "2.29.1",
+    "numeral": "2.0.6",
+    "prop-types": "15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "4.1.0",
+    "react-redux": "7.2.2",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.2",
+    "reactstrap": "^8.9.0",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0",
+    "serialize-javascript": "5.0.1",
+    "styled-components": "5.2.1",
+    "typescript": "^4.1.3",
+    "validate.js": "0.13.1",
+    "validator": "13.5.2",
+    "web-vitals": "1.1.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "6.1.17",
+    "@storybook/addon-controls": "6.1.17",
+    "@storybook/addon-essentials": "6.1.17",
+    "@storybook/addon-links": "6.1.17",
+    "@storybook/node-logger": "6.1.17",
+    "@storybook/preset-create-react-app": "3.1.5",
+    "@storybook/react": "6.1.17",
+    "@testing-library/react": "11.2.5",
+    "@testing-library/user-event": "12.6.3",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.6",
+    "eslint": "7.19.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "7.2.0",
+    "eslint-plugin-immutable": "1.0.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-import-helpers": "1.1.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-more": "1.0.0",
+    "eslint-plugin-no-mixed-operators": "1.1.1",
+    "eslint-plugin-prefer-object-spread": "1.2.1",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "gh-pages": "^3.1.0",
+    "json-server": "0.16.3",
+    "prettier": "2.2.1",
+    "redux-devtools-extension": "2.13.8",
+    "storybook-addon-outline": "1.2.0"
+  }
+}
