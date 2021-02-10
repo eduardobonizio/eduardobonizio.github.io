@@ -3,6 +3,7 @@
 /* eslint-disable no-use-before-define */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router';
 import { Button } from 'reactstrap';
 
 import { questions } from '../../api/api';
@@ -15,7 +16,12 @@ export default function StartGame() {
   const [listaCards, setListaCards] = useState(questions);
   const [card, setCard] = useState();
   const [score, setScore] = useState(0);
+  const themeSelected = verifyGameSetup();
 
+  function verifyGameSetup() {
+    if (!gameConfig) return false;
+    return true;
+  }
   function newCard() {
     const randomIndex = parseInt(
       Math.random(listaCards.length) * listaCards.length,
@@ -55,6 +61,7 @@ export default function StartGame() {
 
   return (
     <div className="container d-flex justify-content-center">
+      {!themeSelected && <Redirect to="/game" />}
       {card ? (
         <QuestionCard question={card} answer={answer} newCard={newCard} />
       ) : (
