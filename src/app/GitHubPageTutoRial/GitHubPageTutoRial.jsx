@@ -10,8 +10,8 @@ export default function GitHubPageTutoRial() {
           <Media body>
             <h1>Github pages com React</h1>
             <h5>
-              Como criar sua página em react diretamente na raíz do seu site no
-              github.io
+              Como postar sua página com react diretamente na raíz do seu site
+              no github.io
             </h5>
           </Media>
           <hr />
