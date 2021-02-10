@@ -3,8 +3,6 @@ npx react-app app-name
 cd app-name
 npm install
 npm install gh-pages --save-dev
-npm i -S react-router
-npm i -S history
 npm install --save bootstrap
 npm install --save reactstrap react react-dom
 
