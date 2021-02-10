@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+
 import GameSetup from '../../app/Game/GameSetup';
 import StartGame from '../../app/Game/StartGame';
-
 import GitHubPageTutoRial from '../../app/GitHubPageTutoRial/GitHubPageTutoRial';
 import Home from '../../app/Home/Home';
 import Secure from '../../app/Secure/Secure';
