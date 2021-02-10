@@ -141,6 +141,11 @@ export default function GitHubPageTutoRial() {
                   Agora é só acessar a sua página do github que está funcionando
                   normalmente <code>https://seuNomeDeUsuário.github.io/</code>
                 </p>
+                <p>
+                  Toda vez que você fizer alguma atualização no seu projeto,
+                  você terá que rodar o <code>git add/push</code> e o{' '}
+                  <code>npm run deploy</code> para atualizar o github.io.
+                </p>
               </Media>
               <Media body>
                 <img
