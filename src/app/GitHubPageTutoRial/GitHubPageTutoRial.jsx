@@ -139,7 +139,7 @@ export default function GitHubPageTutoRial() {
             botão que mostra as branchs desse repositório e troque de "master"
             para "gh-pages", <b>não se esqueça de clicar em "save"</b>.
             <p>
-              Agora é só acessar a sua página do github que está funcionando
+              Agora é só acessar a sua página do github que estará funcionando
               normalmente <code>https://seuNomeDeUsuário.github.io/</code>
             </p>
             <p>
