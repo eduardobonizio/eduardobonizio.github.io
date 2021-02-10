@@ -171,7 +171,7 @@ export default function GitHubPageTutoRial() {
               <code>userName.github.io/news</code>.
             </p>
             <p>
-              Se você utilizar apenas o BroweserRouter e tentar acessar
+              Se você utilizar apenas o BrowserRouter e tentar acessar
               diretamente uma url do seu site no github, que não seja o root,
               provavelmente encontrará o erro 404 File not found, por isso
               iremos utilizar dois scripts feitos pelo usuário{' '}
