@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-// import { HashRouter as Router } from 'react-router-dom';
-import { Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './app/App';
 import store from './store';
@@ -11,10 +10,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      {/* <Router> */}
       <Router basename={process.env.PUBLIC_URL}>
-        {/* <Router basename={process.env.PUBLIC_URL}>
-      </Router> */}
-        <Route path="/" component={App} />
+        <App />
       </Router>
     </Provider>
   </React.StrictMode>,
