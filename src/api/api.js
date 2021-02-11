@@ -460,6 +460,33 @@ export const questions = [
   },
 ];
 
+export const clocks = [
+  {
+    author: 'Rodrigo de Souza',
+    gitHubId: 'rodrigoDeSouzaFernandes',
+    github: 'https://github.com/rodrigoDeSouzaFernandes',
+    url: 'https://rodrigodesouzafernandes.github.io/count-down/',
+    photo:
+      'http://avatars.githubusercontent.com/u/72228436?s=460&u=e498085a542b1539c9bfedc91eb7de82d49ebadb&v=4',
+  },
+  {
+    author: 'Viviane Silva Florido',
+    gitHubId: 'vivianeflowt',
+    github: 'https://github.com/vivianeflowt',
+    url: 'https://vivianeflowt.github.io/countdown-trybe/',
+    photo:
+      'https://avatars.githubusercontent.com/u/22636948?s=460&u=d569693f84bc221fbf3e57d921efeef93b2706d2&v=4',
+  },
+  {
+    author: 'Filipe Louzano',
+    gitHubId: 'MEianelli',
+    github: 'https://github.com/MEianelli',
+    url: 'https://meianelli.github.io/cronometro/',
+    photo:
+      'https://avatars.githubusercontent.com/u/29641380?s=460&u=7ff5887636b65898cd9ead6b9eacb70916163894&v=4',
+  },
+];
+
 // {
 //   question:
 //     '',
