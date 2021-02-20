@@ -13,14 +13,21 @@ import { getFirstMissingInSequence } from '../../utils/Index';
 import QuestionCard from './QuestionCard';
 
 export default function StartGame() {
-  const dispatch = useDispatch();
   const gameConfig = useSelector(state => state.gameConfig);
+  const themeSelected = verifyGameSetup();
+  function verifyGameSetup() {
+    if (!gameConfig) return false;
+    return true;
+  }
+
+  const dispatch = useDispatch();
   const [card, setCard] = useState(null);
   const [score, setScore] = useState(0);
-  const [answeredList, setAnsweredList] = useState(gameConfig.answered);
+  const [answeredList, setAnsweredList] = useState(
+    (gameConfig && gameConfig.answered) || [0],
+  );
   const [finishGame, setFinishGame] = useState(false);
   const [fade, setFade] = useState(true);
-  const themeSelected = verifyGameSetup();
 
   async function newCard() {
     setFade(false);
@@ -31,7 +38,7 @@ export default function StartGame() {
 
     const question = await api.getQuestionFromDatabase('questions', next);
 
-    if (!question && !(gameConfig.answered.length < next)) {
+    if (!question && !(gameConfig && gameConfig.answered.length < next)) {
       setFinishGame(true);
       return;
     }
@@ -46,13 +53,10 @@ export default function StartGame() {
   }
 
   useEffect(() => {
-    newCard();
+    if (themeSelected) {
+      newCard();
+    }
   }, []);
-
-  function verifyGameSetup() {
-    if (!gameConfig) return false;
-    return true;
-  }
 
   function answer(selectedOption, id) {
     if (!selectedOption) return;
