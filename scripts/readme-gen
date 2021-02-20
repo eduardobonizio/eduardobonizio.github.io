@@ -1,7 +1,0 @@
-#!/bin/sh
-
-clear
-
-npx readme-md-generator -y
-
-exit 0

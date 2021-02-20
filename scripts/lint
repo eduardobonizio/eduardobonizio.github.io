@@ -1,7 +1,0 @@
-#!/bin/sh
-
-clear
-
-npx eslint --fix .
-
-exit 0

@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import App from './app/App';
+import App from './App';
 import store from './store';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/bootstrap.min.css';
+import './assets/Bootstrap/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>

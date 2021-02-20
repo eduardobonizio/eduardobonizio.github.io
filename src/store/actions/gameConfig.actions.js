@@ -1,7 +1,21 @@
-export function updateUser(user) {
+export function updateUserName(user) {
   return {
-    type: 'UPDATE_USER',
+    type: 'UPDATE_USER_NAME',
     payload: user,
+  };
+}
+
+export function updateAnswerdQuestions(questions) {
+  return {
+    type: 'UPDATE_ANSWERED_QUESTIONS',
+    payload: questions,
+  };
+}
+
+export function updateLastAnswered(id) {
+  return {
+    type: 'UPDATE_LAST_ANSWRED_QUESTION',
+    payload: id,
   };
 }
 
