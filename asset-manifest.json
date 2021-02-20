@@ -1,20 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.791ac143.chunk.css",
-    "main.js": "/static/js/main.175f0749.chunk.js",
-    "main.js.map": "/static/js/main.175f0749.chunk.js.map",
+    "main.css": "/static/css/main.5c61df97.chunk.css",
+    "main.js": "/static/js/main.559350e2.chunk.js",
+    "main.js.map": "/static/js/main.559350e2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a6aafd70.js",
     "runtime-main.js.map": "/static/js/runtime-main.a6aafd70.js.map",
-    "static/js/2.f0d0d251.chunk.js": "/static/js/2.f0d0d251.chunk.js",
-    "static/js/2.f0d0d251.chunk.js.map": "/static/js/2.f0d0d251.chunk.js.map",
+    "static/js/2.1ea98040.chunk.js": "/static/js/2.1ea98040.chunk.js",
+    "static/js/2.1ea98040.chunk.js.map": "/static/js/2.1ea98040.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.791ac143.chunk.css.map": "/static/css/main.791ac143.chunk.css.map",
-    "static/js/2.f0d0d251.chunk.js.LICENSE.txt": "/static/js/2.f0d0d251.chunk.js.LICENSE.txt"
+    "static/css/main.5c61df97.chunk.css.map": "/static/css/main.5c61df97.chunk.css.map",
+    "static/js/2.1ea98040.chunk.js.LICENSE.txt": "/static/js/2.1ea98040.chunk.js.LICENSE.txt",
+    "static/media/FolderStructure.2cf3bc35.png": "/static/media/FolderStructure.2cf3bc35.png",
+    "static/media/GhPagesBranch.379bfdee.png": "/static/media/GhPagesBranch.379bfdee.png",
+    "static/media/GitHubNewRepo.0fdd9f93.png": "/static/media/GitHubNewRepo.0fdd9f93.png",
+    "static/media/HomePagePackageJson.275ab571.png": "/static/media/HomePagePackageJson.275ab571.png",
+    "static/media/Html404.d2894536.png": "/static/media/Html404.d2894536.png",
+    "static/media/IndexHtml.a8b1f75a.png": "/static/media/IndexHtml.a8b1f75a.png",
+    "static/media/IndexJs.a500db59.png": "/static/media/IndexJs.a500db59.png",
+    "static/media/PackageJson.41cc1681.png": "/static/media/PackageJson.41cc1681.png",
+    "static/media/Redirecting.73e73be9.gif": "/static/media/Redirecting.73e73be9.gif",
+    "static/media/RepoSSH.d0b3b939.png": "/static/media/RepoSSH.d0b3b939.png",
+    "static/media/SettingsDoRepositorio.1b01995f.gif": "/static/media/SettingsDoRepositorio.1b01995f.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.a6aafd70.js",
-    "static/js/2.f0d0d251.chunk.js",
-    "static/css/main.791ac143.chunk.css",
-    "static/js/main.175f0749.chunk.js"
+    "static/js/2.1ea98040.chunk.js",
+    "static/css/main.5c61df97.chunk.css",
+    "static/js/main.559350e2.chunk.js"
   ]
 }
