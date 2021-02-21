@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable no-undef */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink as RRNavLink } from 'react-router-dom';
@@ -15,6 +18,8 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
+
+import app from '../../api/Firebase';
 
 const NavBar = () => {
   const gameConfig = useSelector(state => state.gameConfig);
@@ -68,8 +73,10 @@ const NavBar = () => {
             </UncontrolledDropdown>
           </Nav>
           <NavbarText>
-            {gameConfig && gameConfig.user}
-            {gameConfig && gameConfig.score >= 0 && ` ${gameConfig.score}pts`}
+            <div onClick={() => app.auth().signOut()}>
+              {gameConfig && gameConfig.user}
+              {gameConfig && gameConfig.score >= 0 && ` ${gameConfig.score}pts`}
+            </div>
           </NavbarText>
         </Collapse>
       </div>

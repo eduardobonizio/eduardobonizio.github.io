@@ -1,7 +1,7 @@
-import fireDatabase from './FireDatabase';
+import app from './Firebase';
 
 export async function getAllQuestionsFromDatabase() {
-  const get = fireDatabase.database().ref();
+  const get = app.database().ref();
   const questions = await get
     .once('value')
     .then(snapshot => snapshot.val().questions);
@@ -9,27 +9,23 @@ export async function getAllQuestionsFromDatabase() {
 }
 
 export async function getQuestionFromDatabase(key, id) {
-  const get = fireDatabase.database().ref(key).child(id);
+  const get = app.database().ref(key).child(id);
   const question = await get.once('value').then(snapshot => snapshot.val());
   return question;
 }
 
 export async function setItemOnDatabase(key, item) {
-  fireDatabase.database().ref(key).push(item);
+  app.database().ref(key).push(item);
 }
 
 export async function setItemsOnDatabase(key, list) {
-  list.forEach(item =>
-    fireDatabase.database().ref(key).child(item.id).set(item),
-  );
+  list.forEach(item => app.database().ref(key).child(item.id).set(item));
 }
 
 export async function removeItemFromDatabase(key, item) {
-  fireDatabase.database().ref(key).child(item.id).remove();
+  app.database().ref(key).child(item.id).remove();
 }
 
 export async function removeItemsFromDatabase(key, list) {
-  list.forEach(item =>
-    fireDatabase.database().ref(key).child(item.id).remove(),
-  );
+  list.forEach(item => app.database().ref(key).child(item.id).remove());
 }

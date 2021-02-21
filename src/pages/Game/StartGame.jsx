@@ -1,10 +1,8 @@
-/* eslint-disable immutable/no-let */
-/* eslint-disable more/no-window */
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-use-before-define */
+/* eslint-disable more/no-window */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router';
+import { useHistory } from 'react-router';
 import { Fade } from 'reactstrap';
 
 import * as api from '../../api/index';
@@ -13,14 +11,9 @@ import { getFirstMissingInSequence } from '../../utils/Index';
 import QuestionCard from './QuestionCard';
 
 export default function StartGame() {
-  const gameConfig = useSelector(state => state.gameConfig);
-  const themeSelected = verifyGameSetup();
-  function verifyGameSetup() {
-    if (!gameConfig) return false;
-    return true;
-  }
-
+  const history = useHistory();
   const dispatch = useDispatch();
+  const gameConfig = useSelector(state => state.gameConfig);
   const [card, setCard] = useState(null);
   const [score, setScore] = useState(0);
   const [answeredList, setAnsweredList] = useState(
@@ -29,34 +22,36 @@ export default function StartGame() {
   const [finishGame, setFinishGame] = useState(false);
   const [fade, setFade] = useState(true);
 
+  async function getCard(array) {
+    const next = getFirstMissingInSequence(array);
+    const question = await api.getQuestionFromDatabase('questions', next);
+    return question;
+  }
+
   async function newCard() {
     setFade(false);
-    setTimeout(() => {
-      setFade(true);
-    }, 300);
-    const next = getFirstMissingInSequence(answeredList);
-
-    const question = await api.getQuestionFromDatabase('questions', next);
-
-    if (!question && !(gameConfig && gameConfig.answered.length < next)) {
+    const question = await getCard(answeredList);
+    if (!question) {
+      const answeredArray = gameConfig.answered;
+      const missingQuestion = await getCard(answeredArray);
+      if (missingQuestion !== card) {
+        setAnsweredList(answeredArray);
+        setCard(missingQuestion);
+        return;
+      }
       setFinishGame(true);
       return;
     }
 
     setCard(question);
-    setAnsweredList([...answeredList, next]);
+    setAnsweredList([...answeredList, question.id]);
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: 'smooth',
     });
+    setFade(true);
   }
-
-  useEffect(() => {
-    if (themeSelected) {
-      newCard();
-    }
-  }, []);
 
   function answer(selectedOption, id) {
     if (!selectedOption) return;
@@ -82,13 +77,14 @@ export default function StartGame() {
     dispatch(userSetup.updateLastAnswered(id));
   }
 
+  useEffect(() => newCard(), []);
+
   useEffect(() => {
     localStorage.setItem('userConfig', JSON.stringify(gameConfig));
   }, [gameConfig]);
 
   return (
     <div className="container d-flex justify-content-center">
-      {!themeSelected && <Redirect to="/game" />}
       {!finishGame && card && (
         <Fade timeout={(500, 100)} in={fade}>
           <QuestionCard question={card} answer={answer} newCard={newCard} />

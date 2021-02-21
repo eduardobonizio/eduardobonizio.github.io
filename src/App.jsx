@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-import Content from './pages/Content/Content';
 import Footer from './pages/Footer/Footer';
 import NavBar from './pages/NavBar/NavBar';
+import Routes from './pages/Routes/Routes';
 import { loadUserConfig } from './utils/Index';
 import './App.css';
 
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <Content />
+      <Routes />
       <Footer />
     </>
   );
