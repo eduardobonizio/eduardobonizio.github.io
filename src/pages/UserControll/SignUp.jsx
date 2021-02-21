@@ -2,7 +2,8 @@ import React, { useCallback } from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import app from '../../api/Firebase';
+import app, { signInWithGoogle } from '../../api/Firebase';
+import image from '../../assets/Index';
 
 const SignUp = ({ history }) => {
   const handleSignUp = useCallback(
@@ -24,7 +25,7 @@ const SignUp = ({ history }) => {
   return (
     <div className="container d-flex flex-column align-items-center">
       <h1>Sign up</h1>
-      <div>
+      <div className="d-flex flex-column align-items-center">
         <form onSubmit={handleSignUp} className="d-flex flex-column">
           <label htmlFor="email" className="d-flex flex-column">
             Email
@@ -54,6 +55,16 @@ const SignUp = ({ history }) => {
           }}
         >
           <Link to="/login">Login</Link>
+        </button>
+        <button
+          type="button"
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+          }}
+          onClick={() => signInWithGoogle()}
+        >
+          <img src={image.GoogleLoginButton} alt="Login with google" />
         </button>
       </div>
     </div>

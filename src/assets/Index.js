@@ -1,3 +1,4 @@
+import GoogleLoginButton from './google_signin_buttons/web/1x/btn_google_signin_dark_pressed_web.png';
 import FolderStructure from './Images/FolderStructure.png';
 import GhPagesBranch from './Images/GhPagesBranch.png';
 import GitHubNewRepo from './Images/GitHubNewRepo.png';
@@ -22,4 +23,5 @@ export default {
   Redirecting,
   RepoSSH,
   SettingsDoRepositorio,
+  GoogleLoginButton,
 };

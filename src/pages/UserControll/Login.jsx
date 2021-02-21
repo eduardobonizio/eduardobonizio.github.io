@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { AuthContext } from '../../api/Auth';
 import app, { signInWithGoogle } from '../../api/Firebase';
+import image from '../../assets/Index';
 
 const Login = ({ history }) => {
   const handleLogin = useCallback(
@@ -58,20 +59,18 @@ const Login = ({ history }) => {
           backgroundColor: 'transparent',
           border: 'none',
         }}
-      >
-        <Link to="/signup">Sign Up</Link>
-      </button>
+      />
       <button
         type="button"
         style={{
-          width: '100%',
           backgroundColor: 'transparent',
           border: 'none',
         }}
         onClick={() => signInWithGoogle()}
       >
-        Sign in with Google
+        <img src={image.GoogleLoginButton} alt="Login with google" />
       </button>
+      Dont have an account? <Link to="/signup">Sign Up</Link>
     </div>
   );
 };

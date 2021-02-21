@@ -7,7 +7,6 @@ import image from '../../assets/Index';
 export default function GitHubPageTutoRial() {
   return (
     <>
-      {console.log(image)}
       <div className="container">
         <Media list>
           <Media body>

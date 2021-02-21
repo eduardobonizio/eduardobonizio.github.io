@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-undef */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink as RRNavLink } from 'react-router-dom';
+import { NavLink as RRNavLink, Redirect, useHistory } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -22,9 +23,9 @@ import {
 import app from '../../api/Firebase';
 
 const NavBar = () => {
-  const gameConfig = useSelector(state => state.gameConfig);
+  const globalUser = useSelector(state => state.globalUser);
   const [isOpen, setIsOpen] = useState(false);
-
+  const history = useHistory();
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -72,12 +73,27 @@ const NavBar = () => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>
-            <div onClick={() => app.auth().signOut()}>
-              {gameConfig && gameConfig.user}
-              {gameConfig && gameConfig.score >= 0 && ` ${gameConfig.score}pts`}
+          {globalUser && (
+            <div>
+              <NavbarText>
+                <div>{globalUser.displayName}</div>
+              </NavbarText>
+              <img
+                src={globalUser.photoURL}
+                alt="User"
+                className="ml-3"
+                style={{ height: '38px', borderRadius: '50%' }}
+              />
+              <button
+                type="button"
+                onClick={() => {
+                  app.auth().signOut();
+                }}
+              >
+                Logout
+              </button>
             </div>
-          </NavbarText>
+          )}
         </Collapse>
       </div>
     </Navbar>
