@@ -2,6 +2,8 @@
 npx react-app app-name
 cd app-name
 npm install
+npm install redux-thunk
+npm install -D fetch-mock-jest
 npm install gh-pages --save-dev
 npm install --save bootstrap
 npm install --save reactstrap react react-dom
@@ -9,6 +11,7 @@ npm install --save react-router-dom
 npm install --save firebase
 npm install @react-firebase/auth
 npm install firebaseui --save
+
 
 ### npm i -S react-router when using react at github pages ###
 ### https://reactstrap.github.io/ ###
