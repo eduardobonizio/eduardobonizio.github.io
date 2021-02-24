@@ -10,7 +10,7 @@ clear
 #yarn install
 npm install
 npm audit fix
-npm i react-router-dom
+npm install react-router-dom
 npm install redux-thunk
 npm install -D fetch-mock-jest
 rm -rf node_modules/gh-pages/.cache

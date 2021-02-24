@@ -2,7 +2,7 @@
 npx react-app app-name
 cd app-name
 npm install
-npm i react-router-dom
+npm install react-router-dom
 npm install redux-thunk
 npm install -D fetch-mock-jest
 npm install gh-pages --save-dev
