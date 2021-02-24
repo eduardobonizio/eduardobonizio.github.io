@@ -1,4 +1,4 @@
-const INITIAL_GAME_CONFIG = null;
+const INITIAL_GAME_CONFIG = false;
 
 export default function reducer(state = INITIAL_GAME_CONFIG, action) {
   const { type, payload } = action;

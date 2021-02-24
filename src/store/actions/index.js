@@ -1,8 +1,8 @@
-import * as currentLoggedUser from './currentLoggedUser';
+import * as currentUser from './currentUser';
 import * as screenSize from './screenSize.actions';
 
 const actions = {
-  currentLoggedUser,
+  currentUser,
   screenSize,
 };
 

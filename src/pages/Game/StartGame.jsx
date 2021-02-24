@@ -24,8 +24,13 @@ export default function StartGame() {
 
   async function getCard(array) {
     const next = getFirstMissingInSequence(array);
-    const question = await api.getQuestionFromDatabase('questions', next);
-    return question;
+    try {
+      const question = await api.getQuestionFromDatabase('questions', next);
+      return question;
+    } catch {
+      history.push('/login');
+      return false;
+    }
   }
 
   async function newCard() {

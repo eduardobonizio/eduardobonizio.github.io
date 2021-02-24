@@ -1,78 +1,24 @@
-import React, { useCallback, useContext } from 'react';
-import { withRouter, Redirect } from 'react-router';
-import { Link } from 'react-router-dom';
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Redirect, useHistory } from 'react-router';
 
-import { AuthContext } from '../../api/Auth';
-import app, { signInWithGoogle } from '../../api/Firebase';
-import image from '../../assets/Index';
+import SocialMediaLogin from '../../components/SocialMediaLogin/SocialMediaLogin';
 
-const Login = ({ history }) => {
-  const handleLogin = useCallback(
-    async event => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      try {
-        await app
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
-        history.push('/');
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    [history],
-  );
-
-  const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    return <Redirect to="/" />;
-  }
+export default function Login() {
+  const history = useHistory();
+  const currentUser = useSelector(state => state.currentUser);
 
   return (
-    <div className="container d-flex flex-column align-items-center">
-      <h1>Log in</h1>
-      <form onSubmit={handleLogin} className="d-flex flex-column">
-        <label htmlFor="email" className="d-flex flex-column">
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label htmlFor="password" className="d-flex flex-column">
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
-        <button
-          type="submit"
-          style={{
-            width: '100%',
-            backgroundColor: 'transparent',
-            border: 'none',
-          }}
-        >
-          Log in
-        </button>
-      </form>
-      <button
-        type="submit"
-        style={{
-          width: '100%',
-          backgroundColor: 'transparent',
-          border: 'none',
-        }}
-      />
-      <button
-        type="button"
-        style={{
-          backgroundColor: 'transparent',
-          border: 'none',
-        }}
-        onClick={() => signInWithGoogle()}
-      >
-        <img src={image.GoogleLoginButton} alt="Login with google" />
-      </button>
-      Dont have an account? <Link to="/signup">Sign Up</Link>
-    </div>
+    <>
+      {currentUser ? (
+        <Redirect to="/game" />
+      ) : (
+        <div className="container d-flex flex-column align-items-center">
+          <h1>Log in</h1>
+          <SocialMediaLogin />
+        </div>
+      )}
+    </>
   );
-};
-
-export default withRouter(Login);
+}

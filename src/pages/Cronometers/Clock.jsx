@@ -1,16 +1,10 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable more/no-window */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-use-before-define */
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router';
-import { Button, Media } from 'reactstrap';
+import React from 'react';
+import { Media } from 'reactstrap';
 import './Cronometers.css';
 
 export default function Clock(props) {
   const {
-    clock: { author, gitHubId, github, url, photo },
+    clock: { author, gitHubId, url, photo },
   } = props;
   return (
     <div className="container d-flex justify-content-center">
