@@ -35,7 +35,7 @@ export default function NavBar() {
                 auth.signOut();
               }}
             >
-              Logout
+              Logout yes
             </button>
           </>
         )}
