@@ -1,9 +1,9 @@
-import * as currentUser from './currentUser';
-import * as screenSize from './screenSize.actions';
+import * as currentUser from './currentUser.actions';
+import * as gameConfig from './gameConfig.actions';
+// import * as screenSize from './screenSize.actions';
 
-const actions = {
+export default {
   currentUser,
-  screenSize,
+  gameConfig,
+  // screenSize,
 };
-
-export default actions;

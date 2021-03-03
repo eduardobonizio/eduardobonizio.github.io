@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { auth } from '../Firebase';
-import { currentUser } from '../store/actions/currentUser';
+import { currentUser } from '../store/actions/currentUser.actions';
 import { newUser } from '../store/actions/gameConfig.actions';
 
 export default function loadUserConfig() {

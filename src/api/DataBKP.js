@@ -485,6 +485,14 @@ export const clocks = [
     photo:
       'https://avatars.githubusercontent.com/u/29641380?s=460&u=7ff5887636b65898cd9ead6b9eacb70916163894&v=4',
   },
+  {
+    author: 'Bruno Pedrosa',
+    gitHubId: 'brunopdrs',
+    github: 'https://github.com/BrunoPDRS',
+    url: 'https://brunopdrs.github.io/trybe-stopwatch/',
+    photo:
+      'https://avatars.githubusercontent.com/u/67613857?s=460&u=f2325afcbdcdef54b66ee7f6c04393cec7210d31&v=4',
+  },
 ];
 
 // {

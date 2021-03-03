@@ -13,7 +13,7 @@ export default function App() {
   loadUserConfig();
 
   if (currentUser === false) {
-    return <></>;
+    return <div>Loading...</div>;
   }
   return (
     <>

@@ -1,5 +1,4 @@
 import firebase from 'firebase/app';
-import * as firebaseui from 'firebaseui';
 
 import 'firebase/auth';
 import 'firebase/database';
@@ -29,9 +28,6 @@ export const uiConfig = {
     // firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
   ],
 };
-export const ui = new firebaseui.auth.AuthUI(firebase.auth());
-// The start method will wait until the DOM is loaded.
-// ui.start('#firebaseui-auth-container', uiConfig);
 
 export const auth = app.auth();
 export default app;
