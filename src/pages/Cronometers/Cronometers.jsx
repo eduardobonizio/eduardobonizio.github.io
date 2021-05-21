@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable immutable/no-let */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
