@@ -9,11 +9,12 @@ rm -rf ./node_modules 2>/dev/null
 clear
 #yarn install
 npm install
-npm audit fix
 rm -rf node_modules/gh-pages/.cache
 npm install gh-pages --save-dev
 npm install --save bootstrap
+npm install --save jquery
 npm install --save reactstrap react react-dom
 npm install --save firebase
 npm install @react-firebase/auth
 npm install firebaseui --save
+npm audit fix
