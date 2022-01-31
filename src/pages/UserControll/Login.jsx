@@ -1,6 +1,5 @@
 import React, { useCallback, useContext } from 'react';
-import { withRouter, Redirect } from 'react-router';
-import { Link } from 'react-router-dom';
+import { withRouter, Redirect, Link } from 'react-router-dom';
 
 import { AuthContext } from '../../api/Auth';
 import app, { signInWithGoogle } from '../../api/Firebase';
