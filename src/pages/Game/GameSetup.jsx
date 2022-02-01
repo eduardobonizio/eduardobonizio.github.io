@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink as RRNavLink } from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 import * as userSetup from '../../store/actions/gameConfig.actions';
 
@@ -29,10 +28,10 @@ export default function GameSetup() {
   }
   return (
     <div className="container d-flex justify-content-center">
-      <Form>
-        <FormGroup>
-          <Label for="user">Nome</Label>
-          <Input
+      <form>
+        <label htmlFor="user">
+          Nome
+          <input
             type="text"
             name="user"
             id="user"
@@ -43,10 +42,10 @@ export default function GameSetup() {
             }
             onChange={e => setUser(e.target.value)}
           />
-        </FormGroup>
-        <FormGroup>
-          <Label for="temeSelection">Tema</Label>
-          <Input
+        </label>
+        <label htmlFor="temeSelection">
+          Tema
+          <select
             type="select"
             name="theme"
             id="temeSelection"
@@ -54,21 +53,21 @@ export default function GameSetup() {
           >
             <option />
             <option>Enfermagem</option>
-          </Input>
-        </FormGroup>
+          </select>
+        </label>
         {user && theme ? (
-          <Button
+          <button
             type="button"
             onClick={updateUser}
             tag={RRNavLink}
             to="/game/start"
           >
             Iniciar
-          </Button>
+          </button>
         ) : (
-          <Button type="button">Iniciar</Button>
+          <button type="button">Iniciar</button>
         )}
-      </Form>
+      </form>
     </div>
   );
 }

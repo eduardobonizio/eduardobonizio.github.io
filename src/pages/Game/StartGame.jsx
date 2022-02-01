@@ -1,9 +1,6 @@
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable no-unused-vars */
 /* eslint-disable more/no-window */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Fade } from 'reactstrap';
 
 import * as api from '../../api/index';
 import * as userSetup from '../../store/actions/gameConfig.actions';
@@ -19,7 +16,6 @@ export default function StartGame() {
     (gameConfig && gameConfig.answered) || [0],
   );
   const [finishGame, setFinishGame] = useState(false);
-  const [fade, setFade] = useState(true);
 
   async function getCard(array) {
     const next = getFirstMissingInSequence(array);
@@ -28,7 +24,6 @@ export default function StartGame() {
   }
 
   async function newCard() {
-    setFade(false);
     const question = await getCard(answeredList);
     if (!question) {
       const answeredArray = gameConfig.answered;
@@ -49,7 +44,6 @@ export default function StartGame() {
       left: 0,
       behavior: 'smooth',
     });
-    setFade(true);
   }
 
   function answer(selectedOption, id) {
@@ -85,9 +79,7 @@ export default function StartGame() {
   return (
     <div className="container d-flex justify-content-center">
       {!finishGame && card && (
-        <Fade timeout={(500, 100)} in={fade}>
-          <QuestionCard question={card} answer={answer} newCard={newCard} />
-        </Fade>
+        <QuestionCard question={card} answer={answer} newCard={newCard} />
       )}
     </div>
   );

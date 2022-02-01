@@ -1,20 +1,4 @@
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable no-unused-expressions */
 import React, { useState } from 'react';
-import {
-  Card,
-  // CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  // CardSubtitle,
-  Button,
-  ListGroup,
-  // ListGroupItem,
-  FormGroup,
-  // Label,
-  // CustomInput,
-} from 'reactstrap';
 
 function QuestionCard(prop) {
   const [selectedOption, setSelectedOption] = useState();
@@ -28,7 +12,8 @@ function QuestionCard(prop) {
     return options.map((e, i) => {
       const newKey = id + i;
       return (
-        <Button
+        <button
+          type="button"
           className="option"
           style={{ whiteSpace: 'pre-line' }}
           color="secondary"
@@ -38,7 +23,7 @@ function QuestionCard(prop) {
           onClick={event => setSelectedOption(event.target)}
         >
           {e}
-        </Button>
+        </button>
       );
     });
   }
@@ -67,25 +52,25 @@ function QuestionCard(prop) {
   }
 
   return (
-    <Card>
-      <CardBody>
-        <CardTitle tag="h5" className="mb-2">
-          Tema: {theme}
-        </CardTitle>
-        <CardText>{question}</CardText>
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title mb-2">Tema: {theme}</h5>
+        <p className="card-text">{question}</p>
 
-        <FormGroup>
-          <ListGroup className="mt-2 mb-1">{mapOptions()}</ListGroup>
-        </FormGroup>
+        <form>
+          <div className="mt-2 mb-1">{mapOptions()}</div>
+        </form>
         <div className="d-flex justify-content-around flex-wrap">
-          <Button disabled>Curtir</Button>
+          <button type="button" disabled>
+            Curtir
+          </button>
           {/* <Button disabled>Sugerir correção</Button> */}
-          <Button onClick={handleClick}>
+          <button type="button" onClick={handleClick}>
             {answered ? 'Próxima pergunta' : 'Confirmar'}
-          </Button>
+          </button>
         </div>
-      </CardBody>
-    </Card>
+      </div>
+    </div>
   );
 }
 

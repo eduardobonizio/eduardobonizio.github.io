@@ -17,23 +17,27 @@ function NavBar() {
         <Link to="/game">Quizz</Link>
         <Link to="/30-dias-css">Desafio CSS</Link>
         <Link to="/github-pages-react">Github pages com react</Link>
-        <span>
-          <div>{globalUser.displayName}</div>
-        </span>
-        <img
-          src={globalUser.photoURL}
-          alt="User"
-          className="ml-3"
-          style={{ height: '38px', borderRadius: '50%' }}
-        />
-        <button
-          type="button"
-          onClick={() => {
-            app.auth().signOut();
-          }}
-        >
-          Logout
-        </button>
+        {globalUser && (
+          <div>
+            <span>
+              <div>{globalUser.displayName}</div>
+            </span>
+            <img
+              src={globalUser.photoURL}
+              alt="User"
+              className="ml-3"
+              style={{ height: '38px', borderRadius: '50%' }}
+            />
+            <button
+              type="button"
+              onClick={() => {
+                app.auth().signOut();
+              }}
+            >
+              Logout
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

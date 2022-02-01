@@ -73,6 +73,7 @@
         "extensions": [".jsx", ".js"]
       }
     ],
-    "react/static-property-placement": "off"
+    "react/static-property-placement": "off",
+    "react/jsx-no-bind": "off"
   }
 }
