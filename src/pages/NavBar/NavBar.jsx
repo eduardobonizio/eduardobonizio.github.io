@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink as RRNavLink } from 'react-router-dom';
-import { NavItem, NavLink, NavbarText } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { NavItem, NavbarText } from 'reactstrap';
 
 import app from '../../api/Firebase';
 
@@ -14,25 +15,9 @@ function NavBar() {
     <div className="container d-flex">
       <div>Home</div>
       <div className="container d-flex">
-        <NavLink onClick={() => isOpen && toggle()} tag={RRNavLink} to="/game">
-          Quizz
-        </NavLink>
-        <NavItem>
-          <NavLink
-            onClick={() => isOpen && toggle()}
-            tag={RRNavLink}
-            to="/30-dias-css"
-          >
-            Desafio CSS
-          </NavLink>
-        </NavItem>
-        <NavItem
-          onClick={() => isOpen && toggle()}
-          tag={RRNavLink}
-          to="/github-pages-react"
-        >
-          Github pages com react
-        </NavItem>
+        <Link to="/game">Quizz</Link>
+        <Link to="/30-dias-css">Desafio CSS</Link>
+        <Link to="/github-pages-react">Github pages com react</Link>
         <NavbarText>
           <div>{globalUser.displayName}</div>
         </NavbarText>
