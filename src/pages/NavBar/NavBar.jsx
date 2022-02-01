@@ -1,10 +1,6 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-undef */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink as RRNavLink, Redirect } from 'react-router-dom';
+import { NavLink as RRNavLink } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -68,7 +64,7 @@ function NavBar() {
                 </DropdownItem>
                 {/* <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />
-              <DropdownItem>Reset</DropdownItem> */}
+                <DropdownItem>Reset</DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>

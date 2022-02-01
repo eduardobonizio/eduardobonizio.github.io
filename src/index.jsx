@@ -6,8 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from './api/Auth';
 import App from './App';
 import store from './store';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/Bootstrap/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
