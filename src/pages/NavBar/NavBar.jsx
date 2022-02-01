@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { NavItem, NavbarText } from 'reactstrap';
 
 import app from '../../api/Firebase';
 
@@ -18,9 +17,9 @@ function NavBar() {
         <Link to="/game">Quizz</Link>
         <Link to="/30-dias-css">Desafio CSS</Link>
         <Link to="/github-pages-react">Github pages com react</Link>
-        <NavbarText>
+        <span>
           <div>{globalUser.displayName}</div>
-        </NavbarText>
+        </span>
         <img
           src={globalUser.photoURL}
           alt="User"
