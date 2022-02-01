@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import PrivateRoute from '../../api/PrivateRoute';
 import TrintaDiasDeCss from '../30diasDeCSS/TrintaDiasDeCss';
@@ -11,19 +11,36 @@ import Home from '../Home/Home';
 import Login from '../UserControll/Login';
 import SignUp from '../UserControll/SignUp';
 
-export default function Routes() {
+export default function Rotas() {
   return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/login" exact component={Login} />
-      <Route path="/signup" exact component={SignUp} />
-      <Route path="/github-pages-react" exact component={GitHubPageTutoRial} />
-      <PrivateRoute path="/game" exact component={GameSetup} />
-      <PrivateRoute path="/game/start" exact component={StartGame} />
-      <Route path="/cronometers" exact component={Cronometers} />
-      <Route path="/30-dias-css" exact component={TrintaDiasDeCss} />
-      <Route path="/30-dias-css/:day" exact component={TrintaDiasDeCss} />
-      <Redirect from="*" to="/" />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/github-pages-react" element={<GitHubPageTutoRial />} />
+
+      <Route
+        path="/game"
+        element={
+          <PrivateRoute>
+            <GameSetup />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/game/start"
+        element={
+          <PrivateRoute>
+            <StartGame />
+          </PrivateRoute>
+        }
+      />
+
+      <Route path="/cronometers" element={<Cronometers />} />
+      <Route path="/30-dias-css" element={<TrintaDiasDeCss />} />
+      <Route path="/30-dias-css/:day" element={<TrintaDiasDeCss />} />
+      <Route from="*" to="/" />
+    </Routes>
   );
 }

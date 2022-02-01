@@ -1,17 +1,8 @@
-/* eslint-disable more/no-window */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable react/no-unescaped-entities */
-
+/* eslint-disable react/jsx-no-bind */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  Redirect,
-  NavLink as RRNavLink,
-  useHistory,
-  Link,
-} from 'react-router-dom';
-import { Button, Form, FormGroup, Label, Input, Fade } from 'reactstrap';
+import { NavLink as RRNavLink } from 'react-router-dom';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 import * as userSetup from '../../store/actions/gameConfig.actions';
 
@@ -37,49 +28,47 @@ export default function GameSetup() {
     dispatch(userSetup.newUser(userOptions));
   }
   return (
-    <>
-      <div className="container d-flex justify-content-center">
-        <Form>
-          <FormGroup>
-            <Label for="user">Nome</Label>
-            <Input
-              type="text"
-              name="user"
-              id="user"
-              placeholder={
-                gameConfig && gameConfig.user
-                  ? gameConfig.user
-                  : 'Seu nome ou nickname'
-              }
-              onChange={e => setUser(e.target.value)}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for="temeSelection">Tema</Label>
-            <Input
-              type="select"
-              name="theme"
-              id="temeSelection"
-              onChange={e => setTheme(e.target.value)}
-            >
-              <option />
-              <option>Enfermagem</option>
-            </Input>
-          </FormGroup>
-          {user && theme ? (
-            <Button
-              type="button"
-              onClick={updateUser}
-              tag={RRNavLink}
-              to="/game/start"
-            >
-              Iniciar
-            </Button>
-          ) : (
-            <Button type="button">Iniciar</Button>
-          )}
-        </Form>
-      </div>
-    </>
+    <div className="container d-flex justify-content-center">
+      <Form>
+        <FormGroup>
+          <Label for="user">Nome</Label>
+          <Input
+            type="text"
+            name="user"
+            id="user"
+            placeholder={
+              gameConfig && gameConfig.user
+                ? gameConfig.user
+                : 'Seu nome ou nickname'
+            }
+            onChange={e => setUser(e.target.value)}
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="temeSelection">Tema</Label>
+          <Input
+            type="select"
+            name="theme"
+            id="temeSelection"
+            onChange={e => setTheme(e.target.value)}
+          >
+            <option />
+            <option>Enfermagem</option>
+          </Input>
+        </FormGroup>
+        {user && theme ? (
+          <Button
+            type="button"
+            onClick={updateUser}
+            tag={RRNavLink}
+            to="/game/start"
+          >
+            Iniciar
+          </Button>
+        ) : (
+          <Button type="button">Iniciar</Button>
+        )}
+      </Form>
+    </div>
   );
 }

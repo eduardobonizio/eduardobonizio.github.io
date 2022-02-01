@@ -1,31 +1,25 @@
 import React, { useCallback, useContext } from 'react';
-import { withRouter, Redirect, Link } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 
 import { AuthContext } from '../../api/Auth';
 import app, { signInWithGoogle } from '../../api/Firebase';
 import image from '../../assets/Index';
 
-const Login = ({ history }) => {
-  const handleLogin = useCallback(
-    async event => {
-      event.preventDefault();
-      const { email, password } = event.target.elements;
-      try {
-        await app
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
-        history.push('/');
-      } catch (error) {
-        console.log(error);
-      }
-    },
-    [history],
-  );
+function Login() {
+  const handleLogin = useCallback(async event => {
+    event.preventDefault();
+    const { email, password } = event.target.elements;
+    try {
+      await app.auth().signInWithEmailAndPassword(email.value, password.value);
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/" />;
+    return <Navigate to="/" />;
   }
 
   return (
@@ -72,6 +66,6 @@ const Login = ({ history }) => {
       Dont have an account? <Link to="/signup">Sign Up</Link>
     </div>
   );
-};
+}
 
-export default withRouter(Login);
+export default Login;

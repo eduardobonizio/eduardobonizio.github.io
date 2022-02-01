@@ -1,11 +1,11 @@
 import React, { useCallback } from 'react';
-import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import app, { signInWithGoogle } from '../../api/Firebase';
 import image from '../../assets/Index';
 
-const SignUp = ({ history }) => {
+function SignUp({ history }) {
+  const navigate = useNavigate();
   const handleSignUp = useCallback(
     async event => {
       event.preventDefault();
@@ -14,7 +14,7 @@ const SignUp = ({ history }) => {
         await app
           .auth()
           .createUserWithEmailAndPassword(email.value, password.value);
-        history.push('/');
+        navigate('/');
       } catch (error) {
         console.log(error);
       }
@@ -69,6 +69,6 @@ const SignUp = ({ history }) => {
       </div>
     </div>
   );
-};
+}
 
-export default withRouter(SignUp);
+export default SignUp;

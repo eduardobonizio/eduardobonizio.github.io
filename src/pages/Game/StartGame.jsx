@@ -1,8 +1,8 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable no-unused-vars */
 /* eslint-disable more/no-window */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router';
 import { Fade } from 'reactstrap';
 
 import * as api from '../../api/index';
@@ -11,7 +11,6 @@ import { getFirstMissingInSequence } from '../../utils/Index';
 import QuestionCard from './QuestionCard';
 
 export default function StartGame() {
-  const history = useHistory();
   const dispatch = useDispatch();
   const gameConfig = useSelector(state => state.gameConfig);
   const [card, setCard] = useState(null);

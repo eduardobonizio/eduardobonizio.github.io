@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink as RRNavLink, Redirect, useHistory } from 'react-router-dom';
+import { NavLink as RRNavLink, Redirect } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -22,10 +22,9 @@ import {
 
 import app from '../../api/Firebase';
 
-const NavBar = () => {
+function NavBar() {
   const globalUser = useSelector(state => state.globalUser);
   const [isOpen, setIsOpen] = useState(false);
-  const history = useHistory();
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -59,7 +58,7 @@ const NavBar = () => {
               <DropdownToggle nav caret>
                 Guias
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem
                   onClick={() => isOpen && toggle()}
                   tag={RRNavLink}
@@ -98,6 +97,6 @@ const NavBar = () => {
       </div>
     </Navbar>
   );
-};
+}
 
 export default NavBar;

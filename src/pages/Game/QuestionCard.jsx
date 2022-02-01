@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable no-unused-expressions */
 import React, { useState } from 'react';
 import {
@@ -15,7 +16,7 @@ import {
   // CustomInput,
 } from 'reactstrap';
 
-const QuestionCard = prop => {
+function QuestionCard(prop) {
   const [selectedOption, setSelectedOption] = useState();
   const [answered, setAnswered] = useState(false);
   const {
@@ -86,6 +87,6 @@ const QuestionCard = prop => {
       </CardBody>
     </Card>
   );
-};
+}
 
 export default QuestionCard;
