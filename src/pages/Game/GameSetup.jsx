@@ -1,15 +1,16 @@
 /* eslint-disable react/jsx-no-bind */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink as RRNavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import * as userSetup from '../../store/actions/gameConfig.actions';
 
 export default function GameSetup() {
+  const navigate = useNavigate();
   const gameConfig = useSelector(state => state.gameConfig);
   const dispatch = useDispatch();
   const [user, setUser] = useState(gameConfig && gameConfig.user);
-  const [theme, setTheme] = useState();
+  const [theme, setTheme] = useState('Enfermagem');
 
   function updateUser() {
     const hasScore = gameConfig && gameConfig.score ? gameConfig.score : 0;
@@ -25,6 +26,7 @@ export default function GameSetup() {
     if (!user || !theme) return;
     localStorage.setItem('userConfig', JSON.stringify(userOptions));
     dispatch(userSetup.newUser(userOptions));
+    navigate('/game/start');
   }
   return (
     <div className="container d-flex justify-content-center">
@@ -49,24 +51,16 @@ export default function GameSetup() {
             type="select"
             name="theme"
             id="temeSelection"
-            onChange={e => setTheme(e.target.value)}
+            onChange={e => {
+              setTheme(e.target.value);
+            }}
           >
-            <option />
             <option>Enfermagem</option>
           </select>
         </label>
-        {user && theme ? (
-          <button
-            type="button"
-            onClick={updateUser}
-            tag={RRNavLink}
-            to="/game/start"
-          >
-            Iniciar
-          </button>
-        ) : (
-          <button type="button">Iniciar</button>
-        )}
+        <button type="button" onClick={updateUser}>
+          Iniciar
+        </button>
       </form>
     </div>
   );
