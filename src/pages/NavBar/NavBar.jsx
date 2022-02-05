@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -7,8 +6,6 @@ import app from '../../api/Firebase';
 
 function NavBar() {
   const globalUser = useSelector(state => state.globalUser);
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div className="navbar navbar-expand-md navbar-dark bg-dark" id="navbar">
@@ -30,28 +27,28 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbar-itens">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="/game" className="nav-link">
+              <Link to="/game" className="nav-link">
                 Quizz
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/30-dias-css" className="nav-link">
+              <Link to="/30-dias-css" className="nav-link">
                 Desafio CSS
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/github-pages-react" className="nav-link">
+              <Link to="/github-pages-react" className="nav-link">
                 Github pages com react
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="navbar-nav">
             {globalUser && (
               <>
                 <li className="nav-item">
-                  <a href="/" className="nav-link">
+                  <Link to="/" className="nav-link">
                     <div>{globalUser.displayName}</div>
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <img
