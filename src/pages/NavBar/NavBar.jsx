@@ -58,13 +58,10 @@ function NavBar() {
                 </li>
                 <li className="nav-item">
                   <button
-                    className="nav-link"
                     type="button"
+                    className="nav-link btn btn-secondary"
                     onClick={() => {
                       app.auth().signOut();
-                    }}
-                    style={{
-                      maxHeight: '40px',
                     }}
                   >
                     Logout
