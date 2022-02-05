@@ -8,8 +8,10 @@
 }
 /*# sourceMappingURL=App.css.map */
 
-#navbar-itens {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+@media screen and (min-width: 768px) {
+  #navbar-itens {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
