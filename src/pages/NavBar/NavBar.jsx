@@ -8,7 +8,10 @@ function NavBar() {
   const globalUser = useSelector(state => state.globalUser);
 
   return (
-    <div className="navbar navbar-expand-md navbar-dark bg-dark" id="navbar">
+    <div
+      className="navbar navbar-expand-md navbar-dark bg-dark mb-3"
+      id="navbar"
+    >
       <div className="container">
         <Link className="navbar-brand" to="/">
           Home
@@ -27,7 +30,7 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbar-itens">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/game" className="nav-link">
+              <Link to="/quizz" className="nav-link">
                 Quizz
               </Link>
             </li>
