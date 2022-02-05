@@ -11,8 +11,8 @@ function NavBar() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
+    <div className="navbar navbar-expand-md navbar-dark bg-dark" id="navbar">
+      <div className="container py-3">
         <Link className="navbar-brand" to="/">
           Home
         </Link>
@@ -28,39 +28,56 @@ function NavBar() {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbar-itens">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <a href="/game" className="nav-item">
-              Quizz
-            </a>
-            <a href="/30-dias-css" className="nav-item">
-              Desafio CSS
-            </a>
-            <a href="/github-pages-react" className="nav-item">
-              Github pages com react
-            </a>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a href="/game" className="nav-link">
+                Quizz
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/30-dias-css" className="nav-link">
+                Desafio CSS
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/github-pages-react" className="nav-link">
+                Github pages com react
+              </a>
+            </li>
+          </ul>
+          <ul className="navbar-nav">
             {globalUser && (
               <>
-                <a href="/">
-                  <div>{globalUser.displayName}</div>
-                </a>
-                <img
-                  src={globalUser.photoURL}
-                  alt="User"
-                  className="ml-3"
-                  style={{
-                    maxHeight: '40px',
-                    maxWidth: '40px',
-                    borderRadius: '50%',
-                  }}
-                />
-                <button
-                  type="button"
-                  onClick={() => {
-                    app.auth().signOut();
-                  }}
-                >
-                  Logout
-                </button>
+                <li className="nav-item">
+                  <a href="/" className="nav-link">
+                    <div>{globalUser.displayName}</div>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <img
+                    src={globalUser.photoURL}
+                    alt="User"
+                    style={{
+                      maxHeight: '40px',
+                      borderRadius: '50%',
+                    }}
+                    className="nav-link"
+                  />
+                </li>
+                <li className="nav-item">
+                  <button
+                    className="nav-link"
+                    type="button"
+                    onClick={() => {
+                      app.auth().signOut();
+                    }}
+                    style={{
+                      maxHeight: '40px',
+                    }}
+                  >
+                    Logout
+                  </button>
+                </li>
               </>
             )}
           </ul>
