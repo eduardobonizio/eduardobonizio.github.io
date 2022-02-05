@@ -3,18 +3,20 @@ import React, { useState } from 'react';
 function QuestionCard(prop) {
   const [selectedOption, setSelectedOption] = useState();
   const [answered, setAnswered] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+
   const {
     question: { question, theme, options, id },
     answer,
     newCard,
   } = prop;
-  function mapOptions() {
+  function generateOptions() {
     return options.map((e, i) => {
       const newKey = id + i;
       return (
         <button
           type="button"
-          className="option"
+          className="option btn btn-info mb-1"
           style={{ whiteSpace: 'pre-line' }}
           color="secondary"
           size="lg"
@@ -38,8 +40,17 @@ function QuestionCard(prop) {
     });
   }
 
-  function handleClick() {
-    if (!selectedOption) return;
+  function answerQuestion() {
+    if (!selectedOption) {
+      const FIVE_SECONDS = 5000;
+      if (!showAlert) {
+        setShowAlert(true);
+        setTimeout(() => {
+          setShowAlert(false);
+        }, FIVE_SECONDS);
+      }
+      return;
+    }
     if (!answered) {
       answer(selectedOption, id);
     }
@@ -53,19 +64,26 @@ function QuestionCard(prop) {
 
   return (
     <div className="card">
+      {showAlert && (
+        <div className="alert alert-warning sticky-top" role="alert">
+          Selecione uma das opções
+        </div>
+      )}
       <div className="card-body">
         <h5 className="card-title mb-2">Tema: {theme}</h5>
         <p className="card-text">{question}</p>
 
-        <form>
-          <div className="mt-2 mb-1">{mapOptions()}</div>
-        </form>
+        <form className="d-flex flex-column">{generateOptions()}</form>
         <div className="d-flex justify-content-around flex-wrap">
-          <button type="button" disabled>
+          <button type="button" className="btn btn-success" disabled>
             Curtir
           </button>
           {/* <Button disabled>Sugerir correção</Button> */}
-          <button type="button" onClick={handleClick}>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={answerQuestion}
+          >
             {answered ? 'Próxima pergunta' : 'Confirmar'}
           </button>
         </div>
