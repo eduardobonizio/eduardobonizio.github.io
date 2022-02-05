@@ -34,10 +34,32 @@ function NavBar() {
                 Quiz
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/kakele" className="nav-link">
+            <li className="nav-item dropdown">
+              <Link
+                to="/kakele"
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Kakele
               </Link>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <Link className="dropdown-item" to="/kakele/set-maker">
+                    Criador de set
+                  </Link>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/kakele/ore-calculator">
+                    Calculadora de minérios
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
           <ul className="navbar-nav">
