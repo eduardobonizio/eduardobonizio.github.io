@@ -32,13 +32,8 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/30-dias-css" className="nav-link">
-                Desafio CSS
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/github-pages-react" className="nav-link">
-                Github pages com react
+              <Link to="/kakele" className="nav-link">
+                Kakele
               </Link>
             </li>
           </ul>
