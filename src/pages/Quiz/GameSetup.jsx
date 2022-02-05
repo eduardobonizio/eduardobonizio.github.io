@@ -26,7 +26,7 @@ export default function GameSetup() {
     if (!user || !theme) return;
     localStorage.setItem('userConfig', JSON.stringify(userOptions));
     dispatch(userSetup.newUser(userOptions));
-    navigate('/game/start');
+    navigate('/quiz/start');
   }
   return (
     <div className="container d-flex justify-content-center">

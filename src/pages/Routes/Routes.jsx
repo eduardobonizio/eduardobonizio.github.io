@@ -2,9 +2,9 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import PrivateRoute from '../../api/PrivateRoute';
-import GameSetup from '../Game/GameSetup';
-import StartGame from '../Game/StartGame';
 import Home from '../Home/Home';
+import GameSetup from '../Quiz/GameSetup';
+import StartGame from '../Quiz/StartGame';
 import Login from '../UserControll/Login';
 import SignUp from '../UserControll/SignUp';
 
@@ -16,7 +16,7 @@ export default function Rotas() {
       <Route path="/signup" element={<SignUp />} />
 
       <Route
-        path="/quizz"
+        path="/quiz"
         element={
           <PrivateRoute>
             <GameSetup />
@@ -25,7 +25,7 @@ export default function Rotas() {
       />
 
       <Route
-        path="/quizz/start"
+        path="/quiz/start"
         element={
           <PrivateRoute>
             <StartGame />
