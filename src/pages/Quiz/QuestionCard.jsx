@@ -42,7 +42,7 @@ function QuestionCard(prop) {
 
   function answerQuestion() {
     if (!selectedOption) {
-      const FIVE_SECONDS = 500000;
+      const FIVE_SECONDS = 3000;
       if (!showAlert) {
         setShowAlert(true);
         setTimeout(() => {
