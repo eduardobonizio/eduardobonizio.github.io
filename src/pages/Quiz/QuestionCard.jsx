@@ -36,6 +36,7 @@ function QuestionCard(prop) {
     allOptions.forEach(e => {
       e.classList.remove('btn-danger');
       e.classList.remove('btn-success');
+      e.classList.add('btn-light');
       e.disabled = false;
     });
   }
