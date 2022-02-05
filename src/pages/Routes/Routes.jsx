@@ -16,7 +16,7 @@ export default function Rotas() {
       <Route path="/signup" element={<SignUp />} />
 
       <Route
-        path="/game"
+        path="/quizz"
         element={
           <PrivateRoute>
             <GameSetup />
@@ -25,7 +25,7 @@ export default function Rotas() {
       />
 
       <Route
-        path="/game/start"
+        path="/quizz/start"
         element={
           <PrivateRoute>
             <StartGame />
