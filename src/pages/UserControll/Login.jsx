@@ -19,7 +19,7 @@ function Login() {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Navigate to="/" />;
+    return <Navigate to="/game" />;
   }
 
   return (
