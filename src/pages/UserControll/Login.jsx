@@ -1,16 +1,17 @@
 import React, { useCallback, useContext, useState } from 'react';
-import { Navigate, Link } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 import { AuthContext } from '../../api/Auth';
 import app, { signInWithGoogle } from '../../api/Firebase';
 import image from '../../assets/Index';
 
 function Login() {
+  const navigate = useNavigate();
   const [showAlert, setShowAlert] = useState(false);
 
   const handleLogin = useCallback(async event => {
     event.preventDefault();
-    const TENSECONDS = 1000;
+    const TENSECONDS = 10000;
     const { email, password } = event.target.elements;
     try {
       await app.auth().signInWithEmailAndPassword(email.value, password.value);
@@ -24,6 +25,8 @@ function Login() {
     }
   });
 
+  const goToRegisterPage = () => navigate('/signup');
+
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
@@ -31,38 +34,40 @@ function Login() {
   }
 
   return (
-    <div className="container d-flex flex-column align-items-center">
+    <div className="container d-flex flex-column align-items-center input-groups">
       <h1>Fazer Login</h1>
       <form onSubmit={handleLogin} className="d-flex flex-column">
-        <label htmlFor="email" className="d-flex flex-column">
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label htmlFor="password" className="d-flex flex-column">
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
+        <input
+          type="email"
+          className="form-control mb-1"
+          placeholder="Email"
+          aria-label="Email"
+          aria-describedby="basic-addon1"
+          name="email"
+        />
+        <input
+          type="password"
+          className="form-control mb-1"
+          placeholder="Password"
+          aria-label="Password"
+          aria-describedby="basic-addon1"
+          name="password"
+        />
+        <button type="submit" className="btn btn-primary mb-1">
+          Login
+        </button>
         <button
-          type="submit"
-          style={{
-            width: '100%',
-            backgroundColor: 'transparent',
-            border: 'none',
-          }}
+          type="button"
+          className="btn btn-primary mb-1"
+          onClick={goToRegisterPage}
         >
-          Log in
+          Register
         </button>
       </form>
-      <button
-        type="submit"
-        style={{
-          width: '100%',
-          backgroundColor: 'transparent',
-          border: 'none',
-        }}
-      />
+
       <button
         type="button"
+        className="mb-1"
         style={{
           backgroundColor: 'transparent',
           border: 'none',
@@ -71,7 +76,6 @@ function Login() {
       >
         <img src={image.GoogleLoginButton} alt="Login with google" />
       </button>
-      Dont have an account? <Link to="/signup">Sign Up</Link>
       {showAlert && (
         <div className="alert alert-danger" role="alert">
           Usuário ou senha incorreta
