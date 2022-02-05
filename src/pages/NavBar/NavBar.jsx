@@ -9,7 +9,7 @@ function NavBar() {
 
   return (
     <div className="navbar navbar-expand-md navbar-dark bg-dark" id="navbar">
-      <div className="container py-3">
+      <div className="container">
         <Link className="navbar-brand" to="/">
           Home
         </Link>
