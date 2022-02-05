@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
 function QuestionCard(prop) {
@@ -10,6 +11,7 @@ function QuestionCard(prop) {
     answer,
     newCard,
   } = prop;
+
   function generateOptions() {
     return options.map((e, i) => {
       const newKey = id + i;
@@ -17,11 +19,7 @@ function QuestionCard(prop) {
         <button
           type="button"
           className="option btn btn-light mb-3"
-          style={{ whiteSpace: 'pre-line' }}
-          color="secondary"
-          size="lg"
           key={newKey}
-          block
           onClick={event => setSelectedOption(event.target)}
         >
           {e}

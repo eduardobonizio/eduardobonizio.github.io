@@ -61,7 +61,7 @@ export default function GameSetup() {
               setTheme(e.target.value);
             }}
           >
-            <option selected>Enfermagem</option>
+            <option defaultValue>Enfermagem</option>
           </select>
         </div>
 
