@@ -42,7 +42,7 @@ function QuestionCard(prop) {
 
   function answerQuestion() {
     if (!selectedOption) {
-      const FIVE_SECONDS = 5000;
+      const FIVE_SECONDS = 500000;
       if (!showAlert) {
         setShowAlert(true);
         setTimeout(() => {
@@ -65,8 +65,11 @@ function QuestionCard(prop) {
   return (
     <div className="card">
       {showAlert && (
-        <div className="alert alert-warning sticky-top" role="alert">
-          Selecione uma das opções
+        <div
+          className="alert alert-warning position-absolute start-50 translate-middle alert-fixed"
+          role="alert"
+        >
+          Escolha uma opção
         </div>
       )}
       <div className="card-body">
