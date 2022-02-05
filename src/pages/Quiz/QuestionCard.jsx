@@ -16,7 +16,7 @@ function QuestionCard(prop) {
       return (
         <button
           type="button"
-          className="option btn btn-info mb-1"
+          className="option btn btn-light mb-3"
           style={{ whiteSpace: 'pre-line' }}
           color="secondary"
           size="lg"
