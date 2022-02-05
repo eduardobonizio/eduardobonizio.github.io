@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -19,9 +20,9 @@ export function AuthProvider({ children }) {
     });
   }, []);
 
-  if (pending) {
-    return <>Loading...</>;
-  }
+  // if (pending) {
+  //   return <>Loading...</>;
+  // }
 
   return (
     <AuthContext.Provider
