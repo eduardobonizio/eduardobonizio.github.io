@@ -75,7 +75,10 @@ function SignUp({ history }) {
         <img src={image.GoogleLoginButton} alt="Login with google" />
       </button>
       {showAlert && (
-        <div className="alert alert-danger" role="alert">
+        <div
+          className="alert alert-danger position-absolute top-100 start-50 translate-middle alert-fixed"
+          role="alert"
+        >
           Usuário já cadastrado
         </div>
       )}
