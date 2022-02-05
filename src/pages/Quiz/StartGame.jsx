@@ -59,10 +59,12 @@ export default function StartGame() {
       dispatch(userSetup.updateAnswerdQuestions(answeredQuestions));
     }
     if (!rightAnswer) {
+      selectedOption.classList.remove('btn-light');
       selectedOption.classList.add('btn-danger');
     }
     allOptions.forEach(e => {
       if (e.innerText === card.correctAnswer) {
+        e.classList.remove('btn-light');
         e.classList.add('btn-success');
       }
       e.disabled = true;
