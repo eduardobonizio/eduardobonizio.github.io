@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
 
 import { AuthContext } from '../../api/Auth';
@@ -6,13 +6,21 @@ import app, { signInWithGoogle } from '../../api/Firebase';
 import image from '../../assets/Index';
 
 function Login() {
+  const [showAlert, setShowAlert] = useState(false);
+
   const handleLogin = useCallback(async event => {
     event.preventDefault();
+    const TENSECONDS = 1000;
     const { email, password } = event.target.elements;
     try {
       await app.auth().signInWithEmailAndPassword(email.value, password.value);
     } catch (error) {
-      console.log(error);
+      if (!showAlert) {
+        setShowAlert(true);
+        setTimeout(() => {
+          setShowAlert(false);
+        }, TENSECONDS);
+      }
     }
   });
 
@@ -24,7 +32,7 @@ function Login() {
 
   return (
     <div className="container d-flex flex-column align-items-center">
-      <h1>Log in</h1>
+      <h1>Fazer Login</h1>
       <form onSubmit={handleLogin} className="d-flex flex-column">
         <label htmlFor="email" className="d-flex flex-column">
           Email
@@ -64,6 +72,11 @@ function Login() {
         <img src={image.GoogleLoginButton} alt="Login with google" />
       </button>
       Dont have an account? <Link to="/signup">Sign Up</Link>
+      {showAlert && (
+        <div className="alert alert-danger" role="alert">
+          Usuário ou senha incorreta
+        </div>
+      )}
     </div>
   );
 }
