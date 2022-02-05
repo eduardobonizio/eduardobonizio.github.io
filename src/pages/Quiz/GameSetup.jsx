@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-no-bind */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -30,35 +31,41 @@ export default function GameSetup() {
   }
   return (
     <div className="container d-flex justify-content-center">
-      <form>
-        <label htmlFor="user">
-          Nome
+      <form className="d-flex flex-column">
+        <div className="input-group mb-1">
+          <span className="input-group-text" id="basic-addon1">
+            Apelido
+          </span>
           <input
             type="text"
-            name="user"
-            id="user"
+            className="form-control"
             placeholder={
               gameConfig && gameConfig.user
                 ? gameConfig.user
-                : 'Seu nome ou nickname'
+                : 'Seu nome ou apelido'
             }
+            aria-label="Email"
+            aria-describedby="basic-addon1"
+            name="user"
             onChange={e => setUser(e.target.value)}
           />
-        </label>
-        <label htmlFor="temeSelection">
-          Tema
+        </div>
+        <div className="input-group mb-1">
+          <label htmlFor="temeSelection" className="input-group-text">
+            Tema
+          </label>
           <select
-            type="select"
-            name="theme"
+            className="form-select"
             id="temeSelection"
             onChange={e => {
               setTheme(e.target.value);
             }}
           >
-            <option>Enfermagem</option>
+            <option selected>Enfermagem</option>
           </select>
-        </label>
-        <button type="button" onClick={updateUser}>
+        </div>
+
+        <button type="button" className="btn btn-primary" onClick={updateUser}>
           Iniciar
         </button>
       </form>
