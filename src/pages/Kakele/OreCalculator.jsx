@@ -34,6 +34,7 @@ export default function OreCalculator() {
           setShowAlert(false);
         }, FIVE_SECONDS);
       }
+      setItensNecessarios();
       return;
     }
     const total = {
