@@ -27,11 +27,29 @@ export default function SetMaker() {
       Haste: 0,
     };
     const onlySlotItens = itemList.filter(item => item.Slot === slot);
-    onlySlotItens.forEach(item => {
+    const somenteElmentoRequisitado = onlySlotItens.filter(
+      item => item.Energy === elemento,
+    );
+    somenteElmentoRequisitado.forEach(item => {
       if (item[status] > bestItem[status]) {
         bestItem = item;
       }
     });
+    if (bestItem.Level === 0) {
+      let usarOutroStatus;
+      if (slot === 'Weapon') {
+        usarOutroStatus = 'Attack';
+      } else if (slot === 'Necklace') {
+        usarOutroStatus = 'Magic';
+      } else {
+        usarOutroStatus = 'Armor';
+      }
+      somenteElmentoRequisitado.forEach(item => {
+        if (item[usarOutroStatus] > bestItem[usarOutroStatus]) {
+          bestItem = item;
+        }
+      });
+    }
     if (bestItem.Level === 0) {
       let usarOutroStatus;
       if (slot === 'Weapon') {
