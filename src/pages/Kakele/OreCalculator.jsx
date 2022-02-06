@@ -118,7 +118,7 @@ export default function OreCalculator() {
           className="btn btn-light mb-2"
           onClick={calculateOreQuantityAndPrice}
         >
-          Calc
+          Calcular
         </button>
         {itensNecessarios && (
           <div>
