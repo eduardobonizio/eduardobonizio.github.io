@@ -1,31 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.3fc01d2e.chunk.css",
-    "main.js": "/static/js/main.92833a60.chunk.js",
-    "main.js.map": "/static/js/main.92833a60.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a8f42fe5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a8f42fe5.js.map",
-    "static/js/2.765f61d2.chunk.js": "/static/js/2.765f61d2.chunk.js",
-    "static/js/2.765f61d2.chunk.js.map": "/static/js/2.765f61d2.chunk.js.map",
+    "main.css": "/static/css/main.b45f894a.css",
+    "main.js": "/static/js/main.9d33c1d3.js",
+    "static/media/SettingsDoRepositorio.gif": "/static/media/SettingsDoRepositorio.1b01995fe9e1c475c863.gif",
+    "static/media/Html404.png": "/static/media/Html404.d289453643868c3361db.png",
+    "static/media/IndexHtml.png": "/static/media/IndexHtml.a8b1f75ac62daeb0ba28.png",
+    "static/media/IndexJs.png": "/static/media/IndexJs.a500db598ff2e5978e57.png",
+    "static/media/PackageJson.png": "/static/media/PackageJson.41cc168187d24eac92be.png",
+    "static/media/Redirecting.gif": "/static/media/Redirecting.73e73be978a8efa172ba.gif",
+    "static/media/GitHubNewRepo.png": "/static/media/GitHubNewRepo.0fdd9f93ac17e8b61b5a.png",
+    "static/media/RepoSSH.png": "/static/media/RepoSSH.d0b3b93942b3c9df9c76.png",
+    "static/media/FolderStructure.png": "/static/media/FolderStructure.2cf3bc3584171c271ffd.png",
+    "static/media/GhPagesBranch.png": "/static/media/GhPagesBranch.379bfdee59291d7713d0.png",
+    "static/media/HomePagePackageJson.png": "/static/media/HomePagePackageJson.275ab571100e05daec3e.png",
     "index.html": "/index.html",
-    "static/css/main.3fc01d2e.chunk.css.map": "/static/css/main.3fc01d2e.chunk.css.map",
-    "static/js/2.765f61d2.chunk.js.LICENSE.txt": "/static/js/2.765f61d2.chunk.js.LICENSE.txt",
-    "static/media/FolderStructure.2cf3bc35.png": "/static/media/FolderStructure.2cf3bc35.png",
-    "static/media/GhPagesBranch.379bfdee.png": "/static/media/GhPagesBranch.379bfdee.png",
-    "static/media/GitHubNewRepo.0fdd9f93.png": "/static/media/GitHubNewRepo.0fdd9f93.png",
-    "static/media/HomePagePackageJson.275ab571.png": "/static/media/HomePagePackageJson.275ab571.png",
-    "static/media/Html404.d2894536.png": "/static/media/Html404.d2894536.png",
-    "static/media/IndexHtml.a8b1f75a.png": "/static/media/IndexHtml.a8b1f75a.png",
-    "static/media/IndexJs.a500db59.png": "/static/media/IndexJs.a500db59.png",
-    "static/media/PackageJson.41cc1681.png": "/static/media/PackageJson.41cc1681.png",
-    "static/media/Redirecting.73e73be9.gif": "/static/media/Redirecting.73e73be9.gif",
-    "static/media/RepoSSH.d0b3b939.png": "/static/media/RepoSSH.d0b3b939.png",
-    "static/media/SettingsDoRepositorio.1b01995f.gif": "/static/media/SettingsDoRepositorio.1b01995f.gif"
+    "main.b45f894a.css.map": "/static/css/main.b45f894a.css.map",
+    "main.9d33c1d3.js.map": "/static/js/main.9d33c1d3.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.a8f42fe5.js",
-    "static/js/2.765f61d2.chunk.js",
-    "static/css/main.3fc01d2e.chunk.css",
-    "static/js/main.92833a60.chunk.js"
+    "static/css/main.b45f894a.css",
+    "static/js/main.9d33c1d3.js"
   ]
 }
