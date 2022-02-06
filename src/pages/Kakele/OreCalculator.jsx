@@ -23,11 +23,17 @@ export default function OreCalculator() {
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(5);
   const [itensNecessarios, setItensNecessarios] = useState();
+  const [showAlert, setShowAlert] = useState(false);
 
   const calculateOreQuantityAndPrice = () => {
     if (startUpgradeLvl >= finishUpgradeLvl) {
-      console.log(startUpgradeLvl, finishUpgradeLvl);
-      console.log('O valor inicial não pode ser menor ou igual ao final');
+      const FIVE_SECONDS = 5000;
+      if (!showAlert) {
+        setShowAlert(true);
+        setTimeout(() => {
+          setShowAlert(false);
+        }, FIVE_SECONDS);
+      }
       return;
     }
     const total = {
@@ -51,6 +57,14 @@ export default function OreCalculator() {
 
   return (
     <div className="container d-flex justify-content-center">
+      {showAlert && (
+        <div
+          className="alert alert-warning position-absolute start-50 translate-middle alert-fixed"
+          role="alert"
+        >
+          O upgrade desejado tem que ser maior que o upgrade atual
+        </div>
+      )}
       <div className="d-flex flex-column">
         <span className="mb-2">
           Selecione o upgrade atual e o upgrade desejado
