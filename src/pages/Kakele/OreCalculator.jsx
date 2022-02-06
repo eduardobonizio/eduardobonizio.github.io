@@ -167,7 +167,7 @@ export default function OreCalculator() {
               htmlFor="adicionarPrecoMinerios"
               className="input-group-text"
             >
-              Vou comprar os minérios, não precisa preencher todos
+              Vou comprar os minérios
             </label>
           </div>
         </div>
