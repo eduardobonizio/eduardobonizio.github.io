@@ -1,3 +1,4 @@
+/* eslint-disable immutable/no-let */
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-param-reassign */
@@ -9,38 +10,102 @@ export default function SetMaker() {
   const [classe, setClasse] = useState('Alchemist');
   const [elemento, setElemento] = useState('Light');
   const [level, setLevel] = useState(1);
+  const [statusPrincipal, setStatusPrincipal] = useState('Armor');
 
-  const selecionarMelhorArmadura = listaDeArmaduras => {
-    console.log(listaDeArmaduras);
+  const filtraMelhoreItem = (itemList, status, slot) => {
+    let bestItem = {
+      Equipment: '',
+      Level: 0,
+      Vocation: 'All',
+      Energy: 'None',
+      Armor: 0,
+      Value: 0,
+      Sources: '',
+      Slot: '',
+      Attack: 0,
+      Magic: 0,
+      Haste: 0,
+    };
+    const onlySlotItens = itemList.filter(item => item.Slot === slot);
+    onlySlotItens.forEach(item => {
+      if (item[status] > bestItem[status]) {
+        bestItem = item;
+      }
+    });
+    // if (bestItem.Level === 0) {
+    //   const pegarMelhorItem = itemList.filter(item => item.Slot === slot);
+    //   onlySlotItens.forEach(item => {
+    //     if (item[status] > bestItem[status]) {
+    //       bestItem = item;
+    //     }
+    //   });
+    // }
+    return bestItem;
   };
-
-  const selecionarMelhorArma = listaDeArmas => {
-    console.log(listaDeArmas);
-  };
-
-  const setParaGuerreiro = () => {};
-  const setParaMago = () => {};
-  const setParaArqueiro = () => {};
-  const setParaFurioso = () => {};
-  const setParaAlquemista = () => {};
 
   const gerarSetParaClasse = (listaDeArmas, listaDeEquipamentos) => {
-    if (classe === 'Alchemist') {
-      return 'Alchemist';
-    }
-    if (classe === 'Berserker') {
-      return 'Berserker';
-    }
-    if (classe === 'Warrior') {
-      return 'Warrior';
-    }
-    if (classe === 'Hunter') {
-      return 'Hunter';
-    }
-    if (classe === 'Mage') {
-      return 'Mage';
-    }
-    return 'Classe não encontrada';
+    const melhorAmuleto = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Necklace',
+    );
+    const melhorElmo = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Helmet',
+    );
+    const melhorAnel = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Ring',
+    );
+    const melhorArma = filtraMelhoreItem(
+      listaDeArmas,
+      statusPrincipal,
+      'Weapon',
+    );
+    const melhorArmadura = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Armor',
+    );
+    const melhorEscudo = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Shield',
+    );
+    const melhorLivro = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Book',
+    );
+    const melhorAcessorio = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Accessorie',
+    );
+    const melhorCalca = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Leg',
+    );
+    const melhorBota = filtraMelhoreItem(
+      listaDeEquipamentos,
+      statusPrincipal,
+      'Shoe',
+    );
+    console.log(
+      melhorAmuleto,
+      melhorElmo,
+      melhorAnel,
+      melhorArma,
+      melhorArmadura,
+      melhorEscudo,
+      melhorLivro,
+      melhorAcessorio,
+      melhorCalca,
+      melhorBota,
+    );
   };
 
   const filtrarItens = listDeItens => {
@@ -57,7 +122,6 @@ export default function SetMaker() {
     const listaDeArmas = filtrarItens(weapons);
     const listaDeEquipamentos = filtrarItens(equipments);
     const set = gerarSetParaClasse(listaDeArmas, listaDeEquipamentos);
-    console.log(set);
   };
 
   return (
@@ -98,7 +162,7 @@ export default function SetMaker() {
         </div>
         <div className="input-group mb-2">
           <label className="input-group-text" htmlFor="elemento-do-set">
-            Classe do personagem
+            Elemento
           </label>
           <select
             className="form-select"
@@ -110,6 +174,22 @@ export default function SetMaker() {
             </option>
             <option value="Dark">Trevas</option>
             <option value="Nature">Natureza</option>
+          </select>
+        </div>
+        <div className="input-group mb-2">
+          <label className="input-group-text" htmlFor="status-principal">
+            Status principal
+          </label>
+          <select
+            className="form-select"
+            id="status-principal"
+            onChange={e => setStatusPrincipal(e.target.value)}
+          >
+            <option defaultValue value="Armor">
+              Amadura
+            </option>
+            <option value="Magic">Magia</option>
+            <option value="Attack">Ataque</option>
           </select>
         </div>
         <button type="button" className="btn btn-light mb-2" onClick={gerarSet}>
