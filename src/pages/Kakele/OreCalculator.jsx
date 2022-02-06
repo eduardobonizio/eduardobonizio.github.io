@@ -153,29 +153,26 @@ export default function OreCalculator() {
             <option value="65">65</option>
             <option value="70">70</option>
           </select>
-          <div className="input-group mb-2 mt-2">
-            <div className="input-group-text">
-              <input
-                className="form-check-input mt-0"
-                type="checkbox"
-                id="adicionarPrecoMinerios"
-                aria-label="Checkbox for following text input"
-                onChange={() => setShowOresPricesFiels(!showOresPricesFiels)}
-              />
-            </div>
-            <label
-              htmlFor="adicionarPrecoMinerios"
-              className="input-group-text"
-            >
-              Vou comprar os minérios
-            </label>
+        </div>
+        <div className="input-group mb-2">
+          <div className="input-group-text">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              id="adicionarPrecoMinerios"
+              aria-label="Checkbox for following text input"
+              onChange={() => setShowOresPricesFiels(!showOresPricesFiels)}
+            />
           </div>
+          <label htmlFor="adicionarPrecoMinerios" className="input-group-text">
+            Vou comprar os minérios
+          </label>
         </div>
         {showOresPricesFiels && (
           <div className="d-flex flex-column">
             <div className="input-group mb-2">
               <span className="input-group-text" id="preco-cobre-bruto">
-                Cobre Bruto
+                Preço Cobre Bruto
               </span>
               <input
                 type="number"
@@ -194,7 +191,7 @@ export default function OreCalculator() {
             </div>
             <div className="input-group mb-2">
               <span className="input-group-text" id="preco-estanho-bruto">
-                Estanho Bruto
+                Preço Estanho Bruto
               </span>
               <input
                 type="number"
@@ -213,7 +210,7 @@ export default function OreCalculator() {
             </div>
             <div className="input-group mb-2">
               <span className="input-group-text" id="preco-prata-bruta">
-                Prata Bruta
+                Preço Prata Bruta
               </span>
               <input
                 type="number"
@@ -232,7 +229,7 @@ export default function OreCalculator() {
             </div>
             <div className="input-group mb-2">
               <span className="input-group-text" id="preco-ferro-bruto">
-                Ferro Bruto
+                Preço Ferro Bruto
               </span>
               <input
                 type="number"
@@ -251,7 +248,7 @@ export default function OreCalculator() {
             </div>
             <div className="input-group mb-2">
               <span className="input-group-text" id="preco-ouro-bruto">
-                Ouro Bruto
+                Preço Ouro Bruto
               </span>
               <input
                 type="number"
