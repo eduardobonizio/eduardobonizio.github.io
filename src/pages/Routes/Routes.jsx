@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import PrivateRoute from '../../api/PrivateRoute';
 import Home from '../Home/Home';
-import Kakele from '../Kakele/Kakele.';
+import Kakele from '../Kakele/Kakele';
 import OreCalculator from '../Kakele/OreCalculator';
 import SetMaker from '../Kakele/SetMaker';
 import GameSetup from '../Quiz/GameSetup';
