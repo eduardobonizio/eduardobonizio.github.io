@@ -1,3 +1,7 @@
+/* eslint-disable prefer-const */
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable immutable/no-let */
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -11,6 +15,8 @@ export default function SetMaker() {
   const [elemento, setElemento] = useState('Light');
   const [level, setLevel] = useState(1);
   const [statusPrincipal, setStatusPrincipal] = useState('Armor');
+  const [ignorarElemento, setIgnorarElemento] = useState(false);
+  const [exibirSet, setExibirSet] = useState(false);
 
   const filtraMelhoresEquipamentos = (itemList, status, slot) => {
     let bestItem = {
@@ -26,30 +32,46 @@ export default function SetMaker() {
       Magic: 0,
       Haste: 0,
     };
+
+    if (classe === 'Berserker' && (slot === 'Shield' || slot === 'Book')) {
+      return bestItem;
+    }
     const onlySlotItens = itemList.filter(item => item.Slot === slot);
-    const somenteElmentoRequisitado = onlySlotItens.filter(
-      item => item.Energy === elemento,
-    );
-    somenteElmentoRequisitado.forEach(item => {
-      if (item[status] > bestItem[status]) {
-        bestItem = item;
-      }
-    });
-    if (bestItem.Level === 0) {
-      let usarOutroStatus;
-      if (slot === 'Weapon') {
-        usarOutroStatus = 'Attack';
-      } else if (slot === 'Necklace') {
-        usarOutroStatus = 'Magic';
-      } else {
-        usarOutroStatus = 'Armor';
-      }
+
+    if (!ignorarElemento) {
+      const somenteElmentoRequisitado = onlySlotItens.filter(
+        item => item.Energy === elemento,
+      );
       somenteElmentoRequisitado.forEach(item => {
-        if (item[usarOutroStatus] > bestItem[usarOutroStatus]) {
+        if (item[status] > bestItem[status]) {
+          bestItem = item;
+        }
+      });
+      if (bestItem.Level === 0) {
+        let usarOutroStatus;
+        if (slot === 'Weapon') {
+          usarOutroStatus = 'Attack';
+        } else if (slot === 'Necklace') {
+          usarOutroStatus = 'Magic';
+        } else {
+          usarOutroStatus = 'Armor';
+        }
+        somenteElmentoRequisitado.forEach(item => {
+          if (item[usarOutroStatus] > bestItem[usarOutroStatus]) {
+            bestItem = item;
+          }
+        });
+      }
+    }
+
+    if (ignorarElemento) {
+      onlySlotItens.forEach(item => {
+        if (item[status] > bestItem[status]) {
           bestItem = item;
         }
       });
     }
+
     if (bestItem.Level === 0) {
       let usarOutroStatus;
       if (slot === 'Weapon') {
@@ -95,7 +117,8 @@ export default function SetMaker() {
         slot,
       );
     });
-    console.log(bestItens);
+
+    setExibirSet(bestItens);
   };
 
   const filtrarItens = listaDeItens => {
@@ -113,8 +136,25 @@ export default function SetMaker() {
     const set = gerarSetParaClasse(listaDeArmas, listaDeEquipamentos);
   };
 
+  const verificarElemento = itens => {
+    console.log(itens);
+    let luz = 0;
+    let natureza = 0;
+    let trevas = 0;
+    itens.forEach(item => {
+      if (item.Energy === 'Light') luz += 1;
+      if (item.Energy === 'Nature') natureza += 1;
+      if (item.Energy === 'Dark') trevas += 1;
+    });
+    console.log(luz, natureza, trevas);
+    if (luz >= 5 && luz > natureza) return 'Luz';
+    if (natureza >= 5 && natureza > trevas) return 'Natureza';
+    if (trevas >= 5 && trevas > luz) return 'Trevas';
+    return 'Neutro';
+  };
+
   return (
-    <div className="container d-flex justify-content-center">
+    <div className="d-flex flex-column justify-content-center align-items-center">
       <div className="d-flex flex-column">
         <h3 className="">Gerador de set</h3>
         <div className="input-group mb-2">
@@ -149,22 +189,7 @@ export default function SetMaker() {
             <option value="Mage">Mago</option>
           </select>
         </div>
-        <div className="input-group mb-2">
-          <label className="input-group-text" htmlFor="elemento-do-set">
-            Elemento
-          </label>
-          <select
-            className="form-select"
-            id="elemento-do-set"
-            onChange={e => setElemento(e.target.value)}
-          >
-            <option defaultValue value="Light">
-              Luz
-            </option>
-            <option value="Dark">Trevas</option>
-            <option value="Nature">Natureza</option>
-          </select>
-        </div>
+
         <div className="input-group mb-2">
           <label className="input-group-text" htmlFor="status-principal">
             Status principal
@@ -181,9 +206,96 @@ export default function SetMaker() {
             <option value="Attack">Ataque</option>
           </select>
         </div>
+
+        {!ignorarElemento && (
+          <div className="input-group mb-2">
+            <label className="input-group-text" htmlFor="elemento-do-set">
+              Elemento
+            </label>
+            <select
+              className="form-select"
+              id="elemento-do-set"
+              onChange={e => setElemento(e.target.value)}
+            >
+              <option defaultValue value="Light">
+                Luz
+              </option>
+              <option value="Dark">Trevas</option>
+              <option value="Nature">Natureza</option>
+            </select>
+          </div>
+        )}
+
+        <div className="input-group mb-2">
+          <div className="input-group-text">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              id="ignorar-elemento"
+              aria-label="Checkbox for following text input"
+              onChange={() => setIgnorarElemento(!ignorarElemento)}
+            />
+          </div>
+          <label htmlFor="ignorar-elemento" className="input-group-text">
+            Ignorar Elemento
+          </label>
+        </div>
         <button type="button" className="btn btn-light mb-2" onClick={gerarSet}>
           Gerar set
         </button>
+        <div>
+          <h3>Atributos do set</h3>
+          <p>
+            Armadura:{' '}
+            {exibirSet &&
+              exibirSet.reduce(
+                (anterior, proximo) => anterior + proximo.Armor,
+                0,
+              )}
+          </p>
+          <p>
+            Magia:{' '}
+            {exibirSet &&
+              exibirSet.reduce(
+                (anterior, proximo) => anterior + proximo.Magic,
+                0,
+              )}
+          </p>
+          <p>
+            Ataque:{' '}
+            {exibirSet &&
+              exibirSet.reduce(
+                (anterior, proximo) => anterior + proximo.Attack,
+                0,
+              )}
+          </p>
+          <p>Elemento: {exibirSet && verificarElemento(exibirSet)}</p>
+        </div>
+      </div>
+      <div className="container d-flex">
+        <div className="row">
+          {exibirSet &&
+            exibirSet.map((item, i) => {
+              if (item.Equipment !== '') {
+                return (
+                  <div className="col-sm-4" key={i}>
+                    <div className="card">
+                      {/* <img src="..." className="card-img-top" alt="..." /> */}
+                      <div className="card-body">
+                        <h5 className="card-title">
+                          {item.Equipment || item.Weapon}
+                        </h5>
+                        <p className="card-text">Elemento: {item.Energy}</p>
+                        <p className="card-text">Armadura: {item.Armor}</p>
+                        <p className="card-text">Magia: {item.Magic}</p>
+                        <p className="card-text">Ataque: {item.Attack}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+            })}
+        </div>
       </div>
     </div>
   );
