@@ -24,6 +24,14 @@ export default function OreCalculator() {
   const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(5);
   const [itensNecessarios, setItensNecessarios] = useState();
   const [showAlert, setShowAlert] = useState(false);
+  const [showOresPricesFiels, setShowOresPricesFiels] = useState(false);
+  const [precoMinerios, setPrecoMinerios] = useState({
+    precoCobre: 0,
+    precoEstanho: 0,
+    precoPrata: 0,
+    precoFerro: 0,
+    precoOuro: 0,
+  });
 
   const calculateOreQuantityAndPrice = () => {
     if (startUpgradeLvl >= finishUpgradeLvl) {
@@ -46,12 +54,30 @@ export default function OreCalculator() {
       kks: 0,
     };
     for (let i = startUpgradeLvl + 5; i <= finishUpgradeLvl; i += 5) {
-      total.cobre += minerios[i].cobre;
-      total.estanho += minerios[i].estanho;
-      total.prata += minerios[i].prata;
-      total.ferro += minerios[i].ferro;
-      total.ouro += minerios[i].ouro;
-      total.kks += minerios[i].kks;
+      const { cobre, estanho, prata, ferro, ouro, kks } = minerios[i];
+      const { precoCobre, precoEstanho, precoPrata, precoFerro, precoOuro } =
+        precoMinerios;
+      total.cobre += cobre;
+      total.estanho += estanho;
+      total.prata += prata;
+      total.ferro += ferro;
+      total.ouro += ouro;
+      if (showOresPricesFiels) {
+        const precoTotalCobre = precoCobre * cobre;
+        const precoTotalEstanho = precoEstanho * estanho;
+        const precoTotalPrata = precoPrata * prata;
+        const precoTotalFerro = precoFerro * ferro;
+        const precoTotalOuro = precoOuro * ouro;
+        total.kks +=
+          kks +
+          precoTotalCobre +
+          precoTotalEstanho +
+          precoTotalPrata +
+          precoTotalOuro +
+          precoTotalFerro;
+      } else {
+        total.kks += kks;
+      }
     }
     setItensNecessarios(total);
   };
@@ -127,7 +153,123 @@ export default function OreCalculator() {
             <option value="65">65</option>
             <option value="70">70</option>
           </select>
+          <div className="input-group mb-2 mt-2">
+            <div className="input-group-text">
+              <input
+                className="form-check-input mt-0"
+                type="checkbox"
+                id="adicionarPrecoMinerios"
+                aria-label="Checkbox for following text input"
+                onChange={() => setShowOresPricesFiels(!showOresPricesFiels)}
+              />
+            </div>
+            <label
+              htmlFor="adicionarPrecoMinerios"
+              className="input-group-text"
+            >
+              Vou comprar os minérios, não precisa preencher todos
+            </label>
+          </div>
         </div>
+        {showOresPricesFiels && (
+          <div className="d-flex flex-column">
+            <div className="input-group mb-2">
+              <span className="input-group-text" id="preco-cobre-bruto">
+                Cobre Bruto
+              </span>
+              <input
+                type="number"
+                className="form-control"
+                placeholder="Preço do Cobre Bruto"
+                aria-label="Preço do Cobre Bruto"
+                aria-describedby="preco-cobre-bruto"
+                value={precoMinerios.precoCobre}
+                onChange={e =>
+                  setPrecoMinerios({
+                    ...precoMinerios,
+                    precoCobre: Number(e.target.value),
+                  })
+                }
+              />
+            </div>
+            <div className="input-group mb-2">
+              <span className="input-group-text" id="preco-estanho-bruto">
+                Estanho Bruto
+              </span>
+              <input
+                type="number"
+                className="form-control"
+                placeholder="Preço do Estanho Bruto"
+                aria-label="Preço do Estanho Bruto"
+                aria-describedby="preco-estanho-bruto"
+                value={precoMinerios.precoEstanho}
+                onChange={e =>
+                  setPrecoMinerios({
+                    ...precoMinerios,
+                    precoEstanho: Number(e.target.value),
+                  })
+                }
+              />
+            </div>
+            <div className="input-group mb-2">
+              <span className="input-group-text" id="preco-prata-bruta">
+                Prata Bruta
+              </span>
+              <input
+                type="number"
+                className="form-control"
+                placeholder="Preço da Prata Bruta"
+                aria-label="Preço da Prata Bruta"
+                aria-describedby="preco-prata-bruta"
+                value={precoMinerios.precoPrata}
+                onChange={e =>
+                  setPrecoMinerios({
+                    ...precoMinerios,
+                    precoPrata: Number(e.target.value),
+                  })
+                }
+              />
+            </div>
+            <div className="input-group mb-2">
+              <span className="input-group-text" id="preco-ferro-bruto">
+                Ferro Bruto
+              </span>
+              <input
+                type="number"
+                className="form-control"
+                placeholder="Preço do Ferro Bruto"
+                aria-label="Preço do Ferro Bruto"
+                aria-describedby="preco-ferro-bruto"
+                value={precoMinerios.precoFerro}
+                onChange={e =>
+                  setPrecoMinerios({
+                    ...precoMinerios,
+                    precoFerro: Number(e.target.value),
+                  })
+                }
+              />
+            </div>
+            <div className="input-group mb-2">
+              <span className="input-group-text" id="preco-ouro-bruto">
+                Ouro Bruto
+              </span>
+              <input
+                type="number"
+                className="form-control"
+                placeholder="Preço do Ouro Bruto"
+                aria-label="Preço do Ouro Bruto"
+                aria-describedby="preco-ouro-bruto"
+                value={precoMinerios.precoOuro}
+                onChange={e =>
+                  setPrecoMinerios({
+                    ...precoMinerios,
+                    precoOuro: Number(e.target.value),
+                  })
+                }
+              />
+            </div>
+          </div>
+        )}
         <button
           type="button"
           className="btn btn-light mb-2"
