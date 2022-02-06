@@ -4011,6 +4011,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Copper Glove',
@@ -4024,6 +4025,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Static Glove',
@@ -4037,6 +4039,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Worn Glove',
@@ -4050,6 +4053,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Electrical Glove',
@@ -4063,6 +4067,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Iron Glove',
@@ -4076,6 +4081,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Forest Glove',
@@ -4090,6 +4096,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Heat Glove',
@@ -4103,6 +4110,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dark Glove',
@@ -4116,6 +4124,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Novice Gladiator Glove',
@@ -4129,6 +4138,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Arctic Glove',
@@ -4142,6 +4152,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Humanoid Octopus Glove',
@@ -4155,6 +4166,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Demon Glove',
@@ -4168,6 +4180,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Cursed Glove',
@@ -4181,6 +4194,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Nobles Glove',
@@ -4194,6 +4208,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Intermediate Gladiator Glove',
@@ -4207,6 +4222,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Hell Mage Glove',
@@ -4220,6 +4236,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Poison Beetle Glove',
@@ -4233,6 +4250,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Clan's Glove",
@@ -4247,6 +4265,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Chaos Glove',
@@ -4260,6 +4279,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Hell's Glove",
@@ -4273,6 +4293,7 @@ const weapons = [
     Sources: 'Quests: The Treasure Is Mine',
     Armor: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Justice Glove',
@@ -4286,6 +4307,7 @@ const weapons = [
     Sources: '?',
     Armor: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Lava Glove',
@@ -4299,6 +4321,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Advanced Gladiator Glove',
@@ -4312,6 +4335,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Fire Manipulator Glove',
@@ -4325,6 +4349,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Abyssal Cultist Glove',
@@ -4338,6 +4363,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Righteous Glove',
@@ -4351,6 +4377,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elven Glove',
@@ -4364,6 +4391,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Diabolus Glove',
@@ -4377,6 +4405,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Fireblaze Glove',
@@ -4390,6 +4419,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Elora's Glove",
@@ -4403,6 +4433,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elder Vampire Glove',
@@ -4417,6 +4448,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Dragon Hunters' Glove",
@@ -4430,6 +4462,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Eternal Ice Glove',
@@ -4443,6 +4476,7 @@ const weapons = [
     Sources: 'Quests: Eternal Ice Treasure',
     Armor: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Revenant Glove',
@@ -4456,6 +4490,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Reaper's Glove",
@@ -4469,6 +4504,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Celestial Glove',
@@ -4482,6 +4518,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Golden Dragon Scale Glove',
@@ -4495,6 +4532,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Chromatic Golden Dragon Scale Glove',
@@ -4508,6 +4546,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Undead Golden Dragon Scale Glove',
@@ -4521,6 +4560,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Slingshot',
@@ -4534,6 +4574,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Wooden Sword',
@@ -4547,6 +4588,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Sharp Axe',
@@ -4561,6 +4603,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Club',
@@ -4575,6 +4618,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Double Axe',
@@ -4589,6 +4633,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Halberd',
@@ -4604,6 +4649,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Morning Star',
@@ -4617,6 +4663,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Hatchet',
@@ -4630,6 +4677,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Silver Axe',
@@ -4644,6 +4692,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Specialist Axe',
@@ -4658,6 +4707,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Bielze's Mace",
@@ -4672,6 +4722,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Tribal Axe',
@@ -4686,6 +4737,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Ritual Spear',
@@ -4700,6 +4752,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dwarven Axe',
@@ -4714,6 +4767,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Golden Axe',
@@ -4728,6 +4782,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Novice Gladiator Hammer',
@@ -4742,6 +4797,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Demon Axe',
@@ -4756,6 +4812,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Crown Axe',
@@ -4770,6 +4827,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Ice Beetle Axe',
@@ -4784,6 +4842,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'War Spear',
@@ -4798,6 +4857,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Giants Club',
@@ -4812,6 +4872,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'The Winter Spear',
@@ -4826,6 +4887,7 @@ const weapons = [
     Sources: 'Monsters: Glacies, The Frost King',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Justice Axe',
@@ -4840,6 +4902,7 @@ const weapons = [
     Sources: '?',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Intermediate Gladiator Hammer',
@@ -4854,6 +4917,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Clan's Axe",
@@ -4869,6 +4933,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Frost Axe',
@@ -4883,6 +4948,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Devil's Fork",
@@ -4897,6 +4963,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Clan's Club",
@@ -4912,6 +4979,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Advanced Gladiator Hammer',
@@ -4926,6 +4994,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Tidal Bringer',
@@ -4940,6 +5009,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Inferno Fork',
@@ -4954,6 +5024,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Thunder Hammer',
@@ -4968,6 +5039,7 @@ const weapons = [
     Sources: 'Quests: Stairway to Heaven',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elven Axe',
@@ -4982,6 +5054,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Archangel Axe',
@@ -4996,6 +5069,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Devil's Scythe",
@@ -5010,6 +5084,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Elora's Axe",
@@ -5024,6 +5099,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Dragon Hunters' Hammer",
@@ -5038,6 +5114,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elder Vampire Axe',
@@ -5053,6 +5130,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Eternal Ice Axe',
@@ -5067,6 +5145,7 @@ const weapons = [
     Sources: 'Quests: Eternal Ice Treasure',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Reaper's Axe",
@@ -5081,6 +5160,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Revenant Axe',
@@ -5095,6 +5175,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Celestial Axe',
@@ -5109,6 +5190,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Golden Dragon Hammer',
@@ -5123,6 +5205,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Chromatic Golden Dragon Axe',
@@ -5137,6 +5220,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Undead Golden Dragon Hammer',
@@ -5151,6 +5235,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Wooden Bow',
@@ -5165,6 +5250,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Tin Bow',
@@ -5179,6 +5265,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Reinforced Bow',
@@ -5193,6 +5280,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Copper Bow',
@@ -5207,6 +5295,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dark Bow',
@@ -5222,6 +5311,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Shuriken',
@@ -5235,6 +5325,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Arctic Bow',
@@ -5249,6 +5340,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Light Bow',
@@ -5263,6 +5355,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Bronze Bow',
@@ -5277,6 +5370,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Bones Bow',
@@ -5292,6 +5386,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Ornamented Bow',
@@ -5306,6 +5401,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Novice Gladiator Spear',
@@ -5319,6 +5415,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Cursed Bow',
@@ -5333,6 +5430,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Fairy Bow',
@@ -5347,6 +5445,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Vulcana Bow',
@@ -5361,6 +5460,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Hardrock Bow',
@@ -5375,6 +5475,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Stardust Bow',
@@ -5389,6 +5490,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Hellhound Bow',
@@ -5403,6 +5505,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Clan's Bow",
@@ -5418,6 +5521,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Intermediate Gladiator Spear',
@@ -5431,6 +5535,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dragon Bow',
@@ -5445,6 +5550,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Champion Bow',
@@ -5459,6 +5565,7 @@ const weapons = [
     Sources: 'Monsters: Pithos, Satan',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Justice Bow',
@@ -5473,6 +5580,7 @@ const weapons = [
     Sources: '?',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Lava Bow',
@@ -5487,6 +5595,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Frost Bow',
@@ -5501,6 +5610,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Poison Beetle Bow',
@@ -5515,6 +5625,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Clan's Expertise Bow",
@@ -5530,6 +5641,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Advanced Gladiator Spear',
@@ -5543,6 +5655,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Grue Bow',
@@ -5557,6 +5670,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Nature's Bow",
@@ -5571,6 +5685,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Bow of the Skies',
@@ -5585,6 +5700,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elven Bow',
@@ -5599,6 +5715,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Devil Bow',
@@ -5613,6 +5730,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Soul Brander',
@@ -5626,6 +5744,7 @@ const weapons = [
     Sources: 'Monsters: Archangel',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Elora's Bow",
@@ -5640,6 +5759,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Void Bow',
@@ -5654,6 +5774,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Dragon Hunters' Bow",
@@ -5668,6 +5789,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Eternal Ice Bow',
@@ -5682,6 +5804,7 @@ const weapons = [
     Sources: 'Quests: Eternal Ice Treasure',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elder Vampire Bow',
@@ -5696,6 +5819,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Soul Piercer',
@@ -5710,6 +5834,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dragons Tamer Bow',
@@ -5724,6 +5849,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Golden Dragon Bow',
@@ -5738,6 +5864,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Chromatic Golden Dragon Bow',
@@ -5752,6 +5879,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Undead Golden Dragon Bow',
@@ -5766,6 +5894,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Candy Staff',
@@ -5779,6 +5908,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Natural Staff',
@@ -5792,6 +5922,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Iron Staff',
@@ -5805,6 +5936,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Voodoo Staff',
@@ -5818,6 +5950,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Ruby Staff',
@@ -5831,6 +5964,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Sapphire Staff',
@@ -5844,6 +5978,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Amethyst Staff',
@@ -5857,6 +5992,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Skull Staff',
@@ -5871,6 +6007,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Humanoid Fox Wand',
@@ -5884,6 +6021,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Holy Staff',
@@ -5897,6 +6035,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Silver Staff',
@@ -5910,6 +6049,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Novice Gladiator Staff',
@@ -5923,6 +6063,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Crown Staff',
@@ -5936,6 +6077,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Warlock Staff',
@@ -5949,6 +6091,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Spider Wand',
@@ -5962,6 +6105,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Golden Sceptre',
@@ -5975,6 +6119,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Clan's Staff",
@@ -5988,6 +6133,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Hell Mage Wand',
@@ -6001,6 +6147,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Intermediate Gladiator Staff',
@@ -6014,6 +6161,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Lava Staff',
@@ -6027,6 +6175,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Poison Beetle Wand',
@@ -6040,6 +6189,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Staff of Justice',
@@ -6053,6 +6203,7 @@ const weapons = [
     Sources: '?',
     Armor: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Hell's Staff",
@@ -6066,6 +6217,7 @@ const weapons = [
     Sources: 'Quests: The Treasure Is Mine',
     Armor: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Mystic Staff',
@@ -6079,6 +6231,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Advanced Gladiator Staff',
@@ -6092,6 +6245,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'The Earthquaker',
@@ -6105,6 +6259,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Abyssal Cultist Wand',
@@ -6118,6 +6273,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Righteous Staff',
@@ -6131,6 +6287,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elven Staff',
@@ -6144,6 +6301,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Sky Elf Wand',
@@ -6157,6 +6315,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Wand of Doom',
@@ -6170,6 +6329,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Elora's Staff",
@@ -6183,6 +6343,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Dragon Hunters' Staff",
@@ -6196,6 +6357,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Undead Dragon Wand',
@@ -6209,6 +6371,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Eternal Ice Staff',
@@ -6222,6 +6385,7 @@ const weapons = [
     Sources: 'Quests: Eternal Ice Treasure',
     Armor: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elder Vampire Staff',
@@ -6235,6 +6399,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Wand of Salvation',
@@ -6248,6 +6413,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dragons Tamer Staff',
@@ -6261,6 +6427,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Undead Golden Dragon Staff',
@@ -6274,6 +6441,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Chromatic Golden Dragon Wand',
@@ -6287,6 +6455,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Golden Dragon Staff',
@@ -6300,6 +6469,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dagger',
@@ -6313,6 +6483,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Rapier',
@@ -6326,6 +6497,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Long Dagger',
@@ -6339,6 +6511,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Katana',
@@ -6352,6 +6525,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Sword',
@@ -6365,6 +6539,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Long Sword',
@@ -6379,6 +6554,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Spike Sword',
@@ -6392,6 +6568,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Silver Sword',
@@ -6406,6 +6583,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Humanoid Lizard Sword',
@@ -6419,6 +6597,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Bright Sword',
@@ -6432,6 +6611,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Curved Sword',
@@ -6445,6 +6625,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Giant Sword',
@@ -6459,6 +6640,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Novice Gladiator Sword',
@@ -6472,6 +6654,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Fire Sword',
@@ -6485,6 +6668,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Black Sword',
@@ -6498,6 +6682,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Forgotten Sword',
@@ -6512,6 +6697,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Ice Beetle Sword',
@@ -6525,6 +6711,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Nobles Sword',
@@ -6538,6 +6725,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Clan's Sword",
@@ -6552,6 +6740,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Intermediate Gladiator Sword',
@@ -6565,6 +6754,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dragon Sword',
@@ -6578,6 +6768,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Winter Rapier',
@@ -6591,6 +6782,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Mystic Sword',
@@ -6604,6 +6796,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Champion Sword',
@@ -6617,6 +6810,7 @@ const weapons = [
     Sources: 'Monsters: Pithos, Satan',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Sword of Justice',
@@ -6630,6 +6824,7 @@ const weapons = [
     Sources: '?',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Lava Sword',
@@ -6643,6 +6838,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Poison Beetle Sword',
@@ -6656,6 +6852,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Advanced Gladiator Sword',
@@ -6669,6 +6866,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'The Decapitator',
@@ -6682,6 +6880,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Void Sword',
@@ -6695,6 +6894,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Sacred Sword',
@@ -6708,6 +6908,7 @@ const weapons = [
     Sources: 'Quests: Stairway to Heaven',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elven Sword',
@@ -6721,6 +6922,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Reaper's Sword",
@@ -6734,6 +6936,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Sky Elf Blade',
@@ -6747,6 +6950,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Elora's Sword",
@@ -6760,6 +6964,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Undead Dragon Sword',
@@ -6773,6 +6978,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: "Dragon Hunters' Sword",
@@ -6786,6 +6992,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Eternal Ice Sword',
@@ -6799,6 +7006,7 @@ const weapons = [
     Sources: 'Quests: Eternal Ice Treasure',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Elder Vampire Sword',
@@ -6812,6 +7020,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Sword of Glory',
@@ -6825,6 +7034,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Dragons Tamer Sword',
@@ -6838,6 +7048,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Undead Golden Dragon Sword',
@@ -6851,6 +7062,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Chromatic Golden Dragon Sword',
@@ -6864,6 +7076,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Golden Dragon Sword',
@@ -6877,6 +7090,7 @@ const weapons = [
     Armor: 0,
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
   {
     Weapon: 'Warlord Sword',
@@ -6890,6 +7104,7 @@ const weapons = [
     Sources: 'Quests: The Final War',
     Magic: 0,
     Haste: 0,
+    Slot: 'Weapon',
   },
 ];
 
