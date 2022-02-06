@@ -12,7 +12,7 @@ export default function SetMaker() {
   const [level, setLevel] = useState(1);
   const [statusPrincipal, setStatusPrincipal] = useState('Armor');
 
-  const filtraMelhoreItem = (itemList, status, slot) => {
+  const filtraMelhoresEquipamentos = (itemList, status, slot) => {
     let bestItem = {
       Equipment: '',
       Level: 0,
@@ -32,87 +32,58 @@ export default function SetMaker() {
         bestItem = item;
       }
     });
-    // if (bestItem.Level === 0) {
-    //   const pegarMelhorItem = itemList.filter(item => item.Slot === slot);
-    //   onlySlotItens.forEach(item => {
-    //     if (item[status] > bestItem[status]) {
-    //       bestItem = item;
-    //     }
-    //   });
-    // }
+    if (bestItem.Level === 0) {
+      let usarOutroStatus;
+      if (slot === 'Weapon') {
+        usarOutroStatus = 'Attack';
+      } else if (slot === 'Necklace') {
+        usarOutroStatus = 'Magic';
+      } else {
+        usarOutroStatus = 'Armor';
+      }
+      onlySlotItens.forEach(item => {
+        if (item[usarOutroStatus] > bestItem[usarOutroStatus]) {
+          bestItem = item;
+        }
+      });
+    }
     return bestItem;
   };
 
   const gerarSetParaClasse = (listaDeArmas, listaDeEquipamentos) => {
-    const melhorAmuleto = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
+    const allSlots = [
       'Necklace',
-    );
-    const melhorElmo = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
       'Helmet',
-    );
-    const melhorAnel = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
       'Ring',
-    );
-    const melhorArma = filtraMelhoreItem(
-      listaDeArmas,
-      statusPrincipal,
       'Weapon',
-    );
-    const melhorArmadura = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
       'Armor',
-    );
-    const melhorEscudo = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
       'Shield',
-    );
-    const melhorLivro = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
       'Book',
-    );
-    const melhorAcessorio = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
       'Accessorie',
-    );
-    const melhorCalca = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
       'Leg',
-    );
-    const melhorBota = filtraMelhoreItem(
-      listaDeEquipamentos,
-      statusPrincipal,
       'Shoe',
-    );
-    console.log(
-      melhorAmuleto,
-      melhorElmo,
-      melhorAnel,
-      melhorArma,
-      melhorArmadura,
-      melhorEscudo,
-      melhorLivro,
-      melhorAcessorio,
-      melhorCalca,
-      melhorBota,
-    );
+    ];
+    const bestItens = allSlots.map(slot => {
+      if (slot === 'Weapon') {
+        return filtraMelhoresEquipamentos(
+          listaDeArmas,
+          statusPrincipal,
+          'Weapon',
+        );
+      }
+      return filtraMelhoresEquipamentos(
+        listaDeEquipamentos,
+        statusPrincipal,
+        slot,
+      );
+    });
+    console.log(bestItens);
   };
 
-  const filtrarItens = listDeItens => {
-    const itensPermitios = listDeItens.filter(
+  const filtrarItens = listaDeItens => {
+    const itensPermitios = listaDeItens.filter(
       item =>
         level >= Number(item.Level) &&
-        (item.Energy === elemento || item.Energy === 'None') &&
         (item.Vocation === classe || item.Vocation === 'All'),
     );
     return itensPermitios;
