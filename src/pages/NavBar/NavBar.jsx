@@ -37,7 +37,7 @@ function NavBar() {
             <li className="nav-item dropdown">
               <Link
                 to="/kakele"
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
