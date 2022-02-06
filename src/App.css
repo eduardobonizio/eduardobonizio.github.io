@@ -11,6 +11,7 @@
 .alert-fixed {
   padding: 10px !important;
   border-radius: 15px !important;
+  z-index: 9999;
 }
 
 @media screen and (min-width: 768px) {
