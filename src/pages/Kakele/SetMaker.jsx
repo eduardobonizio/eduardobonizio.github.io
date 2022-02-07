@@ -56,8 +56,9 @@ export default function SetMaker() {
       const somenteElmentoRequisitado = onlySlotItens.filter(
         item => item.Energy === elemento,
       );
+
       somenteElmentoRequisitado.forEach(item => {
-        if (item[status] >= bestItem[status]) {
+        if (item[status] >= bestItem[status] && item[status] > 0) {
           bestItem = item;
         }
       });
@@ -71,7 +72,10 @@ export default function SetMaker() {
           usarOutroStatus = 'Armor';
         }
         somenteElmentoRequisitado.forEach(item => {
-          if (item[usarOutroStatus] >= bestItem[usarOutroStatus]) {
+          if (
+            item[usarOutroStatus] >= bestItem[usarOutroStatus] &&
+            item[usarOutroStatus] > 0
+          ) {
             bestItem = item;
           }
         });
@@ -80,7 +84,7 @@ export default function SetMaker() {
 
     if (ignorarElemento || slotsComElementoIgnorado.includes(slot)) {
       onlySlotItens.forEach(item => {
-        if (item[status] >= bestItem[status]) {
+        if (item[status] >= bestItem[status] && item[status] > 0) {
           bestItem = item;
         }
       });
@@ -96,7 +100,10 @@ export default function SetMaker() {
         usarOutroStatus = 'Armor';
       }
       onlySlotItens.forEach(item => {
-        if (item[usarOutroStatus] > bestItem[usarOutroStatus]) {
+        if (
+          item[usarOutroStatus] > bestItem[usarOutroStatus] &&
+          item[usarOutroStatus] > 0
+        ) {
           bestItem = item;
         }
       });
@@ -323,13 +330,20 @@ export default function SetMaker() {
                       className="card-body pb-0"
                       style={{ minWidth: '200px' }}
                     >
-                      <h5 className="card-title">
+                      <h6 className="card-title">
                         {item.Equipment || item.Weapon}
-                      </h5>
-                      <p className="card-text">Elemento: {item.Energy}</p>
-                      <p className="card-text">Armadura: {item.Armor}</p>
-                      <p className="card-text">Magia: {item.Magic}</p>
-                      <p className="card-text">Ataque: {item.Attack}</p>
+                      </h6>
+                      <div className="d-flex flex-column mb-1">
+                        <span className="card-text">
+                          Elemento: {item.Energy}
+                        </span>
+                        <span className="card-text">
+                          Armadura: {item.Armor}
+                        </span>
+                        <span className="card-text">Magia: {item.Magic}</span>
+                        <span className="card-text">Ataque: {item.Attack}</span>
+                        <span className="card-text">Nivel: {item.Level}</span>
+                      </div>
                       <div className="input-group mb-2">
                         <div className="input-group-text">
                           <input
