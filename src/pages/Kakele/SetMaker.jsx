@@ -8,6 +8,8 @@
 /* eslint-disable no-param-reassign */
 import React, { useState } from 'react';
 
+import copy from 'copy-to-clipboard';
+
 import { equipments, weapons } from './kakeleData';
 
 export default function SetMaker() {
@@ -199,6 +201,21 @@ export default function SetMaker() {
     setSlotsComElementoIgnorado(slotNaoMaisIgnorado);
   };
 
+  const gerarLink = () => {
+    const link = exibirSet.reduce((anterior, proximo) => {
+      if (proximo.Level > 0) {
+        const adicionarTexto = `${proximo.Slot}=${
+          proximo.Equipment || proximo.Weapon
+        }`.replaceAll(' ', '-');
+        anterior += `${adicionarTexto} `;
+      }
+      return anterior;
+    }, '');
+
+    const linkFinal = `http://localhost:3000/kakele/set/${link}`;
+    copy(linkFinal);
+  };
+
   return (
     <div className="container d-flex flex-column justify-content-center align-items-center">
       <div className="d-flex flex-column">
@@ -288,6 +305,13 @@ export default function SetMaker() {
         </div>
         <button type="button" className="btn btn-light mb-2" onClick={gerarSet}>
           Gerar set
+        </button>
+        <button
+          type="button"
+          className="btn btn-light mb-2"
+          onClick={gerarLink}
+        >
+          Copiar link
         </button>
         <div>
           <h3>Atributos do set</h3>
