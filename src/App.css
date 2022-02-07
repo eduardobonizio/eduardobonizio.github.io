@@ -3,10 +3,9 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-/*# sourceMappingURL=App.css.map */
 
 .alert-fixed {
   padding: 10px !important;
@@ -14,10 +13,20 @@
   z-index: 9999;
 }
 
+.footer-container a {
+  margin-right: 10px;
+  color: inherit;
+}
+
 @media screen and (min-width: 768px) {
   #navbar-itens {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
   }
 }
+/*# sourceMappingURL=App.css.map */

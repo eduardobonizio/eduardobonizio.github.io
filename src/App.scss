@@ -5,3 +5,22 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+.alert-fixed {
+  padding: 10px !important;
+  border-radius: 15px !important;
+  z-index: 9999;
+}
+
+.footer-container a {
+  margin-right: 10px;
+  color: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  #navbar-itens {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
