@@ -7125,4 +7125,6 @@ const upgrades = {
   70: { cobre: 70, estanho: 65, prata: 60, ferro: 55, ouro: 50, kks: 81920000 },
 };
 
-export { equipments, weapons, upgrades };
+const UPGRADES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
+
+export { equipments, weapons, upgrades, UPGRADES };
