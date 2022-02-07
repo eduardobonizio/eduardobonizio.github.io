@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Alert from './Componentes/Alert';
+import ButtonForKakele from './Componentes/ButtonForKakele';
 import InputCheckBox from './Componentes/InputCheckBox';
 import OrePriceUpdater from './Componentes/OrePriceUpdater';
 import UpgradeSelector from './Componentes/UpgradeSelector';
@@ -74,13 +75,7 @@ export default function OreCalculator() {
         {addOrePriceToTotal && (
           <OrePriceUpdater oresPrice={oresPrice} setOresPrice={setOresPrice} />
         )}
-        <button
-          type="button"
-          className="btn btn-light mb-2"
-          onClick={calculateOres}
-        >
-          Calcular
-        </button>
+        <ButtonForKakele onClick={calculateOres} text="Calcular" />
         {necessaryItens && (
           <div>
             <h3>Itens necessários:</h3>
