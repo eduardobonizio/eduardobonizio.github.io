@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-import { minerios } from './kakeleData';
+import { upgrades } from './kakeleData';
 
 export default function OreCalculator() {
-  console.log(minerios);
+  const FIVE_SECONDS = 5000;
+  const UPGRADES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(5);
   const [itensNecessarios, setItensNecessarios] = useState();
@@ -17,15 +18,16 @@ export default function OreCalculator() {
     precoOuro: 0,
   });
 
+  const activateAlert = () => {
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, FIVE_SECONDS);
+  };
+
   const calculateOreQuantityAndPrice = () => {
     if (startUpgradeLvl >= finishUpgradeLvl) {
-      const FIVE_SECONDS = 5000;
-      if (!showAlert) {
-        setShowAlert(true);
-        setTimeout(() => {
-          setShowAlert(false);
-        }, FIVE_SECONDS);
-      }
+      if (!showAlert) activateAlert();
       setItensNecessarios();
       return;
     }
@@ -38,7 +40,7 @@ export default function OreCalculator() {
       kks: 0,
     };
     for (let i = startUpgradeLvl + 5; i <= finishUpgradeLvl; i += 5) {
-      const { cobre, estanho, prata, ferro, ouro, kks } = minerios[i];
+      const { cobre, estanho, prata, ferro, ouro, kks } = upgrades[i];
       const { precoCobre, precoEstanho, precoPrata, precoFerro, precoOuro } =
         precoMinerios;
       total.cobre += cobre;
@@ -66,6 +68,33 @@ export default function OreCalculator() {
     setItensNecessarios(total);
   };
 
+  const generateUpgradeSelectOptions = (
+    initialValue,
+    elementId,
+    labelText,
+    functionOnChange,
+  ) => (
+    <div className="input-group mb-2">
+      <label className="input-group-text" htmlFor={elementId}>
+        {labelText}
+      </label>
+      <select
+        className="form-select"
+        id={elementId}
+        onChange={e => functionOnChange(Number(e.target.value))}
+      >
+        <option defaultValue value={initialValue}>
+          {initialValue}
+        </option>
+        {UPGRADES.map(upgradeValue => {
+          if (upgradeValue !== initialValue) {
+            return <option value={upgradeValue}>{upgradeValue}</option>;
+          }
+        })}
+      </select>
+    </div>
+  );
+
   return (
     <div className="container d-flex justify-content-center">
       {showAlert && (
@@ -80,64 +109,18 @@ export default function OreCalculator() {
         <span className="mb-2">
           Selecione o upgrade atual e o upgrade desejado
         </span>
-        <div className="input-group mb-2">
-          <label
-            className="input-group-text"
-            htmlFor="inputGroupUpgradeInicial"
-          >
-            Upgrade atual
-          </label>
-          <select
-            className="form-select"
-            id="inputGroupUpgradeInicial"
-            onChange={e => setStartUpgradeLvl(Number(e.target.value))}
-          >
-            <option defaultValue value="0">
-              0
-            </option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
-            <option value="40">40</option>
-            <option value="45">45</option>
-            <option value="50">50</option>
-            <option value="55">55</option>
-            <option value="60">60</option>
-            <option value="65">65</option>
-            <option value="70">70</option>
-          </select>
-        </div>
-        <div className="input-group mb-2">
-          <label className="input-group-text" htmlFor="inputGroupUpgradeFinal">
-            Upgrade desejado
-          </label>
-          <select
-            className="form-select"
-            id="inputGroupUpgradeFinal"
-            onChange={e => setFinishUpgradeLvl(Number(e.target.value))}
-          >
-            <option defaultValue value="5">
-              5
-            </option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
-            <option value="40">40</option>
-            <option value="45">45</option>
-            <option value="50">50</option>
-            <option value="55">55</option>
-            <option value="60">60</option>
-            <option value="65">65</option>
-            <option value="70">70</option>
-          </select>
-        </div>
+        {generateUpgradeSelectOptions(
+          0,
+          'inputGroupUpgradeInicial',
+          'Upgrade atual',
+          setStartUpgradeLvl,
+        )}
+        {generateUpgradeSelectOptions(
+          5,
+          'inputGroupUpgradeFinal',
+          'Upgrade desejado',
+          setFinishUpgradeLvl,
+        )}
         <div className="input-group mb-2">
           <div className="input-group-text">
             <input
