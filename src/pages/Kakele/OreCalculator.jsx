@@ -12,7 +12,7 @@ export default function OreCalculator() {
   const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(5);
   const [necessaryItens, setNecessaryItens] = useState();
   const [showAlert, setShowAlert] = useState(false);
-  const [showOresPricesFiels, setShowOresPricesFiels] = useState(false);
+  const [addOrePriceToTotal, setAddOrePriceToTotal] = useState(false);
   const [oresPrice, setOresPrice] = useState({
     copperPrice: 0,
     tinPrice: 0,
@@ -33,7 +33,7 @@ export default function OreCalculator() {
       finishUpgradeLvl,
     );
 
-    if (showOresPricesFiels) {
+    if (addOrePriceToTotal) {
       const newTotalPrice = calculateUpgradePriceWithOresPrice(
         totalOres,
         oresPrice,
@@ -74,14 +74,14 @@ export default function OreCalculator() {
               type="checkbox"
               id="adicionarPrecoMinerios"
               aria-label="Checkbox for following text input"
-              onChange={() => setShowOresPricesFiels(!showOresPricesFiels)}
+              onChange={() => setAddOrePriceToTotal(!addOrePriceToTotal)}
             />
           </div>
           <label htmlFor="adicionarPrecoMinerios" className="input-group-text">
             Vou comprar os minérios
           </label>
         </div>
-        {showOresPricesFiels && (
+        {addOrePriceToTotal && (
           <div className="d-flex flex-column">
             <div className="input-group mb-2">
               <span className="input-group-text" id="preco-cobre-bruto">
