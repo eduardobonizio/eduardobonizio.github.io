@@ -10,21 +10,21 @@ export default function OreCalculator() {
   const UPGRADES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(5);
-  const [itensNecessarios, setItensNecessarios] = useState();
+  const [necessaryItens, setNecessaryItens] = useState();
   const [showAlert, setShowAlert] = useState(false);
   const [showOresPricesFiels, setShowOresPricesFiels] = useState(false);
-  const [precoMinerios, setPrecoMinerios] = useState({
-    precoCobre: 0,
-    precoEstanho: 0,
-    precoPrata: 0,
-    precoFerro: 0,
-    precoOuro: 0,
+  const [oresPrice, setOresPrice] = useState({
+    copperPrice: 0,
+    tinPrice: 0,
+    silverPrice: 0,
+    ironPrice: 0,
+    goldPrice: 0,
   });
 
   const calculateOres = () => {
     if (startUpgradeLvl >= finishUpgradeLvl) {
       if (!showAlert) activateAlert(setShowAlert);
-      setItensNecessarios();
+      setNecessaryItens();
       return;
     }
 
@@ -36,11 +36,11 @@ export default function OreCalculator() {
     if (showOresPricesFiels) {
       const newTotalPrice = calculateUpgradePriceWithOresPrice(
         totalOres,
-        precoMinerios,
+        oresPrice,
       );
       totalOres.kks = newTotalPrice;
     }
-    setItensNecessarios(totalOres);
+    setNecessaryItens(totalOres);
   };
 
   const generateUpgradeSelectOptions = (
@@ -122,11 +122,11 @@ export default function OreCalculator() {
                 placeholder="Preço do Cobre Bruto"
                 aria-label="Preço do Cobre Bruto"
                 aria-describedby="preco-cobre-bruto"
-                value={precoMinerios.precoCobre}
+                value={oresPrice.copperPrice}
                 onChange={e =>
-                  setPrecoMinerios({
-                    ...precoMinerios,
-                    precoCobre: Number(e.target.value),
+                  setOresPrice({
+                    ...oresPrice,
+                    copperPrice: Number(e.target.value),
                   })
                 }
               />
@@ -141,11 +141,11 @@ export default function OreCalculator() {
                 placeholder="Preço do Estanho Bruto"
                 aria-label="Preço do Estanho Bruto"
                 aria-describedby="preco-estanho-bruto"
-                value={precoMinerios.precoEstanho}
+                value={oresPrice.tinPrice}
                 onChange={e =>
-                  setPrecoMinerios({
-                    ...precoMinerios,
-                    precoEstanho: Number(e.target.value),
+                  setOresPrice({
+                    ...oresPrice,
+                    tinPrice: Number(e.target.value),
                   })
                 }
               />
@@ -160,11 +160,11 @@ export default function OreCalculator() {
                 placeholder="Preço da Prata Bruta"
                 aria-label="Preço da Prata Bruta"
                 aria-describedby="preco-prata-bruta"
-                value={precoMinerios.precoPrata}
+                value={oresPrice.silverPrice}
                 onChange={e =>
-                  setPrecoMinerios({
-                    ...precoMinerios,
-                    precoPrata: Number(e.target.value),
+                  setOresPrice({
+                    ...oresPrice,
+                    silverPrice: Number(e.target.value),
                   })
                 }
               />
@@ -179,11 +179,11 @@ export default function OreCalculator() {
                 placeholder="Preço do Ferro Bruto"
                 aria-label="Preço do Ferro Bruto"
                 aria-describedby="preco-ferro-bruto"
-                value={precoMinerios.precoFerro}
+                value={oresPrice.ironPrice}
                 onChange={e =>
-                  setPrecoMinerios({
-                    ...precoMinerios,
-                    precoFerro: Number(e.target.value),
+                  setOresPrice({
+                    ...oresPrice,
+                    ironPrice: Number(e.target.value),
                   })
                 }
               />
@@ -198,11 +198,11 @@ export default function OreCalculator() {
                 placeholder="Preço do Ouro Bruto"
                 aria-label="Preço do Ouro Bruto"
                 aria-describedby="preco-ouro-bruto"
-                value={precoMinerios.precoOuro}
+                value={oresPrice.goldPrice}
                 onChange={e =>
-                  setPrecoMinerios({
-                    ...precoMinerios,
-                    precoOuro: Number(e.target.value),
+                  setOresPrice({
+                    ...oresPrice,
+                    goldPrice: Number(e.target.value),
                   })
                 }
               />
@@ -216,20 +216,20 @@ export default function OreCalculator() {
         >
           Calcular
         </button>
-        {itensNecessarios && (
+        {necessaryItens && (
           <div>
             <h3>Itens necessários:</h3>
             <div>
               Ouro (kks):{' '}
-              {itensNecessarios.kks
+              {necessaryItens.kks
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
             </div>
-            <div>Cobre Bruto: {itensNecessarios.cobre}</div>
-            <div>Estanho Bruto: {itensNecessarios.estanho}</div>
-            <div>Prata Bruta: {itensNecessarios.prata}</div>
-            <div>Ferro Bruto: {itensNecessarios.ferro}</div>
-            <div>Ouro Bruto: {itensNecessarios.ouro}</div>
+            <div>Cobre Bruto: {necessaryItens.cobre}</div>
+            <div>Estanho Bruto: {necessaryItens.estanho}</div>
+            <div>Prata Bruta: {necessaryItens.prata}</div>
+            <div>Ferro Bruto: {necessaryItens.ferro}</div>
+            <div>Ouro Bruto: {necessaryItens.ouro}</div>
           </div>
         )}
       </div>

@@ -21,22 +21,22 @@ const activateAlert = setShowAlert => {
 
 const calculateUpgradePriceWithOresPrice = (totalOres, oresPrice) => {
   const { cobre, estanho, prata, ferro, ouro, kks } = totalOres;
-  const { precoCobre, precoEstanho, precoPrata, precoFerro, precoOuro } =
+  const { copperPrice, tinPrice, silverPrice, ironPrice, goldPrice } =
     oresPrice;
 
-  const precoTotalCobre = precoCobre * cobre;
-  const precoTotalEstanho = precoEstanho * estanho;
-  const precoTotalPrata = precoPrata * prata;
-  const precoTotalFerro = precoFerro * ferro;
-  const precoTotalOuro = precoOuro * ouro;
+  const totalCopperPrice = copperPrice * cobre;
+  const totalTinPrice = tinPrice * estanho;
+  const totalSilverPrice = silverPrice * prata;
+  const totalIronPrice = ironPrice * ferro;
+  const totalGoldPrice = goldPrice * ouro;
 
   const totalPrice =
     kks +
-    precoTotalCobre +
-    precoTotalEstanho +
-    precoTotalPrata +
-    precoTotalOuro +
-    precoTotalFerro;
+    totalCopperPrice +
+    totalTinPrice +
+    totalSilverPrice +
+    totalIronPrice +
+    totalGoldPrice;
 
   return totalPrice;
 };
