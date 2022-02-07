@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Alert from './Componentes/Alert';
+import InputCheckBox from './Componentes/InputCheckBox';
 import UpgradeSelector from './Componentes/UpgradeSelector';
 import {
   activateAlert,
@@ -63,20 +64,12 @@ export default function OreCalculator() {
           labelText="Upgrade desejado"
           onChange={setFinishUpgradeLvl}
         />
-        <div className="input-group mb-2">
-          <div className="input-group-text">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              id="adicionarPrecoMinerios"
-              aria-label="Checkbox for following text input"
-              onChange={() => setAddOrePriceToTotal(!addOrePriceToTotal)}
-            />
-          </div>
-          <label htmlFor="adicionarPrecoMinerios" className="input-group-text">
-            Vou comprar os minérios
-          </label>
-        </div>
+        <InputCheckBox
+          labelText="Vou comprar os minérios"
+          id="adicionarPrecoMinerios"
+          onChangeFunc={setAddOrePriceToTotal}
+          changeOnCheck={addOrePriceToTotal}
+        />
         {addOrePriceToTotal && (
           <div className="d-flex flex-column">
             <div className="input-group mb-2">
