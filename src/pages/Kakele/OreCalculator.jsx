@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Alert from './Componentes/Alert';
 import InputCheckBox from './Componentes/InputCheckBox';
+import OrePriceUpdater from './Componentes/OrePriceUpdater';
 import UpgradeSelector from './Componentes/UpgradeSelector';
 import {
   activateAlert,
@@ -71,103 +72,7 @@ export default function OreCalculator() {
           changeOnCheck={addOrePriceToTotal}
         />
         {addOrePriceToTotal && (
-          <div className="d-flex flex-column">
-            <div className="input-group mb-2">
-              <span className="input-group-text" id="preco-cobre-bruto">
-                Preço Cobre Bruto
-              </span>
-              <input
-                type="number"
-                className="form-control"
-                placeholder="Preço do Cobre Bruto"
-                aria-label="Preço do Cobre Bruto"
-                aria-describedby="preco-cobre-bruto"
-                value={oresPrice.copperPrice}
-                onChange={e =>
-                  setOresPrice({
-                    ...oresPrice,
-                    copperPrice: Number(e.target.value),
-                  })
-                }
-              />
-            </div>
-            <div className="input-group mb-2">
-              <span className="input-group-text" id="preco-estanho-bruto">
-                Preço Estanho Bruto
-              </span>
-              <input
-                type="number"
-                className="form-control"
-                placeholder="Preço do Estanho Bruto"
-                aria-label="Preço do Estanho Bruto"
-                aria-describedby="preco-estanho-bruto"
-                value={oresPrice.tinPrice}
-                onChange={e =>
-                  setOresPrice({
-                    ...oresPrice,
-                    tinPrice: Number(e.target.value),
-                  })
-                }
-              />
-            </div>
-            <div className="input-group mb-2">
-              <span className="input-group-text" id="preco-prata-bruta">
-                Preço Prata Bruta
-              </span>
-              <input
-                type="number"
-                className="form-control"
-                placeholder="Preço da Prata Bruta"
-                aria-label="Preço da Prata Bruta"
-                aria-describedby="preco-prata-bruta"
-                value={oresPrice.silverPrice}
-                onChange={e =>
-                  setOresPrice({
-                    ...oresPrice,
-                    silverPrice: Number(e.target.value),
-                  })
-                }
-              />
-            </div>
-            <div className="input-group mb-2">
-              <span className="input-group-text" id="preco-ferro-bruto">
-                Preço Ferro Bruto
-              </span>
-              <input
-                type="number"
-                className="form-control"
-                placeholder="Preço do Ferro Bruto"
-                aria-label="Preço do Ferro Bruto"
-                aria-describedby="preco-ferro-bruto"
-                value={oresPrice.ironPrice}
-                onChange={e =>
-                  setOresPrice({
-                    ...oresPrice,
-                    ironPrice: Number(e.target.value),
-                  })
-                }
-              />
-            </div>
-            <div className="input-group mb-2">
-              <span className="input-group-text" id="preco-ouro-bruto">
-                Preço Ouro Bruto
-              </span>
-              <input
-                type="number"
-                className="form-control"
-                placeholder="Preço do Ouro Bruto"
-                aria-label="Preço do Ouro Bruto"
-                aria-describedby="preco-ouro-bruto"
-                value={oresPrice.goldPrice}
-                onChange={e =>
-                  setOresPrice({
-                    ...oresPrice,
-                    goldPrice: Number(e.target.value),
-                  })
-                }
-              />
-            </div>
-          </div>
+          <OrePriceUpdater oresPrice={oresPrice} setOresPrice={setOresPrice} />
         )}
         <button
           type="button"
