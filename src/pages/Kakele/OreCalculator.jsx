@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import UpgradeSelector from './Componentes/UpgradeSelector';
 import {
   activateAlert,
   calculateOreQuantityAndPrice,
@@ -7,7 +8,6 @@ import {
 } from './kakele';
 
 export default function OreCalculator() {
-  const UPGRADES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(5);
   const [necessaryItens, setNecessaryItens] = useState();
@@ -43,33 +43,6 @@ export default function OreCalculator() {
     setNecessaryItens(totalOres);
   };
 
-  const generateUpgradeSelectOptions = (
-    initialValue,
-    elementId,
-    labelText,
-    functionOnChange,
-  ) => (
-    <div className="input-group mb-2">
-      <label className="input-group-text" htmlFor={elementId}>
-        {labelText}
-      </label>
-      <select
-        className="form-select"
-        id={elementId}
-        onChange={e => functionOnChange(Number(e.target.value))}
-      >
-        <option defaultValue value={initialValue}>
-          {initialValue}
-        </option>
-        {UPGRADES.map(upgradeValue => {
-          if (upgradeValue !== initialValue) {
-            return <option value={upgradeValue}>{upgradeValue}</option>;
-          }
-        })}
-      </select>
-    </div>
-  );
-
   return (
     <div className="container d-flex justify-content-center">
       {showAlert && (
@@ -84,18 +57,16 @@ export default function OreCalculator() {
         <span className="mb-2">
           Selecione o upgrade atual e o upgrade desejado
         </span>
-        {generateUpgradeSelectOptions(
-          0,
-          'inputGroupUpgradeInicial',
-          'Upgrade atual',
-          setStartUpgradeLvl,
-        )}
-        {generateUpgradeSelectOptions(
-          5,
-          'inputGroupUpgradeFinal',
-          'Upgrade desejado',
-          setFinishUpgradeLvl,
-        )}
+        <UpgradeSelector
+          elementId="upgrade-inicial"
+          labelText="Upgrade atual"
+          onChange={setStartUpgradeLvl}
+        />
+        <UpgradeSelector
+          elementId="upgrade-final"
+          labelText="Upgrade desejado"
+          onChange={setFinishUpgradeLvl}
+        />
         <div className="input-group mb-2">
           <div className="input-group-text">
             <input
