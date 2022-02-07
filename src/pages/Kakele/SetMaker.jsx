@@ -17,6 +17,7 @@ export default function SetMaker() {
   const [statusPrincipal, setStatusPrincipal] = useState('Armor');
   const [ignorarElemento, setIgnorarElemento] = useState(false);
   const [exibirSet, setExibirSet] = useState(false);
+  const [itensIgnorados, setItensIgnorados] = useState([]);
 
   const filtraMelhoresEquipamentos = (itemList, status, slot) => {
     let bestItem = {
@@ -36,14 +37,26 @@ export default function SetMaker() {
     if (classe === 'Berserker' && (slot === 'Shield' || slot === 'Book')) {
       return bestItem;
     }
-    const onlySlotItens = itemList.filter(item => item.Slot === slot);
+
+    if ((classe === 'Mage' || classe === 'Alchemist') && slot === 'Shield') {
+      return bestItem;
+    }
+
+    const onlySlotItens = itemList.filter(
+      item =>
+        item.Slot === slot &&
+        !(
+          itensIgnorados.includes(item.Equipment) ||
+          itensIgnorados.includes(item.Weapon)
+        ),
+    );
 
     if (!ignorarElemento) {
       const somenteElmentoRequisitado = onlySlotItens.filter(
         item => item.Energy === elemento,
       );
       somenteElmentoRequisitado.forEach(item => {
-        if (item[status] > bestItem[status]) {
+        if (item[status] >= bestItem[status]) {
           bestItem = item;
         }
       });
@@ -57,7 +70,7 @@ export default function SetMaker() {
           usarOutroStatus = 'Armor';
         }
         somenteElmentoRequisitado.forEach(item => {
-          if (item[usarOutroStatus] > bestItem[usarOutroStatus]) {
+          if (item[usarOutroStatus] >= bestItem[usarOutroStatus]) {
             bestItem = item;
           }
         });
@@ -66,7 +79,7 @@ export default function SetMaker() {
 
     if (ignorarElemento) {
       onlySlotItens.forEach(item => {
-        if (item[status] > bestItem[status]) {
+        if (item[status] >= bestItem[status]) {
           bestItem = item;
         }
       });
@@ -133,11 +146,10 @@ export default function SetMaker() {
   const gerarSet = () => {
     const listaDeArmas = filtrarItens(weapons);
     const listaDeEquipamentos = filtrarItens(equipments);
-    const set = gerarSetParaClasse(listaDeArmas, listaDeEquipamentos);
+    gerarSetParaClasse(listaDeArmas, listaDeEquipamentos);
   };
 
   const verificarElemento = itens => {
-    console.log(itens);
     let luz = 0;
     let natureza = 0;
     let trevas = 0;
@@ -146,15 +158,26 @@ export default function SetMaker() {
       if (item.Energy === 'Nature') natureza += 1;
       if (item.Energy === 'Dark') trevas += 1;
     });
-    console.log(luz, natureza, trevas);
     if (luz >= 5 && luz > natureza) return 'Luz';
     if (natureza >= 5 && natureza > trevas) return 'Natureza';
     if (trevas >= 5 && trevas > luz) return 'Trevas';
-    return 'Neutro';
+    return `Neutro [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
+  };
+
+  const ignorarItem = (nomeDoItem, ignorar) => {
+    if (ignorar) {
+      const novosItensIgnorados = [...itensIgnorados, nomeDoItem];
+      setItensIgnorados(novosItensIgnorados);
+      return;
+    }
+    const itemNaoMaisIgnorado = itensIgnorados.filter(
+      item => item !== nomeDoItem,
+    );
+    setItensIgnorados(itemNaoMaisIgnorado);
   };
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center">
+    <div className="container d-flex flex-column justify-content-center align-items-center">
       <div className="d-flex flex-column">
         <h3 className="">Gerador de set</h3>
         <div className="input-group mb-2">
@@ -272,30 +295,55 @@ export default function SetMaker() {
           <p>Elemento: {exibirSet && verificarElemento(exibirSet)}</p>
         </div>
       </div>
-      <div className="container d-flex">
-        <div className="row">
-          {exibirSet &&
-            exibirSet.map((item, i) => {
-              if (item.Equipment !== '') {
-                return (
-                  <div className="col-sm-4" key={i}>
-                    <div className="card">
-                      {/* <img src="..." className="card-img-top" alt="..." /> */}
-                      <div className="card-body">
-                        <h5 className="card-title">
-                          {item.Equipment || item.Weapon}
-                        </h5>
-                        <p className="card-text">Elemento: {item.Energy}</p>
-                        <p className="card-text">Armadura: {item.Armor}</p>
-                        <p className="card-text">Magia: {item.Magic}</p>
-                        <p className="card-text">Ataque: {item.Attack}</p>
+      <div className="row">
+        {exibirSet &&
+          exibirSet.map((item, i) => {
+            if (item.Equipment !== '') {
+              return (
+                <div className="col " key={i}>
+                  <div className="card mb-2">
+                    {/* <img src="..." className="card-img-top" alt="..." /> */}
+                    <div
+                      className="card-body pb-0"
+                      style={{ minWidth: '200px' }}
+                    >
+                      <h5 className="card-title">
+                        {item.Equipment || item.Weapon}
+                      </h5>
+                      <p className="card-text">Elemento: {item.Energy}</p>
+                      <p className="card-text">Armadura: {item.Armor}</p>
+                      <p className="card-text">Magia: {item.Magic}</p>
+                      <p className="card-text">Ataque: {item.Attack}</p>
+                      <div className="input-group mb-2">
+                        <div className="input-group-text">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            name={item.Equipment || item.Weapon}
+                            id={`exclude-item-${i}`}
+                            checked={
+                              itensIgnorados.includes(item.Equipment) ||
+                              itensIgnorados.includes(item.Weapon)
+                            }
+                            aria-label="Checkbox for following text input"
+                            onChange={e =>
+                              ignorarItem(e.target.name, e.target.checked)
+                            }
+                          />
+                        </div>
+                        <label
+                          htmlFor={`exclude-item-${i}`}
+                          className="input-group-text"
+                        >
+                          Não incluir
+                        </label>
                       </div>
                     </div>
                   </div>
-                );
-              }
-            })}
-        </div>
+                </div>
+              );
+            }
+          })}
       </div>
     </div>
   );
