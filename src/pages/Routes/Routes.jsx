@@ -5,7 +5,6 @@ import PrivateRoute from '../../api/PrivateRoute';
 import Home from '../Home/Home';
 import Kakele from '../Kakele/Kakele';
 import OreCalculator from '../Kakele/OreCalculator';
-import ParaGoogleSheets from '../Kakele/ParaGoogleSheets';
 import SetMaker from '../Kakele/SetMaker';
 import ShowSet from '../Kakele/ShowSet';
 import GameSetup from '../Quiz/GameSetup';
@@ -22,7 +21,6 @@ export default function Rotas() {
       <Route path="/kakele" element={<Kakele />} />
       <Route path="/kakele/set-maker" element={<SetMaker />} />
       <Route path="/kakele/ore-calculator" element={<OreCalculator />} />
-      <Route path="/kakele/para-google-sheets" element={<ParaGoogleSheets />} />
       <Route path="/kakele/set/*" element={<ShowSet />} />
 
       <Route
