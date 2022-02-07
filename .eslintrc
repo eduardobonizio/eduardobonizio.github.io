@@ -32,11 +32,11 @@
     "no-mixed-operators/no-mixed-operators": "error",
     "more/prefer-includes": 2,
     "more/no-void-map": 2,
-    "more/no-window": 2,
+    "more/no-window": "off",
     "more/no-filter-instead-of-find": 2,
     "more/no-numeric-endings-for-variables": 2,
     "prefer-object-spread/prefer-object-spread": 2,
-    "immutable/no-let": 1,
+    "immutable/no-let": "off",
     "immutable/no-this": 2,
     "import-helpers/order-imports": [
       "warn",
@@ -74,6 +74,10 @@
       }
     ],
     "react/static-property-placement": "off",
-    "react/jsx-no-bind": "off"
+    "react/jsx-no-bind": "off",
+    "array-callback-return": "off",
+    "react/no-array-index-key": "off",
+    "consistent-return": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   }
 }

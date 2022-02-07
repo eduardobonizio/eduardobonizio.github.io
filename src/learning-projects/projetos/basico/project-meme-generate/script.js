@@ -13,7 +13,7 @@ function addEventHandler() {
   getInput.addEventListener('change', event => {
     img.setAttribute('src', '');
     img.src = URL.createObjectURL(event.target.files[0]);
-    img.onload = function () {
+    img.onload = () => {
       URL.revokeObjectURL(img.src); // free memory
     };
     /* now you can work with the file list https://developer.mozilla.org/pt-BR/docs/Web/API/File/Using_files_from_web_applications */
@@ -47,7 +47,7 @@ function addListenerToMemeTemplate() {
   }
 }
 
-window.onload = function () {
+window.onload = () => {
   addListenerToTextToMeme();
   addListenerToBorderButtons();
   addListenerToMemeTemplate();

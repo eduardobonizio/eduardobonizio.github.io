@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable immutable/no-let */
 import React, { useState } from 'react';
 
 import { minerios } from './kakeleData';

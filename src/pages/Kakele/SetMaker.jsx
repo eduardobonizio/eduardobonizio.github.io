@@ -1,11 +1,3 @@
-/* eslint-disable prefer-const */
-/* eslint-disable array-callback-return */
-/* eslint-disable consistent-return */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable immutable/no-let */
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-param-reassign */
 import React, { useState } from 'react';
 
 import copy from 'copy-to-clipboard';
@@ -207,7 +199,8 @@ export default function SetMaker() {
         const adicionarTexto = `${proximo.Slot}=${
           proximo.Equipment || proximo.Weapon
         }`.replaceAll(' ', '-');
-        anterior += `${adicionarTexto} `;
+        const concatenado = `${anterior}${adicionarTexto} `;
+        return concatenado;
       }
       return anterior;
     }, '');
@@ -349,7 +342,6 @@ export default function SetMaker() {
               return (
                 <div className="col" key={i}>
                   <div className="card mb-2">
-                    {/* <img src="..." className="card-img-top" alt="..." /> */}
                     <div
                       className="card-body pb-0"
                       style={{ minWidth: '200px' }}

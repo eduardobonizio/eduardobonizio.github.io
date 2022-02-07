@@ -1,4 +1,3 @@
-/* eslint-disable more/no-window */
 import { useDispatch } from 'react-redux';
 
 import { newUser } from '../store/actions/gameConfig.actions';

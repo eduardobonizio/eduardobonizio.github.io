@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/button-has-type */
-import React, { useState } from 'react';
+import React from 'react';
 
 function Home() {
   return (

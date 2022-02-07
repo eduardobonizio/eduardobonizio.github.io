@@ -1,4 +1,3 @@
-// /* eslint-disable no-unused-vars */
 // import React, { useContext, useState, useEffect } from 'react';
 
 // import { auth } from './Firebase';

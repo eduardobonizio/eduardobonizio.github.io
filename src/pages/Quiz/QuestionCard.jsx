@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
 function QuestionCard(prop) {
@@ -80,7 +79,6 @@ function QuestionCard(prop) {
           <button type="button" className="btn btn-success" disabled>
             Curtir
           </button>
-          {/* <Button disabled>Sugerir correção</Button> */}
           <button
             type="button"
             className="btn btn-primary"

@@ -1,4 +1,3 @@
-/* eslint-disable more/no-window */
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
