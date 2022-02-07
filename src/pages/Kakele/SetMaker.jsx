@@ -18,6 +18,7 @@ export default function SetMaker() {
   const [ignorarElemento, setIgnorarElemento] = useState(false);
   const [exibirSet, setExibirSet] = useState(false);
   const [itensIgnorados, setItensIgnorados] = useState([]);
+  const [slotsComElementoIgnorado, setSlotsComElementoIgnorado] = useState([]);
 
   const filtraMelhoresEquipamentos = (itemList, status, slot) => {
     let bestItem = {
@@ -51,7 +52,7 @@ export default function SetMaker() {
         ),
     );
 
-    if (!ignorarElemento) {
+    if (!ignorarElemento && !slotsComElementoIgnorado.includes(slot)) {
       const somenteElmentoRequisitado = onlySlotItens.filter(
         item => item.Energy === elemento,
       );
@@ -77,7 +78,7 @@ export default function SetMaker() {
       }
     }
 
-    if (ignorarElemento) {
+    if (ignorarElemento || slotsComElementoIgnorado.includes(slot)) {
       onlySlotItens.forEach(item => {
         if (item[status] >= bestItem[status]) {
           bestItem = item;
@@ -158,9 +159,12 @@ export default function SetMaker() {
       if (item.Energy === 'Nature') natureza += 1;
       if (item.Energy === 'Dark') trevas += 1;
     });
-    if (luz >= 5 && luz > natureza) return 'Luz';
-    if (natureza >= 5 && natureza > trevas) return 'Natureza';
-    if (trevas >= 5 && trevas > luz) return 'Trevas';
+    if (luz >= 5 && luz > natureza)
+      return `Luz [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
+    if (natureza >= 5 && natureza > trevas)
+      return `Natureza [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
+    if (trevas >= 5 && trevas > luz)
+      return `Trevas [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
     return `Neutro [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
   };
 
@@ -174,6 +178,18 @@ export default function SetMaker() {
       item => item !== nomeDoItem,
     );
     setItensIgnorados(itemNaoMaisIgnorado);
+  };
+
+  const ignorarSlot = (slot, ignorar) => {
+    if (ignorar) {
+      const novosSlotsIgnorados = [...slotsComElementoIgnorado, slot];
+      setSlotsComElementoIgnorado(novosSlotsIgnorados);
+      return;
+    }
+    const slotNaoMaisIgnorado = slotsComElementoIgnorado.filter(
+      item => item !== slot,
+    );
+    setSlotsComElementoIgnorado(slotNaoMaisIgnorado);
   };
 
   return (
@@ -300,7 +316,7 @@ export default function SetMaker() {
           exibirSet.map((item, i) => {
             if (item.Equipment !== '') {
               return (
-                <div className="col " key={i}>
+                <div className="col" key={i}>
                   <div className="card mb-2">
                     {/* <img src="..." className="card-img-top" alt="..." /> */}
                     <div
@@ -336,6 +352,29 @@ export default function SetMaker() {
                           className="input-group-text"
                         >
                           Não incluir
+                        </label>
+                      </div>
+                      <div className="input-group mb-2">
+                        <div className="input-group-text">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            name={item.Slot}
+                            id={`ignore-slot-element-${i}`}
+                            checked={slotsComElementoIgnorado.includes(
+                              item.Slot,
+                            )}
+                            aria-label="Checkbox for following text input"
+                            onChange={e =>
+                              ignorarSlot(e.target.name, e.target.checked)
+                            }
+                          />
+                        </div>
+                        <label
+                          htmlFor={`ignore-slot-element-${i}`}
+                          className="input-group-text"
+                        >
+                          Ignora elemento dessa peça
                         </label>
                       </div>
                     </div>
