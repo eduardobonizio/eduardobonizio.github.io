@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Alert from './Componentes/Alert';
 import UpgradeSelector from './Componentes/UpgradeSelector';
 import {
   activateAlert,
@@ -9,7 +10,7 @@ import {
 
 export default function OreCalculator() {
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
-  const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(5);
+  const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(0);
   const [necessaryItens, setNecessaryItens] = useState();
   const [showAlert, setShowAlert] = useState(false);
   const [addOrePriceToTotal, setAddOrePriceToTotal] = useState(false);
@@ -46,12 +47,7 @@ export default function OreCalculator() {
   return (
     <div className="container d-flex justify-content-center">
       {showAlert && (
-        <div
-          className="alert alert-warning position-absolute start-50 translate-middle alert-fixed"
-          role="alert"
-        >
-          O upgrade desejado tem que ser maior que o upgrade atual
-        </div>
+        <Alert message="O upgrade desejado tem que ser maior que o upgrade atual" />
       )}
       <div className="d-flex flex-column">
         <span className="mb-2">
