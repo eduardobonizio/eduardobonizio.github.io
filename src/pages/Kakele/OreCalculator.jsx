@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
-import { activateAlert } from './kakele';
-import { upgrades } from './kakeleData';
+import {
+  activateAlert,
+  calculateOreQuantityAndPrice,
+  calculateUpgradePriceWithOresPrice,
+} from './kakele';
 
 export default function OreCalculator() {
   const UPGRADES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
@@ -18,47 +21,26 @@ export default function OreCalculator() {
     precoOuro: 0,
   });
 
-  const calculateOreQuantityAndPrice = () => {
+  const calculateOres = () => {
     if (startUpgradeLvl >= finishUpgradeLvl) {
       if (!showAlert) activateAlert(setShowAlert);
       setItensNecessarios();
       return;
     }
-    const total = {
-      cobre: 0,
-      estanho: 0,
-      prata: 0,
-      ferro: 0,
-      ouro: 0,
-      kks: 0,
-    };
-    for (let i = startUpgradeLvl + 5; i <= finishUpgradeLvl; i += 5) {
-      const { cobre, estanho, prata, ferro, ouro, kks } = upgrades[i];
-      const { precoCobre, precoEstanho, precoPrata, precoFerro, precoOuro } =
-        precoMinerios;
-      total.cobre += cobre;
-      total.estanho += estanho;
-      total.prata += prata;
-      total.ferro += ferro;
-      total.ouro += ouro;
-      if (showOresPricesFiels) {
-        const precoTotalCobre = precoCobre * cobre;
-        const precoTotalEstanho = precoEstanho * estanho;
-        const precoTotalPrata = precoPrata * prata;
-        const precoTotalFerro = precoFerro * ferro;
-        const precoTotalOuro = precoOuro * ouro;
-        total.kks +=
-          kks +
-          precoTotalCobre +
-          precoTotalEstanho +
-          precoTotalPrata +
-          precoTotalOuro +
-          precoTotalFerro;
-      } else {
-        total.kks += kks;
-      }
+
+    const totalOres = calculateOreQuantityAndPrice(
+      startUpgradeLvl,
+      finishUpgradeLvl,
+    );
+
+    if (showOresPricesFiels) {
+      const newTotalPrice = calculateUpgradePriceWithOresPrice(
+        totalOres,
+        precoMinerios,
+      );
+      totalOres.kks = newTotalPrice;
     }
-    setItensNecessarios(total);
+    setItensNecessarios(totalOres);
   };
 
   const generateUpgradeSelectOptions = (
@@ -230,7 +212,7 @@ export default function OreCalculator() {
         <button
           type="button"
           className="btn btn-light mb-2"
-          onClick={calculateOreQuantityAndPrice}
+          onClick={calculateOres}
         >
           Calcular
         </button>
