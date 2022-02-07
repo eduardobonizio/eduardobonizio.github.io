@@ -12,7 +12,9 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <Routes />
+      <div className="body-container">
+        <Routes />
+      </div>
       <Footer />
     </>
   );

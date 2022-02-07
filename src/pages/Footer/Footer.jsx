@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <hr />
-      <div className="container mt-3 d-flex justify-content-center footer-container">
+      <div className="container mt-3 mb-2 d-flex justify-content-center footer-container">
         <a href="https://www.linkedin.com/in/eduardo-bonizio/">
           <svg
             xmlns="http://www.w3.org/2000/svg"

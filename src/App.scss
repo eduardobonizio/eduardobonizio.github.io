@@ -6,6 +6,10 @@
   -moz-box-sizing: border-box;
 }
 
+.body-container {
+  min-height: 73vh;
+}
+
 .alert-fixed {
   padding: 10px !important;
   border-radius: 15px !important;
@@ -18,6 +22,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .body-container {
+    min-height: 80vh;
+  }
+
   #navbar-itens {
     display: flex;
     justify-content: space-between;
