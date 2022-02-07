@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
+import { activateAlert } from './kakele';
 import { upgrades } from './kakeleData';
 
 export default function OreCalculator() {
-  const FIVE_SECONDS = 5000;
   const UPGRADES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(5);
@@ -18,16 +18,9 @@ export default function OreCalculator() {
     precoOuro: 0,
   });
 
-  const activateAlert = () => {
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, FIVE_SECONDS);
-  };
-
   const calculateOreQuantityAndPrice = () => {
     if (startUpgradeLvl >= finishUpgradeLvl) {
-      if (!showAlert) activateAlert();
+      if (!showAlert) activateAlert(setShowAlert);
       setItensNecessarios();
       return;
     }

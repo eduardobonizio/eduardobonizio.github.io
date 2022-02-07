@@ -1,3 +1,5 @@
+const FIVE_SECONDS = 5000;
+
 const urlParamsToObject = paramsText => {
   // Ex.: /Item=Sowrd-of-Fire Item2=Shield-of-Darkness
   const formatedText = `{"${paramsText['*']
@@ -8,4 +10,11 @@ const urlParamsToObject = paramsText => {
   return object;
 };
 
-export { urlParamsToObject };
+const activateAlert = setShowAlert => {
+  setShowAlert(true);
+  setTimeout(() => {
+    setShowAlert(false);
+  }, FIVE_SECONDS);
+};
+
+export { urlParamsToObject, activateAlert };
