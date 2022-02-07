@@ -7108,7 +7108,7 @@ const weapons = [
   },
 ];
 
-const minerios = {
+const upgrades = {
   5: { cobre: 5, estanho: 0, prata: 0, ferro: 0, ouro: 0, kks: 10000 },
   10: { cobre: 10, estanho: 5, prata: 0, ferro: 0, ouro: 0, kks: 20000 },
   15: { cobre: 15, estanho: 10, prata: 5, ferro: 0, ouro: 0, kks: 40000 },
@@ -7125,4 +7125,4 @@ const minerios = {
   70: { cobre: 70, estanho: 65, prata: 60, ferro: 55, ouro: 50, kks: 81920000 },
 };
 
-export { equipments, weapons, minerios };
+export { equipments, weapons, upgrades };
