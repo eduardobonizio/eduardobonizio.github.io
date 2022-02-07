@@ -7,6 +7,7 @@ import OrePriceUpdater from './Componentes/OrePriceUpdater';
 import UpgradeSelector from './Componentes/UpgradeSelector';
 import {
   activateAlert,
+  addDotToKks,
   calculateOreQuantityAndPrice,
   calculateUpgradePriceWithOresPrice,
 } from './kakele';
@@ -79,12 +80,7 @@ export default function OreCalculator() {
         {necessaryItens && (
           <div>
             <h3>Itens necessários:</h3>
-            <div>
-              Ouro (kks):{' '}
-              {necessaryItens.kks
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
-            </div>
+            <div>Ouro (kks): {addDotToKks(necessaryItens.kks)}</div>
             <div>Cobre Bruto: {necessaryItens.cobre}</div>
             <div>Estanho Bruto: {necessaryItens.estanho}</div>
             <div>Prata Bruta: {necessaryItens.prata}</div>

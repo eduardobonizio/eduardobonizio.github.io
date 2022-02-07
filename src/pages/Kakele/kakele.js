@@ -62,9 +62,13 @@ const calculateOreQuantityAndPrice = (startUpgradeLvl, finishUpgradeLvl) => {
   return totalOres;
 };
 
+const addDotToKks = number =>
+  number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
 export {
   urlParamsToObject,
   activateAlert,
   calculateOreQuantityAndPrice,
   calculateUpgradePriceWithOresPrice,
+  addDotToKks,
 };
