@@ -7,6 +7,7 @@ import Kakele from '../Kakele/Kakele';
 import OreCalculator from '../Kakele/OreCalculator';
 import ParaGoogleSheets from '../Kakele/ParaGoogleSheets';
 import SetMaker from '../Kakele/SetMaker';
+import ShowSet from '../Kakele/ShowSet';
 import GameSetup from '../Quiz/GameSetup';
 import StartGame from '../Quiz/StartGame';
 import Login from '../UserControll/Login';
@@ -22,6 +23,7 @@ export default function Rotas() {
       <Route path="/kakele/set-maker" element={<SetMaker />} />
       <Route path="/kakele/ore-calculator" element={<OreCalculator />} />
       <Route path="/kakele/para-google-sheets" element={<ParaGoogleSheets />} />
+      <Route path="/kakele/set/*" element={<ShowSet />} />
 
       <Route
         path="/quiz"
