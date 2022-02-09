@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 
-import { equipments, weapons } from './kakeleData';
+import { filterItensByLevenAndClass } from './kakele';
+import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function SetMaker() {
   const [classe, setClasse] = useState('Alchemist');
@@ -106,25 +107,9 @@ export default function SetMaker() {
   };
 
   const gerarSetParaClasse = (listaDeArmas, listaDeEquipamentos) => {
-    const allSlots = [
-      'Necklace',
-      'Helmet',
-      'Ring',
-      'Weapon',
-      'Armor',
-      'Shield',
-      'Book',
-      'Accessorie',
-      'Leg',
-      'Shoe',
-    ];
-    const bestItens = allSlots.map(slot => {
+    const bestItens = ALL_ITENS_SLOTS_LIST.map(slot => {
       if (slot === 'Weapon') {
-        return filtraMelhoresEquipamentos(
-          listaDeArmas,
-          statusPrincipal,
-          'Weapon',
-        );
+        return filtraMelhoresEquipamentos(listaDeArmas, statusPrincipal, slot);
       }
       return filtraMelhoresEquipamentos(
         listaDeEquipamentos,
@@ -136,18 +121,9 @@ export default function SetMaker() {
     setExibirSet(bestItens);
   };
 
-  const filtrarItens = listaDeItens => {
-    const itensPermitios = listaDeItens.filter(
-      item =>
-        level >= Number(item.Level) &&
-        (item.Vocation === classe || item.Vocation === 'All'),
-    );
-    return itensPermitios;
-  };
-
   const gerarSet = () => {
-    const listaDeArmas = filtrarItens(weapons);
-    const listaDeEquipamentos = filtrarItens(equipments);
+    const listaDeArmas = filterItensByLevenAndClass(weapons);
+    const listaDeEquipamentos = filterItensByLevenAndClass(equipments);
     gerarSetParaClasse(listaDeArmas, listaDeEquipamentos);
   };
 

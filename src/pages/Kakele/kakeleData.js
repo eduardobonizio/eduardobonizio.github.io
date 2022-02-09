@@ -7127,4 +7127,17 @@ const upgrades = {
 
 const UPGRADES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
 
-export { equipments, weapons, upgrades, UPGRADES };
+const ALL_ITENS_SLOTS_LIST = [
+  'Necklace',
+  'Helmet',
+  'Ring',
+  'Weapon',
+  'Armor',
+  'Shield',
+  'Book',
+  'Accessorie',
+  'Leg',
+  'Shoe',
+];
+
+export { equipments, weapons, upgrades, UPGRADES, ALL_ITENS_SLOTS_LIST };
