@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 
+import ButtonForKakele from './Componentes/ButtonForKakele';
 import InputCheckBox from './Componentes/InputCheckBox';
+import ItemCard from './Componentes/ItemCard';
 import {
   filterItensByLevenAndClass,
   findBestSet,
@@ -55,7 +57,7 @@ export default function SetMaker() {
     setIgnoredItens(removeFromIgnoredList);
   };
 
-  const ignorarSlot = (slot, ignore) => {
+  const ignoreElementForThisSlot = (slot, ignore) => {
     if (ignore) {
       const novosSlotsIgnorados = [...ignoreThisSlotsElement, slot];
       setIgnoreThisSlotsElement(novosSlotsIgnorados);
@@ -151,16 +153,8 @@ export default function SetMaker() {
           onChangeFunc={setIgnoreElement}
           changeOnCheck={ignoreElement}
         />
-        <button
-          type="button"
-          className="btn btn-light mb-2"
-          onClick={generateSet}
-        >
-          Gerar set
-        </button>
-        <button type="button" className="btn btn-light mb-2" onClick={copyLink}>
-          Copiar link
-        </button>
+        <ButtonForKakele onClick={generateSet} text="Gerar set" />
+        <ButtonForKakele onClick={copyLink} text="Copiar link" />
         <div>
           <h3>Atributos do set</h3>
           <p>
@@ -195,74 +189,15 @@ export default function SetMaker() {
           showSet.map((item, i) => {
             if (item) {
               return (
-                <div className="col" key={i}>
-                  <div className="card mb-2">
-                    <div
-                      className="card-body pb-0"
-                      style={{ minWidth: '200px' }}
-                    >
-                      <h6 className="card-title">
-                        {item.Equipment || item.Weapon}
-                      </h6>
-                      <div className="d-flex flex-column mb-1">
-                        <span className="card-text">
-                          Elemento: {item.Energy}
-                        </span>
-                        <span className="card-text">
-                          Armadura: {item.Armor}
-                        </span>
-                        <span className="card-text">Magia: {item.Magic}</span>
-                        <span className="card-text">Ataque: {item.Attack}</span>
-                        <span className="card-text">Nivel: {item.Level}</span>
-                      </div>
-                      <div className="input-group mb-2">
-                        <div className="input-group-text">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            name={item.Equipment || item.Weapon}
-                            id={`exclude-item-${i}`}
-                            checked={
-                              ignoredItens.includes(item.Equipment) ||
-                              ignoredItens.includes(item.Weapon)
-                            }
-                            aria-label="Checkbox for following text input"
-                            onChange={e =>
-                              ignoreItens(e.target.name, e.target.checked)
-                            }
-                          />
-                        </div>
-                        <label
-                          htmlFor={`exclude-item-${i}`}
-                          className="input-group-text"
-                        >
-                          Não incluir
-                        </label>
-                      </div>
-                      <div className="input-group mb-2">
-                        <div className="input-group-text">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            name={item.Slot}
-                            id={`ignore-slot-element-${i}`}
-                            checked={ignoreThisSlotsElement.includes(item.Slot)}
-                            aria-label="Checkbox for following text input"
-                            onChange={e =>
-                              ignorarSlot(e.target.name, e.target.checked)
-                            }
-                          />
-                        </div>
-                        <label
-                          htmlFor={`ignore-slot-element-${i}`}
-                          className="input-group-text"
-                        >
-                          Ignora elemento dessa peça
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ItemCard
+                  index={i}
+                  ignoredItens={ignoredItens}
+                  ignoreItens={ignoreItens}
+                  ignoreThisSlotsElement={ignoreThisSlotsElement}
+                  ignoreElementForThisSlot={ignoreElementForThisSlot}
+                  item={item}
+                  key={i}
+                />
               );
             }
           })}
