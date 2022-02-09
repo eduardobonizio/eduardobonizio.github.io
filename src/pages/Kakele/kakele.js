@@ -9,7 +9,6 @@ const urlParamsToObject = paramsText => {
     .replaceAll('_', '","')
     .replaceAll('=', '":"')
     .replaceAll('-', ' ')}"}`;
-  console.log(formatedText);
   const object = JSON.parse(formatedText);
   return object;
 };
