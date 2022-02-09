@@ -17,7 +17,7 @@ export default function SetMaker() {
   const [statusPrincipal, setStatusPrincipal] = useState('Armor');
   const [ignorarElemento, setIgnorarElemento] = useState(false);
   const [exibirSet, setExibirSet] = useState(false);
-  const [itensIgnorados, setItensIgnorados] = useState([]);
+  const [ignoredItens, setIgnoredItens] = useState([]);
   const [slotsComElementoIgnorado, setSlotsComElementoIgnorado] = useState([]);
 
   const gerarSet = () => {
@@ -32,7 +32,7 @@ export default function SetMaker() {
         statusPrincipal,
         slot,
         classe,
-        itensIgnorados,
+        ignoredItens,
         ignorarElemento,
         slotsComElementoIgnorado,
         elemento,
@@ -44,14 +44,14 @@ export default function SetMaker() {
 
   const ignorarItem = (nomeDoItem, ignorar) => {
     if (ignorar) {
-      const novosItensIgnorados = [...itensIgnorados, nomeDoItem];
-      setItensIgnorados(novosItensIgnorados);
+      const newIgnoredItensList = [...ignoredItens, nomeDoItem];
+      setIgnoredItens(newIgnoredItensList);
       return;
     }
-    const itemNaoMaisIgnorado = itensIgnorados.filter(
+    const removeFromIgnoredList = ignoredItens.filter(
       item => item !== nomeDoItem,
     );
-    setItensIgnorados(itemNaoMaisIgnorado);
+    setIgnoredItens(removeFromIgnoredList);
   };
 
   const ignorarSlot = (slot, ignorar) => {
@@ -231,8 +231,8 @@ export default function SetMaker() {
                             name={item.Equipment || item.Weapon}
                             id={`exclude-item-${i}`}
                             checked={
-                              itensIgnorados.includes(item.Equipment) ||
-                              itensIgnorados.includes(item.Weapon)
+                              ignoredItens.includes(item.Equipment) ||
+                              ignoredItens.includes(item.Weapon)
                             }
                             aria-label="Checkbox for following text input"
                             onChange={e =>
