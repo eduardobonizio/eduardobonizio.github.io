@@ -163,6 +163,18 @@ const filterItensByLevenAndClass = (listaDeItens, level, classe) =>
       (item.Vocation === classe || item.Vocation === 'All'),
   );
 
+const elementQuantityInSet = (itensList, element) =>
+  itensList.filter(item => item.Energy === element).length;
+
+const checkSetElement = itens => {
+  const luz = elementQuantityInSet(itens, 'Light');
+  const natureza = elementQuantityInSet(itens, 'Nature');
+  const trevas = elementQuantityInSet(itens, 'Dark');
+  const neutral = elementQuantityInSet(itens, 'None');
+
+  return `Luz: ${luz}, Natureza: ${natureza}, Trevas: ${trevas}, Neutro: ${neutral}`;
+};
+
 export {
   urlParamsToObject,
   activateAlert,
@@ -171,4 +183,5 @@ export {
   addDotToKks,
   findBestSet,
   filterItensByLevenAndClass,
+  checkSetElement,
 };

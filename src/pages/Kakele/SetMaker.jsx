@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 
-import { filterItensByLevenAndClass, findBestSet } from './kakele';
+import {
+  filterItensByLevenAndClass,
+  findBestSet,
+  checkSetElement,
+} from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function SetMaker() {
@@ -35,24 +39,6 @@ export default function SetMaker() {
     );
 
     setExibirSet(bestItens);
-  };
-
-  const verificarElemento = itens => {
-    let luz = 0;
-    let natureza = 0;
-    let trevas = 0;
-    itens.forEach(item => {
-      if (item.Energy === 'Light') luz += 1;
-      if (item.Energy === 'Nature') natureza += 1;
-      if (item.Energy === 'Dark') trevas += 1;
-    });
-    if (luz >= 5 && luz > natureza)
-      return `Luz [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
-    if (natureza >= 5 && natureza > trevas)
-      return `Natureza [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
-    if (trevas >= 5 && trevas > luz)
-      return `Trevas [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
-    return `Neutro [Luz ${luz}, Natureza ${natureza}, Trevas ${trevas}]`;
   };
 
   const ignorarItem = (nomeDoItem, ignorar) => {
@@ -218,7 +204,7 @@ export default function SetMaker() {
                 0,
               )}
           </p>
-          <p>Elemento: {exibirSet && verificarElemento(exibirSet)}</p>
+          <p>Elemento: {exibirSet && checkSetElement(exibirSet)}</p>
         </div>
       </div>
       <div className="row">
