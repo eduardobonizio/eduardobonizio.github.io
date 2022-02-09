@@ -7,31 +7,28 @@ export default function ItemCard(props) {
     ignoreItens,
     ignoreThisSlotsElement,
     ignoreElementForThisSlot,
-    item: { Equipment, Weapon, Energy, Armor, Magic, Attack, Level, Slot },
+    item: { name, energy, armor, magic, attack, level, slot },
   } = props;
   return (
     <div className="col">
       <div className="card mb-2">
         <div className="card-body pb-0" style={{ minWidth: '200px' }}>
-          <h6 className="card-title">{Equipment || Weapon}</h6>
+          <h6 className="card-title">{name}</h6>
           <div className="d-flex flex-column mb-1">
-            <span className="card-text">Elemento: {Energy}</span>
-            <span className="card-text">Armadura: {Armor}</span>
-            <span className="card-text">Magia: {Magic}</span>
-            <span className="card-text">Ataque: {Attack}</span>
-            <span className="card-text">Nivel: {Level}</span>
+            <span className="card-text">Elemento: {energy}</span>
+            <span className="card-text">Armadura: {armor}</span>
+            <span className="card-text">Magia: {magic}</span>
+            <span className="card-text">Ataque: {attack}</span>
+            <span className="card-text">Nivel: {level}</span>
           </div>
           <div className="input-group mb-2">
             <div className="input-group-text">
               <input
                 className="form-check-input"
                 type="checkbox"
-                name={Equipment || Weapon}
+                name={name}
                 id={`exclude-item-${index}`}
-                checked={
-                  ignoredItens.includes(Equipment) ||
-                  ignoredItens.includes(Weapon)
-                }
+                checked={ignoredItens.includes(name)}
                 aria-label="Checkbox for following text input"
                 onChange={e => ignoreItens(e.target.name, e.target.checked)}
               />
@@ -48,9 +45,9 @@ export default function ItemCard(props) {
               <input
                 className="form-check-input"
                 type="checkbox"
-                name={Slot}
+                name={slot}
                 id={`ignore-slot-element-${index}`}
-                checked={ignoreThisSlotsElement.includes(Slot)}
+                checked={ignoreThisSlotsElement.includes(slot)}
                 aria-label="Checkbox for following text input"
                 onChange={e =>
                   ignoreElementForThisSlot(e.target.name, e.target.checked)

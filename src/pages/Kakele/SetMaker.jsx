@@ -17,7 +17,7 @@ export default function SetMaker() {
   const [characterClass, setCharacterClass] = useState('Alchemist');
   const [element, setElement] = useState('Light');
   const [level, setLevel] = useState(1);
-  const [mainStat, setMainStat] = useState('Armor');
+  const [mainStat, setMainStat] = useState('armor');
   const [ignoreElement, setIgnoreElement] = useState(false);
   const [showSet, setShowSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
@@ -121,11 +121,11 @@ export default function SetMaker() {
             id="status-principal"
             onChange={e => setMainStat(e.target.value)}
           >
-            <option defaultValue value="Armor">
+            <option defaultValue value="armor">
               Amadura
             </option>
-            <option value="Magic">Magia</option>
-            <option value="Attack">Ataque</option>
+            <option value="magic">Magia</option>
+            <option value="attack">Ataque</option>
           </select>
         </div>
 
@@ -161,7 +161,7 @@ export default function SetMaker() {
             Armadura:
             {showSet &&
               showSet.reduce(
-                (anterior, proximo) => anterior + (proximo.Armor || 0),
+                (anterior, proximo) => anterior + (proximo.armor || 0),
                 0,
               )}
           </p>
@@ -169,7 +169,7 @@ export default function SetMaker() {
             Magia:{' '}
             {showSet &&
               showSet.reduce(
-                (anterior, proximo) => anterior + (proximo.Magic || 0),
+                (anterior, proximo) => anterior + (proximo.magic || 0),
                 0,
               )}
           </p>
@@ -177,7 +177,7 @@ export default function SetMaker() {
             Ataque:{' '}
             {showSet &&
               showSet.reduce(
-                (anterior, proximo) => anterior + (proximo.Attack || 0),
+                (anterior, proximo) => anterior + (proximo.attack || 0),
                 0,
               )}
           </p>
