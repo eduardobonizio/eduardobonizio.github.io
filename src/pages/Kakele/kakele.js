@@ -115,7 +115,10 @@ const findBestSet = (
 ) => {
   let bestItem = false;
 
-  if (classe === 'Berserker' && (slot === 'Shield' || slot === 'Book')) {
+  if (
+    (classe === 'Berserker' || classe === 'Hunter') &&
+    (slot === 'Shield' || slot === 'Book')
+  ) {
     return bestItem;
   }
 
