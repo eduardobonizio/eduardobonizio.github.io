@@ -66,7 +66,7 @@ export default function SetMaker() {
     setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };
 
-  const generateLink = () => {
+  const copyLink = () => {
     const origin = window.location.origin.toString();
     const link = genereateLinkToViewSet(showSet, origin);
     if (link) copy(link);
@@ -166,11 +166,7 @@ export default function SetMaker() {
         >
           Gerar set
         </button>
-        <button
-          type="button"
-          className="btn btn-light mb-2"
-          onClick={generateLink}
-        >
+        <button type="button" className="btn btn-light mb-2" onClick={copyLink}>
           Copiar link
         </button>
         <div>
