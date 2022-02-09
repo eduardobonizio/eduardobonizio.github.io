@@ -196,6 +196,9 @@ const checkSetElement = itens => {
   return `Luz: ${luz}, Natureza: ${natureza}, Trevas: ${trevas}, Neutro: ${neutral}`;
 };
 
+const findItemByName = (itemList, itemName) =>
+  itemList.filter(item => item.itemName === itemName);
+
 export {
   urlParamsToObject,
   activateAlert,
@@ -206,4 +209,5 @@ export {
   filterItensByLevenAndClass,
   checkSetElement,
   genereateLinkToViewSet,
+  findItemByName,
 };
