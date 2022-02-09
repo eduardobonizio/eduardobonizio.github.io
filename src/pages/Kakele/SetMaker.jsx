@@ -15,7 +15,12 @@ export default function SetMaker() {
   const [itensIgnorados, setItensIgnorados] = useState([]);
   const [slotsComElementoIgnorado, setSlotsComElementoIgnorado] = useState([]);
 
-  const gerarSetParaClasse = itensList => {
+  const gerarSet = () => {
+    const itensList = filterItensByLevenAndClass(
+      [...equipments, ...weapons],
+      level,
+      classe,
+    );
     const bestItens = ALL_ITENS_SLOTS_LIST.map(slot =>
       findBestSet(
         itensList,
@@ -30,12 +35,6 @@ export default function SetMaker() {
     );
 
     setExibirSet(bestItens);
-  };
-
-  const gerarSet = () => {
-    const listaDeArmas = filterItensByLevenAndClass(weapons);
-    const listaDeEquipamentos = filterItensByLevenAndClass(equipments);
-    gerarSetParaClasse([...listaDeArmas, ...listaDeEquipamentos]);
   };
 
   const verificarElemento = itens => {
@@ -196,10 +195,10 @@ export default function SetMaker() {
         <div>
           <h3>Atributos do set</h3>
           <p>
-            Armadura:{' '}
+            Armadura:
             {exibirSet &&
               exibirSet.reduce(
-                (anterior, proximo) => anterior + proximo.Armor,
+                (anterior, proximo) => anterior + (proximo.Armor || 0),
                 0,
               )}
           </p>
@@ -207,7 +206,7 @@ export default function SetMaker() {
             Magia:{' '}
             {exibirSet &&
               exibirSet.reduce(
-                (anterior, proximo) => anterior + proximo.Magic,
+                (anterior, proximo) => anterior + (proximo.Magic || 0),
                 0,
               )}
           </p>
@@ -215,7 +214,7 @@ export default function SetMaker() {
             Ataque:{' '}
             {exibirSet &&
               exibirSet.reduce(
-                (anterior, proximo) => anterior + proximo.Attack,
+                (anterior, proximo) => anterior + (proximo.Attack || 0),
                 0,
               )}
           </p>
@@ -225,7 +224,7 @@ export default function SetMaker() {
       <div className="row">
         {exibirSet &&
           exibirSet.map((item, i) => {
-            if (item.Equipment !== '') {
+            if (item) {
               return (
                 <div className="col" key={i}>
                   <div className="card mb-2">

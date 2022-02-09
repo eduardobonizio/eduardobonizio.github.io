@@ -76,6 +76,7 @@ const filterItensBySlot = (itensList, slot, ignoreItensList) =>
   );
 
 const findBestItem = (itensList, status) => {
+  if (itensList.length === 0) return;
   const bestItem = itensList.reduce((previous, next) => {
     if (next[status] >= previous[status] && next[status] > 0) {
       return next;
@@ -112,19 +113,7 @@ const findBestSet = (
   slotsComElementoIgnorado,
   element,
 ) => {
-  let bestItem = {
-    Equipment: '',
-    Level: 0,
-    Vocation: 'All',
-    Energy: 'None',
-    Armor: 0,
-    Value: 0,
-    Sources: '',
-    Slot: '',
-    Attack: 0,
-    Magic: 0,
-    Haste: 0,
-  };
+  let bestItem = false;
 
   if (classe === 'Berserker' && (slot === 'Shield' || slot === 'Book')) {
     return bestItem;
@@ -153,19 +142,18 @@ const findBestSet = (
 
     bestItem = findBestItem(itensListByRequestedElement, status);
 
-    if (bestItem.Level === 0) {
+    if (!bestItem) {
       const alternativeStatus = getAlternativeStatus(slot);
       bestItem = findBestItem(itensListByRequestedElement, alternativeStatus);
     }
   }
 
   // Se não encontrou nem um item na opção anterior
-  if (bestItem.Level === 0) {
+  if (!bestItem) {
     const alternativeStatus = getAlternativeStatus(slot);
     bestItem = findBestItem(onlyRequestedSlotItensList, alternativeStatus);
   }
-
-  return bestItem;
+  return bestItem || false;
 };
 
 const filterItensByLevenAndClass = (listaDeItens, level, classe) =>
