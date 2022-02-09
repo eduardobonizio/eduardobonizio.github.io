@@ -3020,11 +3020,11 @@ const equipments = [
     Vocation: 'Alchemist',
     Energy: 'None',
     Armor: 10,
+    Attack: 50,
+    Magic: 10,
     Value: 0,
     Sources: '?',
     Slot: 'Accessorie',
-    Attack: 0,
-    Magic: 0,
     Haste: 0,
   },
   {
