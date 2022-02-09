@@ -17,12 +17,12 @@ const urlParamsToObject = paramsText => {
 const genereateLinkToViewSet = (setList, origin) => {
   if (!setList) return;
   const link = setList.reduce((anterior, proximo) => {
-    if (proximo.Level > 0) {
-      const adicionarTexto = `${proximo.Slot}=${
-        proximo.Equipment || proximo.Weapon
-      }`.replaceAll(' ', '-');
-      const concatenado = `${anterior}_${adicionarTexto}`;
-      return concatenado;
+    if (proximo.level > 0) {
+      const adicionarTexto = `${proximo.slot}=${proximo.name}`.replaceAll(
+        ' ',
+        '-',
+      );
+      return `${anterior}_${adicionarTexto}`;
     }
     return anterior;
   }, '');
@@ -85,12 +85,7 @@ const addDotToKks = number =>
 
 const filterItensBySlot = (itensList, slot, ignoreItensList) =>
   itensList.filter(
-    item =>
-      item.Slot === slot &&
-      !(
-        ignoreItensList.includes(item.Equipment) ||
-        ignoreItensList.includes(item.Weapon)
-      ),
+    item => item.slot === slot && !ignoreItensList.includes(item.name),
   );
 
 const findBestItem = (itensList, status) => {
@@ -106,16 +101,16 @@ const findBestItem = (itensList, status) => {
 };
 
 const filterItensByElement = (itensList, element) =>
-  itensList.filter(item => item.Energy === element || item.Energy === 'None');
+  itensList.filter(item => item.energy === element || item.energy === 'None');
 
 const getAlternativeStatus = slot => {
   let alternativeStatus;
-  if (slot === 'Weapon') {
-    alternativeStatus = 'Attack';
-  } else if (slot === 'Necklace') {
-    alternativeStatus = 'Magic';
+  if (slot === 'weapon') {
+    alternativeStatus = 'attack';
+  } else if (slot === 'necklace') {
+    alternativeStatus = 'magic';
   } else {
-    alternativeStatus = 'Armor';
+    alternativeStatus = 'armor';
   }
 
   return alternativeStatus;
@@ -135,12 +130,12 @@ const findBestSet = (
 
   if (
     (classe === 'Berserker' || classe === 'Hunter') &&
-    (slot === 'Shield' || slot === 'Book')
+    (slot === 'shield' || slot === 'book')
   ) {
     return bestItem;
   }
 
-  if ((classe === 'Mage' || classe === 'Alchemist') && slot === 'Shield') {
+  if ((classe === 'Mage' || classe === 'Alchemist') && slot === 'shield') {
     return bestItem;
   }
 
@@ -180,12 +175,12 @@ const findBestSet = (
 const filterItensByLevenAndClass = (listaDeItens, level, classe) =>
   listaDeItens.filter(
     item =>
-      level >= Number(item.Level) &&
-      (item.Vocation === classe || item.Vocation === 'All'),
+      level >= Number(item.level) &&
+      (item.vocation === classe || item.vocation === 'All'),
   );
 
 const elementQuantityInSet = (itensList, element) =>
-  itensList.filter(item => item.Energy === element).length;
+  itensList.filter(item => item.energy === element).length;
 
 const checkSetElement = itens => {
   const luz = elementQuantityInSet(itens, 'Light');
@@ -197,7 +192,7 @@ const checkSetElement = itens => {
 };
 
 const findItemByName = (itemList, itemName) =>
-  itemList.filter(item => item.itemName === itemName);
+  itemList.filter(item => item.name === itemName);
 
 export {
   urlParamsToObject,
