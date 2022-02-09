@@ -42,28 +42,28 @@ export default function SetMaker() {
     setShowSet(bestItens);
   };
 
-  const ignoreItens = (nomeDoItem, ignorar) => {
-    if (ignorar) {
-      const newIgnoredItensList = [...ignoredItens, nomeDoItem];
+  const ignoreItens = (itemName, ignore) => {
+    if (ignore) {
+      const newIgnoredItensList = [...ignoredItens, itemName];
       setIgnoredItens(newIgnoredItensList);
       return;
     }
     const removeFromIgnoredList = ignoredItens.filter(
-      item => item !== nomeDoItem,
+      item => item !== itemName,
     );
     setIgnoredItens(removeFromIgnoredList);
   };
 
-  const ignorarSlot = (slot, ignorar) => {
-    if (ignorar) {
+  const ignorarSlot = (slot, ignore) => {
+    if (ignore) {
       const novosSlotsIgnorados = [...ignoreThisSlotsElement, slot];
       setIgnoreThisSlotsElement(novosSlotsIgnorados);
       return;
     }
-    const slotNaoMaisIgnorado = ignoreThisSlotsElement.filter(
+    const removeSlotFromIgnoredList = ignoreThisSlotsElement.filter(
       item => item !== slot,
     );
-    setIgnoreThisSlotsElement(slotNaoMaisIgnorado);
+    setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };
 
   const generateLink = () => {
