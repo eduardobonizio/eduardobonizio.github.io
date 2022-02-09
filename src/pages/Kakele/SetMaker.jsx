@@ -154,7 +154,7 @@ export default function SetMaker() {
           changeOnCheck={ignoreElement}
         />
         <ButtonForKakele onClick={generateSet} text="Gerar set" />
-        <ButtonForKakele onClick={copyLink} text="Copiar link" />
+        {showSet && <ButtonForKakele onClick={copyLink} text="Copiar link" />}
         <div>
           <h3>Atributos do set</h3>
           <p>
