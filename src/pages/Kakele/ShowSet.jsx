@@ -1,37 +1,94 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import ItemCard from './Componentes/ItemCard';
 import { urlParamsToObject } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function ShowSet() {
   const urlParams = useParams();
   const itensOnUrl = urlParamsToObject(urlParams);
-  const [currentSet, setCurrentSet] = useState({
-    necklace: {},
-    helmet: {},
-    ring: {},
-    weapon: {},
-    armor: {},
-    shield: {},
-    accessorie: {},
-    shoe: {},
-  });
+  const [currentSet, setCurrentSet] = useState();
 
-  // const itensOnUrlToItensList = () => {
-  const allItens = [...equipments, ...weapons];
-  const itensList = Object.values(itensOnUrl).map(itemName =>
-    allItens.filter(equipment => {
-      console.log(equipment.ItemName === itemName);
-      return equipment.ItemName === itemName;
-    }),
-  );
-  console.log(itensList);
-  // };
+  const itensOnUrlToItensList = () => {
+    const allItens = [...equipments, ...weapons];
+    const selectedItems = {};
+    const itensList = Object.values(itensOnUrl).map(itemName =>
+      allItens.forEach(item => {
+        if (item.name === itemName) selectedItems[item.slot] = item;
+      }),
+    );
+
+    setCurrentSet(selectedItems);
+  };
+
+  useEffect(() => {
+    itensOnUrlToItensList();
+  }, []);
+
+  console.log(currentSet);
+
   return (
-    <div className="container d-flex justify-content-center flex-column">
-      Mostrar Set
+    <div className="container">
+      {currentSet && (
+        <div className="row">
+          <div className="col-sm">
+            {currentSet.necklace && (
+              <ItemCard
+                item={currentSet.necklace}
+                index={currentSet.necklace.name}
+              />
+            )}
+
+            {currentSet.helmet && (
+              <ItemCard
+                item={currentSet.helmet}
+                index={currentSet.helmet.name}
+              />
+            )}
+
+            {currentSet.ring && (
+              <ItemCard item={currentSet.ring} index={currentSet.ring.name} />
+            )}
+          </div>
+          <div className="col-sm">
+            {currentSet.weapon && (
+              <ItemCard
+                item={currentSet.weapon}
+                index={currentSet.weapon.name}
+              />
+            )}
+
+            {currentSet.armor && (
+              <ItemCard item={currentSet.armor} index={currentSet.armor.name} />
+            )}
+
+            {(currentSet.shield || currentSet.book) && (
+              <ItemCard
+                item={currentSet.shield || currentSet.book}
+                index={currentSet.shield.name || currentSet.book.name}
+              />
+            )}
+          </div>
+          <div className="col-sm">
+            {currentSet.accessorie && (
+              <ItemCard
+                item={currentSet.accessorie}
+                index={currentSet.accessorie.name}
+              />
+            )}
+
+            {currentSet.leg && (
+              <ItemCard item={currentSet.leg} index={currentSet.leg.name} />
+            )}
+
+            {currentSet.shoe && (
+              <ItemCard item={currentSet.shoe} index={currentSet.shoe.name} />
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
