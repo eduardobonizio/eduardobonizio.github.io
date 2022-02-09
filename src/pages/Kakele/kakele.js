@@ -102,7 +102,7 @@ const getAlternativeStatus = slot => {
   return alternativeStatus;
 };
 
-const filtraMelhoresEquipamentos = (
+const findBestSet = (
   itensList,
   status,
   slot,
@@ -181,6 +181,6 @@ export {
   calculateOreQuantityAndPrice,
   calculateUpgradePriceWithOresPrice,
   addDotToKks,
-  filtraMelhoresEquipamentos,
+  findBestSet,
   filterItensByLevenAndClass,
 };
