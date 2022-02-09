@@ -1,7 +1,7 @@
 // https://www.convertjson.com/html-table-to-json.htm
 const equipments = [
   {
-    Equipment: 'Bow Tie',
+    ItemName: 'Bow Tie',
     Level: 1,
     Vocation: 'All',
     Energy: 'Light',
@@ -14,7 +14,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Amulet of Death',
+    ItemName: 'Amulet of Death',
     Level: 1,
     Vocation: 'All',
     Energy: 'Light',
@@ -27,7 +27,7 @@ const equipments = [
     Magic: 0,
   },
   {
-    Equipment: 'Spirit Necklace',
+    ItemName: 'Spirit Necklace',
     Level: 10,
     Vocation: 'All',
     Energy: 'Dark',
@@ -40,7 +40,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Bronze Health Charm',
+    ItemName: 'Bronze Health Charm',
     Level: 20,
     Vocation: 'All',
     Energy: 'None',
@@ -53,7 +53,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Bronze Mana Charm',
+    ItemName: 'Bronze Mana Charm',
     Level: 20,
     Vocation: 'All',
     Energy: 'None',
@@ -66,7 +66,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Bronze Defense Charm',
+    ItemName: 'Bronze Defense Charm',
     Level: 20,
     Vocation: 'All',
     Energy: 'None',
@@ -79,7 +79,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Bronze Anti Spell Charm',
+    ItemName: 'Bronze Anti Spell Charm',
     Level: 20,
     Vocation: 'All',
     Energy: 'None',
@@ -92,7 +92,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Amulet of Life',
+    ItemName: 'Amulet of Life',
     Level: 30,
     Vocation: 'All',
     Energy: 'Nature',
@@ -105,7 +105,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Unbreakable Necklace',
+    ItemName: 'Unbreakable Necklace',
     Level: 35,
     Vocation: 'All',
     Energy: 'Dark',
@@ -118,7 +118,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Medusa Necklace',
+    ItemName: 'Medusa Necklace',
     Level: 40,
     Vocation: 'All',
     Energy: 'Light',
@@ -131,7 +131,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Oceanic Necklace',
+    ItemName: 'Oceanic Necklace',
     Level: 50,
     Vocation: 'All',
     Energy: 'Nature',
@@ -144,7 +144,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Silver Health Charm',
+    ItemName: 'Silver Health Charm',
     Level: 60,
     Vocation: 'All',
     Energy: 'None',
@@ -157,7 +157,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Silver Anti Spell Charm',
+    ItemName: 'Silver Anti Spell Charm',
     Level: 60,
     Vocation: 'All',
     Energy: 'None',
@@ -170,7 +170,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Silver Mana Charm',
+    ItemName: 'Silver Mana Charm',
     Level: 60,
     Vocation: 'All',
     Energy: 'None',
@@ -183,7 +183,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Silver Defense Charm',
+    ItemName: 'Silver Defense Charm',
     Level: 60,
     Vocation: 'All',
     Energy: 'None',
@@ -196,7 +196,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Blessed Amulet',
+    ItemName: 'Blessed Amulet',
     Level: 70,
     Vocation: 'All',
     Energy: 'Dark',
@@ -209,7 +209,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Troll Necklace',
+    ItemName: 'Troll Necklace',
     Level: 75,
     Vocation: 'All',
     Energy: 'Light',
@@ -222,7 +222,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Vampire Necklace',
+    ItemName: 'Vampire Necklace',
     Level: 80,
     Vocation: 'All',
     Energy: 'Dark',
@@ -235,7 +235,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Gold Anti Spell Charm',
+    ItemName: 'Gold Anti Spell Charm',
     Level: 90,
     Vocation: 'All',
     Energy: 'None',
@@ -248,7 +248,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Gold Health Charm',
+    ItemName: 'Gold Health Charm',
     Level: 90,
     Vocation: 'All',
     Energy: 'None',
@@ -262,7 +262,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Gold Mana Charm',
+    ItemName: 'Gold Mana Charm',
     Level: 90,
     Vocation: 'All',
     Energy: 'None',
@@ -276,7 +276,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Gold Defense Charm',
+    ItemName: 'Gold Defense Charm',
     Level: 90,
     Vocation: 'All',
     Energy: 'None',
@@ -289,7 +289,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Giant Spider Necklace',
+    ItemName: 'Giant Spider Necklace',
     Level: 95,
     Vocation: 'All',
     Energy: 'Nature',
@@ -302,7 +302,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Antichrist Amulet',
+    ItemName: 'Antichrist Amulet',
     Level: 100,
     Vocation: 'All',
     Energy: 'Dark',
@@ -315,7 +315,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Clan's Amulet",
+    ItemName: "Clan's Amulet",
     Level: 110,
     Vocation: 'All',
     Energy: 'Light',
@@ -329,7 +329,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Antidemonic Amulet',
+    ItemName: 'Antidemonic Amulet',
     Level: 125,
     Vocation: 'All',
     Energy: 'Light',
@@ -342,7 +342,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Mystic Amulet',
+    ItemName: 'Mystic Amulet',
     Level: 140,
     Vocation: 'All',
     Energy: 'Dark',
@@ -355,7 +355,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elven Amulet',
+    ItemName: 'Elven Amulet',
     Level: 150,
     Vocation: 'All',
     Energy: 'Nature',
@@ -368,7 +368,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Monk Necklace',
+    ItemName: 'Monk Necklace',
     Level: 165,
     Vocation: 'All',
     Energy: 'Light',
@@ -381,7 +381,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elven Night Amulet',
+    ItemName: 'Elven Night Amulet',
     Level: 175,
     Vocation: 'All',
     Energy: 'Nature',
@@ -394,7 +394,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Banshee Necklace',
+    ItemName: 'Banshee Necklace',
     Level: 180,
     Vocation: 'All',
     Energy: 'Dark',
@@ -407,7 +407,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Noble Necklace',
+    ItemName: 'Noble Necklace',
     Level: 200,
     Vocation: 'All',
     Energy: 'Light',
@@ -420,7 +420,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elemental Necklace',
+    ItemName: 'Elemental Necklace',
     Level: 225,
     Vocation: 'All',
     Energy: 'Nature',
@@ -433,7 +433,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Undead Dragon Necklace',
+    ItemName: 'Undead Dragon Necklace',
     Level: 225,
     Vocation: 'All',
     Energy: 'Dark',
@@ -446,7 +446,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Angel Essence Necklace',
+    ItemName: 'Angel Essence Necklace',
     Level: 250,
     Vocation: 'All',
     Energy: 'Light',
@@ -459,7 +459,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elder Vampire Necklace',
+    ItemName: 'Elder Vampire Necklace',
     Level: 265,
     Vocation: 'All',
     Energy: 'Dark',
@@ -473,7 +473,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Elora's Necklace",
+    ItemName: "Elora's Necklace",
     Level: 275,
     Vocation: 'All',
     Energy: 'Nature',
@@ -486,7 +486,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elf Guardian Necklace',
+    ItemName: 'Elf Guardian Necklace',
     Level: 295,
     Vocation: 'All',
     Energy: 'Light',
@@ -499,7 +499,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Corrupted Necklace',
+    ItemName: 'Corrupted Necklace',
     Level: 300,
     Vocation: 'All',
     Energy: 'Dark',
@@ -513,7 +513,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Draconic Gems Necklace',
+    ItemName: 'Draconic Gems Necklace',
     Level: 320,
     Vocation: 'All',
     Energy: 'Nature',
@@ -526,7 +526,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Celestial Necklace',
+    ItemName: 'Celestial Necklace',
     Level: 325,
     Vocation: 'All',
     Energy: 'Light',
@@ -539,7 +539,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Green Cap',
+    ItemName: 'Green Cap',
     Level: 1,
     Vocation: 'All',
     Energy: 'Light',
@@ -552,7 +552,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Swimming Goggles',
+    ItemName: 'Swimming Goggles',
     Level: 1,
     Vocation: 'All',
     Energy: 'Light',
@@ -565,7 +565,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Unknown Helmet',
+    ItemName: 'Unknown Helmet',
     Level: 1,
     Vocation: 'All',
     Energy: 'Nature',
@@ -578,7 +578,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Purple Bandana',
+    ItemName: 'Purple Bandana',
     Level: 5,
     Vocation: 'All',
     Energy: 'Light',
@@ -591,7 +591,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Bronze Helmet',
+    ItemName: 'Bronze Helmet',
     Level: 10,
     Vocation: 'All',
     Energy: 'Nature',
@@ -605,7 +605,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Black Bandana',
+    ItemName: 'Black Bandana',
     Level: 12,
     Vocation: 'All',
     Energy: 'Light',
@@ -618,7 +618,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Steel Helmet',
+    ItemName: 'Steel Helmet',
     Level: 15,
     Vocation: 'All',
     Energy: 'Light',
@@ -631,7 +631,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Witch Hat',
+    ItemName: 'Witch Hat',
     Level: 20,
     Vocation: 'All',
     Energy: 'Dark',
@@ -644,7 +644,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Explorer Helmet',
+    ItemName: 'Explorer Helmet',
     Level: 25,
     Vocation: 'All',
     Energy: 'Nature',
@@ -657,7 +657,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Silver Helmet',
+    ItemName: 'Silver Helmet',
     Level: 30,
     Vocation: 'All',
     Energy: 'Light',
@@ -671,7 +671,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Alamogordo Helmet',
+    ItemName: 'Alamogordo Helmet',
     Level: 35,
     Vocation: 'All',
     Energy: 'Dark',
@@ -684,7 +684,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Mastermind Hat',
+    ItemName: 'Mastermind Hat',
     Level: 45,
     Vocation: 'All',
     Energy: 'Dark',
@@ -697,7 +697,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Iron Helmet',
+    ItemName: 'Iron Helmet',
     Level: 50,
     Vocation: 'All',
     Energy: 'Light',
@@ -710,7 +710,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Golin's Helmet",
+    ItemName: "Golin's Helmet",
     Level: 55,
     Vocation: 'All',
     Energy: 'Light',
@@ -723,7 +723,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Humanoid Lioncat Helmet',
+    ItemName: 'Humanoid Lioncat Helmet',
     Level: 65,
     Vocation: 'All',
     Energy: 'Nature',
@@ -736,7 +736,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Demon Horn Helmet',
+    ItemName: 'Demon Horn Helmet',
     Level: 70,
     Vocation: 'All',
     Energy: 'Dark',
@@ -749,7 +749,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Noble Guard Helmet',
+    ItemName: 'Noble Guard Helmet',
     Level: 75,
     Vocation: 'All',
     Energy: 'Light',
@@ -762,7 +762,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Darkness Hat',
+    ItemName: 'Darkness Hat',
     Level: 80,
     Vocation: 'All',
     Energy: 'Dark',
@@ -775,7 +775,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Skeletons Helmet',
+    ItemName: 'Skeletons Helmet',
     Level: 85,
     Vocation: 'All',
     Energy: 'Dark',
@@ -788,7 +788,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Spider Silk Helmet',
+    ItemName: 'Spider Silk Helmet',
     Level: 100,
     Vocation: 'All',
     Energy: 'Nature',
@@ -801,7 +801,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Clan's Helmet",
+    ItemName: "Clan's Helmet",
     Level: 110,
     Vocation: 'All',
     Energy: 'Light',
@@ -815,7 +815,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Skeleton Warrior Helmet',
+    ItemName: 'Skeleton Warrior Helmet',
     Level: 115,
     Vocation: 'All',
     Energy: 'Dark',
@@ -828,7 +828,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Poison Beetle Helmet',
+    ItemName: 'Poison Beetle Helmet',
     Level: 120,
     Vocation: 'All',
     Energy: 'Nature',
@@ -841,7 +841,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Warrior Helmet',
+    ItemName: 'Warrior Helmet',
     Level: 130,
     Vocation: 'All',
     Energy: 'Dark',
@@ -854,7 +854,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Hell's Helmet",
+    ItemName: "Hell's Helmet",
     Level: 140,
     Vocation: 'All',
     Energy: 'Dark',
@@ -867,7 +867,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Frost Helmet',
+    ItemName: 'Frost Helmet',
     Level: 150,
     Vocation: 'All',
     Energy: 'Nature',
@@ -880,7 +880,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dwarf Miner Helmet',
+    ItemName: 'Dwarf Miner Helmet',
     Level: 155,
     Vocation: 'All',
     Energy: 'Light',
@@ -893,7 +893,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Helmet of the Void',
+    ItemName: 'Helmet of the Void',
     Level: 160,
     Vocation: 'All',
     Energy: 'Dark',
@@ -906,7 +906,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Lava Helmet',
+    ItemName: 'Lava Helmet',
     Level: 175,
     Vocation: 'All',
     Energy: 'Nature',
@@ -919,7 +919,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Noble Topper',
+    ItemName: 'Noble Topper',
     Level: 180,
     Vocation: 'All',
     Energy: 'Light',
@@ -932,7 +932,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Cruzader Helmet',
+    ItemName: 'Cruzader Helmet',
     Level: 200,
     Vocation: 'All',
     Energy: 'Light',
@@ -945,7 +945,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Undead Dragon Rider Helmet',
+    ItemName: 'Undead Dragon Rider Helmet',
     Level: 210,
     Vocation: 'All',
     Energy: 'Dark',
@@ -958,7 +958,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Night Elf Lord Helmet',
+    ItemName: 'Night Elf Lord Helmet',
     Level: 220,
     Vocation: 'All',
     Energy: 'Nature',
@@ -971,7 +971,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crown of the Skies',
+    ItemName: 'Crown of the Skies',
     Level: 225,
     Vocation: 'All',
     Energy: 'Light',
@@ -984,7 +984,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Helmet of the Doom',
+    ItemName: 'Helmet of the Doom',
     Level: 250,
     Vocation: 'All',
     Energy: 'Dark',
@@ -997,7 +997,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Revenant Helmet',
+    ItemName: 'Revenant Helmet',
     Level: 270,
     Vocation: 'All',
     Energy: 'Light',
@@ -1010,7 +1010,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Elora's Helmet",
+    ItemName: "Elora's Helmet",
     Level: 275,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1023,7 +1023,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Devil Hunter Helmet',
+    ItemName: 'Devil Hunter Helmet',
     Level: 300,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1036,7 +1036,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Celestial Helmet',
+    ItemName: 'Celestial Helmet',
     Level: 325,
     Vocation: 'All',
     Energy: 'Light',
@@ -1049,7 +1049,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Golden Dragon Scale Helmet',
+    ItemName: 'Golden Dragon Scale Helmet',
     Level: 500,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1062,7 +1062,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Undead Golden Dragon Scale Helmet',
+    ItemName: 'Undead Golden Dragon Scale Helmet',
     Level: 500,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1075,7 +1075,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crown of Enlightenment',
+    ItemName: 'Crown of Enlightenment',
     Level: 500,
     Vocation: 'All',
     Energy: 'Light',
@@ -1088,7 +1088,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Chromatic Golden Dragon Scale Helmet',
+    ItemName: 'Chromatic Golden Dragon Scale Helmet',
     Level: 500,
     Vocation: 'All',
     Energy: 'Light',
@@ -1101,7 +1101,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Rainbow Helmet',
+    ItemName: 'Rainbow Helmet',
     Level: 1000,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1114,7 +1114,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Plato Ring',
+    ItemName: 'Plato Ring',
     Level: 5,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1127,7 +1127,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Goblin Ring',
+    ItemName: 'Goblin Ring',
     Level: 15,
     Vocation: 'All',
     Energy: 'Light',
@@ -1140,7 +1140,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Lost Soul Ring',
+    ItemName: 'Lost Soul Ring',
     Level: 20,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1153,7 +1153,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Mana Shield Ring',
+    ItemName: 'Mana Shield Ring',
     Level: 25,
     Vocation: 'All',
     Energy: 'None',
@@ -1167,7 +1167,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Silver Ring',
+    ItemName: 'Silver Ring',
     Level: 35,
     Vocation: 'All',
     Energy: 'Light',
@@ -1181,7 +1181,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Humanoid Octopus Ring',
+    ItemName: 'Humanoid Octopus Ring',
     Level: 40,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1194,7 +1194,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Stealth Ring',
+    ItemName: 'Stealth Ring',
     Level: 45,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1208,7 +1208,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dark Ring',
+    ItemName: 'Dark Ring',
     Level: 50,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1221,7 +1221,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ice Mermaid Ring',
+    ItemName: 'Ice Mermaid Ring',
     Level: 65,
     Vocation: 'All',
     Energy: 'Light',
@@ -1234,7 +1234,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ice Ring',
+    ItemName: 'Ice Ring',
     Level: 70,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1247,7 +1247,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Golden Ring',
+    ItemName: 'Golden Ring',
     Level: 80,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1260,7 +1260,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Uzara Ring',
+    ItemName: 'Uzara Ring',
     Level: 90,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1273,7 +1273,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Carapace Ring',
+    ItemName: 'Carapace Ring',
     Level: 95,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1286,7 +1286,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Hell's Ring",
+    ItemName: "Hell's Ring",
     Level: 100,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1299,7 +1299,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Gladiator Ring',
+    ItemName: 'Gladiator Ring',
     Level: 105,
     Vocation: 'All',
     Energy: 'Light',
@@ -1312,7 +1312,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Bone Ring',
+    ItemName: 'Bone Ring',
     Level: 110,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1325,7 +1325,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Power Ring',
+    ItemName: 'Power Ring',
     Level: 125,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1338,7 +1338,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Lava Ring',
+    ItemName: 'Lava Ring',
     Level: 135,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1351,7 +1351,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Mystic Ring',
+    ItemName: 'Mystic Ring',
     Level: 140,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1364,7 +1364,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Clan's Ring",
+    ItemName: "Clan's Ring",
     Level: 150,
     Vocation: 'All',
     Energy: 'Light',
@@ -1378,7 +1378,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ring of the Skies',
+    ItemName: 'Ring of the Skies',
     Level: 165,
     Vocation: 'All',
     Energy: 'Light',
@@ -1391,7 +1391,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Abyssal Cultist Ring',
+    ItemName: 'Abyssal Cultist Ring',
     Level: 170,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1404,7 +1404,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elven Nobility Night Ring',
+    ItemName: 'Elven Nobility Night Ring',
     Level: 180,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1417,7 +1417,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elven Nobility Ring',
+    ItemName: 'Elven Nobility Ring',
     Level: 190,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1430,7 +1430,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Aristocrat Ring',
+    ItemName: 'Aristocrat Ring',
     Level: 195,
     Vocation: 'All',
     Energy: 'Light',
@@ -1443,7 +1443,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Galaxy Ring',
+    ItemName: 'Galaxy Ring',
     Level: 200,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1456,7 +1456,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crystal Ring',
+    ItemName: 'Crystal Ring',
     Level: 210,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1469,7 +1469,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Celestial Ring',
+    ItemName: 'Celestial Ring',
     Level: 225,
     Vocation: 'All',
     Energy: 'Light',
@@ -1482,7 +1482,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Draconic Gem Ring',
+    ItemName: 'Draconic Gem Ring',
     Level: 245,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1495,7 +1495,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Chromatic Ring',
+    ItemName: 'Chromatic Ring',
     Level: 275,
     Vocation: 'All',
     Energy: 'Light',
@@ -1509,7 +1509,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Wool Shirt',
+    ItemName: 'Wool Shirt',
     Level: 2,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1522,7 +1522,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Wool Coat',
+    ItemName: 'Wool Coat',
     Level: 5,
     Vocation: 'All',
     Energy: 'Light',
@@ -1535,7 +1535,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Reinforced Shirt',
+    ItemName: 'Reinforced Shirt',
     Level: 7,
     Vocation: 'All',
     Energy: 'Light',
@@ -1548,7 +1548,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Winter Coat',
+    ItemName: 'Winter Coat',
     Level: 12,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1561,7 +1561,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Leather Armor',
+    ItemName: 'Leather Armor',
     Level: 15,
     Vocation: 'All',
     Energy: 'Light',
@@ -1575,7 +1575,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ghostly Coat',
+    ItemName: 'Ghostly Coat',
     Level: 20,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1588,7 +1588,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Plate Armor',
+    ItemName: 'Plate Armor',
     Level: 25,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1602,7 +1602,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Bronze Armor',
+    ItemName: 'Bronze Armor',
     Level: 35,
     Vocation: 'All',
     Energy: 'Light',
@@ -1615,7 +1615,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Silver Armor',
+    ItemName: 'Silver Armor',
     Level: 40,
     Vocation: 'All',
     Energy: 'Light',
@@ -1628,7 +1628,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Humanoid Fox Cape',
+    ItemName: 'Humanoid Fox Cape',
     Level: 45,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1641,7 +1641,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'War Armor',
+    ItemName: 'War Armor',
     Level: 50,
     Vocation: 'All',
     Energy: 'Light',
@@ -1654,7 +1654,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Vortex Robe',
+    ItemName: 'Vortex Robe',
     Level: 55,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1667,7 +1667,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Golden Armor',
+    ItemName: 'Golden Armor',
     Level: 60,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1680,7 +1680,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Vulcana Armor',
+    ItemName: 'Vulcana Armor',
     Level: 70,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1693,7 +1693,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ice Beetle Carapace Armor',
+    ItemName: 'Ice Beetle Carapace Armor',
     Level: 75,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1706,7 +1706,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dark Armor',
+    ItemName: 'Dark Armor',
     Level: 80,
     Vocation: 'All',
     Energy: 'Light',
@@ -1719,7 +1719,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Blue Robe',
+    ItemName: 'Blue Robe',
     Level: 85,
     Vocation: 'All',
     Energy: 'Light',
@@ -1732,7 +1732,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Skeleton Warrior Armor',
+    ItemName: 'Skeleton Warrior Armor',
     Level: 95,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1745,7 +1745,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Spider Silk Armor',
+    ItemName: 'Spider Silk Armor',
     Level: 100,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1758,7 +1758,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Heron's Armor",
+    ItemName: "Heron's Armor",
     Level: 110,
     Vocation: 'All',
     Energy: 'Light',
@@ -1771,7 +1771,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Hell's Cloak",
+    ItemName: "Hell's Cloak",
     Level: 120,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1784,7 +1784,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Clan's Armor",
+    ItemName: "Clan's Armor",
     Level: 130,
     Vocation: 'All',
     Energy: 'Light',
@@ -1798,7 +1798,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Abyssal Skeleton Armor',
+    ItemName: 'Abyssal Skeleton Armor',
     Level: 135,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1811,7 +1811,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Royal Cloak',
+    ItemName: 'Royal Cloak',
     Level: 140,
     Vocation: 'All',
     Energy: 'Light',
@@ -1824,7 +1824,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Lava Armor',
+    ItemName: 'Lava Armor',
     Level: 145,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1837,7 +1837,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Frost Armor',
+    ItemName: 'Frost Armor',
     Level: 150,
     Vocation: 'All',
     Energy: 'Light',
@@ -1850,7 +1850,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Mystic Robe',
+    ItemName: 'Mystic Robe',
     Level: 160,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1863,7 +1863,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Armor of the Void',
+    ItemName: 'Armor of the Void',
     Level: 170,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1876,7 +1876,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Paladin Armor',
+    ItemName: 'Paladin Armor',
     Level: 185,
     Vocation: 'All',
     Energy: 'Light',
@@ -1889,7 +1889,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Black Dragon Scale Armor',
+    ItemName: 'Black Dragon Scale Armor',
     Level: 195,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1902,7 +1902,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Devil Hunter Armor',
+    ItemName: 'Devil Hunter Armor',
     Level: 200,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1915,7 +1915,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Unstable Vortex Robe',
+    ItemName: 'Unstable Vortex Robe',
     Level: 210,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1928,7 +1928,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dwarf Warrior Armor',
+    ItemName: 'Dwarf Warrior Armor',
     Level: 220,
     Vocation: 'All',
     Energy: 'Light',
@@ -1941,7 +1941,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elemental Armor',
+    ItemName: 'Elemental Armor',
     Level: 230,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1954,7 +1954,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Saint Armor',
+    ItemName: 'Saint Armor',
     Level: 250,
     Vocation: 'All',
     Energy: 'Light',
@@ -1967,7 +1967,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elder Vampire Armor',
+    ItemName: 'Elder Vampire Armor',
     Level: 260,
     Vocation: 'All',
     Energy: 'Dark',
@@ -1981,7 +1981,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Elora's Armor",
+    ItemName: "Elora's Armor",
     Level: 275,
     Vocation: 'All',
     Energy: 'Nature',
@@ -1994,7 +1994,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Revenant Armor',
+    ItemName: 'Revenant Armor',
     Level: 290,
     Vocation: 'All',
     Energy: 'Light',
@@ -2007,7 +2007,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Corrupted Armor',
+    ItemName: 'Corrupted Armor',
     Level: 300,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2020,7 +2020,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Celestial Armor',
+    ItemName: 'Celestial Armor',
     Level: 325,
     Vocation: 'All',
     Energy: 'Light',
@@ -2033,7 +2033,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Golden Dragon Scale Armor',
+    ItemName: 'Golden Dragon Scale Armor',
     Level: 500,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2046,7 +2046,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Undead Golden Dragon Scale Armor',
+    ItemName: 'Undead Golden Dragon Scale Armor',
     Level: 500,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2059,7 +2059,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Chromatic Golden Dragon Scale Armor',
+    ItemName: 'Chromatic Golden Dragon Scale Armor',
     Level: 500,
     Vocation: 'All',
     Energy: 'Light',
@@ -2072,7 +2072,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Rainbow Armor',
+    ItemName: 'Rainbow Armor',
     Level: 1000,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2085,7 +2085,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Reinforced Shield',
+    ItemName: 'Reinforced Shield',
     Level: 1,
     Vocation: 'All',
     Energy: 'Light',
@@ -2098,7 +2098,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Round Wooden Shield',
+    ItemName: 'Round Wooden Shield',
     Level: 2,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2111,7 +2111,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Copper Shield',
+    ItemName: 'Copper Shield',
     Level: 5,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2124,7 +2124,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Squared Wooden Shield',
+    ItemName: 'Squared Wooden Shield',
     Level: 8,
     Vocation: 'All',
     Energy: 'Light',
@@ -2138,7 +2138,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Heritage Shield',
+    ItemName: 'Heritage Shield',
     Level: 12,
     Vocation: 'All',
     Energy: 'Light',
@@ -2151,7 +2151,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Undead Warrior Shield',
+    ItemName: 'Undead Warrior Shield',
     Level: 15,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2164,7 +2164,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Steel Shield',
+    ItemName: 'Steel Shield',
     Level: 18,
     Vocation: 'All',
     Energy: 'Light',
@@ -2177,7 +2177,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dark Shield',
+    ItemName: 'Dark Shield',
     Level: 30,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2191,7 +2191,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Humanoid Toad Shield',
+    ItemName: 'Humanoid Toad Shield',
     Level: 35,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2204,7 +2204,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dwarven Shield',
+    ItemName: 'Dwarven Shield',
     Level: 40,
     Vocation: 'All',
     Energy: 'Light',
@@ -2217,7 +2217,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Bones Shield',
+    ItemName: 'Bones Shield',
     Level: 50,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2230,7 +2230,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ice Shield',
+    ItemName: 'Ice Shield',
     Level: 60,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2243,7 +2243,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Troll Shield',
+    ItemName: 'Troll Shield',
     Level: 65,
     Vocation: 'All',
     Energy: 'Light',
@@ -2256,7 +2256,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crown Shield',
+    ItemName: 'Crown Shield',
     Level: 70,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2269,7 +2269,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Golden Shield',
+    ItemName: 'Golden Shield',
     Level: 80,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2282,7 +2282,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Evil Shield',
+    ItemName: 'Evil Shield',
     Level: 85,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2295,7 +2295,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Time Shield',
+    ItemName: 'Time Shield',
     Level: 90,
     Vocation: 'All',
     Energy: 'Light',
@@ -2308,7 +2308,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Giant Spider Shield',
+    ItemName: 'Giant Spider Shield',
     Level: 95,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2321,7 +2321,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Tower Shield',
+    ItemName: 'Tower Shield',
     Level: 100,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2334,7 +2334,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'The Winter Shield',
+    ItemName: 'The Winter Shield',
     Level: 110,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2347,7 +2347,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Skull Shield',
+    ItemName: 'Skull Shield',
     Level: 120,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2360,7 +2360,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crystal Shield',
+    ItemName: 'Crystal Shield',
     Level: 130,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2373,7 +2373,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Clan's Shield",
+    ItemName: "Clan's Shield",
     Level: 140,
     Vocation: 'All',
     Energy: 'Light',
@@ -2387,7 +2387,7 @@ const equipments = [
     Magic: 0,
   },
   {
-    Equipment: 'Mithril Shield',
+    ItemName: 'Mithril Shield',
     Level: 150,
     Vocation: 'All',
     Energy: 'Light',
@@ -2400,7 +2400,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Shield of the Void',
+    ItemName: 'Shield of the Void',
     Level: 160,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2413,7 +2413,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elven Shield',
+    ItemName: 'Elven Shield',
     Level: 170,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2426,7 +2426,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Gladiator Shield',
+    ItemName: 'Gladiator Shield',
     Level: 200,
     Vocation: 'All',
     Energy: 'Light',
@@ -2439,7 +2439,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Sacred Shield',
+    ItemName: 'Sacred Shield',
     Level: 200,
     Vocation: 'All',
     Energy: 'Light',
@@ -2452,7 +2452,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Draconia Shield',
+    ItemName: 'Draconia Shield',
     Level: 205,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2465,7 +2465,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Devil Shield',
+    ItemName: 'Devil Shield',
     Level: 210,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2478,7 +2478,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Angaina Shield',
+    ItemName: 'Angaina Shield',
     Level: 225,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2491,7 +2491,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Righteous Shield',
+    ItemName: 'Righteous Shield',
     Level: 250,
     Vocation: 'All',
     Energy: 'Light',
@@ -2504,7 +2504,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Paladin Shield',
+    ItemName: 'Paladin Shield',
     Level: 250,
     Vocation: 'All',
     Energy: 'Light',
@@ -2517,7 +2517,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elder Vampire Shield',
+    ItemName: 'Elder Vampire Shield',
     Level: 260,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2531,7 +2531,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dragon Shield',
+    ItemName: 'Dragon Shield',
     Level: 275,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2545,7 +2545,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Elora's Shield",
+    ItemName: "Elora's Shield",
     Level: 275,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2558,7 +2558,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Revenant Shield',
+    ItemName: 'Revenant Shield',
     Level: 295,
     Vocation: 'All',
     Energy: 'Light',
@@ -2571,7 +2571,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Corrupted Shield',
+    ItemName: 'Corrupted Shield',
     Level: 300,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2585,7 +2585,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dragons Tamer Shield',
+    ItemName: 'Dragons Tamer Shield',
     Level: 325,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2598,7 +2598,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Beginner's Spellbook",
+    ItemName: "Beginner's Spellbook",
     Level: 2,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2611,7 +2611,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Fragile Grimoire',
+    ItemName: 'Fragile Grimoire',
     Level: 10,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2624,7 +2624,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Faun Book',
+    ItemName: 'Faun Book',
     Level: 15,
     Vocation: 'All',
     Energy: 'Light',
@@ -2637,7 +2637,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Incarnated Spellbook',
+    ItemName: 'Incarnated Spellbook',
     Level: 20,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2650,7 +2650,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Reincarnated Spellbook',
+    ItemName: 'Reincarnated Spellbook',
     Level: 30,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2663,7 +2663,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Preserved Tome',
+    ItemName: 'Preserved Tome',
     Level: 40,
     Vocation: 'All',
     Energy: 'Light',
@@ -2676,7 +2676,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Frigid Grimoire',
+    ItemName: 'Frigid Grimoire',
     Level: 50,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2689,7 +2689,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Blazefury Tome',
+    ItemName: 'Blazefury Tome',
     Level: 60,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2702,7 +2702,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Warlock's Secrets",
+    ItemName: "Warlock's Secrets",
     Level: 70,
     Vocation: 'All',
     Energy: 'Light',
@@ -2715,7 +2715,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Vampiric Spellbook',
+    ItemName: 'Vampiric Spellbook',
     Level: 85,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2728,7 +2728,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Silk Book',
+    ItemName: 'Silk Book',
     Level: 90,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2741,7 +2741,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Clan's Spellbook",
+    ItemName: "Clan's Spellbook",
     Level: 100,
     Vocation: 'All',
     Energy: 'Light',
@@ -2755,7 +2755,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Hellish Tome',
+    ItemName: 'Hellish Tome',
     Level: 120,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2768,7 +2768,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Earth Tome',
+    ItemName: 'Earth Tome',
     Level: 130,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2781,7 +2781,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Demonic Spellbook',
+    ItemName: 'Demonic Spellbook',
     Level: 140,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2794,7 +2794,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Prayer Book',
+    ItemName: 'Prayer Book',
     Level: 150,
     Vocation: 'All',
     Energy: 'Light',
@@ -2807,7 +2807,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Tome of the Void',
+    ItemName: 'Tome of the Void',
     Level: 160,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2820,7 +2820,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Artificer Tome',
+    ItemName: 'Artificer Tome',
     Level: 180,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2833,7 +2833,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Draconic Tome',
+    ItemName: 'Draconic Tome',
     Level: 200,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2846,7 +2846,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Book of Good Deeds',
+    ItemName: 'Book of Good Deeds',
     Level: 200,
     Vocation: 'All',
     Energy: 'Light',
@@ -2859,7 +2859,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Vortex Book',
+    ItemName: 'Vortex Book',
     Level: 205,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2872,7 +2872,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Sacred Tome',
+    ItemName: 'Sacred Tome',
     Level: 225,
     Vocation: 'All',
     Energy: 'Light',
@@ -2885,7 +2885,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ancient Tome',
+    ItemName: 'Ancient Tome',
     Level: 250,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2898,7 +2898,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elder Vampire Tome',
+    ItemName: 'Elder Vampire Tome',
     Level: 255,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2911,7 +2911,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Elora's Tome",
+    ItemName: "Elora's Tome",
     Level: 275,
     Vocation: 'All',
     Energy: 'Nature',
@@ -2924,7 +2924,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Celestial Tome',
+    ItemName: 'Celestial Tome',
     Level: 275,
     Vocation: 'All',
     Energy: 'Light',
@@ -2937,7 +2937,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Forgotten Tome',
+    ItemName: 'Forgotten Tome',
     Level: 300,
     Vocation: 'All',
     Energy: 'Dark',
@@ -2950,7 +2950,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Chromatic Book',
+    ItemName: 'Chromatic Book',
     Level: 325,
     Vocation: 'All',
     Energy: 'Light',
@@ -2963,7 +2963,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Axe',
+    ItemName: 'Axe',
     Level: 0,
     Vocation: 'All',
     Energy: 'None',
@@ -2976,7 +2976,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Hammer',
+    ItemName: 'Hammer',
     Level: 0,
     Vocation: 'All',
     Energy: 'None',
@@ -2989,7 +2989,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crest of Fire',
+    ItemName: 'Crest of Fire',
     Level: 1,
     Vocation: 'Berserker',
     Energy: 'None',
@@ -3002,7 +3002,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crest of Air',
+    ItemName: 'Crest of Air',
     Level: 1,
     Vocation: 'Mage',
     Energy: 'None',
@@ -3015,7 +3015,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crest of Time',
+    ItemName: 'Crest of Time',
     Level: 1,
     Vocation: 'Alchemist',
     Energy: 'None',
@@ -3028,7 +3028,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crest of Water',
+    ItemName: 'Crest of Water',
     Level: 1,
     Vocation: 'Hunter',
     Energy: 'None',
@@ -3041,7 +3041,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crest of Earth',
+    ItemName: 'Crest of Earth',
     Level: 1,
     Vocation: 'Warrior',
     Energy: 'None',
@@ -3054,7 +3054,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Energy Totem',
+    ItemName: 'Energy Totem',
     Level: 1,
     Vocation: 'All',
     Energy: 'None',
@@ -3067,7 +3067,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Fishing Rod',
+    ItemName: 'Fishing Rod',
     Level: 1,
     Vocation: 'All',
     Energy: 'None',
@@ -3080,7 +3080,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Pickaxe',
+    ItemName: 'Pickaxe',
     Level: 1,
     Vocation: 'All',
     Energy: 'None',
@@ -3093,7 +3093,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crystal Pickaxe',
+    ItemName: 'Crystal Pickaxe',
     Level: 400,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3106,7 +3106,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Rainbow Gauntlet',
+    ItemName: 'Rainbow Gauntlet',
     Level: 1000,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3119,7 +3119,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Complete Rainbow Gauntlet',
+    ItemName: 'Complete Rainbow Gauntlet',
     Level: 1000,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3132,7 +3132,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Comfortable Thong',
+    ItemName: 'Comfortable Thong',
     Level: 1,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3145,7 +3145,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Wool Legs',
+    ItemName: 'Wool Legs',
     Level: 5,
     Vocation: 'All',
     Energy: 'Light',
@@ -3158,7 +3158,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Leather Legs',
+    ItemName: 'Leather Legs',
     Level: 15,
     Vocation: 'All',
     Energy: 'Light',
@@ -3172,7 +3172,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Wizard Legs',
+    ItemName: 'Wizard Legs',
     Level: 25,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3186,7 +3186,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Humanoid Toad Legs',
+    ItemName: 'Humanoid Toad Legs',
     Level: 30,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3199,7 +3199,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Chain Legs',
+    ItemName: 'Chain Legs',
     Level: 35,
     Vocation: 'All',
     Energy: 'Light',
@@ -3213,7 +3213,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ninja Legs',
+    ItemName: 'Ninja Legs',
     Level: 45,
     Vocation: 'All',
     Energy: 'Light',
@@ -3226,7 +3226,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Heirloom Legs',
+    ItemName: 'Heirloom Legs',
     Level: 55,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3239,7 +3239,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Vampire Legs',
+    ItemName: 'Vampire Legs',
     Level: 60,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3252,7 +3252,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Reinforced Legs',
+    ItemName: 'Reinforced Legs',
     Level: 65,
     Vocation: 'All',
     Energy: 'Light',
@@ -3266,7 +3266,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Prismatic Legs',
+    ItemName: 'Prismatic Legs',
     Level: 75,
     Vocation: 'All',
     Energy: 'Light',
@@ -3279,7 +3279,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Fairy Legs',
+    ItemName: 'Fairy Legs',
     Level: 80,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3292,7 +3292,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Golden Legs',
+    ItemName: 'Golden Legs',
     Level: 85,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3305,7 +3305,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Plate Legs',
+    ItemName: 'Plate Legs',
     Level: 100,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3318,7 +3318,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Gladiator Legs',
+    ItemName: 'Gladiator Legs',
     Level: 110,
     Vocation: 'All',
     Energy: 'Light',
@@ -3331,7 +3331,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crystal Legs',
+    ItemName: 'Crystal Legs',
     Level: 120,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3345,7 +3345,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Abyssal Cultist Legs',
+    ItemName: 'Abyssal Cultist Legs',
     Level: 125,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3358,7 +3358,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Clan Legs',
+    ItemName: 'Clan Legs',
     Level: 140,
     Vocation: 'All',
     Energy: 'Light',
@@ -3372,7 +3372,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elven Legs',
+    ItemName: 'Elven Legs',
     Level: 160,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3385,7 +3385,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Void Legs',
+    ItemName: 'Void Legs',
     Level: 175,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3398,7 +3398,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Noble Legs',
+    ItemName: 'Noble Legs',
     Level: 180,
     Vocation: 'All',
     Energy: 'Light',
@@ -3411,7 +3411,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Volcano Legs',
+    ItemName: 'Volcano Legs',
     Level: 200,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3424,7 +3424,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Frost Hunter Legs',
+    ItemName: 'Frost Hunter Legs',
     Level: 220,
     Vocation: 'All',
     Energy: 'Light',
@@ -3437,7 +3437,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Demon Legs',
+    ItemName: 'Demon Legs',
     Level: 225,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3450,7 +3450,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Elemental Legs',
+    ItemName: 'Elemental Legs',
     Level: 245,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3463,7 +3463,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Angelic Legs',
+    ItemName: 'Angelic Legs',
     Level: 250,
     Vocation: 'All',
     Energy: 'Light',
@@ -3476,7 +3476,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Dragons Tamer Legs',
+    ItemName: 'Dragons Tamer Legs',
     Level: 275,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3489,7 +3489,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Chromatic Legs',
+    ItemName: 'Chromatic Legs',
     Level: 295,
     Vocation: 'All',
     Energy: 'Light',
@@ -3502,7 +3502,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ethereal Legs',
+    ItemName: 'Ethereal Legs',
     Level: 300,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3515,7 +3515,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Chromatic Golden Dragon Scale Legs',
+    ItemName: 'Chromatic Golden Dragon Scale Legs',
     Level: 500,
     Vocation: 'All',
     Energy: 'Light',
@@ -3528,7 +3528,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Golden Dragon Scale Legs',
+    ItemName: 'Golden Dragon Scale Legs',
     Level: 500,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3541,7 +3541,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Undead Golden Dragon Scale Legs',
+    ItemName: 'Undead Golden Dragon Scale Legs',
     Level: 500,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3554,7 +3554,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Leather Boot',
+    ItemName: 'Leather Boot',
     Level: 1,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3567,7 +3567,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Strange Cloth Shoe',
+    ItemName: 'Strange Cloth Shoe',
     Level: 5,
     Vocation: 'All',
     Energy: 'Light',
@@ -3580,7 +3580,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Tin Boot',
+    ItemName: 'Tin Boot',
     Level: 10,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3593,7 +3593,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Reinforced Leather Boot',
+    ItemName: 'Reinforced Leather Boot',
     Level: 12,
     Vocation: 'All',
     Energy: 'Light',
@@ -3607,7 +3607,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Light Boot',
+    ItemName: 'Light Boot',
     Level: 16,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3620,7 +3620,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Steeltoe Boot',
+    ItemName: 'Steeltoe Boot',
     Level: 22,
     Vocation: 'All',
     Energy: 'Light',
@@ -3633,7 +3633,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Steel Boot',
+    ItemName: 'Steel Boot',
     Level: 30,
     Vocation: 'All',
     Energy: 'Light',
@@ -3646,7 +3646,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Undead Warrior Boot',
+    ItemName: 'Undead Warrior Boot',
     Level: 35,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3659,7 +3659,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Winged Boot',
+    ItemName: 'Winged Boot',
     Level: 40,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3672,7 +3672,7 @@ const equipments = [
     Magic: 0,
   },
   {
-    Equipment: 'Dark Boot',
+    ItemName: 'Dark Boot',
     Level: 55,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3685,7 +3685,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Golden Boot',
+    ItemName: 'Golden Boot',
     Level: 70,
     Vocation: 'All',
     Energy: 'Light',
@@ -3698,7 +3698,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Giant Beetle Carapace Boot',
+    ItemName: 'Giant Beetle Carapace Boot',
     Level: 75,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3711,7 +3711,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Demon Boot',
+    ItemName: 'Demon Boot',
     Level: 80,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3724,7 +3724,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Boots of Haste',
+    ItemName: 'Boots of Haste',
     Level: 90,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3737,7 +3737,7 @@ const equipments = [
     Magic: 0,
   },
   {
-    Equipment: 'Spider Silk Boot',
+    ItemName: 'Spider Silk Boot',
     Level: 100,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3750,7 +3750,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Noble Extractor Boot',
+    ItemName: 'Noble Extractor Boot',
     Level: 110,
     Vocation: 'All',
     Energy: 'Light',
@@ -3763,7 +3763,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Skeleton Warrior Boot',
+    ItemName: 'Skeleton Warrior Boot',
     Level: 115,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3776,7 +3776,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Lava Boot',
+    ItemName: 'Lava Boot',
     Level: 125,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3789,7 +3789,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Clan's Boots",
+    ItemName: "Clan's Boots",
     Level: 140,
     Vocation: 'All',
     Energy: 'Light',
@@ -3802,7 +3802,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Mystic Boot',
+    ItemName: 'Mystic Boot',
     Level: 145,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3815,7 +3815,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Frost Boots',
+    ItemName: 'Frost Boots',
     Level: 150,
     Vocation: 'All',
     Energy: 'Light',
@@ -3828,7 +3828,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Ice Widow Silk Boot',
+    ItemName: 'Ice Widow Silk Boot',
     Level: 170,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3841,7 +3841,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Noble Boots',
+    ItemName: 'Noble Boots',
     Level: 180,
     Vocation: 'All',
     Energy: 'Light',
@@ -3854,7 +3854,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Abyssal Cultist Boot',
+    ItemName: 'Abyssal Cultist Boot',
     Level: 190,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3867,7 +3867,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Angelical Boots',
+    ItemName: 'Angelical Boots',
     Level: 200,
     Vocation: 'All',
     Energy: 'Light',
@@ -3880,7 +3880,7 @@ const equipments = [
     Magic: 0,
   },
   {
-    Equipment: 'Giant Worm Boot',
+    ItemName: 'Giant Worm Boot',
     Level: 210,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3893,7 +3893,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Undead Dragon Tamer Boot',
+    ItemName: 'Undead Dragon Tamer Boot',
     Level: 225,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3906,7 +3906,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Frost Hunter Boot',
+    ItemName: 'Frost Hunter Boot',
     Level: 245,
     Vocation: 'All',
     Energy: 'Light',
@@ -3919,7 +3919,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Boots of Dark Magic',
+    ItemName: 'Boots of Dark Magic',
     Level: 250,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3932,7 +3932,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Crystal Boot',
+    ItemName: 'Crystal Boot',
     Level: 255,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3945,7 +3945,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: "Elora's Boots",
+    ItemName: "Elora's Boots",
     Level: 275,
     Vocation: 'All',
     Energy: 'Nature',
@@ -3958,7 +3958,7 @@ const equipments = [
     Magic: 0,
   },
   {
-    Equipment: 'Revenant Boot',
+    ItemName: 'Revenant Boot',
     Level: 290,
     Vocation: 'All',
     Energy: 'Light',
@@ -3971,7 +3971,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Interdimensional Boots',
+    ItemName: 'Interdimensional Boots',
     Level: 300,
     Vocation: 'All',
     Energy: 'Dark',
@@ -3984,7 +3984,7 @@ const equipments = [
     Haste: 0,
   },
   {
-    Equipment: 'Celestial Boots',
+    ItemName: 'Celestial Boots',
     Level: 325,
     Vocation: 'All',
     Energy: 'Light',
@@ -4000,7 +4000,7 @@ const equipments = [
 
 const weapons = [
   {
-    Weapon: 'Earth Glove',
+    ItemName: 'Earth Glove',
     Level: 1,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4014,7 +4014,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Copper Glove',
+    ItemName: 'Copper Glove',
     Level: 4,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4028,7 +4028,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Static Glove',
+    ItemName: 'Static Glove',
     Level: 5,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4042,7 +4042,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Worn Glove',
+    ItemName: 'Worn Glove',
     Level: 8,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4056,7 +4056,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Electrical Glove',
+    ItemName: 'Electrical Glove',
     Level: 10,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4070,7 +4070,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Iron Glove',
+    ItemName: 'Iron Glove',
     Level: 15,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4084,7 +4084,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Forest Glove',
+    ItemName: 'Forest Glove',
     Level: 20,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4099,7 +4099,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Heat Glove',
+    ItemName: 'Heat Glove',
     Level: 30,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4113,7 +4113,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dark Glove',
+    ItemName: 'Dark Glove',
     Level: 40,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4127,7 +4127,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Novice Gladiator Glove',
+    ItemName: 'Novice Gladiator Glove',
     Level: 50,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4141,7 +4141,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Arctic Glove',
+    ItemName: 'Arctic Glove',
     Level: 55,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4155,7 +4155,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Humanoid Octopus Glove',
+    ItemName: 'Humanoid Octopus Glove',
     Level: 60,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4169,7 +4169,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Demon Glove',
+    ItemName: 'Demon Glove',
     Level: 70,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4183,7 +4183,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Cursed Glove',
+    ItemName: 'Cursed Glove',
     Level: 80,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4197,7 +4197,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Nobles Glove',
+    ItemName: 'Nobles Glove',
     Level: 90,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4211,7 +4211,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Intermediate Gladiator Glove',
+    ItemName: 'Intermediate Gladiator Glove',
     Level: 100,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4225,7 +4225,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Hell Mage Glove',
+    ItemName: 'Hell Mage Glove',
     Level: 105,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4239,7 +4239,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Poison Beetle Glove',
+    ItemName: 'Poison Beetle Glove',
     Level: 105,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4253,7 +4253,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Clan's Glove",
+    ItemName: "Clan's Glove",
     Level: 110,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4268,7 +4268,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Chaos Glove',
+    ItemName: 'Chaos Glove',
     Level: 125,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4282,7 +4282,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Hell's Glove",
+    ItemName: "Hell's Glove",
     Level: 140,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4296,7 +4296,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Justice Glove',
+    ItemName: 'Justice Glove',
     Level: 140,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4310,7 +4310,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Lava Glove',
+    ItemName: 'Lava Glove',
     Level: 150,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4324,7 +4324,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Advanced Gladiator Glove',
+    ItemName: 'Advanced Gladiator Glove',
     Level: 160,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4338,7 +4338,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Fire Manipulator Glove',
+    ItemName: 'Fire Manipulator Glove',
     Level: 180,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4352,7 +4352,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Abyssal Cultist Glove',
+    ItemName: 'Abyssal Cultist Glove',
     Level: 190,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4366,7 +4366,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Righteous Glove',
+    ItemName: 'Righteous Glove',
     Level: 200,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4380,7 +4380,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elven Glove',
+    ItemName: 'Elven Glove',
     Level: 225,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4394,7 +4394,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Diabolus Glove',
+    ItemName: 'Diabolus Glove',
     Level: 245,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4408,7 +4408,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Fireblaze Glove',
+    ItemName: 'Fireblaze Glove',
     Level: 250,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4422,7 +4422,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Elora's Glove",
+    ItemName: "Elora's Glove",
     Level: 275,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4436,7 +4436,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elder Vampire Glove',
+    ItemName: 'Elder Vampire Glove',
     Level: 295,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4451,7 +4451,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Dragon Hunters' Glove",
+    ItemName: "Dragon Hunters' Glove",
     Level: 300,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4465,7 +4465,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Eternal Ice Glove',
+    ItemName: 'Eternal Ice Glove',
     Level: 325,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4479,7 +4479,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Revenant Glove',
+    ItemName: 'Revenant Glove',
     Level: 345,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4493,7 +4493,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Reaper's Glove",
+    ItemName: "Reaper's Glove",
     Level: 350,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4507,7 +4507,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Celestial Glove',
+    ItemName: 'Celestial Glove',
     Level: 375,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4521,7 +4521,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Golden Dragon Scale Glove',
+    ItemName: 'Golden Dragon Scale Glove',
     Level: 500,
     Vocation: 'Alchemist',
     Energy: 'Nature',
@@ -4535,7 +4535,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Chromatic Golden Dragon Scale Glove',
+    ItemName: 'Chromatic Golden Dragon Scale Glove',
     Level: 500,
     Vocation: 'Alchemist',
     Energy: 'Light',
@@ -4549,7 +4549,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Undead Golden Dragon Scale Glove',
+    ItemName: 'Undead Golden Dragon Scale Glove',
     Level: 500,
     Vocation: 'Alchemist',
     Energy: 'Dark',
@@ -4563,7 +4563,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Slingshot',
+    ItemName: 'Slingshot',
     Level: 1,
     Vocation: 'All',
     Energy: 'None',
@@ -4577,7 +4577,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Wooden Sword',
+    ItemName: 'Wooden Sword',
     Level: 1,
     Vocation: 'All',
     Energy: 'None',
@@ -4591,7 +4591,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Sharp Axe',
+    ItemName: 'Sharp Axe',
     Level: 1,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -4606,7 +4606,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Club',
+    ItemName: 'Club',
     Level: 4,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -4621,7 +4621,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Double Axe',
+    ItemName: 'Double Axe',
     Level: 5,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4636,7 +4636,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Halberd',
+    ItemName: 'Halberd',
     Level: 10,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -4652,7 +4652,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Morning Star',
+    ItemName: 'Morning Star',
     Level: 12,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -4666,7 +4666,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Hatchet',
+    ItemName: 'Hatchet',
     Level: 15,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4680,7 +4680,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Silver Axe',
+    ItemName: 'Silver Axe',
     Level: 20,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4695,7 +4695,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Specialist Axe',
+    ItemName: 'Specialist Axe',
     Level: 25,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4710,7 +4710,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Bielze's Mace",
+    ItemName: "Bielze's Mace",
     Level: 27,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4725,7 +4725,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Tribal Axe',
+    ItemName: 'Tribal Axe',
     Level: 30,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -4740,7 +4740,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Ritual Spear',
+    ItemName: 'Ritual Spear',
     Level: 35,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4755,7 +4755,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dwarven Axe',
+    ItemName: 'Dwarven Axe',
     Level: 40,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4770,7 +4770,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Golden Axe',
+    ItemName: 'Golden Axe',
     Level: 50,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -4785,7 +4785,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Novice Gladiator Hammer',
+    ItemName: 'Novice Gladiator Hammer',
     Level: 55,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4800,7 +4800,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Demon Axe',
+    ItemName: 'Demon Axe',
     Level: 60,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -4815,7 +4815,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Crown Axe',
+    ItemName: 'Crown Axe',
     Level: 70,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -4830,7 +4830,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Ice Beetle Axe',
+    ItemName: 'Ice Beetle Axe',
     Level: 75,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -4845,7 +4845,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'War Spear',
+    ItemName: 'War Spear',
     Level: 80,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4860,7 +4860,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Giants Club',
+    ItemName: 'Giants Club',
     Level: 90,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4875,7 +4875,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'The Winter Spear',
+    ItemName: 'The Winter Spear',
     Level: 100,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -4890,7 +4890,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Justice Axe',
+    ItemName: 'Justice Axe',
     Level: 100,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -4905,7 +4905,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Intermediate Gladiator Hammer',
+    ItemName: 'Intermediate Gladiator Hammer',
     Level: 105,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4920,7 +4920,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Clan's Axe",
+    ItemName: "Clan's Axe",
     Level: 110,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4936,7 +4936,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Frost Axe',
+    ItemName: 'Frost Axe',
     Level: 125,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -4951,7 +4951,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Devil's Fork",
+    ItemName: "Devil's Fork",
     Level: 145,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -4966,7 +4966,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Clan's Club",
+    ItemName: "Clan's Club",
     Level: 150,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4982,7 +4982,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Advanced Gladiator Hammer',
+    ItemName: 'Advanced Gladiator Hammer',
     Level: 160,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -4997,7 +4997,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Tidal Bringer',
+    ItemName: 'Tidal Bringer',
     Level: 180,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -5012,7 +5012,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Inferno Fork',
+    ItemName: 'Inferno Fork',
     Level: 195,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -5027,7 +5027,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Thunder Hammer',
+    ItemName: 'Thunder Hammer',
     Level: 200,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -5042,7 +5042,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elven Axe',
+    ItemName: 'Elven Axe',
     Level: 225,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -5057,7 +5057,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Archangel Axe',
+    ItemName: 'Archangel Axe',
     Level: 245,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -5072,7 +5072,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Devil's Scythe",
+    ItemName: "Devil's Scythe",
     Level: 250,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -5087,7 +5087,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Elora's Axe",
+    ItemName: "Elora's Axe",
     Level: 275,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -5102,7 +5102,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Dragon Hunters' Hammer",
+    ItemName: "Dragon Hunters' Hammer",
     Level: 300,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -5117,7 +5117,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elder Vampire Axe',
+    ItemName: 'Elder Vampire Axe',
     Level: 300,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -5133,7 +5133,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Eternal Ice Axe',
+    ItemName: 'Eternal Ice Axe',
     Level: 325,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -5148,7 +5148,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Reaper's Axe",
+    ItemName: "Reaper's Axe",
     Level: 350,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -5163,7 +5163,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Revenant Axe',
+    ItemName: 'Revenant Axe',
     Level: 355,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -5178,7 +5178,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Celestial Axe',
+    ItemName: 'Celestial Axe',
     Level: 375,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -5193,7 +5193,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Golden Dragon Hammer',
+    ItemName: 'Golden Dragon Hammer',
     Level: 500,
     Vocation: 'Berserker',
     Energy: 'Nature',
@@ -5208,7 +5208,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Chromatic Golden Dragon Axe',
+    ItemName: 'Chromatic Golden Dragon Axe',
     Level: 500,
     Vocation: 'Berserker',
     Energy: 'Light',
@@ -5223,7 +5223,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Undead Golden Dragon Hammer',
+    ItemName: 'Undead Golden Dragon Hammer',
     Level: 500,
     Vocation: 'Berserker',
     Energy: 'Dark',
@@ -5238,7 +5238,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Wooden Bow',
+    ItemName: 'Wooden Bow',
     Level: 1,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5253,7 +5253,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Tin Bow',
+    ItemName: 'Tin Bow',
     Level: 4,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5268,7 +5268,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Reinforced Bow',
+    ItemName: 'Reinforced Bow',
     Level: 5,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5283,7 +5283,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Copper Bow',
+    ItemName: 'Copper Bow',
     Level: 9,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5298,7 +5298,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dark Bow',
+    ItemName: 'Dark Bow',
     Level: 10,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5314,7 +5314,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Shuriken',
+    ItemName: 'Shuriken',
     Level: 15,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5328,7 +5328,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Arctic Bow',
+    ItemName: 'Arctic Bow',
     Level: 20,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5343,7 +5343,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Light Bow',
+    ItemName: 'Light Bow',
     Level: 25,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5358,7 +5358,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Bronze Bow',
+    ItemName: 'Bronze Bow',
     Level: 30,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5373,7 +5373,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Bones Bow',
+    ItemName: 'Bones Bow',
     Level: 40,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5389,7 +5389,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Ornamented Bow',
+    ItemName: 'Ornamented Bow',
     Level: 50,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5404,7 +5404,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Novice Gladiator Spear',
+    ItemName: 'Novice Gladiator Spear',
     Level: 55,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5418,7 +5418,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Cursed Bow',
+    ItemName: 'Cursed Bow',
     Level: 60,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5433,7 +5433,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Fairy Bow',
+    ItemName: 'Fairy Bow',
     Level: 65,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5448,7 +5448,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Vulcana Bow',
+    ItemName: 'Vulcana Bow',
     Level: 70,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5463,7 +5463,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Hardrock Bow',
+    ItemName: 'Hardrock Bow',
     Level: 80,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5478,7 +5478,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Stardust Bow',
+    ItemName: 'Stardust Bow',
     Level: 90,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5493,7 +5493,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Hellhound Bow',
+    ItemName: 'Hellhound Bow',
     Level: 95,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5508,7 +5508,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Clan's Bow",
+    ItemName: "Clan's Bow",
     Level: 100,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5524,7 +5524,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Intermediate Gladiator Spear',
+    ItemName: 'Intermediate Gladiator Spear',
     Level: 105,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5538,7 +5538,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dragon Bow',
+    ItemName: 'Dragon Bow',
     Level: 110,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5553,7 +5553,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Champion Bow',
+    ItemName: 'Champion Bow',
     Level: 120,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5568,7 +5568,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Justice Bow',
+    ItemName: 'Justice Bow',
     Level: 120,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5583,7 +5583,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Lava Bow',
+    ItemName: 'Lava Bow',
     Level: 130,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5598,7 +5598,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Frost Bow',
+    ItemName: 'Frost Bow',
     Level: 140,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5613,7 +5613,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Poison Beetle Bow',
+    ItemName: 'Poison Beetle Bow',
     Level: 145,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5628,7 +5628,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Clan's Expertise Bow",
+    ItemName: "Clan's Expertise Bow",
     Level: 150,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5644,7 +5644,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Advanced Gladiator Spear',
+    ItemName: 'Advanced Gladiator Spear',
     Level: 160,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5658,7 +5658,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Grue Bow',
+    ItemName: 'Grue Bow',
     Level: 175,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5673,7 +5673,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Nature's Bow",
+    ItemName: "Nature's Bow",
     Level: 180,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5688,7 +5688,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Bow of the Skies',
+    ItemName: 'Bow of the Skies',
     Level: 200,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5703,7 +5703,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elven Bow',
+    ItemName: 'Elven Bow',
     Level: 225,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5718,7 +5718,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Devil Bow',
+    ItemName: 'Devil Bow',
     Level: 230,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5733,7 +5733,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Soul Brander',
+    ItemName: 'Soul Brander',
     Level: 250,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5747,7 +5747,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Elora's Bow",
+    ItemName: "Elora's Bow",
     Level: 275,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5762,7 +5762,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Void Bow',
+    ItemName: 'Void Bow',
     Level: 280,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5777,7 +5777,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Dragon Hunters' Bow",
+    ItemName: "Dragon Hunters' Bow",
     Level: 300,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5792,7 +5792,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Eternal Ice Bow',
+    ItemName: 'Eternal Ice Bow',
     Level: 325,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5807,7 +5807,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elder Vampire Bow',
+    ItemName: 'Elder Vampire Bow',
     Level: 330,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5822,7 +5822,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Soul Piercer',
+    ItemName: 'Soul Piercer',
     Level: 350,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5837,7 +5837,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dragons Tamer Bow',
+    ItemName: 'Dragons Tamer Bow',
     Level: 375,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5852,7 +5852,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Golden Dragon Bow',
+    ItemName: 'Golden Dragon Bow',
     Level: 500,
     Vocation: 'Hunter',
     Energy: 'Nature',
@@ -5867,7 +5867,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Chromatic Golden Dragon Bow',
+    ItemName: 'Chromatic Golden Dragon Bow',
     Level: 500,
     Vocation: 'Hunter',
     Energy: 'Light',
@@ -5882,7 +5882,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Undead Golden Dragon Bow',
+    ItemName: 'Undead Golden Dragon Bow',
     Level: 500,
     Vocation: 'Hunter',
     Energy: 'Dark',
@@ -5897,7 +5897,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Candy Staff',
+    ItemName: 'Candy Staff',
     Level: 1,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -5911,7 +5911,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Natural Staff',
+    ItemName: 'Natural Staff',
     Level: 4,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -5925,7 +5925,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Iron Staff',
+    ItemName: 'Iron Staff',
     Level: 5,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -5939,7 +5939,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Voodoo Staff',
+    ItemName: 'Voodoo Staff',
     Level: 8,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -5953,7 +5953,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Ruby Staff',
+    ItemName: 'Ruby Staff',
     Level: 10,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -5967,7 +5967,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Sapphire Staff',
+    ItemName: 'Sapphire Staff',
     Level: 15,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -5981,7 +5981,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Amethyst Staff',
+    ItemName: 'Amethyst Staff',
     Level: 20,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -5995,7 +5995,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Skull Staff',
+    ItemName: 'Skull Staff',
     Level: 25,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6010,7 +6010,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Humanoid Fox Wand',
+    ItemName: 'Humanoid Fox Wand',
     Level: 30,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6024,7 +6024,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Holy Staff',
+    ItemName: 'Holy Staff',
     Level: 35,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6038,7 +6038,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Silver Staff',
+    ItemName: 'Silver Staff',
     Level: 50,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6052,7 +6052,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Novice Gladiator Staff',
+    ItemName: 'Novice Gladiator Staff',
     Level: 60,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6066,7 +6066,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Crown Staff',
+    ItemName: 'Crown Staff',
     Level: 70,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6080,7 +6080,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Warlock Staff',
+    ItemName: 'Warlock Staff',
     Level: 80,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6094,7 +6094,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Spider Wand',
+    ItemName: 'Spider Wand',
     Level: 85,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6108,7 +6108,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Golden Sceptre',
+    ItemName: 'Golden Sceptre',
     Level: 90,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6122,7 +6122,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Clan's Staff",
+    ItemName: "Clan's Staff",
     Level: 100,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6136,7 +6136,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Hell Mage Wand',
+    ItemName: 'Hell Mage Wand',
     Level: 105,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6150,7 +6150,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Intermediate Gladiator Staff',
+    ItemName: 'Intermediate Gladiator Staff',
     Level: 110,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6164,7 +6164,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Lava Staff',
+    ItemName: 'Lava Staff',
     Level: 130,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6178,7 +6178,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Poison Beetle Wand',
+    ItemName: 'Poison Beetle Wand',
     Level: 135,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6192,7 +6192,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Staff of Justice',
+    ItemName: 'Staff of Justice',
     Level: 140,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6206,7 +6206,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Hell's Staff",
+    ItemName: "Hell's Staff",
     Level: 140,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6220,7 +6220,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Mystic Staff',
+    ItemName: 'Mystic Staff',
     Level: 150,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6234,7 +6234,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Advanced Gladiator Staff',
+    ItemName: 'Advanced Gladiator Staff',
     Level: 160,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6248,7 +6248,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'The Earthquaker',
+    ItemName: 'The Earthquaker',
     Level: 180,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6262,7 +6262,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Abyssal Cultist Wand',
+    ItemName: 'Abyssal Cultist Wand',
     Level: 195,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6276,7 +6276,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Righteous Staff',
+    ItemName: 'Righteous Staff',
     Level: 200,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6290,7 +6290,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elven Staff',
+    ItemName: 'Elven Staff',
     Level: 225,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6304,7 +6304,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Sky Elf Wand',
+    ItemName: 'Sky Elf Wand',
     Level: 245,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6318,7 +6318,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Wand of Doom',
+    ItemName: 'Wand of Doom',
     Level: 250,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6332,7 +6332,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Elora's Staff",
+    ItemName: "Elora's Staff",
     Level: 275,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6346,7 +6346,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Dragon Hunters' Staff",
+    ItemName: "Dragon Hunters' Staff",
     Level: 300,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6360,7 +6360,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Undead Dragon Wand',
+    ItemName: 'Undead Dragon Wand',
     Level: 305,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6374,7 +6374,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Eternal Ice Staff',
+    ItemName: 'Eternal Ice Staff',
     Level: 325,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6388,7 +6388,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elder Vampire Staff',
+    ItemName: 'Elder Vampire Staff',
     Level: 345,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6402,7 +6402,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Wand of Salvation',
+    ItemName: 'Wand of Salvation',
     Level: 350,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6416,7 +6416,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dragons Tamer Staff',
+    ItemName: 'Dragons Tamer Staff',
     Level: 375,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6430,7 +6430,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Undead Golden Dragon Staff',
+    ItemName: 'Undead Golden Dragon Staff',
     Level: 500,
     Vocation: 'Mage',
     Energy: 'Dark',
@@ -6444,7 +6444,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Chromatic Golden Dragon Wand',
+    ItemName: 'Chromatic Golden Dragon Wand',
     Level: 500,
     Vocation: 'Mage',
     Energy: 'Light',
@@ -6458,7 +6458,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Golden Dragon Staff',
+    ItemName: 'Golden Dragon Staff',
     Level: 500,
     Vocation: 'Mage',
     Energy: 'Nature',
@@ -6472,7 +6472,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dagger',
+    ItemName: 'Dagger',
     Level: 1,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6486,7 +6486,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Rapier',
+    ItemName: 'Rapier',
     Level: 4,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6500,7 +6500,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Long Dagger',
+    ItemName: 'Long Dagger',
     Level: 5,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6514,7 +6514,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Katana',
+    ItemName: 'Katana',
     Level: 10,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6528,7 +6528,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Sword',
+    ItemName: 'Sword',
     Level: 12,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6542,7 +6542,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Long Sword',
+    ItemName: 'Long Sword',
     Level: 15,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6557,7 +6557,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Spike Sword',
+    ItemName: 'Spike Sword',
     Level: 20,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6571,7 +6571,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Silver Sword',
+    ItemName: 'Silver Sword',
     Level: 25,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6586,7 +6586,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Humanoid Lizard Sword',
+    ItemName: 'Humanoid Lizard Sword',
     Level: 30,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6600,7 +6600,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Bright Sword',
+    ItemName: 'Bright Sword',
     Level: 35,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6614,7 +6614,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Curved Sword',
+    ItemName: 'Curved Sword',
     Level: 40,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6628,7 +6628,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Giant Sword',
+    ItemName: 'Giant Sword',
     Level: 50,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6643,7 +6643,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Novice Gladiator Sword',
+    ItemName: 'Novice Gladiator Sword',
     Level: 55,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6657,7 +6657,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Fire Sword',
+    ItemName: 'Fire Sword',
     Level: 60,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6671,7 +6671,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Black Sword',
+    ItemName: 'Black Sword',
     Level: 70,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6685,7 +6685,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Forgotten Sword',
+    ItemName: 'Forgotten Sword',
     Level: 80,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6700,7 +6700,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Ice Beetle Sword',
+    ItemName: 'Ice Beetle Sword',
     Level: 85,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6714,7 +6714,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Nobles Sword',
+    ItemName: 'Nobles Sword',
     Level: 90,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6728,7 +6728,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Clan's Sword",
+    ItemName: "Clan's Sword",
     Level: 100,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6743,7 +6743,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Intermediate Gladiator Sword',
+    ItemName: 'Intermediate Gladiator Sword',
     Level: 105,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6757,7 +6757,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dragon Sword',
+    ItemName: 'Dragon Sword',
     Level: 110,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6771,7 +6771,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Winter Rapier',
+    ItemName: 'Winter Rapier',
     Level: 120,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6785,7 +6785,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Mystic Sword',
+    ItemName: 'Mystic Sword',
     Level: 130,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6799,7 +6799,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Champion Sword',
+    ItemName: 'Champion Sword',
     Level: 140,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6813,7 +6813,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Sword of Justice',
+    ItemName: 'Sword of Justice',
     Level: 140,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6827,7 +6827,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Lava Sword',
+    ItemName: 'Lava Sword',
     Level: 145,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6841,7 +6841,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Poison Beetle Sword',
+    ItemName: 'Poison Beetle Sword',
     Level: 150,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6855,7 +6855,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Advanced Gladiator Sword',
+    ItemName: 'Advanced Gladiator Sword',
     Level: 160,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6869,7 +6869,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'The Decapitator',
+    ItemName: 'The Decapitator',
     Level: 180,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6883,7 +6883,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Void Sword',
+    ItemName: 'Void Sword',
     Level: 195,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6897,7 +6897,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Sacred Sword',
+    ItemName: 'Sacred Sword',
     Level: 200,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6911,7 +6911,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elven Sword',
+    ItemName: 'Elven Sword',
     Level: 225,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6925,7 +6925,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Reaper's Sword",
+    ItemName: "Reaper's Sword",
     Level: 250,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6939,7 +6939,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Sky Elf Blade',
+    ItemName: 'Sky Elf Blade',
     Level: 255,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6953,7 +6953,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Elora's Sword",
+    ItemName: "Elora's Sword",
     Level: 275,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -6967,7 +6967,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Undead Dragon Sword',
+    ItemName: 'Undead Dragon Sword',
     Level: 290,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -6981,7 +6981,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: "Dragon Hunters' Sword",
+    ItemName: "Dragon Hunters' Sword",
     Level: 300,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -6995,7 +6995,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Eternal Ice Sword',
+    ItemName: 'Eternal Ice Sword',
     Level: 325,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -7009,7 +7009,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Elder Vampire Sword',
+    ItemName: 'Elder Vampire Sword',
     Level: 345,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -7023,7 +7023,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Sword of Glory',
+    ItemName: 'Sword of Glory',
     Level: 350,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -7037,7 +7037,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Dragons Tamer Sword',
+    ItemName: 'Dragons Tamer Sword',
     Level: 375,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -7051,7 +7051,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Undead Golden Dragon Sword',
+    ItemName: 'Undead Golden Dragon Sword',
     Level: 500,
     Vocation: 'Warrior',
     Energy: 'Dark',
@@ -7065,7 +7065,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Chromatic Golden Dragon Sword',
+    ItemName: 'Chromatic Golden Dragon Sword',
     Level: 500,
     Vocation: 'Warrior',
     Energy: 'Light',
@@ -7079,7 +7079,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Golden Dragon Sword',
+    ItemName: 'Golden Dragon Sword',
     Level: 500,
     Vocation: 'Warrior',
     Energy: 'Nature',
@@ -7093,7 +7093,7 @@ const weapons = [
     Slot: 'Weapon',
   },
   {
-    Weapon: 'Warlord Sword',
+    ItemName: 'Warlord Sword',
     Level: 1000,
     Vocation: 'Warrior',
     Energy: 'Dark',
