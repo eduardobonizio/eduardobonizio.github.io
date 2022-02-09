@@ -5,8 +5,9 @@ const FIVE_SECONDS = 5000;
 const urlParamsToObject = paramsText => {
   // Ex.: /Item=Sowrd-of-Fire Item2=Shield-of-Darkness
   const formatedText = `{"${paramsText['*']
+    .replace('_', '')
+    .replaceAll('_', '","')
     .replaceAll('=', '":"')
-    .replaceAll(' ', '","')
     .replaceAll('-', ' ')}"}`;
   console.log(formatedText);
   const object = JSON.parse(formatedText);
@@ -14,13 +15,13 @@ const urlParamsToObject = paramsText => {
 };
 
 const genereateLinkToViewSet = (setList, origin) => {
-  if (!setList) return false;
+  if (!setList) return;
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.Level > 0) {
       const adicionarTexto = `${proximo.Slot}=${
         proximo.Equipment || proximo.Weapon
       }`.replaceAll(' ', '-');
-      const concatenado = `${anterior}${adicionarTexto} `;
+      const concatenado = `${anterior}_${adicionarTexto}`;
       return concatenado;
     }
     return anterior;

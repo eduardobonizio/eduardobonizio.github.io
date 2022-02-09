@@ -69,7 +69,7 @@ export default function SetMaker() {
   const gerarLink = () => {
     const origin = window.location.origin.toString();
     const link = genereateLinkToViewSet(exibirSet, origin);
-    copy(link);
+    if (link) copy(link);
   };
 
   return (
