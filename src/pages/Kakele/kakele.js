@@ -87,7 +87,7 @@ const findBestItem = (itensList, status) => {
 };
 
 const filterItensByElement = (itensList, element) =>
-  itensList.filter(item => item.Energy === element);
+  itensList.filter(item => item.Energy === element || item.Energy === 'None');
 
 const getAlternativeStatus = slot => {
   let alternativeStatus;
