@@ -11,35 +11,35 @@ import {
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function SetMaker() {
-  const [classe, setClasse] = useState('Alchemist');
-  const [elemento, setElemento] = useState('Light');
+  const [characterClass, setCharacterClass] = useState('Alchemist');
+  const [element, setElement] = useState('Light');
   const [level, setLevel] = useState(1);
-  const [statusPrincipal, setStatusPrincipal] = useState('Armor');
-  const [ignorarElemento, setIgnorarElemento] = useState(false);
-  const [exibirSet, setExibirSet] = useState(false);
+  const [mainStat, setMainStat] = useState('Armor');
+  const [ignoreElement, setIgnoreElement] = useState(false);
+  const [showSet, setShowSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [slotsComElementoIgnorado, setSlotsComElementoIgnorado] = useState([]);
 
-  const gerarSet = () => {
+  const generateSet = () => {
     const itensList = filterItensByLevenAndClass(
       [...equipments, ...weapons],
       level,
-      classe,
+      characterClass,
     );
     const bestItens = ALL_ITENS_SLOTS_LIST.map(slot =>
       findBestSet(
         itensList,
-        statusPrincipal,
+        mainStat,
         slot,
-        classe,
+        characterClass,
         ignoredItens,
-        ignorarElemento,
+        ignoreElement,
         slotsComElementoIgnorado,
-        elemento,
+        element,
       ),
     );
 
-    setExibirSet(bestItens);
+    setShowSet(bestItens);
   };
 
   const ignorarItem = (nomeDoItem, ignorar) => {
@@ -68,7 +68,7 @@ export default function SetMaker() {
 
   const gerarLink = () => {
     const origin = window.location.origin.toString();
-    const link = genereateLinkToViewSet(exibirSet, origin);
+    const link = genereateLinkToViewSet(showSet, origin);
     if (link) copy(link);
   };
 
@@ -97,7 +97,7 @@ export default function SetMaker() {
           <select
             className="form-select"
             id="classe-do-personagem"
-            onChange={e => setClasse(e.target.value)}
+            onChange={e => setCharacterClass(e.target.value)}
           >
             <option defaultValue value="Alchemist">
               Alquemista
@@ -116,7 +116,7 @@ export default function SetMaker() {
           <select
             className="form-select"
             id="status-principal"
-            onChange={e => setStatusPrincipal(e.target.value)}
+            onChange={e => setMainStat(e.target.value)}
           >
             <option defaultValue value="Armor">
               Amadura
@@ -126,7 +126,7 @@ export default function SetMaker() {
           </select>
         </div>
 
-        {!ignorarElemento && (
+        {!ignoreElement && (
           <div className="input-group mb-2">
             <label className="input-group-text" htmlFor="elemento-do-set">
               Elemento
@@ -134,7 +134,7 @@ export default function SetMaker() {
             <select
               className="form-select"
               id="elemento-do-set"
-              onChange={e => setElemento(e.target.value)}
+              onChange={e => setElement(e.target.value)}
             >
               <option defaultValue value="Light">
                 Luz
@@ -152,14 +152,18 @@ export default function SetMaker() {
               type="checkbox"
               id="ignorar-elemento"
               aria-label="Checkbox for following text input"
-              onChange={() => setIgnorarElemento(!ignorarElemento)}
+              onChange={() => setIgnoreElement(!ignoreElement)}
             />
           </div>
           <label htmlFor="ignorar-elemento" className="input-group-text">
             Ignorar Elemento
           </label>
         </div>
-        <button type="button" className="btn btn-light mb-2" onClick={gerarSet}>
+        <button
+          type="button"
+          className="btn btn-light mb-2"
+          onClick={generateSet}
+        >
           Gerar set
         </button>
         <button
@@ -173,34 +177,34 @@ export default function SetMaker() {
           <h3>Atributos do set</h3>
           <p>
             Armadura:
-            {exibirSet &&
-              exibirSet.reduce(
+            {showSet &&
+              showSet.reduce(
                 (anterior, proximo) => anterior + (proximo.Armor || 0),
                 0,
               )}
           </p>
           <p>
             Magia:{' '}
-            {exibirSet &&
-              exibirSet.reduce(
+            {showSet &&
+              showSet.reduce(
                 (anterior, proximo) => anterior + (proximo.Magic || 0),
                 0,
               )}
           </p>
           <p>
             Ataque:{' '}
-            {exibirSet &&
-              exibirSet.reduce(
+            {showSet &&
+              showSet.reduce(
                 (anterior, proximo) => anterior + (proximo.Attack || 0),
                 0,
               )}
           </p>
-          <p>Elemento: {exibirSet && checkSetElement(exibirSet)}</p>
+          <p>Elemento: {showSet && checkSetElement(showSet)}</p>
         </div>
       </div>
       <div className="row">
-        {exibirSet &&
-          exibirSet.map((item, i) => {
+        {showSet &&
+          showSet.map((item, i) => {
             if (item) {
               return (
                 <div className="col" key={i}>
