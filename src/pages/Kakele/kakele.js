@@ -8,8 +8,25 @@ const urlParamsToObject = paramsText => {
     .replaceAll('=', '":"')
     .replaceAll(' ', '","')
     .replaceAll('-', ' ')}"}`;
+  console.log(formatedText);
   const object = JSON.parse(formatedText);
   return object;
+};
+
+const genereateLinkToViewSet = (setList, origin) => {
+  if (!setList) return false;
+  const link = setList.reduce((anterior, proximo) => {
+    if (proximo.Level > 0) {
+      const adicionarTexto = `${proximo.Slot}=${
+        proximo.Equipment || proximo.Weapon
+      }`.replaceAll(' ', '-');
+      const concatenado = `${anterior}${adicionarTexto} `;
+      return concatenado;
+    }
+    return anterior;
+  }, '');
+
+  return `${origin}/kakele/set/${link}`;
 };
 
 const activateAlert = setShowAlert => {
@@ -187,4 +204,5 @@ export {
   findBestSet,
   filterItensByLevenAndClass,
   checkSetElement,
+  genereateLinkToViewSet,
 };

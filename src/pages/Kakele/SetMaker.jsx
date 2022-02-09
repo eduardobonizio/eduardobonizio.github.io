@@ -6,6 +6,7 @@ import {
   filterItensByLevenAndClass,
   findBestSet,
   checkSetElement,
+  genereateLinkToViewSet,
 } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
@@ -66,19 +67,9 @@ export default function SetMaker() {
   };
 
   const gerarLink = () => {
-    const link = exibirSet.reduce((anterior, proximo) => {
-      if (proximo.Level > 0) {
-        const adicionarTexto = `${proximo.Slot}=${
-          proximo.Equipment || proximo.Weapon
-        }`.replaceAll(' ', '-');
-        const concatenado = `${anterior}${adicionarTexto} `;
-        return concatenado;
-      }
-      return anterior;
-    }, '');
-
-    const linkFinal = `http://localhost:3000/kakele/set/${link}`;
-    copy(linkFinal);
+    const origin = window.location.origin.toString();
+    const link = genereateLinkToViewSet(exibirSet, origin);
+    copy(link);
   };
 
   return (
