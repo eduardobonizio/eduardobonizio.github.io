@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 
-import { filterItensByLevenAndClass } from './kakele';
+import { filterItensByLevenAndClass, findBestSet } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function SetMaker() {
@@ -15,108 +15,19 @@ export default function SetMaker() {
   const [itensIgnorados, setItensIgnorados] = useState([]);
   const [slotsComElementoIgnorado, setSlotsComElementoIgnorado] = useState([]);
 
-  const filtraMelhoresEquipamentos = (itemList, status, slot) => {
-    let bestItem = {
-      Equipment: '',
-      Level: 0,
-      Vocation: 'All',
-      Energy: 'None',
-      Armor: 0,
-      Value: 0,
-      Sources: '',
-      Slot: '',
-      Attack: 0,
-      Magic: 0,
-      Haste: 0,
-    };
-
-    if (classe === 'Berserker' && (slot === 'Shield' || slot === 'Book')) {
-      return bestItem;
-    }
-
-    if ((classe === 'Mage' || classe === 'Alchemist') && slot === 'Shield') {
-      return bestItem;
-    }
-
-    const onlySlotItens = itemList.filter(
-      item =>
-        item.Slot === slot &&
-        !(
-          itensIgnorados.includes(item.Equipment) ||
-          itensIgnorados.includes(item.Weapon)
-        ),
-    );
-
-    if (!ignorarElemento && !slotsComElementoIgnorado.includes(slot)) {
-      const somenteElmentoRequisitado = onlySlotItens.filter(
-        item => item.Energy === elemento,
-      );
-
-      somenteElmentoRequisitado.forEach(item => {
-        if (item[status] >= bestItem[status] && item[status] > 0) {
-          bestItem = item;
-        }
-      });
-      if (bestItem.Level === 0) {
-        let usarOutroStatus;
-        if (slot === 'Weapon') {
-          usarOutroStatus = 'Attack';
-        } else if (slot === 'Necklace') {
-          usarOutroStatus = 'Magic';
-        } else {
-          usarOutroStatus = 'Armor';
-        }
-        somenteElmentoRequisitado.forEach(item => {
-          if (
-            item[usarOutroStatus] >= bestItem[usarOutroStatus] &&
-            item[usarOutroStatus] > 0
-          ) {
-            bestItem = item;
-          }
-        });
-      }
-    }
-
-    if (ignorarElemento || slotsComElementoIgnorado.includes(slot)) {
-      onlySlotItens.forEach(item => {
-        if (item[status] >= bestItem[status] && item[status] > 0) {
-          bestItem = item;
-        }
-      });
-    }
-
-    if (bestItem.Level === 0) {
-      let usarOutroStatus;
-      if (slot === 'Weapon') {
-        usarOutroStatus = 'Attack';
-      } else if (slot === 'Necklace') {
-        usarOutroStatus = 'Magic';
-      } else {
-        usarOutroStatus = 'Armor';
-      }
-      onlySlotItens.forEach(item => {
-        if (
-          item[usarOutroStatus] > bestItem[usarOutroStatus] &&
-          item[usarOutroStatus] > 0
-        ) {
-          bestItem = item;
-        }
-      });
-    }
-    return bestItem;
-  };
-
-  const gerarSetParaClasse = (listaDeArmas, listaDeEquipamentos) => {
-    const bestItens = ALL_ITENS_SLOTS_LIST.map(slot => {
-      if (slot === 'Weapon') {
-        return filtraMelhoresEquipamentos(listaDeArmas, statusPrincipal, slot);
-      }
-      return filtraMelhoresEquipamentos(
-        listaDeEquipamentos,
+  const gerarSetParaClasse = itensList => {
+    const bestItens = ALL_ITENS_SLOTS_LIST.map(slot =>
+      findBestSet(
+        itensList,
         statusPrincipal,
         slot,
-      );
-    });
+        classe,
+        itensIgnorados,
+        ignorarElemento,
+        slotsComElementoIgnorado,
+        elemento,
+      ),
+    );
 
     setExibirSet(bestItens);
   };
@@ -124,7 +35,7 @@ export default function SetMaker() {
   const gerarSet = () => {
     const listaDeArmas = filterItensByLevenAndClass(weapons);
     const listaDeEquipamentos = filterItensByLevenAndClass(equipments);
-    gerarSetParaClasse(listaDeArmas, listaDeEquipamentos);
+    gerarSetParaClasse([...listaDeArmas, ...listaDeEquipamentos]);
   };
 
   const verificarElemento = itens => {
