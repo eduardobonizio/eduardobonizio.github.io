@@ -18,7 +18,7 @@ export default function SetMaker() {
   const [ignoreElement, setIgnoreElement] = useState(false);
   const [showSet, setShowSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
-  const [slotsComElementoIgnorado, setSlotsComElementoIgnorado] = useState([]);
+  const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
 
   const generateSet = () => {
     const itensList = filterItensByLevenAndClass(
@@ -34,7 +34,7 @@ export default function SetMaker() {
         characterClass,
         ignoredItens,
         ignoreElement,
-        slotsComElementoIgnorado,
+        ignoreThisSlotsElement,
         element,
       ),
     );
@@ -42,7 +42,7 @@ export default function SetMaker() {
     setShowSet(bestItens);
   };
 
-  const ignorarItem = (nomeDoItem, ignorar) => {
+  const ignoreItens = (nomeDoItem, ignorar) => {
     if (ignorar) {
       const newIgnoredItensList = [...ignoredItens, nomeDoItem];
       setIgnoredItens(newIgnoredItensList);
@@ -56,17 +56,17 @@ export default function SetMaker() {
 
   const ignorarSlot = (slot, ignorar) => {
     if (ignorar) {
-      const novosSlotsIgnorados = [...slotsComElementoIgnorado, slot];
-      setSlotsComElementoIgnorado(novosSlotsIgnorados);
+      const novosSlotsIgnorados = [...ignoreThisSlotsElement, slot];
+      setIgnoreThisSlotsElement(novosSlotsIgnorados);
       return;
     }
-    const slotNaoMaisIgnorado = slotsComElementoIgnorado.filter(
+    const slotNaoMaisIgnorado = ignoreThisSlotsElement.filter(
       item => item !== slot,
     );
-    setSlotsComElementoIgnorado(slotNaoMaisIgnorado);
+    setIgnoreThisSlotsElement(slotNaoMaisIgnorado);
   };
 
-  const gerarLink = () => {
+  const generateLink = () => {
     const origin = window.location.origin.toString();
     const link = genereateLinkToViewSet(showSet, origin);
     if (link) copy(link);
@@ -169,7 +169,7 @@ export default function SetMaker() {
         <button
           type="button"
           className="btn btn-light mb-2"
-          onClick={gerarLink}
+          onClick={generateLink}
         >
           Copiar link
         </button>
@@ -240,7 +240,7 @@ export default function SetMaker() {
                             }
                             aria-label="Checkbox for following text input"
                             onChange={e =>
-                              ignorarItem(e.target.name, e.target.checked)
+                              ignoreItens(e.target.name, e.target.checked)
                             }
                           />
                         </div>
@@ -258,9 +258,7 @@ export default function SetMaker() {
                             type="checkbox"
                             name={item.Slot}
                             id={`ignore-slot-element-${i}`}
-                            checked={slotsComElementoIgnorado.includes(
-                              item.Slot,
-                            )}
+                            checked={ignoreThisSlotsElement.includes(item.Slot)}
                             aria-label="Checkbox for following text input"
                             onChange={e =>
                               ignorarSlot(e.target.name, e.target.checked)
