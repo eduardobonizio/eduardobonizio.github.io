@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 
+import InputCheckBox from './Componentes/InputCheckBox';
 import {
   filterItensByLevenAndClass,
   findBestSet,
@@ -144,21 +145,12 @@ export default function SetMaker() {
             </select>
           </div>
         )}
-
-        <div className="input-group mb-2">
-          <div className="input-group-text">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              id="ignorar-elemento"
-              aria-label="Checkbox for following text input"
-              onChange={() => setIgnoreElement(!ignoreElement)}
-            />
-          </div>
-          <label htmlFor="ignorar-elemento" className="input-group-text">
-            Ignorar Elemento
-          </label>
-        </div>
+        <InputCheckBox
+          labelText="Ignorar Elemento"
+          id="ignore-element"
+          onChangeFunc={setIgnoreElement}
+          changeOnCheck={ignoreElement}
+        />
         <button
           type="button"
           className="btn btn-light mb-2"
