@@ -1,24 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.45f19360.css",
-    "main.js": "/static/js/main.487477d9.js",
-    "static/media/SettingsDoRepositorio.gif": "/static/media/SettingsDoRepositorio.1b01995fe9e1c475c863.gif",
-    "static/media/Html404.png": "/static/media/Html404.d289453643868c3361db.png",
-    "static/media/IndexHtml.png": "/static/media/IndexHtml.a8b1f75ac62daeb0ba28.png",
-    "static/media/IndexJs.png": "/static/media/IndexJs.a500db598ff2e5978e57.png",
-    "static/media/PackageJson.png": "/static/media/PackageJson.41cc168187d24eac92be.png",
-    "static/media/Redirecting.gif": "/static/media/Redirecting.73e73be978a8efa172ba.gif",
-    "static/media/GitHubNewRepo.png": "/static/media/GitHubNewRepo.0fdd9f93ac17e8b61b5a.png",
-    "static/media/RepoSSH.png": "/static/media/RepoSSH.d0b3b93942b3c9df9c76.png",
-    "static/media/FolderStructure.png": "/static/media/FolderStructure.2cf3bc3584171c271ffd.png",
-    "static/media/GhPagesBranch.png": "/static/media/GhPagesBranch.379bfdee59291d7713d0.png",
-    "static/media/HomePagePackageJson.png": "/static/media/HomePagePackageJson.275ab571100e05daec3e.png",
+    "main.css": "/static/css/main.9adf28e5.css",
+    "main.js": "/static/js/main.5e3173dc.js",
     "index.html": "/index.html",
-    "main.45f19360.css.map": "/static/css/main.45f19360.css.map",
-    "main.487477d9.js.map": "/static/js/main.487477d9.js.map"
+    "main.9adf28e5.css.map": "/static/css/main.9adf28e5.css.map",
+    "main.5e3173dc.js.map": "/static/js/main.5e3173dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.45f19360.css",
-    "static/js/main.487477d9.js"
+    "static/css/main.9adf28e5.css",
+    "static/js/main.5e3173dc.js"
   ]
 }
