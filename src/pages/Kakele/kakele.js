@@ -127,6 +127,7 @@ const findBestSet = (
 ) => {
   let bestItem = false;
 
+  console.log(classe);
   if (
     (classe === 'Berserker' || classe === 'Hunter') &&
     (slot === 'shield' || slot === 'book')
@@ -135,6 +136,10 @@ const findBestSet = (
   }
 
   if ((classe === 'Mage' || classe === 'Alchemist') && slot === 'shield') {
+    return bestItem;
+  }
+
+  if (classe === 'Warrior' && slot === 'book') {
     return bestItem;
   }
 
