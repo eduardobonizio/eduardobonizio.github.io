@@ -11,7 +11,7 @@ export default function ItemCard(props) {
   } = props;
 
   return (
-    <div className="col-sm">
+    <div className="col">
       <div className="card mb-2">
         <div className="card-body pb-0">
           <h6 className="card-title">{name}</h6>
@@ -65,7 +65,7 @@ export default function ItemCard(props) {
                   htmlFor={`ignore-slot-element-${index}`}
                   className="input-group-text"
                 >
-                  Ignora elemento dessa peça
+                  Ignora este elemento
                 </label>
               </div>
             </>

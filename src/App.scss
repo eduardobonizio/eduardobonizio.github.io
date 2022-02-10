@@ -31,6 +31,11 @@
   color: inherit;
 }
 
+.item-card {
+  width: 300px;
+  height: 330px;
+}
+
 @media screen and (min-width: 768px) {
   .body-container {
     min-height: 80vh;
@@ -52,15 +57,12 @@
 
     .col-sm {
       display: flex;
-      min-height: 310px;
-      min-width: 310px;
+      width: 310px;
     }
 
     .card {
-      display: flex;
       margin-bottom: 5px;
-      min-height: 310px;
-      min-width: 310px;
+      width: 310px;
     }
   }
 }

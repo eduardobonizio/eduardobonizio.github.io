@@ -159,7 +159,7 @@ export default function SetMaker() {
         )}
         <ShowSetStatus itensListToShowStatus={recomendedSet} />
       </div>
-      <div className="row">
+      <div className="row row-cols-auto">
         {recomendedSet &&
           recomendedSet.map((item, i) => {
             if (item) {

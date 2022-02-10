@@ -60,7 +60,7 @@ export default function ShowSet() {
         {currentSet && <ShowSetStatus itensListToShowStatus={currentSet} />}
       </div>
       {currentSet && (
-        <div className="row">
+        <div className="row row-cols-auto">
           {currentSet.necklace && (
             <ItemCard
               item={currentSet.necklace}
