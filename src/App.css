@@ -47,5 +47,18 @@
             justify-content: space-between;
     width: 100%;
   }
+  .status-and-card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .status-and-card-container .card {
+    min-width: 250px;
+    min-height: 250px;
+    margin-bottom: 5px;
+  }
+  .status-and-card-container .status-container {
+    min-width: 300px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import ItemCard from './Componentes/ItemCard';
+import ShowSetStatus from './Componentes/ShowSetStatus';
 import { urlParamsToObject } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
@@ -54,7 +55,10 @@ export default function ShowSet() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container status-and-card-container">
+      <div>
+        {currentSet && <ShowSetStatus itensListToShowStatus={currentSet} />}
+      </div>
       {currentSet && (
         <div className="row">
           {currentSet.necklace && (

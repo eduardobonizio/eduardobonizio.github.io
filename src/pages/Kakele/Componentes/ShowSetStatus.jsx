@@ -4,37 +4,40 @@ import { checkSetElement } from '../kakele';
 
 export default function ShowSetStatus(props) {
   const { itensListToShowStatus } = props;
+
+  let itensList = itensListToShowStatus;
+
+  if (!(itensListToShowStatus instanceof Array)) {
+    itensList = [...Object.values(itensListToShowStatus).map(item => item)];
+  }
   return (
-    <div>
+    <div className="status-container">
       <h3>Atributos do set</h3>
       <p>
         Armadura:
-        {itensListToShowStatus &&
-          itensListToShowStatus.reduce(
+        {itensList &&
+          itensList.reduce(
             (anterior, proximo) => anterior + (proximo.armor || 0),
             0,
           )}
       </p>
       <p>
         Magia:{' '}
-        {itensListToShowStatus &&
-          itensListToShowStatus.reduce(
+        {itensList &&
+          itensList.reduce(
             (anterior, proximo) => anterior + (proximo.magic || 0),
             0,
           )}
       </p>
       <p>
         Ataque:{' '}
-        {itensListToShowStatus &&
-          itensListToShowStatus.reduce(
+        {itensList &&
+          itensList.reduce(
             (anterior, proximo) => anterior + (proximo.attack || 0),
             0,
           )}
       </p>
-      <p>
-        Elemento:{' '}
-        {itensListToShowStatus && checkSetElement(itensListToShowStatus)}
-      </p>
+      <p>{itensList && checkSetElement(itensList)}</p>
     </div>
   );
 }

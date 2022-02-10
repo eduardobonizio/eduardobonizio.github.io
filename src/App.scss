@@ -41,4 +41,17 @@
     justify-content: space-between;
     width: 100%;
   }
+
+  .status-and-card-container {
+    display: flex;
+
+    .card {
+      min-width: 250px;
+      min-height: 250px;
+      margin-bottom: 5px;
+    }
+    .status-container {
+      min-width: 300px;
+    }
+  }
 }
