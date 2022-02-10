@@ -31,7 +31,17 @@
       margin-left: 0 !important;
     }
 
+    .col {
+      display: flex;
+      width: auto;
+    }
+
     .card {
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
       padding: 0px;
       margin-bottom: 5px;
       width: auto;
