@@ -11,6 +11,32 @@ export default function ShowSet() {
   const itensOnUrl = urlParamsToObject(urlParams);
   const [currentSet, setCurrentSet] = useState();
 
+  const addMissingItens = selectedItems => {
+    const fakeItem = {
+      name: '-----------',
+      level: 0,
+      vocation: 'All',
+      energy: 'None',
+      attack: 0,
+      armor: 0,
+      Range: 0,
+      value: 0,
+      sources: '',
+      magic: 0,
+      haste: 0,
+      slot: '',
+    };
+    const updatedCurrentSet = selectedItems;
+    ALL_ITENS_SLOTS_LIST.forEach(slot => {
+      if (!selectedItems[slot]) {
+        fakeItem.slot = slot;
+        updatedCurrentSet[slot] = { ...fakeItem, slot };
+      }
+    });
+
+    setCurrentSet(updatedCurrentSet);
+  };
+
   const itensOnUrlToItensList = () => {
     const allItens = [...equipments, ...weapons];
     const selectedItems = {};
@@ -20,14 +46,12 @@ export default function ShowSet() {
       }),
     );
 
-    setCurrentSet(selectedItems);
+    addMissingItens(selectedItems);
   };
 
   useEffect(() => {
     itensOnUrlToItensList();
   }, []);
-
-  console.log(currentSet);
 
   return (
     <div className="container">

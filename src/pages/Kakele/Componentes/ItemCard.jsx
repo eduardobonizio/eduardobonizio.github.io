@@ -16,11 +16,14 @@ export default function ItemCard(props) {
         <div className="card-body pb-0" style={{ minWidth: '200px' }}>
           <h6 className="card-title">{name}</h6>
           <div className="d-flex flex-column mb-1">
-            <span className="card-text">Elemento: {energy}</span>
+            <span className="card-text">
+              Elemento: <span className={energy}>{energy}</span>
+            </span>
             <span className="card-text">Armadura: {armor}</span>
             <span className="card-text">Magia: {magic}</span>
             <span className="card-text">Ataque: {attack}</span>
             <span className="card-text">Nivel: {level}</span>
+            <span className="card-text">Slot: {slot}</span>
           </div>
 
           {ignoredItens && (

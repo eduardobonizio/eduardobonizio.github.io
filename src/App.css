@@ -11,6 +11,18 @@
   min-height: 73vh;
 }
 
+.Nature {
+  color: green;
+}
+
+.Dark {
+  color: #722f37;
+}
+
+.Light {
+  color: gold;
+}
+
 .alert-fixed {
   padding: 10px !important;
   border-radius: 15px !important;
