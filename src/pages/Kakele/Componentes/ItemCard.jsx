@@ -1,5 +1,9 @@
 import React from 'react';
 
+import copy from 'copy-to-clipboard';
+
+import ButtonForKakele from './ButtonForKakele';
+
 export default function ItemCard(props) {
   const {
     index,
@@ -70,6 +74,7 @@ export default function ItemCard(props) {
               </div>
             </>
           )}
+          <ButtonForKakele onClick={() => copy(name)} text="Copiar nome" />
         </div>
       </div>
     </div>
