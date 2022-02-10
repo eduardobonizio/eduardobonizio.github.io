@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 import React from 'react';
 
 import copy from 'copy-to-clipboard';
@@ -16,7 +18,11 @@ export default function ItemCard(props) {
 
   return (
     <div className="col">
-      <div className="card mb-2">
+      <div
+        role="button"
+        className="card mb-2 item-card"
+        onClick={() => console.log('text')}
+      >
         <div className="card-body pb-0">
           <h6 className="card-title">{name}</h6>
           <div className="d-flex flex-column">
