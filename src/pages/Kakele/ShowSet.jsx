@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import './css/ShowSet.css';
+
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
 import { urlParamsToObject } from './kakele';
@@ -60,7 +62,7 @@ export default function ShowSet() {
         {currentSet && <ShowSetStatus itensListToShowStatus={currentSet} />}
       </div>
       {currentSet && (
-        <div className="row row-cols-auto">
+        <div className="row row-cols-auto d-flex justify-content-center">
           {currentSet.necklace && (
             <ItemCard
               item={currentSet.necklace}

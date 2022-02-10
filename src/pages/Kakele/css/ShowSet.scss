@@ -1,0 +1,46 @@
+@media screen and (max-width: 767px) {
+  .status-and-card-container {
+    display: block;
+
+    .row {
+      justify-content: center;
+      margin: 0px;
+    }
+
+    .col {
+      width: 90%;
+      padding: 0;
+    }
+
+    .card {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .status-and-card-container {
+    display: flex;
+
+    .status-container {
+      min-width: 320px;
+    }
+
+    .row {
+      margin-left: 0 !important;
+      display: flex;
+    }
+
+    .col {
+      display: flex;
+      width: auto;
+    }
+
+    .card {
+      padding: 0px;
+      margin-bottom: 5px;
+      width: auto;
+      width: 265px;
+    }
+  }
+}

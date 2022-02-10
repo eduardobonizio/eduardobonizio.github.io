@@ -20,7 +20,7 @@ export default function ItemCard(props) {
     <div className="col">
       <div
         role="button"
-        className="card mb-2 item-card"
+        className="card mb-2 container-fluid"
         onClick={() => console.log('text')}
       >
         <div className="card-body pb-0">

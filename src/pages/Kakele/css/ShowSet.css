@@ -1,0 +1,48 @@
+@media screen and (max-width: 767px) {
+  .status-and-card-container {
+    display: block;
+  }
+  .status-and-card-container .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px;
+  }
+  .status-and-card-container .col {
+    width: 90%;
+    padding: 0;
+  }
+  .status-and-card-container .card {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .status-and-card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .status-and-card-container .status-container {
+    min-width: 320px;
+  }
+  .status-and-card-container .row {
+    margin-left: 0 !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .status-and-card-container .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+  }
+  .status-and-card-container .card {
+    padding: 0px;
+    margin-bottom: 5px;
+    width: auto;
+    width: 265px;
+  }
+}
+/*# sourceMappingURL=ShowSet.css.map */

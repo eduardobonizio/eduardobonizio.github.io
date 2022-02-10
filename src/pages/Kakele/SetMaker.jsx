@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 
+import './css/SetMaker.css';
+
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import InputCheckBox from './Componentes/InputCheckBox';
 import ItemCard from './Componentes/ItemCard';
@@ -76,7 +78,7 @@ export default function SetMaker() {
   };
 
   return (
-    <div className="container status-and-card-container">
+    <div className="container set-maker-container">
       <div className="d-flex flex-column status-container">
         <h3 className="">Gerador de set</h3>
         <div className="input-group mb-2">

@@ -31,10 +31,6 @@
   color: inherit;
 }
 
-.item-card {
-  width: 300px;
-}
-
 @media screen and (min-width: 768px) {
   .body-container {
     min-height: 80vh;
@@ -44,28 +40,5 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-  }
-
-  .status-and-card-container {
-    display: flex;
-
-    .row {
-      margin-left: 0 !important;
-    }
-
-    .status-container {
-      margin-right: 8px;
-      min-width: 300px;
-    }
-
-    .col-sm {
-      display: flex;
-      width: 310px;
-    }
-
-    .card {
-      margin-bottom: 5px;
-      width: 310px;
-    }
   }
 }

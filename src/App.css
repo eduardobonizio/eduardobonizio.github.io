@@ -34,10 +34,6 @@
   color: inherit;
 }
 
-.item-card {
-  width: 300px;
-}
-
 @media screen and (min-width: 768px) {
   .body-container {
     min-height: 80vh;
@@ -50,28 +46,6 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-  }
-  .status-and-card-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .status-and-card-container .row {
-    margin-left: 0 !important;
-  }
-  .status-and-card-container .status-container {
-    margin-right: 8px;
-    min-width: 300px;
-  }
-  .status-and-card-container .col-sm {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 310px;
-  }
-  .status-and-card-container .card {
-    margin-bottom: 5px;
-    width: 310px;
   }
 }
 /*# sourceMappingURL=App.css.map */

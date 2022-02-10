@@ -1,0 +1,29 @@
+@media screen and (min-width: 768px) {
+  .set-maker-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .set-maker-container .status-container {
+    min-width: 320px;
+  }
+  .set-maker-container .row {
+    margin-left: 0 !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .set-maker-container .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+  }
+  .set-maker-container .card {
+    padding: 0px;
+    margin-bottom: 5px;
+    width: auto;
+    width: 265px;
+  }
+}
+/*# sourceMappingURL=SetMaker.css.map */
