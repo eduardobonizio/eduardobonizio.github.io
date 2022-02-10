@@ -3,6 +3,7 @@
     display: block;
 
     .row {
+      display: flex;
       justify-content: center;
       margin: 0px;
     }
@@ -28,12 +29,6 @@
 
     .row {
       margin-left: 0 !important;
-      display: flex;
-    }
-
-    .col {
-      display: flex;
-      width: auto;
     }
 
     .card {
