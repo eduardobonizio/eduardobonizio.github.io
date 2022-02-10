@@ -11,11 +11,11 @@ export default function ItemCard(props) {
   } = props;
 
   return (
-    <div className="col">
+    <div className="col-sm-4">
       <div className="card mb-2">
         <div className="card-body pb-0" style={{ minWidth: '200px' }}>
           <h6 className="card-title">{name}</h6>
-          <div className="d-flex flex-column mb-1">
+          <div className="d-flex flex-column">
             <span className="card-text">
               Elemento: <span className={energy}>{energy}</span>
             </span>
