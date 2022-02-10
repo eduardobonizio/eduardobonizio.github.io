@@ -76,8 +76,8 @@ export default function SetMaker() {
   };
 
   return (
-    <div className="container d-flex flex-column justify-content-center align-items-center">
-      <div className="d-flex flex-column">
+    <div className="container status-and-card-container">
+      <div className="d-flex flex-column status-container">
         <h3 className="">Gerador de set</h3>
         <div className="input-group mb-2">
           <span className="input-group-text" id="nivel-do-personagem">
