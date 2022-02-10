@@ -155,10 +155,12 @@ export default function SetMaker() {
           onChangeFunc={setIgnoreElement}
           changeOnCheck={ignoreElement}
         />
-        <ButtonForKakele onClick={generateSet} text="Gerar set" />
-        {recomendedSet && (
-          <ButtonForKakele onClick={copyLink} text="Copiar link" />
-        )}
+        <div className="container d-flex justify-content-around">
+          <ButtonForKakele onClick={generateSet} text="Gerar set" />
+          {recomendedSet && (
+            <ButtonForKakele onClick={copyLink} text="Copiar link" />
+          )}
+        </div>
         <ShowSetStatus itensListToShowStatus={recomendedSet} />
       </div>
       <div className="row row-cols-auto">
