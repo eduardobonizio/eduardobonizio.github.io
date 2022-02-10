@@ -50,11 +50,17 @@
       min-width: 300px;
     }
 
+    .col-sm {
+      display: flex;
+      min-height: 310px;
+      min-width: 310px;
+    }
+
     .card {
       display: flex;
       margin-bottom: 5px;
-      min-height: 250px;
-      min-width: 250px;
+      min-height: 310px;
+      min-width: 310px;
     }
   }
 }
