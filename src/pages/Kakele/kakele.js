@@ -89,30 +89,27 @@ const filterItensBySlot = (itensList, slot, ignoreItensList) =>
 
 const findBestItem = (itensList, status) => {
   if (itensList.length === 0) return;
-  const bestItem = itensList.reduce((previous, next) => {
-    if (next[status] >= previous[status] && next[status] > 0) {
-      return next;
-    }
-    return previous;
-  });
-
-  return bestItem;
+  const bestItem = itensList.reduce(
+    (previous, next) => {
+      if (next[status] >= previous[status] && next[status] > 0) {
+        return next;
+      }
+      return previous;
+    },
+    { [status]: 0 },
+  );
+  if (bestItem[status] > 0) return bestItem;
+  return false;
 };
 
 const filterItensByElement = (itensList, element) =>
-  itensList.filter(item => item.energy === element || item.energy === 'None');
+  itensList.filter(item => item.energy === element);
 
 const getAlternativeStatus = slot => {
-  let alternativeStatus;
-  if (slot === 'weapon') {
-    alternativeStatus = 'attack';
-  } else if (slot === 'necklace') {
-    alternativeStatus = 'magic';
-  } else {
-    alternativeStatus = 'armor';
-  }
+  if (slot === 'weapon') return 'attack';
+  if (slot === 'necklace') return 'magic';
 
-  return alternativeStatus;
+  return 'armor';
 };
 
 const findBestSet = (
@@ -127,7 +124,6 @@ const findBestSet = (
 ) => {
   let bestItem = false;
 
-  console.log(classe);
   if (
     (classe === 'Berserker' || classe === 'Hunter') &&
     (slot === 'shield' || slot === 'book')
