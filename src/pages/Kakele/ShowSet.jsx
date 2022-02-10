@@ -57,60 +57,50 @@ export default function ShowSet() {
     <div className="container">
       {currentSet && (
         <div className="row">
-          <div className="col-sm">
-            {currentSet.necklace && (
-              <ItemCard
-                item={currentSet.necklace}
-                index={currentSet.necklace.name}
-              />
-            )}
+          {currentSet.necklace && (
+            <ItemCard
+              item={currentSet.necklace}
+              index={currentSet.necklace.name}
+            />
+          )}
 
-            {currentSet.helmet && (
-              <ItemCard
-                item={currentSet.helmet}
-                index={currentSet.helmet.name}
-              />
-            )}
+          {currentSet.helmet && (
+            <ItemCard item={currentSet.helmet} index={currentSet.helmet.name} />
+          )}
 
-            {currentSet.ring && (
-              <ItemCard item={currentSet.ring} index={currentSet.ring.name} />
-            )}
-          </div>
-          <div className="col-sm">
-            {currentSet.weapon && (
-              <ItemCard
-                item={currentSet.weapon}
-                index={currentSet.weapon.name}
-              />
-            )}
+          {currentSet.ring && (
+            <ItemCard item={currentSet.ring} index={currentSet.ring.name} />
+          )}
 
-            {currentSet.armor && (
-              <ItemCard item={currentSet.armor} index={currentSet.armor.name} />
-            )}
+          {currentSet.weapon && (
+            <ItemCard item={currentSet.weapon} index={currentSet.weapon.name} />
+          )}
 
-            {(currentSet.shield || currentSet.book) && (
-              <ItemCard
-                item={currentSet.shield || currentSet.book}
-                index={currentSet.shield.name || currentSet.book.name}
-              />
-            )}
-          </div>
-          <div className="col-sm">
-            {currentSet.accessorie && (
-              <ItemCard
-                item={currentSet.accessorie}
-                index={currentSet.accessorie.name}
-              />
-            )}
+          {currentSet.armor && (
+            <ItemCard item={currentSet.armor} index={currentSet.armor.name} />
+          )}
 
-            {currentSet.leg && (
-              <ItemCard item={currentSet.leg} index={currentSet.leg.name} />
-            )}
+          {(currentSet.shield || currentSet.book) && (
+            <ItemCard
+              item={currentSet.shield || currentSet.book}
+              index={currentSet.shield.name || currentSet.book.name}
+            />
+          )}
 
-            {currentSet.shoe && (
-              <ItemCard item={currentSet.shoe} index={currentSet.shoe.name} />
-            )}
-          </div>
+          {currentSet.accessorie && (
+            <ItemCard
+              item={currentSet.accessorie}
+              index={currentSet.accessorie.name}
+            />
+          )}
+
+          {currentSet.leg && (
+            <ItemCard item={currentSet.leg} index={currentSet.leg.name} />
+          )}
+
+          {currentSet.shoe && (
+            <ItemCard item={currentSet.shoe} index={currentSet.shoe.name} />
+          )}
         </div>
       )}
     </div>

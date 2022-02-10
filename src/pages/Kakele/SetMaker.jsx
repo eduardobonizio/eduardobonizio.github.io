@@ -5,10 +5,10 @@ import copy from 'copy-to-clipboard';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import InputCheckBox from './Componentes/InputCheckBox';
 import ItemCard from './Componentes/ItemCard';
+import ShowSetStatus from './Componentes/ShowSetStatus';
 import {
   filterItensByLevenAndClass,
   findBestSet,
-  checkSetElement,
   genereateLinkToViewSet,
 } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
@@ -19,7 +19,7 @@ export default function SetMaker() {
   const [level, setLevel] = useState(1);
   const [mainStat, setMainStat] = useState('armor');
   const [ignoreElement, setIgnoreElement] = useState(false);
-  const [showSet, setShowSet] = useState(false);
+  const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
 
@@ -42,7 +42,7 @@ export default function SetMaker() {
       ),
     );
 
-    setShowSet(bestItens);
+    setRecomendedSet(bestItens);
   };
 
   const ignoreItens = (itemName, ignore) => {
@@ -71,7 +71,7 @@ export default function SetMaker() {
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
-    const link = genereateLinkToViewSet(showSet, origin);
+    const link = genereateLinkToViewSet(recomendedSet, origin);
     if (link) copy(link);
   };
 
@@ -154,39 +154,14 @@ export default function SetMaker() {
           changeOnCheck={ignoreElement}
         />
         <ButtonForKakele onClick={generateSet} text="Gerar set" />
-        {showSet && <ButtonForKakele onClick={copyLink} text="Copiar link" />}
-        <div>
-          <h3>Atributos do set</h3>
-          <p>
-            Armadura:
-            {showSet &&
-              showSet.reduce(
-                (anterior, proximo) => anterior + (proximo.armor || 0),
-                0,
-              )}
-          </p>
-          <p>
-            Magia:{' '}
-            {showSet &&
-              showSet.reduce(
-                (anterior, proximo) => anterior + (proximo.magic || 0),
-                0,
-              )}
-          </p>
-          <p>
-            Ataque:{' '}
-            {showSet &&
-              showSet.reduce(
-                (anterior, proximo) => anterior + (proximo.attack || 0),
-                0,
-              )}
-          </p>
-          <p>Elemento: {showSet && checkSetElement(showSet)}</p>
-        </div>
+        {recomendedSet && (
+          <ButtonForKakele onClick={copyLink} text="Copiar link" />
+        )}
+        <ShowSetStatus itensListToShowStatus={recomendedSet} />
       </div>
       <div className="row">
-        {showSet &&
-          showSet.map((item, i) => {
+        {recomendedSet &&
+          recomendedSet.map((item, i) => {
             if (item) {
               return (
                 <ItemCard

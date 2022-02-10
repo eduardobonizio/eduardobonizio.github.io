@@ -11,24 +11,22 @@ export default function ItemCard(props) {
   } = props;
 
   return (
-    <div className="col-sm-4">
-      <div className="card mb-2">
-        <div className="card-body pb-0" style={{ minWidth: '200px' }}>
+    <div className="col">
+      <div className="card">
+        <div className="card-body">
           <h6 className="card-title">{name}</h6>
-          <div className="d-flex flex-column">
-            <span className="card-text">
-              Elemento: <span className={energy}>{energy}</span>
-            </span>
-            <span className="card-text">Armadura: {armor}</span>
-            <span className="card-text">Magia: {magic}</span>
-            <span className="card-text">Ataque: {attack}</span>
-            <span className="card-text">Nivel: {level}</span>
-            <span className="card-text">Slot: {slot}</span>
+          <div className="card-text">
+            Elemento: <span className={energy}>{energy}</span>
           </div>
+          <div className="card-text">Armadura: {armor}</div>
+          <div className="card-text">Magia: {magic}</div>
+          <div className="card-text">Ataque: {attack}</div>
+          <div className="card-text">Nivel: {level}</div>
+          <div className="card-text">Slot: {slot}</div>
 
           {ignoredItens && (
             <>
-              <div className="input-group mb-2">
+              <div className="input-group">
                 <div className="input-group-text">
                   <input
                     className="form-check-input"
@@ -47,7 +45,7 @@ export default function ItemCard(props) {
                   Não incluir
                 </label>
               </div>
-              <div className="input-group mb-2">
+              <div className="input-group">
                 <div className="input-group-text">
                   <input
                     className="form-check-input"
