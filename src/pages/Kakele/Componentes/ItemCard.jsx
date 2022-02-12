@@ -14,6 +14,7 @@ export default function ItemCard(props) {
     ignoreThisSlotsElement,
     ignoreElementForThisSlot,
     equipItem,
+    item,
     item: { name, energy, armor, magic, attack, level, slot },
   } = props;
 
@@ -82,7 +83,7 @@ export default function ItemCard(props) {
             {console.log(equipItem)}
             {equipItem && (
               <ButtonForKakele
-                onClick={() => console.log('equip item')}
+                onClick={() => equipItem(item)}
                 text="Equipar Item"
               />
             )}

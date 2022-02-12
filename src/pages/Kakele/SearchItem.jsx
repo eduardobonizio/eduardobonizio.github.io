@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import './css/SearchItem.css';
+
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import { filterItensByLevenAndClass, filterItensBySlot } from './kakele';
@@ -17,6 +19,8 @@ import {
 } from './kakeleData';
 
 export default function SearchItem() {
+  const dispatch = useDispatch();
+  const currentSet = useSelector(state => state.globalUser);
   const [level, setLevel] = useState(1);
   const [element, setElement] = useState();
   const [slotToFilter, setSlotToFilter] = useState(ALL_ITENS_SLOTS_LIST[0]);
@@ -36,6 +40,12 @@ export default function SearchItem() {
       .sort((a, b) => b[orderBy] - a[orderBy]);
     console.log(itensListBySlot);
     setFoundItens(itensListBySlot);
+  };
+
+  console.log(currentSet);
+
+  const equipItem = item => {
+    console.log(item);
   };
 
   return (
@@ -128,7 +138,9 @@ export default function SearchItem() {
         {foundItens &&
           foundItens.map((item, i) => {
             if (item) {
-              return <ItemCard index={i} item={item} key={i} equipItem />;
+              return (
+                <ItemCard index={i} item={item} key={i} equipItem={equipItem} />
+              );
             }
           })}
       </div>
