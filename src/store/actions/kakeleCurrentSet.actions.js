@@ -1,6 +1,6 @@
-export function updateCurrentSet(currentSet) {
+export function updateCurrentSet(item) {
   return {
     type: 'UPDATE_CURRENT_SET',
-    payload: currentSet,
+    payload: item,
   };
 }

@@ -1,12 +1,20 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 import './css/SearchItem.css';
 
+import copy from 'copy-to-clipboard';
+
+import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
-import { filterItensByLevenAndClass, filterItensBySlot } from './kakele';
+import {
+  filterItensByLevenAndClass,
+  filterItensBySlot,
+  genereateLinkToViewSet,
+} from './kakele';
 import {
   ALL_ITENS_SLOTS_LIST,
   ALL_ITENS_SLOTS_LIST_PT_BR,
@@ -19,8 +27,9 @@ import {
 } from './kakeleData';
 
 export default function SearchItem() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const currentSet = useSelector(state => state.globalUser);
+  const currentSet = useSelector(state => state.currentSet);
   const [level, setLevel] = useState(1);
   const [element, setElement] = useState();
   const [slotToFilter, setSlotToFilter] = useState(ALL_ITENS_SLOTS_LIST[0]);
@@ -38,14 +47,20 @@ export default function SearchItem() {
     const itensListBySlot = filterItensBySlot(itensList, slotToFilter, [])
       .sort((a, b) => b.level - a.level)
       .sort((a, b) => b[orderBy] - a[orderBy]);
-    console.log(itensListBySlot);
     setFoundItens(itensListBySlot);
   };
 
-  console.log(currentSet);
-
   const equipItem = item => {
-    console.log(item);
+    console.log('item', item);
+    dispatch(updateCurrentSet(item));
+    console.log('currentSet', currentSet);
+  };
+
+  const copyLink = () => {
+    const origin = window.location.origin.toString();
+    const setToArray = Object.values(currentSet).map(item => item);
+    const link = genereateLinkToViewSet(setToArray, false);
+    if (link) navigate(link);
   };
 
   return (
@@ -132,7 +147,8 @@ export default function SearchItem() {
             ))}
           </select>
         </div>
-        <ButtonForKakele onClick={lookForItens} text="procurar" />
+        <ButtonForKakele onClick={lookForItens} text="Procurar" />
+        <ButtonForKakele onClick={copyLink} text="Ver set" />
       </div>
       <div className="container search-item-result">
         {foundItens &&

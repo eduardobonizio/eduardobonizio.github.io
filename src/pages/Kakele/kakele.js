@@ -26,7 +26,8 @@ const genereateLinkToViewSet = (setList, origin) => {
     return anterior;
   }, '');
 
-  return `${origin}/kakele/set/${link}`;
+  if (origin) return `${origin}/kakele/set/${link}`;
+  return `/kakele/set/${link}`;
 };
 
 const activateAlert = setShowAlert => {

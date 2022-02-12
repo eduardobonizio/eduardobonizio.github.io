@@ -80,7 +80,6 @@ export default function ItemCard(props) {
           )}
           <div className="d-flex justify-content-between mt-1">
             <ButtonForKakele onClick={() => copy(name)} text="Copiar nome" />
-            {console.log(equipItem)}
             {equipItem && (
               <ButtonForKakele
                 onClick={() => equipItem(item)}
