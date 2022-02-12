@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { currentLoggedUser } from '../store/actions/crrentLoggedUser.actions';
+import { currentLoggedUser } from '../store/actions/currentLoggedUser.actions';
 import app from './Firebase';
 
 export const AuthContext = React.createContext();
