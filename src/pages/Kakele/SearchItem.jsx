@@ -5,13 +5,12 @@ import { useNavigate } from 'react-router';
 
 import './css/SearchItem.css';
 
-import copy from 'copy-to-clipboard';
-
 import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import {
-  filterItensByLevenAndClass,
+  filterItensByElement,
+  filterItensByLevelAndClass,
   filterItensBySlot,
   genereateLinkToViewSet,
 } from './kakele';
@@ -31,14 +30,14 @@ export default function SearchItem() {
   const dispatch = useDispatch();
   const currentSet = useSelector(state => state.currentSet);
   const [level, setLevel] = useState(1);
-  const [element, setElement] = useState();
-  const [slotToFilter, setSlotToFilter] = useState(ALL_ITENS_SLOTS_LIST[0]);
+  const [element, setElement] = useState('All');
+  const [slotToFilter, setSlotToFilter] = useState('All');
   const [characterClass, setCharacterClass] = useState(CHARACTER_CLASS[0]);
   const [orderBy, setOrderBy] = useState(ITEM_FILTERS[0]);
   const [foundItens, setFoundItens] = useState(false);
 
   const lookForItens = () => {
-    const itensList = filterItensByLevenAndClass(
+    const itensList = filterItensByLevelAndClass(
       [...equipments, ...weapons],
       level,
       characterClass,
@@ -47,7 +46,10 @@ export default function SearchItem() {
     const itensListBySlot = filterItensBySlot(itensList, slotToFilter, [])
       .sort((a, b) => b.level - a.level)
       .sort((a, b) => b[orderBy] - a[orderBy]);
-    setFoundItens(itensListBySlot);
+
+    const itensListByElement = filterItensByElement(itensListBySlot, element);
+
+    setFoundItens(itensListByElement);
   };
 
   const equipItem = item => {
@@ -104,6 +106,9 @@ export default function SearchItem() {
             id="slot-do-item"
             onChange={e => setSlotToFilter(e.target.value)}
           >
+            <option defaultValue value="All">
+              Todos
+            </option>
             {ALL_ITENS_SLOTS_LIST.map((slot, i) => (
               <option value={slot} key={i}>
                 {ALL_ITENS_SLOTS_LIST_PT_BR[slot]}
@@ -121,6 +126,9 @@ export default function SearchItem() {
             id="elemento-do-set"
             onChange={e => setElement(e.target.value)}
           >
+            <option defaultValue value="All">
+              Todos
+            </option>
             <option defaultValue value="Light">
               Luz
             </option>

@@ -10,7 +10,7 @@ import InputCheckBox from './Componentes/InputCheckBox';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
 import {
-  filterItensByLevenAndClass,
+  filterItensByLevelAndClass,
   findBestSet,
   genereateLinkToViewSet,
 } from './kakele';
@@ -28,7 +28,7 @@ export default function SetMaker() {
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
 
   const generateSet = () => {
-    const itensList = filterItensByLevenAndClass(
+    const itensList = filterItensByLevelAndClass(
       [...equipments, ...weapons],
       level,
       characterClass,

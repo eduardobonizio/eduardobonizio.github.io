@@ -85,7 +85,9 @@ const addDotToKks = number =>
 
 const filterItensBySlot = (itensList, slot, ignoreItensList) =>
   itensList.filter(
-    item => item.slot === slot && !ignoreItensList.includes(item.name),
+    item =>
+      (item.slot === slot && !ignoreItensList.includes(item.name)) ||
+      slot === 'All',
   );
 
 const findBestItem = (itensList, status) => {
@@ -104,7 +106,7 @@ const findBestItem = (itensList, status) => {
 };
 
 const filterItensByElement = (itensList, element) =>
-  itensList.filter(item => item.energy === element);
+  itensList.filter(item => item.energy === element || element === 'All');
 
 const getAlternativeStatus = slot => {
   if (slot === 'weapon') return 'attack';
@@ -173,7 +175,7 @@ const findBestSet = (
   return bestItem || false;
 };
 
-const filterItensByLevenAndClass = (listaDeItens, level, classe) =>
+const filterItensByLevelAndClass = (listaDeItens, level, classe) =>
   listaDeItens.filter(
     item =>
       level >= Number(item.level) &&
@@ -202,9 +204,10 @@ export {
   calculateUpgradePriceWithOresPrice,
   addDotToKks,
   findBestSet,
-  filterItensByLevenAndClass,
+  filterItensByLevelAndClass,
   checkSetElement,
   genereateLinkToViewSet,
   findItemByName,
   filterItensBySlot,
+  filterItensByElement,
 };
