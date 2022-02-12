@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import copy from 'copy-to-clipboard';
 
@@ -14,9 +15,9 @@ import {
   genereateLinkToViewSet,
 } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
-import SearchItem from './SearchItem';
 
 export default function SetMaker() {
+  const navigate = useNavigate();
   const [characterClass, setCharacterClass] = useState('Alchemist');
   const [element, setElement] = useState('Light');
   const [level, setLevel] = useState(1);
@@ -25,7 +26,6 @@ export default function SetMaker() {
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
-  const [openSearchItem, setOpenSearchItem] = useState(false);
 
   const generateSet = () => {
     const itensList = filterItensByLevenAndClass(
@@ -78,18 +78,6 @@ export default function SetMaker() {
     const link = genereateLinkToViewSet(recomendedSet, origin);
     if (link) copy(link);
   };
-
-  const openOrCloseSearchWindow = () => setOpenSearchItem(!openSearchItem);
-
-  if (openSearchItem)
-    return (
-      <SearchItem
-        openOrCloseSearchWindow={openOrCloseSearchWindow}
-        level={level}
-        setLevel={setLevel}
-        setElement={setElement}
-      />
-    );
 
   return (
     <div className="container set-maker-container">
@@ -170,7 +158,7 @@ export default function SetMaker() {
           changeOnCheck={ignoreElement}
         />
         <ButtonForKakele
-          onClick={openOrCloseSearchWindow}
+          onClick={() => navigate('/kakele/search-item')}
           text="Escolher itens manualmente"
         />
         <div className="container d-flex justify-content-around">

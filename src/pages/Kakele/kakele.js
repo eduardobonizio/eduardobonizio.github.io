@@ -205,4 +205,5 @@ export {
   checkSetElement,
   genereateLinkToViewSet,
   findItemByName,
+  filterItensBySlot,
 };

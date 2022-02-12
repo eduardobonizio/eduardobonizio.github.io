@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
+import './css/SearchItem.css';
 import ButtonForKakele from './Componentes/ButtonForKakele';
+import ItemCard from './Componentes/ItemCard';
+import { filterItensByLevenAndClass, filterItensBySlot } from './kakele';
 import {
   ALL_ITENS_SLOTS_LIST,
   ALL_ITENS_SLOTS_LIST_PT_BR,
@@ -9,18 +12,31 @@ import {
   ITEM_FILTERS_PT_BR,
   CHARACTER_CLASS,
   CHARACTER_CLASS_PT_BR,
+  equipments,
+  weapons,
 } from './kakeleData';
 
-import './css/SearchItem.css';
-
-export default function SearchItem(props) {
-  const { openOrCloseSearchWindow, level, setLevel, setElement } = props;
+export default function SearchItem() {
+  const [level, setLevel] = useState(1);
+  const [element, setElement] = useState();
   const [slotToFilter, setSlotToFilter] = useState(ALL_ITENS_SLOTS_LIST[0]);
   const [characterClass, setCharacterClass] = useState(CHARACTER_CLASS[0]);
-  const [filterByStatus, setFilterByStatus] = useState(ITEM_FILTERS[0]);
+  const [orderBy, setOrderBy] = useState(ITEM_FILTERS[0]);
   const [foundItens, setFoundItens] = useState(false);
 
-  const lookForItens = () => {};
+  const lookForItens = () => {
+    const itensList = filterItensByLevenAndClass(
+      [...equipments, ...weapons],
+      level,
+      characterClass,
+    );
+
+    const itensListBySlot = filterItensBySlot(itensList, slotToFilter, [])
+      .sort((a, b) => b.level - a.level)
+      .sort((a, b) => b[orderBy] - a[orderBy]);
+    console.log(itensListBySlot);
+    setFoundItens(itensListBySlot);
+  };
 
   return (
     <div className="container d-flex flex-column kakele-search-item">
@@ -46,7 +62,7 @@ export default function SearchItem(props) {
           <select
             className="form-select"
             id="classe-do-personagem"
-            onChange={e => setSlotToFilter(e.target.value)}
+            onChange={e => setCharacterClass(e.target.value)}
           >
             {CHARACTER_CLASS.map((charClass, i) => (
               <option value={charClass} key={i}>
@@ -92,12 +108,12 @@ export default function SearchItem(props) {
 
         <div className="input-group mb-2">
           <label className="input-group-text" htmlFor="filtro">
-            Filtrar por
+            Ordenar por
           </label>
           <select
             className="form-select"
             id="filtro"
-            onChange={e => setSlotToFilter(e.target.value)}
+            onChange={e => setOrderBy(e.target.value)}
           >
             {ITEM_FILTERS.map((status, i) => (
               <option value={status} key={i}>
@@ -106,10 +122,16 @@ export default function SearchItem(props) {
             ))}
           </select>
         </div>
-        <ButtonForKakele onClick={openOrCloseSearchWindow} text="voltar" />
         <ButtonForKakele onClick={lookForItens} text="procurar" />
       </div>
-      <div className="container search-item-result">Search Results</div>
+      <div className="container search-item-result">
+        {foundItens &&
+          foundItens.map((item, i) => {
+            if (item) {
+              return <ItemCard index={i} item={item} key={i} equipar />;
+            }
+          })}
+      </div>
     </div>
   );
 }
