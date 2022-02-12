@@ -10,20 +10,52 @@ import {
   CHARACTER_CLASS,
   CHARACTER_CLASS_PT_BR,
 } from './kakeleData';
+
 import './css/SearchItem.css';
 
-export default function SearchItem({ closeSearchWindow }) {
+export default function SearchItem(props) {
+  const { openOrCloseSearchWindow, level, setLevel, setElement } = props;
   const [slotToFilter, setSlotToFilter] = useState(ALL_ITENS_SLOTS_LIST[0]);
   const [characterClass, setCharacterClass] = useState(CHARACTER_CLASS[0]);
   const [filterByStatus, setFilterByStatus] = useState(ITEM_FILTERS[0]);
+  const [foundItens, setFoundItens] = useState(false);
 
-  console.log(slotToFilter);
-  console.log(characterClass);
-  console.log(filterByStatus);
+  const lookForItens = () => {};
 
   return (
-    <div className="container d-flex flex-column align-items-center kakele-search-item">
-      <div className="d-flex">
+    <div className="container d-flex flex-column kakele-search-item">
+      <div className="d-flex d-flex flex-column kakele-search-item-filters">
+        <div className="input-group mb-2">
+          <span className="input-group-text" id="nivel-do-personagem">
+            Nivel
+          </span>
+          <input
+            type="number"
+            className="form-control"
+            placeholder="Nivel do Personagem"
+            aria-label="Nivel do Personagem"
+            aria-describedby="nivel-do-personagem"
+            value={level}
+            onChange={e => setLevel(Number(e.target.value))}
+          />
+        </div>
+        <div className="input-group mb-2">
+          <label className="input-group-text" htmlFor="classe-do-personagem">
+            Classe
+          </label>
+          <select
+            className="form-select"
+            id="classe-do-personagem"
+            onChange={e => setSlotToFilter(e.target.value)}
+          >
+            {CHARACTER_CLASS.map((charClass, i) => (
+              <option value={charClass} key={i}>
+                {CHARACTER_CLASS_PT_BR[charClass]}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <div className="input-group mb-2">
           <label className="input-group-text" htmlFor="slot-do-item">
             Slot do item
@@ -42,19 +74,19 @@ export default function SearchItem({ closeSearchWindow }) {
         </div>
 
         <div className="input-group mb-2">
-          <label className="input-group-text" htmlFor="classe-do-personagem">
-            Vocação
+          <label className="input-group-text" htmlFor="elemento-do-set">
+            Elemento
           </label>
           <select
             className="form-select"
-            id="classe-do-personagem"
-            onChange={e => setSlotToFilter(e.target.value)}
+            id="elemento-do-set"
+            onChange={e => setElement(e.target.value)}
           >
-            {CHARACTER_CLASS.map((charClass, i) => (
-              <option value={charClass} key={i}>
-                {CHARACTER_CLASS_PT_BR[charClass]}
-              </option>
-            ))}
+            <option defaultValue value="Light">
+              Luz
+            </option>
+            <option value="Dark">Trevas</option>
+            <option value="Nature">Natureza</option>
           </select>
         </div>
 
@@ -74,9 +106,10 @@ export default function SearchItem({ closeSearchWindow }) {
             ))}
           </select>
         </div>
-        <ButtonForKakele onClick={closeSearchWindow} text="voltar" />
+        <ButtonForKakele onClick={openOrCloseSearchWindow} text="voltar" />
+        <ButtonForKakele onClick={lookForItens} text="procurar" />
       </div>
-      <div>Search Results</div>
+      <div className="container search-item-result">Search Results</div>
     </div>
   );
 }

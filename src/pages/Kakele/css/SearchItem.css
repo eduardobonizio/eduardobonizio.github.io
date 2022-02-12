@@ -1,4 +1,12 @@
-.kakele-search-item .input-group {
-  margin-right: 5px;
+@media screen and (min-width: 768px) {
+  .kakele-search-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
 }
 /*# sourceMappingURL=SearchItem.css.map */

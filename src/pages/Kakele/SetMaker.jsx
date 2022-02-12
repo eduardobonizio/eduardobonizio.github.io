@@ -79,10 +79,17 @@ export default function SetMaker() {
     if (link) copy(link);
   };
 
-  const closeSearchWindow = () => setOpenSearchItem(!openSearchItem);
+  const openOrCloseSearchWindow = () => setOpenSearchItem(!openSearchItem);
 
   if (openSearchItem)
-    return <SearchItem closeSearchWindow={closeSearchWindow} />;
+    return (
+      <SearchItem
+        openOrCloseSearchWindow={openOrCloseSearchWindow}
+        level={level}
+        setLevel={setLevel}
+        setElement={setElement}
+      />
+    );
 
   return (
     <div className="container set-maker-container">
@@ -162,12 +169,17 @@ export default function SetMaker() {
           onChangeFunc={setIgnoreElement}
           changeOnCheck={ignoreElement}
         />
+        <ButtonForKakele
+          onClick={openOrCloseSearchWindow}
+          text="Escolher itens manualmente"
+        />
         <div className="container d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text="Gerar set" />
           {recomendedSet && (
             <ButtonForKakele onClick={copyLink} text="Copiar link" />
           )}
         </div>
+
         <ShowSetStatus itensListToShowStatus={recomendedSet} />
       </div>
       <div className="row row-cols-auto">
@@ -183,8 +195,6 @@ export default function SetMaker() {
                   ignoreElementForThisSlot={ignoreElementForThisSlot}
                   item={item}
                   key={i}
-                  setOpenSearchItem={setOpenSearchItem}
-                  openSearchItem={openSearchItem}
                 />
               );
             }

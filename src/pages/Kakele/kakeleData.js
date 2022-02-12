@@ -7153,15 +7153,13 @@ const ALL_ITENS_SLOTS_LIST_PT_BR = {
   shoe: 'Sapatos',
 };
 
-const ITEM_FILTERS = ['level', 'energy', 'attack', 'armor', 'magic'];
+const ITEM_FILTERS = ['level', 'attack', 'armor', 'magic'];
 
 const ITEM_FILTERS_PT_BR = {
   attack: 'Ataque',
   armor: 'Armadura',
-  energy: 'Elemento',
   level: 'Level',
   magic: 'Magia',
-  vocation: 'Vocação',
 };
 
 const CHARACTER_CLASS = ['Alchemist', 'Berserker', 'Hunter', 'Mage', 'Warrior'];
