@@ -64,7 +64,7 @@ export default function SearchItem() {
   };
 
   return (
-    <div className="container d-flex flex-column kakele-search-item">
+    <div className="container d-flex kakele-search-item">
       <div className="d-flex d-flex flex-column kakele-search-item-filters">
         <div className="input-group mb-2">
           <span className="input-group-text" id="nivel-do-personagem">
@@ -150,7 +150,7 @@ export default function SearchItem() {
         <ButtonForKakele onClick={lookForItens} text="Procurar" />
         <ButtonForKakele onClick={copyLink} text="Ver set" />
       </div>
-      <div className="container search-item-result">
+      <div className="row row-cols-auto">
         {foundItens &&
           foundItens.map((item, i) => {
             if (item) {
