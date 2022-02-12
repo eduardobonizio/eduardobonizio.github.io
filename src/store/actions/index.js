@@ -1,9 +1,9 @@
-import * as currentLoggedUser from './currentLoggedUser';
-import * as screenSize from './screenSize.actions';
+import * as currentLoggedUser from './currentLoggedUser.actions';
+import * as kakeleActions from './kakele.actions';
 
 const actions = {
   currentLoggedUser,
-  screenSize,
+  kakeleActions,
 };
 
 export default actions;
