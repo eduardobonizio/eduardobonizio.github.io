@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import './css/SearchItem.css';
 
 export default function SearchItem() {
   return (
-    <div className="container d-flex justify-content-center flex-column">
-      <Link to="/kakele/set-maker">Criador de set</Link>
-      <Link to="/kakele/ore-calculator">Calculadora de minérios</Link>
+    <div className="kakele-search-item">
+      <div>Criador de set</div>
+      <div>Calculadora de minérios</div>
     </div>
   );
 }
