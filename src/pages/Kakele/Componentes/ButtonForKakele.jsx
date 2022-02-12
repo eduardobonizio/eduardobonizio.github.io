@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ButtonForKakele.css';
+import './css/ButtonForKakele.css';
 
 export default function ButtonForKakele(props) {
   const { onClick, text } = props;

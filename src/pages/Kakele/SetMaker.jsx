@@ -14,6 +14,7 @@ import {
   genereateLinkToViewSet,
 } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
+import SearchItem from './SearchItem';
 
 export default function SetMaker() {
   const [characterClass, setCharacterClass] = useState('Alchemist');
@@ -24,6 +25,7 @@ export default function SetMaker() {
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
+  const [openSearchItem, setOpenSearchItem] = useState(false);
 
   const generateSet = () => {
     const itensList = filterItensByLevenAndClass(
@@ -79,6 +81,7 @@ export default function SetMaker() {
 
   return (
     <div className="container set-maker-container">
+      {openSearchItem && <SearchItem />}
       <div className="d-flex flex-column status-container">
         <h3 className="">Gerador de set</h3>
         <div className="input-group mb-2">
@@ -176,6 +179,8 @@ export default function SetMaker() {
                   ignoreElementForThisSlot={ignoreElementForThisSlot}
                   item={item}
                   key={i}
+                  setOpenSearchItem={setOpenSearchItem}
+                  openSearchItem={openSearchItem}
                 />
               );
             }

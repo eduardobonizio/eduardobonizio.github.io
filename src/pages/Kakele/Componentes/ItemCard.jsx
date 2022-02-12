@@ -13,6 +13,8 @@ export default function ItemCard(props) {
     ignoreItens,
     ignoreThisSlotsElement,
     ignoreElementForThisSlot,
+    setOpenSearchItem,
+    openSearchItem,
     item: { name, energy, armor, magic, attack, level, slot },
   } = props;
 
@@ -21,7 +23,7 @@ export default function ItemCard(props) {
       <div
         role="button"
         className="card mb-2 container-fluid"
-        onClick={() => console.log('text')}
+        onClick={() => setOpenSearchItem(!openSearchItem)}
       >
         <div className="card-body pb-0">
           <h6 className="card-title">{name}</h6>
