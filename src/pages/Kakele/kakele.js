@@ -195,7 +195,9 @@ const checkSetElement = itens => {
 };
 
 const findItemByName = (itemList, itemName) =>
-  itemList.filter(item => item.name === itemName);
+  itemList.filter(item =>
+    item.name.toLowerCase().includes(itemName.toLowerCase()),
+  );
 
 export {
   urlParamsToObject,

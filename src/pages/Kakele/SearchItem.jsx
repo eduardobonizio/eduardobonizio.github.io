@@ -12,6 +12,7 @@ import {
   filterItensByElement,
   filterItensByLevelAndClass,
   filterItensBySlot,
+  findItemByName,
   genereateLinkToViewSet,
 } from './kakele';
 import {
@@ -30,6 +31,7 @@ export default function SearchItem() {
   const dispatch = useDispatch();
   const currentSet = useSelector(state => state.currentSet);
   const [level, setLevel] = useState(1);
+  const [itemName, setItemName] = useState('');
   const [element, setElement] = useState('All');
   const [slotToFilter, setSlotToFilter] = useState('All');
   const [characterClass, setCharacterClass] = useState(CHARACTER_CLASS[0]);
@@ -68,6 +70,20 @@ export default function SearchItem() {
   return (
     <div className="container d-flex kakele-search-item">
       <div className="d-flex d-flex flex-column kakele-search-item-filters">
+        <div className="input-group mb-2">
+          <span className="input-group-text" id="nome-do-item">
+            Item
+          </span>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Nome do item"
+            aria-label="Nome do item"
+            aria-describedby="nome-do-item"
+            value={itemName}
+            onChange={e => setItemName(e.target.value)}
+          />
+        </div>
         <div className="input-group mb-2">
           <span className="input-group-text" id="nivel-do-personagem">
             Nivel
@@ -160,13 +176,22 @@ export default function SearchItem() {
       </div>
       <div className="row row-cols-auto">
         {foundItens.length > 0 ? (
-          foundItens.map((item, i) => {
-            if (item) {
-              return (
-                <ItemCard index={i} item={item} key={i} equipItem={equipItem} />
-              );
-            }
-          })
+          foundItens
+            .filter(item =>
+              item.name.toLowerCase().includes(itemName.toLowerCase()),
+            )
+            .map((item, i) => {
+              if (item) {
+                return (
+                  <ItemCard
+                    index={i}
+                    item={item}
+                    key={i}
+                    equipItem={equipItem}
+                  />
+                );
+              }
+            })
         ) : (
           <span>Nem um item encontrado</span>
         )}
