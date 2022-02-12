@@ -190,9 +190,13 @@ const checkSetElement = itens => {
   const luz = elementQuantityInSet(itens, 'Light');
   const natureza = elementQuantityInSet(itens, 'Nature');
   const trevas = elementQuantityInSet(itens, 'Dark');
-  const neutral = elementQuantityInSet(itens, 'None');
+  let element = 'Neutral';
+  if (luz >= 5) element = 'Light';
+  if (natureza >= 5) element = 'Nature';
+  if (trevas >= 5) element = 'Dark';
+  const text = `Luz: ${luz}, Natureza: ${natureza}, Trevas: ${trevas}`;
 
-  return `Luz: ${luz}, Natureza: ${natureza}, Trevas: ${trevas}, Neutro: ${neutral}`;
+  return { text, element };
 };
 
 const findItemByName = (itemList, itemName) =>
