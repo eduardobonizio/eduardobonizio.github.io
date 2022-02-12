@@ -4,6 +4,7 @@ const FIVE_SECONDS = 5000;
 
 const urlParamsToObject = paramsText => {
   // Ex.: /Item=Sowrd-of-Fire Item2=Shield-of-Darkness
+  if (paramsText['*'] === '') return;
   const formatedText = `{"${paramsText['*']
     .replace('_', '')
     .replaceAll('_', '","')

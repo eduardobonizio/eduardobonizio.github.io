@@ -47,11 +47,13 @@ export default function ShowSet() {
   const itensOnUrlToItensList = () => {
     const allItens = [...equipments, ...weapons];
     const selectedItems = {};
-    const itensList = Object.values(itensOnUrl).map(itemName =>
-      allItens.forEach(item => {
-        if (item.name === itemName) selectedItems[item.slot] = item;
-      }),
-    );
+    if (itensOnUrl) {
+      const itensList = Object.values(itensOnUrl).map(itemName =>
+        allItens.forEach(item => {
+          if (item.name === itemName) selectedItems[item.slot] = item;
+        }),
+      );
+    }
 
     addMissingItens(selectedItems);
   };

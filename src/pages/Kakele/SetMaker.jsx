@@ -157,16 +157,17 @@ export default function SetMaker() {
           onChangeFunc={setIgnoreElement}
           changeOnCheck={ignoreElement}
         />
-        <ButtonForKakele
-          onClick={() => navigate('/kakele/search-item')}
-          text="Escolher itens manualmente"
-        />
+
         <div className="container d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text="Gerar set" />
           {recomendedSet && (
             <ButtonForKakele onClick={copyLink} text="Copiar link" />
           )}
         </div>
+        <ButtonForKakele
+          onClick={() => navigate('/kakele/search-item')}
+          text="Escolher itens manualmente"
+        />
 
         <ShowSetStatus itensListToShowStatus={recomendedSet} />
       </div>
