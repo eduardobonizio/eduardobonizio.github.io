@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import './css/ShowSet.css';
 
+import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
@@ -12,9 +14,10 @@ import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function ShowSet() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const currentSet = useSelector(state => state.currentSet);
   const urlParams = useParams();
   const itensOnUrl = urlParamsToObject(urlParams);
-  const [currentSet, setCurrentSet] = useState();
 
   const addMissingItens = selectedItems => {
     const fakeItem = {
@@ -37,9 +40,8 @@ export default function ShowSet() {
         fakeItem.slot = slot;
         updatedCurrentSet[slot] = { ...fakeItem, slot };
       }
+      dispatch(updateCurrentSet(updatedCurrentSet[slot]));
     });
-
-    setCurrentSet(updatedCurrentSet);
   };
 
   const itensOnUrlToItensList = () => {
