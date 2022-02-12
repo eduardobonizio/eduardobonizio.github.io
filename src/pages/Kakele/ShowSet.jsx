@@ -1,15 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import './css/ShowSet.css';
 
+import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
 import { urlParamsToObject } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function ShowSet() {
+  const navigate = useNavigate();
   const urlParams = useParams();
   const itensOnUrl = urlParamsToObject(urlParams);
   const [currentSet, setCurrentSet] = useState();
@@ -60,6 +62,10 @@ export default function ShowSet() {
     <div className="container status-and-card-container">
       <div>
         {currentSet && <ShowSetStatus itensListToShowStatus={currentSet} />}
+        <ButtonForKakele
+          onClick={() => navigate('/kakele/search-item')}
+          text="Procurar itens"
+        />
       </div>
       {currentSet && (
         <div className="row row-cols-auto d-flex justify-content-center">
