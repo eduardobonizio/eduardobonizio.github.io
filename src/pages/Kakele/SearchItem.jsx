@@ -128,7 +128,7 @@ export default function SearchItem() {
         {foundItens &&
           foundItens.map((item, i) => {
             if (item) {
-              return <ItemCard index={i} item={item} key={i} equipar />;
+              return <ItemCard index={i} item={item} key={i} equipItem />;
             }
           })}
       </div>
