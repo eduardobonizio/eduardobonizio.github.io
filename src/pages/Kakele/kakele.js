@@ -95,14 +95,14 @@ const findBestItem = (itensList, status) => {
   if (itensList.length === 0) return;
   const bestItem = itensList.reduce(
     (previous, next) => {
-      if (next[status] >= previous[status] && next[status] > 0) {
+      if (next[status] >= previous[status]) {
         return next;
       }
       return previous;
     },
     { [status]: 0 },
   );
-  if (bestItem[status] > 0) return bestItem;
+  if (bestItem.name) return bestItem;
   return false;
 };
 
@@ -161,11 +161,6 @@ const findBestSet = (
     );
 
     bestItem = findBestItem(itensListByRequestedElement, status);
-
-    if (!bestItem) {
-      const alternativeStatus = getAlternativeStatus(slot);
-      bestItem = findBestItem(itensListByRequestedElement, alternativeStatus);
-    }
   }
 
   // Se não encontrou nem um item na opção anterior
