@@ -1,7 +1,4 @@
-.kakele-search-item {
-  position: absolute;
-  z-index: 9999;
-  background-color: black;
-  color: white;
+.kakele-search-item .input-group {
+  margin-right: 5px;
 }
 /*# sourceMappingURL=SearchItem.css.map */

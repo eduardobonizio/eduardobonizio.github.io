@@ -1,6 +1,5 @@
 .kakele-search-item {
-  position: absolute;
-  z-index: 9999;
-  background-color: black;
-  color: white;
+  .input-group {
+    margin-right: 5px;
+  }
 }

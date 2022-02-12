@@ -13,18 +13,12 @@ export default function ItemCard(props) {
     ignoreItens,
     ignoreThisSlotsElement,
     ignoreElementForThisSlot,
-    setOpenSearchItem,
-    openSearchItem,
     item: { name, energy, armor, magic, attack, level, slot },
   } = props;
 
   return (
     <div className="col">
-      <div
-        role="button"
-        className="card mb-2 container-fluid"
-        onClick={() => setOpenSearchItem(!openSearchItem)}
-      >
+      <div className="card mb-2 container-fluid">
         <div className="card-body pb-0">
           <h6 className="card-title">{name}</h6>
           <div className="d-flex flex-column">

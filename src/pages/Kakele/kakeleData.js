@@ -7140,4 +7140,48 @@ const ALL_ITENS_SLOTS_LIST = [
   'shoe',
 ];
 
-export { equipments, weapons, upgrades, UPGRADES, ALL_ITENS_SLOTS_LIST };
+const ALL_ITENS_SLOTS_LIST_PT_BR = {
+  accessorie: 'Acessório',
+  ring: 'Anel',
+  weapon: 'Arma',
+  armor: 'Armadura',
+  leg: 'Calças',
+  necklace: 'Colar',
+  helmet: 'Elmo',
+  shield: 'Escudo',
+  book: 'Livro',
+  shoe: 'Sapatos',
+};
+
+const ITEM_FILTERS = ['level', 'energy', 'attack', 'armor', 'magic'];
+
+const ITEM_FILTERS_PT_BR = {
+  attack: 'Ataque',
+  armor: 'Armadura',
+  energy: 'Elemento',
+  level: 'Level',
+  magic: 'Magia',
+  vocation: 'Vocação',
+};
+
+const CHARACTER_CLASS = ['Alchemist', 'Berserker', 'Hunter', 'Mage', 'Warrior'];
+const CHARACTER_CLASS_PT_BR = {
+  Alchemist: 'Alquemista',
+  Hunter: 'Caçador',
+  Berserker: 'Furioso',
+  Warrior: 'Guerreiro',
+  Mage: 'Mago',
+};
+
+export {
+  equipments,
+  weapons,
+  upgrades,
+  UPGRADES,
+  ALL_ITENS_SLOTS_LIST,
+  ALL_ITENS_SLOTS_LIST_PT_BR,
+  ITEM_FILTERS,
+  ITEM_FILTERS_PT_BR,
+  CHARACTER_CLASS,
+  CHARACTER_CLASS_PT_BR,
+};

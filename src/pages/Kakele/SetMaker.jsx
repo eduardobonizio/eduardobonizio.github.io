@@ -79,9 +79,13 @@ export default function SetMaker() {
     if (link) copy(link);
   };
 
+  const closeSearchWindow = () => setOpenSearchItem(!openSearchItem);
+
+  if (openSearchItem)
+    return <SearchItem closeSearchWindow={closeSearchWindow} />;
+
   return (
     <div className="container set-maker-container">
-      {openSearchItem && <SearchItem />}
       <div className="d-flex flex-column status-container">
         <h3 className="">Gerador de set</h3>
         <div className="input-group mb-2">
