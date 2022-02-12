@@ -51,7 +51,9 @@ export default function SearchItem() {
 
     const itensListByElement = filterItensByElement(itensListBySlot, element);
 
-    setFoundItens(itensListByElement);
+    const itensListByName = findItemByName(itensListByElement, itemName);
+
+    setFoundItens(itensListByName);
   };
 
   const equipItem = item => {
@@ -72,7 +74,7 @@ export default function SearchItem() {
       <div className="d-flex d-flex flex-column kakele-search-item-filters">
         <div className="input-group mb-2">
           <span className="input-group-text" id="nome-do-item">
-            Item
+            Nome do item
           </span>
           <input
             type="text"
@@ -176,22 +178,13 @@ export default function SearchItem() {
       </div>
       <div className="row row-cols-auto">
         {foundItens.length > 0 ? (
-          foundItens
-            .filter(item =>
-              item.name.toLowerCase().includes(itemName.toLowerCase()),
-            )
-            .map((item, i) => {
-              if (item) {
-                return (
-                  <ItemCard
-                    index={i}
-                    item={item}
-                    key={i}
-                    equipItem={equipItem}
-                  />
-                );
-              }
-            })
+          foundItens.map((item, i) => {
+            if (item) {
+              return (
+                <ItemCard index={i} item={item} key={i} equipItem={equipItem} />
+              );
+            }
+          })
         ) : (
           <span>Nem um item encontrado</span>
         )}
