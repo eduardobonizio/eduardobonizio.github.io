@@ -35,9 +35,11 @@ export default function ItemCard(props) {
             <span className="card-text">Ataque: {attack}</span>
             <span className="card-text">Nivel: {level}</span>
             <span className="card-text">Slot: {slot}</span>
-            {currentSet[slot] && currentSet[slot].name === name && (
-              <span className="equiped-item">Equipado</span>
-            )}
+            {currentSet[slot] &&
+              currentSet[slot].name === name &&
+              currentSet[slot].name !== '-----------' && (
+                <span className="equiped-item">Equipado</span>
+              )}
           </div>
           {ignoredItens && (
             <>
