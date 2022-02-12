@@ -1,10 +1,11 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import copy from 'copy-to-clipboard';
 
 import ButtonForKakele from './ButtonForKakele';
+
+import './css/ItemCard.css';
 
 export default function ItemCard(props) {
   const {
@@ -17,6 +18,8 @@ export default function ItemCard(props) {
     item,
     item: { name, energy, armor, magic, attack, level, slot },
   } = props;
+
+  const currentSet = useSelector(state => state.currentSet);
 
   return (
     <div className="col">
@@ -32,8 +35,10 @@ export default function ItemCard(props) {
             <span className="card-text">Ataque: {attack}</span>
             <span className="card-text">Nivel: {level}</span>
             <span className="card-text">Slot: {slot}</span>
+            {currentSet[slot] && currentSet[slot].name === name && (
+              <span className="equiped-item">Equipado</span>
+            )}
           </div>
-
           {ignoredItens && (
             <>
               <div className="input-group mb-2">

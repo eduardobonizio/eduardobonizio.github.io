@@ -51,9 +51,7 @@ export default function SearchItem() {
   };
 
   const equipItem = item => {
-    console.log('item', item);
     dispatch(updateCurrentSet(item));
-    console.log('currentSet', currentSet);
   };
 
   const copyLink = () => {

@@ -1,0 +1,10 @@
+.equiped-item {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 3px;
+}
+/*# sourceMappingURL=ItemCard.css.map */
