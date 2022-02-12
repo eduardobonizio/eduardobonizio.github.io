@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
@@ -55,6 +55,8 @@ export default function SearchItem() {
   const equipItem = item => {
     dispatch(updateCurrentSet(item));
   };
+
+  useEffect(() => lookForItens(), []);
 
   const copyLink = () => {
     const origin = window.location.origin.toString();
@@ -157,14 +159,17 @@ export default function SearchItem() {
         <ButtonForKakele onClick={copyLink} text="Ver set" />
       </div>
       <div className="row row-cols-auto">
-        {foundItens &&
+        {foundItens.length > 0 ? (
           foundItens.map((item, i) => {
             if (item) {
               return (
                 <ItemCard index={i} item={item} key={i} equipItem={equipItem} />
               );
             }
-          })}
+          })
+        ) : (
+          <span>Nem um item encontrado</span>
+        )}
       </div>
     </div>
   );
