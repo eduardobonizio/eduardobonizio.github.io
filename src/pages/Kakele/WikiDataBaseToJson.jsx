@@ -38,7 +38,7 @@ export default function WikiDataBaseToJson() {
       const slplitArmorStatus = item
         .getElementsByTagName('td')[4]
         .innerText.split('(');
-      const attack = Number(slplitArmorStatus[0]);
+      const attack = Number(slplitArmorStatus[0].replaceAll(',', ''));
       let magic = 0;
       let haste = 0;
       let armor = 0;
@@ -48,7 +48,7 @@ export default function WikiDataBaseToJson() {
         if (itemStatus.includes('magic')) magic = value;
         if (itemStatus.includes('haste')) haste = value;
         if (itemStatus.includes('armor')) armor = value;
-        if (itemStatus.includes('two')) twoHanded = true;
+        if (itemStatus.includes('two-handed')) twoHanded = true;
       });
 
       const imgLink = item
