@@ -42,11 +42,13 @@ export default function WikiDataBaseToJson() {
       let magic = 0;
       let haste = 0;
       let armor = 0;
+      let twoHanded = false;
       slplitArmorStatus.forEach(itemStatus => {
         const value = Number(itemStatus.split(' ')[0]);
         if (itemStatus.includes('magic')) magic = value;
         if (itemStatus.includes('haste')) haste = value;
         if (itemStatus.includes('armor')) armor = value;
+        if (itemStatus.includes('two')) twoHanded = true;
       });
 
       const imgLink = item
@@ -69,6 +71,7 @@ export default function WikiDataBaseToJson() {
         sources: item.getElementsByTagName('td')[7].innerText,
         slot: 'weapon',
         imgUrl: imgLink,
+        twoHanded,
       };
 
       return itemAtributes;
