@@ -5,11 +5,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 import './css/ShowSet.css';
 
+import copy from 'copy-to-clipboard';
+
 import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
-import { urlParamsToObject } from './kakele';
+import { genereateLinkToViewSet, urlParamsToObject } from './kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function ShowSet() {
@@ -62,14 +64,22 @@ export default function ShowSet() {
     itensOnUrlToItensList();
   }, []);
 
+  const copyLink = () => {
+    const origin = window.location.origin.toString();
+    const setToArray = Object.values(currentSet).map(item => item);
+    const link = genereateLinkToViewSet(setToArray, origin);
+    if (link) copy(link);
+  };
+
   return (
     <div className="container status-and-card-container">
-      <div>
+      <div className="d-flex flex-column">
         {currentSet && <ShowSetStatus itensListToShowStatus={currentSet} />}
         <ButtonForKakele
           onClick={() => navigate('/kakele/search-item')}
           text="Procurar itens"
         />
+        <ButtonForKakele onClick={copyLink} text="Copiar link" />
       </div>
       {currentSet && (
         <div className="row row-cols-auto d-flex justify-content-center">
