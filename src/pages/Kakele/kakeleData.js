@@ -8862,17 +8862,19 @@ const CHARACTER_CLASS_PT_BR = {
 
 const FAKE_ITEM = {
   name: '-----------',
+  namePtBr: '-----------',
   level: 0,
   vocation: 'All',
   energy: 'None',
-  attack: 0,
   armor: 0,
-  Range: 0,
-  value: 0,
-  sources: '',
+  range: 0,
   magic: 0,
   haste: 0,
-  slot: '',
+  attack: 0,
+  value: 0,
+  sources: '',
+  imgUrl: '',
+  twoHanded: false,
 };
 
 export {

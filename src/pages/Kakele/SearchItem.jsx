@@ -24,6 +24,7 @@ import {
   CHARACTER_CLASS_PT_BR,
   equipments,
   weapons,
+  FAKE_ITEM,
 } from './kakeleData';
 
 export default function SearchItem() {
@@ -58,12 +59,24 @@ export default function SearchItem() {
 
   const equipItem = item => {
     dispatch(updateCurrentSet(item));
+
+    if (
+      (item.slot === 'book' || item.slot === 'shield') &&
+      currentSet.weapon.twoHanded
+    ) {
+      dispatch(updateCurrentSet({ ...FAKE_ITEM, slot: 'weapon' }));
+    }
+
+    if (item.slot === 'book')
+      dispatch(updateCurrentSet({ ...FAKE_ITEM, slot: 'shield' }));
+
+    if (item.slot === 'shield')
+      dispatch(updateCurrentSet({ ...FAKE_ITEM, slot: 'book' }));
   };
 
   useEffect(() => lookForItens(), []);
 
-  const copyLink = () => {
-    const origin = window.location.origin.toString();
+  const redirectToShowSetPage = () => {
     const setToArray = Object.values(currentSet).map(item => item);
     const link = genereateLinkToViewSet(setToArray, false);
     if (link) navigate(link);
@@ -174,7 +187,7 @@ export default function SearchItem() {
           </select>
         </div>
         <ButtonForKakele onClick={lookForItens} text="Procurar" />
-        <ButtonForKakele onClick={copyLink} text="Ver set" />
+        <ButtonForKakele onClick={redirectToShowSetPage} text="Ver set" />
       </div>
       <div className="row row-cols-auto">
         {foundItens.length > 0 ? (

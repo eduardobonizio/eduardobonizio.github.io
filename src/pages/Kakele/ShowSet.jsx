@@ -28,7 +28,8 @@ export default function ShowSet() {
 
   const normalizeSet = setItems => {
     const usableSet = { ...setItems };
-    if (setItems.weapon.twoHanded) {
+
+    if (setItems.weapon && setItems.weapon.twoHanded) {
       usableSet.shield = { ...FAKE_ITEM, slot: 'shield' };
       usableSet.book = { ...FAKE_ITEM, slot: 'book' };
     }
