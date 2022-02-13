@@ -16,7 +16,7 @@ export default function ItemCard(props) {
     ignoreElementForThisSlot,
     equipItem,
     item,
-    item: { name, energy, armor, magic, attack, level, slot },
+    item: { namePtBr, energy, armor, magic, attack, level, slot },
   } = props;
 
   const currentSet = useSelector(state => state.currentSet);
@@ -25,7 +25,7 @@ export default function ItemCard(props) {
     <div className="col">
       <div className="card mb-2 container-fluid">
         <div className="card-body pb-0">
-          <h6 className="card-title">{name}</h6>
+          <h6 className="card-title">{namePtBr}</h6>
           <div className="d-flex flex-column">
             <span className="card-text">
               Elemento: <span className={energy}>{energy}</span>
@@ -36,7 +36,7 @@ export default function ItemCard(props) {
             <span className="card-text">Nivel: {level}</span>
             <span className="card-text">Slot: {slot}</span>
             {currentSet[slot] &&
-              currentSet[slot].name === name &&
+              currentSet[slot].namePtBr === namePtBr &&
               currentSet[slot].name !== '-----------' && (
                 <span className="equiped-item">Equipado</span>
               )}
@@ -48,9 +48,9 @@ export default function ItemCard(props) {
                   <input
                     className="form-check-input"
                     type="checkbox"
-                    name={name}
+                    name={namePtBr}
                     id={`exclude-item-${index}`}
-                    checked={ignoredItens.includes(name)}
+                    checked={ignoredItens.includes(namePtBr)}
                     aria-label="Checkbox for following text input"
                     onChange={e => ignoreItens(e.target.name, e.target.checked)}
                   />
@@ -86,7 +86,10 @@ export default function ItemCard(props) {
             </>
           )}
           <div className="d-flex justify-content-between mt-1">
-            <ButtonForKakele onClick={() => copy(name)} text="Copiar nome" />
+            <ButtonForKakele
+              onClick={() => copy(namePtBr)}
+              text="Copiar nome"
+            />
             {equipItem && (
               <ButtonForKakele onClick={() => equipItem(item)} text="Equipar" />
             )}
