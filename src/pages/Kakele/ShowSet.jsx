@@ -106,7 +106,14 @@ export default function ShowSet() {
             <ItemCard item={currentSet.armor} index={currentSet.armor.name} />
           )}
 
-          {(currentSet.shield || currentSet.book) && (
+          {(currentSet.shield && currentSet.shield.name !== '-----------') && (
+            <ItemCard
+              item={currentSet.shield || currentSet.book}
+              index={currentSet.shield.name || currentSet.book.name}
+            />
+          )}
+
+          {(currentSet.book && currentSet.book.name !== '-----------') && (
             <ItemCard
               item={currentSet.shield || currentSet.book}
               index={currentSet.shield.name || currentSet.book.name}
