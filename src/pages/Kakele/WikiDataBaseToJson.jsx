@@ -55,9 +55,7 @@ export default function WikiDataBaseToJson() {
       return itemAtributes;
     });
 
-    console.log(itensList);
-
-    // copy(JSON.stringify(itensList));
+    copy(JSON.stringify(itensList));
   };
 
   const getEquipmentsItens = () => {
