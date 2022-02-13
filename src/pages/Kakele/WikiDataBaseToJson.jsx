@@ -1,13 +1,68 @@
-/* eslint-disable prefer-const */
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+import copy from 'copy-to-clipboard';
 
 import ButtonForKakele from './Componentes/ButtonForKakele';
 
 export default function WikiDataBaseToJson() {
-  const getItens = () => {
+  const [wikiType, setWikiType] = useState('equipments');
+
+  const getWeaponsItens = () => {
     const allTdElements = [...document.getElementsByTagName('tr')];
-    let slots = [
+
+    const itensList = allTdElements.map((item, index) => {
+      if (index === 0) return;
+      const level = Number(
+        item.getElementsByTagName('td')[1].innerText.replaceAll(',', ''),
+      );
+      const slplitArmorStatus = item
+        .getElementsByTagName('td')[4]
+        .innerText.split('(');
+      const attack = Number(slplitArmorStatus[0]);
+      let magic = 0;
+      let haste = 0;
+      let armor = 0;
+      slplitArmorStatus.forEach(itemStatus => {
+        const value = Number(itemStatus.split(' ')[0]);
+        if (itemStatus.includes('magic')) magic = value;
+        if (itemStatus.includes('haste')) haste = value;
+        if (itemStatus.includes('armor')) armor = value;
+      });
+
+      const imgLink = item
+        .querySelector('.item')
+        .style.backgroundImage.replace('url(', '')
+        .replace(')', '');
+      const itemAtributes = {
+        name: item.getElementsByTagName('td')[0].innerText,
+        level,
+        vocation: item.getElementsByTagName('td')[2].innerText,
+        energy: item.getElementsByTagName('td')[3].innerText,
+        armor,
+        range: Number(item.getElementsByTagName('td')[5].innerText),
+        magic,
+        haste,
+        attack,
+        value: Number(
+          item.getElementsByTagName('td')[6].innerText.replaceAll(',', ''),
+        ),
+        sources: item.getElementsByTagName('td')[7].innerText,
+        slot: 'weapon',
+        imgUrl: imgLink,
+      };
+
+      return itemAtributes;
+    });
+
+    console.log(itensList);
+
+    // copy(JSON.stringify(itensList));
+  };
+
+  const getEquipmentsItens = () => {
+    const allTdElements = [...document.getElementsByTagName('tr')];
+    const slots = [
       'helmet',
       'armor',
       'shoe',
@@ -30,7 +85,7 @@ export default function WikiDataBaseToJson() {
       const slplitArmorStatus = item
         .getElementsByTagName('td')[4]
         .innerText.split('(');
-      const def = slplitArmorStatus[0];
+      const armor = Number(slplitArmorStatus[0]);
       let magic = 0;
       let haste = 0;
       let attack = 0;
@@ -50,7 +105,7 @@ export default function WikiDataBaseToJson() {
         level,
         vocation: item.getElementsByTagName('td')[2].innerText,
         energy: item.getElementsByTagName('td')[3].innerText,
-        armor: def,
+        armor,
         value: Number(
           item.getElementsByTagName('td')[5].innerText.replaceAll(',', ''),
         ),
@@ -73,36 +128,61 @@ export default function WikiDataBaseToJson() {
       return itemAtributes;
     });
 
-    console.log(itensList);
+    copy(JSON.stringify(itensList));
   };
 
-  async function loadWiki(wiki) {
+  async function loadWiki(wikiName) {
+    document.getElementById('holdWiki').innerHTML = '';
     fetch(
-      `https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/${wiki}.html`,
+      `https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/${wikiName}.html`,
     )
       .then(response => response.text())
       .then(html => {
         const content = document.createElement('div');
         content.innerHTML = html;
         document.getElementById('holdWiki').appendChild(content);
-      })
-      .then(() => getItens());
+      });
   }
 
   useEffect(() => {
     loadWiki('equipments');
   }, []);
 
-  const tryGetPtBr = () => {
-    getItens();
+  const copyItensToObject = () => {
+    if (wikiType === 'equipments') return getEquipmentsItens();
+    if (wikiType === 'weapons') return getWeaponsItens();
   };
 
   return (
     <div className="container">
-      <ButtonForKakele
-        onClick={tryGetPtBr}
-        text="Gerar Objeto com nome Pt-BR"
-      />
+      <div className="container">
+        <ButtonForKakele
+          onClick={copyItensToObject}
+          text="Copiar como objeto"
+        />
+
+        <div className="input-group mb-2">
+          <label className="input-group-text" htmlFor="elemento-do-set">
+            Wiki
+          </label>
+          <select
+            className="form-select"
+            id="elemento-do-set"
+            onChange={e => {
+              setWikiType(e.target.value);
+              loadWiki(e.target.value);
+            }}
+          >
+            <option defaultValue value="equipments">
+              Equipamentos
+            </option>
+            <option defaultValue value="weapons">
+              Armas
+            </option>
+          </select>
+        </div>
+      </div>
+
       <div
         className="container d-flex justify-content-center flex-column"
         id="holdWiki"
