@@ -16,11 +16,10 @@ export default function ItemCard(props) {
     ignoreElementForThisSlot,
     equipItem,
     item,
-    item: { namePtBr, energy, armor, magic, attack, level, slot },
+    item: { namePtBr, energy, armor, magic, attack, level, slot, imgUrl },
   } = props;
 
   const currentSet = useSelector(state => state.currentSet);
-
   return (
     <div className="col">
       <div className="card mb-2 container-fluid">
@@ -28,6 +27,9 @@ export default function ItemCard(props) {
           <h6 className="card-title">{namePtBr}</h6>
           <div className="d-flex flex-column">
             <span className="card-text">
+              {imgUrl && (
+                <img alt={namePtBr} src={imgUrl.replaceAll('"', '')} />
+              )}
               Elemento: <span className={energy}>{energy}</span>
             </span>
             <span className="card-text">Armadura: {armor}</span>
