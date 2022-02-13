@@ -26,6 +26,24 @@ export default function ShowSet() {
   const urlParams = useParams();
   const itensOnUrl = urlParamsToObject(urlParams);
 
+  const normalizeSet = setItems => {
+    const usableSet = { ...setItems };
+    if (setItems.weapon.twoHanded) {
+      usableSet.shield = { ...FAKE_ITEM, slot: 'shield' };
+      usableSet.book = { ...FAKE_ITEM, slot: 'book' };
+    }
+
+    if (setItems.shield) {
+      usableSet.book = { ...FAKE_ITEM, slot: 'book' };
+    }
+
+    if (setItems.book) {
+      usableSet.shield = { ...FAKE_ITEM, slot: 'shield' };
+    }
+
+    return usableSet;
+  };
+
   const addMissingItens = selectedItems => {
     const fakeItem = { ...FAKE_ITEM };
     const updatedCurrentSet = selectedItems;
@@ -49,7 +67,9 @@ export default function ShowSet() {
       );
     }
 
-    addMissingItens(selectedItems);
+    const normalizedItemSet = normalizeSet(selectedItems);
+
+    addMissingItens(normalizedItemSet);
   };
 
   useEffect(() => {
@@ -63,7 +83,6 @@ export default function ShowSet() {
     if (link) copy(link);
   };
 
-  console.log(currentSet);
   return (
     <div className="container status-and-card-container">
       <div className="d-flex flex-column">
