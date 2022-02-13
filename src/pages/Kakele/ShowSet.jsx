@@ -63,6 +63,7 @@ export default function ShowSet() {
     if (link) copy(link);
   };
 
+  console.log(currentSet);
   return (
     <div className="container status-and-card-container">
       <div className="d-flex flex-column">
@@ -106,10 +107,7 @@ export default function ShowSet() {
           )}
 
           {currentSet.book && currentSet.book.name !== '-----------' && (
-            <ItemCard
-              item={currentSet.shield || currentSet.book}
-              index={currentSet.shield.name || currentSet.book.name}
-            />
+            <ItemCard item={currentSet.book} index={currentSet.book.name} />
           )}
 
           {currentSet.accessorie && (
