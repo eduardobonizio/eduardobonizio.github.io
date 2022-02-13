@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 
-import copy from 'copy-to-clipboard';
-
 import './css/SetMaker.css';
 
 import ButtonForKakele from './Componentes/ButtonForKakele';
@@ -73,10 +71,9 @@ export default function SetMaker() {
     setIgnoreThisSlotsElement(removeSlotFromIgnoredList);
   };
 
-  const copyLink = () => {
-    const origin = window.location.origin.toString();
-    const link = genereateLinkToViewSet(recomendedSet, origin);
-    if (link) copy(link);
+  const redirectToShowSetPage = () => {
+    const link = genereateLinkToViewSet(recomendedSet, false);
+    if (link) navigate(link);
   };
 
   return (
@@ -161,7 +158,7 @@ export default function SetMaker() {
         <div className="container d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text="Gerar set" />
           {recomendedSet && (
-            <ButtonForKakele onClick={copyLink} text="Copiar link" />
+            <ButtonForKakele onClick={redirectToShowSetPage} text="Ver set" />
           )}
         </div>
         <ButtonForKakele
