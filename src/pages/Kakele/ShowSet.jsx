@@ -12,7 +12,12 @@ import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
 import { genereateLinkToViewSet, urlParamsToObject } from './kakele';
-import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
+import {
+  equipments,
+  weapons,
+  ALL_ITENS_SLOTS_LIST,
+  FAKE_ITEM,
+} from './kakeleData';
 
 export default function ShowSet() {
   const navigate = useNavigate();
@@ -22,20 +27,7 @@ export default function ShowSet() {
   const itensOnUrl = urlParamsToObject(urlParams);
 
   const addMissingItens = selectedItems => {
-    const fakeItem = {
-      name: '-----------',
-      level: 0,
-      vocation: 'All',
-      energy: 'None',
-      attack: 0,
-      armor: 0,
-      Range: 0,
-      value: 0,
-      sources: '',
-      magic: 0,
-      haste: 0,
-      slot: '',
-    };
+    const fakeItem = { ...FAKE_ITEM };
     const updatedCurrentSet = selectedItems;
     ALL_ITENS_SLOTS_LIST.forEach(slot => {
       if (!selectedItems[slot]) {
@@ -106,14 +98,14 @@ export default function ShowSet() {
             <ItemCard item={currentSet.armor} index={currentSet.armor.name} />
           )}
 
-          {(currentSet.shield && currentSet.shield.name !== '-----------') && (
+          {currentSet.shield && currentSet.shield.name !== '-----------' && (
             <ItemCard
               item={currentSet.shield || currentSet.book}
               index={currentSet.shield.name || currentSet.book.name}
             />
           )}
 
-          {(currentSet.book && currentSet.book.name !== '-----------') && (
+          {currentSet.book && currentSet.book.name !== '-----------' && (
             <ItemCard
               item={currentSet.shield || currentSet.book}
               index={currentSet.shield.name || currentSet.book.name}

@@ -8645,6 +8645,21 @@ const CHARACTER_CLASS_PT_BR = {
   Mage: 'Mago',
 };
 
+const FAKE_ITEM = {
+  name: '-----------',
+  level: 0,
+  vocation: 'All',
+  energy: 'None',
+  attack: 0,
+  armor: 0,
+  Range: 0,
+  value: 0,
+  sources: '',
+  magic: 0,
+  haste: 0,
+  slot: '',
+};
+
 export {
   equipments,
   weapons,
@@ -8656,4 +8671,5 @@ export {
   ITEM_FILTERS_PT_BR,
   CHARACTER_CLASS,
   CHARACTER_CLASS_PT_BR,
+  FAKE_ITEM,
 };
