@@ -87,7 +87,9 @@ const addDotToKks = number =>
 const filterItensBySlot = (itensList, slot, ignoreItensList) =>
   itensList.filter(
     item =>
-      (item.slot === slot && !ignoreItensList.includes(item.name)) ||
+      (item.slot === slot &&
+        !ignoreItensList.includes(item.name) &&
+        !ignoreItensList.includes(item.namePtBr)) ||
       slot === 'All',
   );
 
