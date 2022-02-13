@@ -13,6 +13,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4000.jpg"',
     slot: 'helmet',
+    namePtBr: 'Tampão Verde',
   },
   {
     name: 'Swimming Goggles',
@@ -28,6 +29,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4025.jpg"',
     slot: 'helmet',
+    namePtBr: 'Óculos de natação',
   },
   {
     name: 'Unknown Helmet',
@@ -43,6 +45,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4041.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete desconhecido',
   },
   {
     name: 'Purple Bandana',
@@ -58,6 +61,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4017.jpg"',
     slot: 'helmet',
+    namePtBr: 'Bandana Roxa',
   },
   {
     name: 'Bronze Helmet',
@@ -74,6 +78,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4001.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Bronze',
   },
   {
     name: 'Black Bandana',
@@ -89,6 +94,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4019.jpg"',
     slot: 'helmet',
+    namePtBr: 'Bandana Preta',
   },
   {
     name: 'Steel Helmet',
@@ -104,6 +110,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4002.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Aço',
   },
   {
     name: 'Witch Hat',
@@ -119,6 +126,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4003.jpg"',
     slot: 'helmet',
+    namePtBr: 'Chapéu de bruxa',
   },
   {
     name: 'Explorer Helmet',
@@ -134,6 +142,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4021.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete Explorador',
   },
   {
     name: 'Silver Helmet',
@@ -150,6 +159,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4004.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Prata',
   },
   {
     name: 'Alamogordo Helmet',
@@ -165,6 +175,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4027.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete Alamogordo',
   },
   {
     name: 'Mastermind Hat',
@@ -180,6 +191,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4005.jpg"',
     slot: 'helmet',
+    namePtBr: 'Chapéu Mastermind',
   },
   {
     name: 'Iron Helmet',
@@ -195,6 +207,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4020.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Ferro',
   },
   {
     name: "Golin's Helmet",
@@ -210,6 +223,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4015.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Golin',
   },
   {
     name: 'Humanoid Lioncat Helmet',
@@ -225,6 +239,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4038.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete Humanóide Lioncat',
   },
   {
     name: 'Demon Horn Helmet',
@@ -240,6 +255,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4007.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Chifre Demoníaco',
   },
   {
     name: 'Noble Guard Helmet',
@@ -255,6 +271,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4033.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete da Guarda Nobre',
   },
   {
     name: 'Darkness Hat',
@@ -270,6 +287,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4014.jpg"',
     slot: 'helmet',
+    namePtBr: 'Chapéu da Escuridão',
   },
   {
     name: 'Skeletons Helmet',
@@ -285,6 +303,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4011.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Esqueletos',
   },
   {
     name: 'Spider Silk Helmet',
@@ -300,6 +319,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4008.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Seda de Aranha',
   },
   {
     name: "Clan's Helmet",
@@ -316,6 +336,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4013.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete do clã',
   },
   {
     name: 'Skeleton Warrior Helmet',
@@ -331,6 +352,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4036.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Guerreiro Esqueleto',
   },
   {
     name: 'Poison Beetle Helmet',
@@ -346,6 +368,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4039.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete do Besouro Venenoso',
   },
   {
     name: 'Warrior Helmet',
@@ -361,6 +384,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4006.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Guerreiro',
   },
   {
     name: "Hell's Helmet",
@@ -376,6 +400,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4012.jpg"',
     slot: 'helmet',
+    namePtBr: 'capacete do inferno',
   },
   {
     name: 'Frost Helmet',
@@ -391,6 +416,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4018.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Gelo',
   },
   {
     name: 'Dwarf Miner Helmet',
@@ -406,6 +432,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4034.jpg"',
     slot: 'helmet',
+    namePtBr: 'Elmo Mineiro Anão',
   },
   {
     name: 'Helmet of the Void',
@@ -421,6 +448,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4022.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete do Vazio',
   },
   {
     name: 'Lava Helmet',
@@ -436,6 +464,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4009.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de lava',
   },
   {
     name: 'Noble Topper',
@@ -451,6 +480,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4030.jpg"',
     slot: 'helmet',
+    namePtBr: 'Topo Nobre',
   },
   {
     name: 'Cruzader Helmet',
@@ -466,6 +496,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4024.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete Cruzador',
   },
   {
     name: 'Undead Dragon Rider Helmet',
@@ -481,6 +512,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4037.jpg"',
     slot: 'helmet',
+    namePtBr: 'Elmo de Cavaleiro de Dragão Morto-vivo',
   },
   {
     name: 'Night Elf Lord Helmet',
@@ -496,6 +528,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4040.jpg"',
     slot: 'helmet',
+    namePtBr: 'Elfo da Noite Elfo Elfo',
   },
   {
     name: 'Crown of the Skies',
@@ -511,6 +544,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4023.jpg"',
     slot: 'helmet',
+    namePtBr: 'Coroa dos Céus',
   },
   {
     name: 'Helmet of the Doom',
@@ -526,6 +560,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4026.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete da Perdição',
   },
   {
     name: 'Revenant Helmet',
@@ -541,6 +576,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4035.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete Revenant',
   },
   {
     name: "Elora's Helmet",
@@ -556,6 +592,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4028.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de Elora',
   },
   {
     name: 'Devil Hunter Helmet',
@@ -571,6 +608,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4010.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete Caçador de Diabos',
   },
   {
     name: 'Celestial Helmet',
@@ -586,6 +624,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4031.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete Celestial',
   },
   {
     name: 'Golden Dragon Scale Helmet',
@@ -601,6 +640,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4016.jpg"',
     slot: 'helmet',
+    namePtBr: 'Elmo de Escama de Dragão Dourado',
   },
   {
     name: 'Undead Golden Dragon Scale Helmet',
@@ -616,6 +656,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4032.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete de escama de dragão dourado morto-vivo',
   },
   {
     name: 'Crown of Enlightenment',
@@ -631,6 +672,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4029.jpg"',
     slot: 'helmet',
+    namePtBr: 'Coroa do Iluminismo',
   },
   {
     name: 'Chromatic Golden Dragon Scale Helmet',
@@ -646,6 +688,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4043.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete cromático de escama de dragão dourado',
   },
   {
     name: 'Rainbow Helmet',
@@ -661,6 +704,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4042.jpg"',
     slot: 'helmet',
+    namePtBr: 'Capacete arco-íris',
   },
   {
     name: 'Wool Shirt',
@@ -676,6 +720,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4100.jpg"',
     slot: 'armor',
+    namePtBr: 'Camisa de lã',
   },
   {
     name: 'Wool Coat',
@@ -691,6 +736,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4101.jpg"',
     slot: 'armor',
+    namePtBr: 'Casaco de lã',
   },
   {
     name: 'Reinforced Shirt',
@@ -706,6 +752,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4117.jpg"',
     slot: 'armor',
+    namePtBr: 'Camisa Reforçada',
   },
   {
     name: 'Winter Coat',
@@ -721,6 +768,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4119.jpg"',
     slot: 'armor',
+    namePtBr: 'Casaco de inverno',
   },
   {
     name: 'Leather Armor',
@@ -737,6 +785,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4102.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de couro',
   },
   {
     name: 'Ghostly Coat',
@@ -752,6 +801,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4121.jpg"',
     slot: 'armor',
+    namePtBr: 'Casaco Fantasmagórico',
   },
   {
     name: 'Plate Armor',
@@ -768,6 +818,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4103.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de placas',
   },
   {
     name: 'Bronze Armor',
@@ -783,6 +834,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4115.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Bronze',
   },
   {
     name: 'Silver Armor',
@@ -798,6 +850,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4104.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Prata',
   },
   {
     name: 'Humanoid Fox Cape',
@@ -813,6 +866,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4137.jpg"',
     slot: 'armor',
+    namePtBr: 'Capa de Raposa Humanóide',
   },
   {
     name: 'War Armor',
@@ -828,6 +882,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4122.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Guerra',
   },
   {
     name: 'Vortex Robe',
@@ -843,6 +898,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4126.jpg"',
     slot: 'armor',
+    namePtBr: 'Vórtice Robe',
   },
   {
     name: 'Golden Armor',
@@ -858,6 +914,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4105.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Dourada',
   },
   {
     name: 'Vulcana Armor',
@@ -873,6 +930,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4106.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Vulcana',
   },
   {
     name: 'Ice Beetle Carapace Armor',
@@ -888,6 +946,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4138.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Carapaça de Besouro de Gelo',
   },
   {
     name: 'Dark Armor',
@@ -903,6 +962,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4107.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Negra',
   },
   {
     name: 'Blue Robe',
@@ -918,6 +978,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4113.jpg"',
     slot: 'armor',
+    namePtBr: 'Manto Azul',
   },
   {
     name: 'Skeleton Warrior Armor',
@@ -933,6 +994,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4134.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura do Guerreiro Esqueleto',
   },
   {
     name: 'Spider Silk Armor',
@@ -948,6 +1010,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4108.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Seda de Aranha',
   },
   {
     name: "Heron's Armor",
@@ -963,6 +1026,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4111.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Garça',
   },
   {
     name: "Hell's Cloak",
@@ -978,6 +1042,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4110.jpg"',
     slot: 'armor',
+    namePtBr: 'Manto do Inferno',
   },
   {
     name: "Clan's Armor",
@@ -994,6 +1059,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4112.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura do Clã',
   },
   {
     name: 'Abyssal Skeleton Armor',
@@ -1009,6 +1075,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4135.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Esqueleto Abissal',
   },
   {
     name: 'Royal Cloak',
@@ -1024,6 +1091,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4114.jpg"',
     slot: 'armor',
+    namePtBr: 'Manto Real',
   },
   {
     name: 'Lava Armor',
@@ -1039,6 +1107,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4139.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de lava',
   },
   {
     name: 'Frost Armor',
@@ -1054,6 +1123,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4118.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Gelo',
   },
   {
     name: 'Mystic Robe',
@@ -1069,6 +1139,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4120.jpg"',
     slot: 'armor',
+    namePtBr: 'Manto Místico',
   },
   {
     name: 'Armor of the Void',
@@ -1084,6 +1155,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4123.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura do Vazio',
   },
   {
     name: 'Paladin Armor',
@@ -1099,6 +1171,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4124.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Paladino',
   },
   {
     name: 'Black Dragon Scale Armor',
@@ -1114,6 +1187,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4140.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Escama de Dragão Negro',
   },
   {
     name: 'Devil Hunter Armor',
@@ -1129,6 +1203,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4109.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura do Caçador de Diabos',
   },
   {
     name: 'Unstable Vortex Robe',
@@ -1144,6 +1219,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4127.jpg"',
     slot: 'armor',
+    namePtBr: 'Manto de Vórtice Instável',
   },
   {
     name: 'Dwarf Warrior Armor',
@@ -1159,6 +1235,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4132.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Guerreiro Anão',
   },
   {
     name: 'Elemental Armor',
@@ -1174,6 +1251,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4141.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Elemental',
   },
   {
     name: 'Saint Armor',
@@ -1189,6 +1267,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4125.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Santo',
   },
   {
     name: 'Elder Vampire Armor',
@@ -1205,6 +1284,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4136.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Vampiro Ancião',
   },
   {
     name: "Elora's Armor",
@@ -1220,6 +1300,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4128.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Elora',
   },
   {
     name: 'Revenant Armor',
@@ -1235,6 +1316,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4133.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Revenant',
   },
   {
     name: 'Corrupted Armor',
@@ -1250,6 +1332,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4129.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Corrompida',
   },
   {
     name: 'Celestial Armor',
@@ -1265,6 +1348,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4130.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Celestial',
   },
   {
     name: 'Golden Dragon Scale Armor',
@@ -1280,6 +1364,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4116.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Escama de Dragão Dourado',
   },
   {
     name: 'Undead Golden Dragon Scale Armor',
@@ -1295,6 +1380,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4131.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura de Escama de Dragão Dourado Morto-vivo',
   },
   {
     name: 'Chromatic Golden Dragon Scale Armor',
@@ -1310,6 +1396,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4143.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Cromática de Escama de Dragão Dourado',
   },
   {
     name: 'Rainbow Armor',
@@ -1325,6 +1412,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4142.jpg"',
     slot: 'armor',
+    namePtBr: 'Armadura Arco-Íris',
   },
   {
     name: 'Leather Boot',
@@ -1340,6 +1428,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4200.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Couro',
   },
   {
     name: 'Strange Cloth Shoe',
@@ -1355,6 +1444,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4213.jpg"',
     slot: 'shoe',
+    namePtBr: 'Sapato de Tecido Estranho',
   },
   {
     name: 'Tin Boot',
@@ -1370,6 +1460,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4215.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Lata',
   },
   {
     name: 'Reinforced Leather Boot',
@@ -1386,6 +1477,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4201.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Couro Reforçada',
   },
   {
     name: 'Light Boot',
@@ -1401,6 +1493,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4202.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Leve',
   },
   {
     name: 'Steeltoe Boot',
@@ -1416,6 +1509,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4212.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Bico de Aço',
   },
   {
     name: 'Steel Boot',
@@ -1431,6 +1525,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4203.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Aço',
   },
   {
     name: 'Undead Warrior Boot',
@@ -1446,6 +1541,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4226.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota do Guerreiro Morto-vivo',
   },
   {
     name: 'Winged Boot',
@@ -1461,6 +1557,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4204.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Alada',
   },
   {
     name: 'Dark Boot',
@@ -1476,6 +1573,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4205.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Escura',
   },
   {
     name: 'Golden Boot',
@@ -1491,6 +1589,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4207.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota dourada',
   },
   {
     name: 'Giant Beetle Carapace Boot',
@@ -1506,6 +1605,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4230.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Carapaça de Besouro Gigante',
   },
   {
     name: 'Demon Boot',
@@ -1521,6 +1621,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4206.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Demoníaca',
   },
   {
     name: 'Boots of Haste',
@@ -1536,6 +1637,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4210.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas da pressa',
   },
   {
     name: 'Spider Silk Boot',
@@ -1551,6 +1653,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4208.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Seda de Aranha',
   },
   {
     name: 'Noble Extractor Boot',
@@ -1566,6 +1669,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4223.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Extrator Nobre',
   },
   {
     name: 'Skeleton Warrior Boot',
@@ -1581,6 +1685,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4227.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Guerreiro Esqueleto',
   },
   {
     name: 'Lava Boot',
@@ -1596,6 +1701,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4209.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Lava',
   },
   {
     name: "Clan's Boots",
@@ -1611,6 +1717,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4211.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas do Clã',
   },
   {
     name: 'Mystic Boot',
@@ -1626,6 +1733,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4216.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Mística',
   },
   {
     name: 'Frost Boots',
@@ -1641,6 +1749,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4214.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas de Gelo',
   },
   {
     name: 'Ice Widow Silk Boot',
@@ -1656,6 +1765,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4231.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Seda da Viúva de Gelo',
   },
   {
     name: 'Noble Boots',
@@ -1671,6 +1781,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4221.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas Nobres',
   },
   {
     name: 'Abyssal Cultist Boot',
@@ -1686,6 +1797,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4228.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota do Cultista Abissal',
   },
   {
     name: 'Angelical Boots',
@@ -1701,6 +1813,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4218.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas Angélicas',
   },
   {
     name: 'Giant Worm Boot',
@@ -1716,6 +1829,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4232.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Minhoca Gigante',
   },
   {
     name: 'Undead Dragon Tamer Boot',
@@ -1731,6 +1845,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4229.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota do Domador de Dragões Mortos-vivos',
   },
   {
     name: 'Frost Hunter Boot',
@@ -1746,6 +1861,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4224.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota do Caçador de Gelo',
   },
   {
     name: 'Boots of Dark Magic',
@@ -1761,6 +1877,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4219.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas da Magia Negra',
   },
   {
     name: 'Crystal Boot',
@@ -1776,6 +1893,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4233.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota de Cristal',
   },
   {
     name: "Elora's Boots",
@@ -1791,6 +1909,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4220.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas de Elora',
   },
   {
     name: 'Revenant Boot',
@@ -1806,6 +1925,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4225.jpg"',
     slot: 'shoe',
+    namePtBr: 'Bota Revenant',
   },
   {
     name: 'Interdimensional Boots',
@@ -1821,6 +1941,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4217.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas Interdimensionais',
   },
   {
     name: 'Celestial Boots',
@@ -1836,6 +1957,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4222.jpg"',
     slot: 'shoe',
+    namePtBr: 'Botas Celestiais',
   },
   {
     name: 'Reinforced Shield',
@@ -1851,6 +1973,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4317.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Reforçado',
   },
   {
     name: 'Round Wooden Shield',
@@ -1866,6 +1989,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4300.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo redondo de madeira',
   },
   {
     name: 'Copper Shield',
@@ -1881,6 +2005,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4319.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Cobre',
   },
   {
     name: 'Squared Wooden Shield',
@@ -1897,6 +2022,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4301.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Madeira Quadrado',
   },
   {
     name: 'Heritage Shield',
@@ -1912,6 +2038,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4320.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo da herança',
   },
   {
     name: 'Undead Warrior Shield',
@@ -1927,6 +2054,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4335.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de guerreiro morto-vivo',
   },
   {
     name: 'Steel Shield',
@@ -1942,6 +2070,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4302.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Aço',
   },
   {
     name: 'Dark Shield',
@@ -1958,6 +2087,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4303.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Escuro',
   },
   {
     name: 'Humanoid Toad Shield',
@@ -1973,6 +2103,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4337.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Sapo Humanoide',
   },
   {
     name: 'Dwarven Shield',
@@ -1988,6 +2119,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4304.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo dos Anões',
   },
   {
     name: 'Bones Shield',
@@ -2003,6 +2135,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4305.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Ossos',
   },
   {
     name: 'Ice Shield',
@@ -2018,6 +2151,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4310.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Gelo',
   },
   {
     name: 'Troll Shield',
@@ -2033,6 +2167,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4332.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Troll',
   },
   {
     name: 'Crown Shield',
@@ -2048,6 +2183,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4306.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo da Coroa',
   },
   {
     name: 'Golden Shield',
@@ -2063,6 +2199,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4308.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Dourado',
   },
   {
     name: 'Evil Shield',
@@ -2078,6 +2215,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4307.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Mal',
   },
   {
     name: 'Time Shield',
@@ -2093,6 +2231,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4309.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Tempo',
   },
   {
     name: 'Giant Spider Shield',
@@ -2108,6 +2247,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4338.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Aranha Gigante',
   },
   {
     name: 'Tower Shield',
@@ -2123,6 +2263,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4315.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo da Torre',
   },
   {
     name: 'The Winter Shield',
@@ -2138,6 +2279,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4314.jpg"',
     slot: 'shield',
+    namePtBr: 'O escudo de inverno',
   },
   {
     name: 'Skull Shield',
@@ -2153,6 +2295,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4311.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de caveira',
   },
   {
     name: 'Crystal Shield',
@@ -2168,6 +2311,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4313.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Cristal',
   },
   {
     name: "Clan's Shield",
@@ -2184,6 +2328,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4316.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Clã',
   },
   {
     name: 'Mithril Shield',
@@ -2199,6 +2344,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4321.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Mithril',
   },
   {
     name: 'Shield of the Void',
@@ -2214,6 +2360,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4322.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Vazio',
   },
   {
     name: 'Elven Shield',
@@ -2229,6 +2376,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4326.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Élfico',
   },
   {
     name: 'Gladiator Shield',
@@ -2244,6 +2392,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4333.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Gladiador',
   },
   {
     name: 'Sacred Shield',
@@ -2259,6 +2408,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4323.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Sagrado',
   },
   {
     name: 'Draconia Shield',
@@ -2274,6 +2424,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4339.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Draconia',
   },
   {
     name: 'Devil Shield',
@@ -2289,6 +2440,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4336.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Diabo',
   },
   {
     name: 'Angaina Shield',
@@ -2304,6 +2456,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4325.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Angaina',
   },
   {
     name: 'Righteous Shield',
@@ -2319,6 +2472,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4324.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Justo',
   },
   {
     name: 'Paladin Shield',
@@ -2334,6 +2488,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4334.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Paladino',
   },
   {
     name: 'Elder Vampire Shield',
@@ -2350,6 +2505,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4330.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Vampiro Ancião',
   },
   {
     name: 'Dragon Shield',
@@ -2366,6 +2522,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4312.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo do Dragão',
   },
   {
     name: "Elora's Shield",
@@ -2381,6 +2538,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4327.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo de Elora',
   },
   {
     name: 'Revenant Shield',
@@ -2396,6 +2554,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4331.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo Revenant',
   },
   {
     name: 'Corrupted Shield',
@@ -2411,6 +2570,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4328.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo corrompido',
   },
   {
     name: 'Dragons Tamer Shield',
@@ -2426,6 +2586,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4329.jpg"',
     slot: 'shield',
+    namePtBr: 'Escudo domador de dragões',
   },
   {
     name: "Beginner's Spellbook",
@@ -2441,6 +2602,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12000.jpg"',
     slot: 'book',
+    namePtBr: 'Livro de feitiços para iniciantes',
   },
   {
     name: 'Fragile Grimoire',
@@ -2456,6 +2618,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12001.jpg"',
     slot: 'book',
+    namePtBr: 'Grimório Frágil',
   },
   {
     name: 'Faun Book',
@@ -2471,6 +2634,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12022.jpg"',
     slot: 'book',
+    namePtBr: 'Livro do Fauno',
   },
   {
     name: 'Incarnated Spellbook',
@@ -2486,6 +2650,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12002.jpg"',
     slot: 'book',
+    namePtBr: 'Livro de Feitiços Encarnado',
   },
   {
     name: 'Reincarnated Spellbook',
@@ -2501,6 +2666,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12003.jpg"',
     slot: 'book',
+    namePtBr: 'Livro de feitiços reencarnado',
   },
   {
     name: 'Preserved Tome',
@@ -2516,6 +2682,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12004.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Preservado',
   },
   {
     name: 'Frigid Grimoire',
@@ -2531,6 +2698,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12005.jpg"',
     slot: 'book',
+    namePtBr: 'Grimório Frígido',
   },
   {
     name: 'Blazefury Tome',
@@ -2546,6 +2714,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12006.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Blazefury',
   },
   {
     name: "Warlock's Secrets",
@@ -2561,6 +2730,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12007.jpg"',
     slot: 'book',
+    namePtBr: 'Segredos do Bruxo',
   },
   {
     name: 'Vampiric Spellbook',
@@ -2576,6 +2746,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12008.jpg"',
     slot: 'book',
+    namePtBr: 'Livro de feitiços vampírico',
   },
   {
     name: 'Silk Book',
@@ -2591,6 +2762,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12026.jpg"',
     slot: 'book',
+    namePtBr: 'Livro de seda',
   },
   {
     name: "Clan's Spellbook",
@@ -2607,6 +2779,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12009.jpg"',
     slot: 'book',
+    namePtBr: 'Livro de feitiços do clã',
   },
   {
     name: 'Hellish Tome',
@@ -2622,6 +2795,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12010.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Infernal',
   },
   {
     name: 'Earth Tome',
@@ -2637,6 +2811,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12013.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo da Terra',
   },
   {
     name: 'Demonic Spellbook',
@@ -2652,6 +2827,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12011.jpg"',
     slot: 'book',
+    namePtBr: 'Feitiço Demoníaco',
   },
   {
     name: 'Prayer Book',
@@ -2667,6 +2843,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12023.jpg"',
     slot: 'book',
+    namePtBr: 'Livro de oração',
   },
   {
     name: 'Tome of the Void',
@@ -2682,6 +2859,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12014.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo do Vazio',
   },
   {
     name: 'Artificer Tome',
@@ -2697,6 +2875,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12018.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo do Artífice',
   },
   {
     name: 'Draconic Tome',
@@ -2712,6 +2891,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12012.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Dracônico',
   },
   {
     name: 'Book of Good Deeds',
@@ -2727,6 +2907,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12024.jpg"',
     slot: 'book',
+    namePtBr: 'Livro de boas ações',
   },
   {
     name: 'Vortex Book',
@@ -2742,6 +2923,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12025.jpg"',
     slot: 'book',
+    namePtBr: 'Livro Vortex',
   },
   {
     name: 'Sacred Tome',
@@ -2757,6 +2939,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12015.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Sagrado',
   },
   {
     name: 'Ancient Tome',
@@ -2772,6 +2955,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12016.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Antigo',
   },
   {
     name: 'Elder Vampire Tome',
@@ -2787,6 +2971,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12021.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Vampiro Ancião',
   },
   {
     name: "Elora's Tome",
@@ -2802,6 +2987,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12017.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo de Elora',
   },
   {
     name: 'Celestial Tome',
@@ -2817,6 +3003,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12020.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Celestial',
   },
   {
     name: 'Forgotten Tome',
@@ -2832,6 +3019,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12019.jpg"',
     slot: 'book',
+    namePtBr: 'Tomo Esquecido',
   },
   {
     name: 'Chromatic Book',
@@ -2847,6 +3035,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/12027.jpg"',
     slot: 'book',
+    namePtBr: 'Livro cromático',
   },
   {
     name: 'Bow Tie',
@@ -2862,6 +3051,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4424.jpg"',
     slot: 'necklace',
+    namePtBr: 'Gravata-borboleta',
   },
   {
     name: 'Amulet of Death',
@@ -2877,6 +3067,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4425.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto da Morte',
   },
   {
     name: 'Spirit Necklace',
@@ -2892,6 +3083,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4400.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar do Espírito',
   },
   {
     name: 'Bronze Health Charm',
@@ -2907,6 +3099,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4409.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Saúde de Bronze',
   },
   {
     name: 'Bronze Mana Charm',
@@ -2922,6 +3115,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4412.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Mana de Bronze',
   },
   {
     name: 'Bronze Defense Charm',
@@ -2937,6 +3131,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4415.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Defesa de Bronze',
   },
   {
     name: 'Bronze Anti Spell Charm',
@@ -2952,6 +3147,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4418.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto Anti Feitiço de Bronze',
   },
   {
     name: 'Amulet of Life',
@@ -2967,6 +3163,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4404.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto da Vida',
   },
   {
     name: 'Unbreakable Necklace',
@@ -2982,6 +3179,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4401.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Inquebrável',
   },
   {
     name: 'Medusa Necklace',
@@ -2997,6 +3195,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4433.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Medusa',
   },
   {
     name: 'Oceanic Necklace',
@@ -3012,6 +3211,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4402.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Oceânico',
   },
   {
     name: 'Silver Health Charm',
@@ -3027,6 +3227,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4410.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Saúde de Prata',
   },
   {
     name: 'Silver Anti Spell Charm',
@@ -3042,6 +3243,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4419.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto Anti Feitiço Prata',
   },
   {
     name: 'Silver Mana Charm',
@@ -3057,6 +3259,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4413.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Mana Prateado',
   },
   {
     name: 'Silver Defense Charm',
@@ -3072,6 +3275,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4416.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Defesa de Prata',
   },
   {
     name: 'Blessed Amulet',
@@ -3087,6 +3291,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4405.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto Abençoado',
   },
   {
     name: 'Troll Necklace',
@@ -3102,6 +3307,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4434.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Troll',
   },
   {
     name: 'Vampire Necklace',
@@ -3117,6 +3323,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4403.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar de Vampiro',
   },
   {
     name: 'Gold Anti Spell Charm',
@@ -3132,6 +3339,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4420.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto Anti Feitiço Dourado',
   },
   {
     name: 'Gold Health Charm',
@@ -3148,6 +3356,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4411.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Saúde de Ouro',
   },
   {
     name: 'Gold Mana Charm',
@@ -3164,6 +3373,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4414.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Mana Dourado',
   },
   {
     name: 'Gold Defense Charm',
@@ -3179,6 +3389,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4417.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto de Defesa de Ouro',
   },
   {
     name: 'Giant Spider Necklace',
@@ -3194,6 +3405,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4439.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar de Aranha Gigante',
   },
   {
     name: 'Antichrist Amulet',
@@ -3209,6 +3421,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4406.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto do Anticristo',
   },
   {
     name: "Clan's Amulet",
@@ -3225,6 +3438,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4408.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto do Clã',
   },
   {
     name: 'Antidemonic Amulet',
@@ -3240,6 +3454,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4422.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto Antidemoníaco',
   },
   {
     name: 'Mystic Amulet',
@@ -3255,6 +3470,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4421.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto Místico',
   },
   {
     name: 'Elven Amulet',
@@ -3270,6 +3486,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4426.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto Élfico',
   },
   {
     name: 'Monk Necklace',
@@ -3285,6 +3502,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4435.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Monge',
   },
   {
     name: 'Elven Night Amulet',
@@ -3300,6 +3518,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4427.jpg"',
     slot: 'necklace',
+    namePtBr: 'Amuleto da Noite Élfica',
   },
   {
     name: 'Banshee Necklace',
@@ -3315,6 +3534,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4437.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Banshee',
   },
   {
     name: 'Noble Necklace',
@@ -3330,6 +3550,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4429.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Nobre',
   },
   {
     name: 'Elemental Necklace',
@@ -3345,6 +3566,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4440.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Elemental',
   },
   {
     name: 'Undead Dragon Necklace',
@@ -3360,6 +3582,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4438.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar de Dragão Morto-vivo',
   },
   {
     name: 'Angel Essence Necklace',
@@ -3375,6 +3598,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4423.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Essência de Anjo',
   },
   {
     name: 'Elder Vampire Necklace',
@@ -3391,6 +3615,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4432.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Vampiro Ancião',
   },
   {
     name: "Elora's Necklace",
@@ -3406,6 +3631,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4428.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar de Elora',
   },
   {
     name: 'Elf Guardian Necklace',
@@ -3421,6 +3647,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4436.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Elfo Guardião',
   },
   {
     name: 'Corrupted Necklace',
@@ -3436,6 +3663,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4430.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Corrompido',
   },
   {
     name: 'Draconic Gems Necklace',
@@ -3451,6 +3679,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4407.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar de Gemas Dracônicas',
   },
   {
     name: 'Celestial Necklace',
@@ -3466,6 +3695,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4431.jpg"',
     slot: 'necklace',
+    namePtBr: 'Colar Celestial',
   },
   {
     name: 'Plato Ring',
@@ -3481,6 +3711,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4500.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de Platão',
   },
   {
     name: 'Goblin Ring',
@@ -3496,6 +3727,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4521.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Goblin',
   },
   {
     name: 'Lost Soul Ring',
@@ -3511,6 +3743,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4525.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel da Alma Perdida',
   },
   {
     name: 'Mana Shield Ring',
@@ -3527,6 +3760,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4513.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de Escudo de Mana',
   },
   {
     name: 'Silver Ring',
@@ -3543,6 +3777,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4501.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de prata',
   },
   {
     name: 'Humanoid Octopus Ring',
@@ -3558,6 +3793,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4527.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de Polvo Humanoide',
   },
   {
     name: 'Stealth Ring',
@@ -3574,6 +3810,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4509.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel furtivo',
   },
   {
     name: 'Dark Ring',
@@ -3589,6 +3826,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4504.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Escuro',
   },
   {
     name: 'Ice Mermaid Ring',
@@ -3604,6 +3842,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4522.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de sereia de gelo',
   },
   {
     name: 'Ice Ring',
@@ -3619,6 +3858,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4518.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de gelo',
   },
   {
     name: 'Golden Ring',
@@ -3634,6 +3874,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4502.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de ouro',
   },
   {
     name: 'Uzara Ring',
@@ -3649,6 +3890,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4510.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Uzara',
   },
   {
     name: 'Carapace Ring',
@@ -3664,6 +3906,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4507.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Carapaça',
   },
   {
     name: "Hell's Ring",
@@ -3679,6 +3922,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4506.jpg"',
     slot: 'ring',
+    namePtBr: 'anel do inferno',
   },
   {
     name: 'Gladiator Ring',
@@ -3694,6 +3938,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4523.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Gladiador',
   },
   {
     name: 'Bone Ring',
@@ -3709,6 +3954,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4505.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de Osso',
   },
   {
     name: 'Power Ring',
@@ -3724,6 +3970,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4503.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de energia',
   },
   {
     name: 'Lava Ring',
@@ -3739,6 +3986,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4528.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de Lava',
   },
   {
     name: 'Mystic Ring',
@@ -3754,6 +4002,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4512.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Místico',
   },
   {
     name: "Clan's Ring",
@@ -3770,6 +4019,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4511.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel do Clã',
   },
   {
     name: 'Ring of the Skies',
@@ -3785,6 +4035,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4514.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel dos Céus',
   },
   {
     name: 'Abyssal Cultist Ring',
@@ -3800,6 +4051,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4526.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel do Cultista Abissal',
   },
   {
     name: 'Elven Nobility Night Ring',
@@ -3815,6 +4067,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4517.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Noturno da Nobreza Élfica',
   },
   {
     name: 'Elven Nobility Ring',
@@ -3830,6 +4083,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4516.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel da Nobreza Élfica',
   },
   {
     name: 'Aristocrat Ring',
@@ -3845,6 +4099,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4524.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Aristocrata',
   },
   {
     name: 'Galaxy Ring',
@@ -3860,6 +4115,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4515.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel da Galáxia',
   },
   {
     name: 'Crystal Ring',
@@ -3875,6 +4131,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4519.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de Cristal',
   },
   {
     name: 'Celestial Ring',
@@ -3890,6 +4147,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4520.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel Celestial',
   },
   {
     name: 'Draconic Gem Ring',
@@ -3905,6 +4163,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4508.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel de Gema Dracônico',
   },
   {
     name: 'Chromatic Ring',
@@ -3921,6 +4180,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4529.jpg"',
     slot: 'ring',
+    namePtBr: 'Anel cromático',
   },
   {
     name: 'Comfortable Thong',
@@ -3936,6 +4196,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16019.jpg"',
     slot: 'leg',
+    namePtBr: 'Tanga Confortável',
   },
   {
     name: 'Wool Legs',
@@ -3951,6 +4212,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16000.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Lã',
   },
   {
     name: 'Leather Legs',
@@ -3967,6 +4229,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16001.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de couro',
   },
   {
     name: 'Wizard Legs',
@@ -3983,6 +4246,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16002.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de mago',
   },
   {
     name: 'Humanoid Toad Legs',
@@ -3998,6 +4262,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16027.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Sapo Humanoide',
   },
   {
     name: 'Chain Legs',
@@ -4014,6 +4279,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16003.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Corrente',
   },
   {
     name: 'Ninja Legs',
@@ -4029,6 +4295,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16004.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Ninja',
   },
   {
     name: 'Heirloom Legs',
@@ -4044,6 +4311,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16005.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de herança',
   },
   {
     name: 'Vampire Legs',
@@ -4059,6 +4327,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16024.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Vampiro',
   },
   {
     name: 'Reinforced Legs',
@@ -4075,6 +4344,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16006.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Reforçadas',
   },
   {
     name: 'Prismatic Legs',
@@ -4090,6 +4360,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16007.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Prismáticas',
   },
   {
     name: 'Fairy Legs',
@@ -4105,6 +4376,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16028.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Fada',
   },
   {
     name: 'Golden Legs',
@@ -4120,6 +4392,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16008.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Douradas',
   },
   {
     name: 'Plate Legs',
@@ -4135,6 +4408,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16009.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas da Placa',
   },
   {
     name: 'Gladiator Legs',
@@ -4150,6 +4424,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16022.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Gladiador',
   },
   {
     name: 'Crystal Legs',
@@ -4166,6 +4441,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16010.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Cristal',
   },
   {
     name: 'Abyssal Cultist Legs',
@@ -4181,6 +4457,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16025.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Abissais do Cultista',
   },
   {
     name: 'Clan Legs',
@@ -4197,6 +4474,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16011.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas do clã',
   },
   {
     name: 'Elven Legs',
@@ -4212,6 +4490,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16012.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas élficas',
   },
   {
     name: 'Void Legs',
@@ -4227,6 +4506,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16026.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Vazias',
   },
   {
     name: 'Noble Legs',
@@ -4242,6 +4522,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16013.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Nobres',
   },
   {
     name: 'Volcano Legs',
@@ -4257,6 +4538,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16014.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas do Vulcão',
   },
   {
     name: 'Frost Hunter Legs',
@@ -4272,6 +4554,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16023.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas do Caçador de Gelo',
   },
   {
     name: 'Demon Legs',
@@ -4287,6 +4570,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16015.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Demônio',
   },
   {
     name: 'Elemental Legs',
@@ -4302,6 +4586,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16029.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Elementais',
   },
   {
     name: 'Angelic Legs',
@@ -4317,6 +4602,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16016.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Angélicas',
   },
   {
     name: 'Dragons Tamer Legs',
@@ -4332,6 +4618,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16020.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas do Domador de Dragões',
   },
   {
     name: 'Chromatic Legs',
@@ -4347,6 +4634,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16031.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas cromáticas',
   },
   {
     name: 'Ethereal Legs',
@@ -4362,6 +4650,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16017.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas Etéreas',
   },
   {
     name: 'Chromatic Golden Dragon Scale Legs',
@@ -4377,6 +4666,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16030.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas cromáticas de escama de dragão dourado',
   },
   {
     name: 'Golden Dragon Scale Legs',
@@ -4392,6 +4682,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16018.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Escama de Dragão Dourado',
   },
   {
     name: 'Undead Golden Dragon Scale Legs',
@@ -4407,6 +4698,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16021.jpg"',
     slot: 'leg',
+    namePtBr: 'Pernas de Escama de Dragão Dourado Morto-vivo',
   },
   {
     name: 'Axe',
@@ -4422,6 +4714,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17002.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Machado',
   },
   {
     name: 'Hammer',
@@ -4437,6 +4730,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17001.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Martelo',
   },
   {
     name: 'Crest of Fire',
@@ -4452,6 +4746,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17003.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Crista de Fogo',
   },
   {
     name: 'Crest of Air',
@@ -4467,6 +4762,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17004.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Crista do Ar',
   },
   {
     name: 'Crest of Time',
@@ -4482,6 +4778,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17005.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Crista do Tempo',
   },
   {
     name: 'Crest of Water',
@@ -4497,6 +4794,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17006.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Crista da Água',
   },
   {
     name: 'Crest of Earth',
@@ -4512,6 +4810,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17007.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Crista da Terra',
   },
   {
     name: 'Energy Totem',
@@ -4527,6 +4826,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17010.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Totem de Energia',
   },
   {
     name: 'Fishing Rod',
@@ -4542,6 +4842,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/4318.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Cana de pesca',
   },
   {
     name: 'Pickaxe',
@@ -4557,6 +4858,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3061.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Picareta',
   },
   {
     name: 'Crystal Pickaxe',
@@ -4572,6 +4874,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17000.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Picareta de Cristal',
   },
   {
     name: 'Rainbow Gauntlet',
@@ -4587,6 +4890,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17008.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Manopla do arco-íris',
   },
   {
     name: 'Complete Rainbow Gauntlet',
@@ -4602,6 +4906,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/17009.jpg"',
     slot: 'accessorie',
+    namePtBr: 'Manopla Arco-Íris Completo',
   },
 ];
 
@@ -4621,6 +4926,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3037.jpg"',
+    namePtBr: 'Luva de Terra',
   },
   {
     name: 'Copper Glove',
@@ -4637,6 +4943,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7002.jpg"',
+    namePtBr: 'Luva de cobre',
   },
   {
     name: 'Static Glove',
@@ -4653,6 +4960,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3046.jpg"',
+    namePtBr: 'Luva Estática',
   },
   {
     name: 'Worn Glove',
@@ -4669,6 +4977,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7003.jpg"',
+    namePtBr: 'Luva Usada',
   },
   {
     name: 'Electrical Glove',
@@ -4685,6 +4994,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3038.jpg"',
+    namePtBr: 'Luva Elétrica',
   },
   {
     name: 'Iron Glove',
@@ -4701,6 +5011,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7005.jpg"',
+    namePtBr: 'Luva de Ferro',
   },
   {
     name: 'Forest Glove',
@@ -4718,6 +5029,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3039.jpg"',
+    namePtBr: 'Luva Florestal',
   },
   {
     name: 'Heat Glove',
@@ -4734,6 +5046,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3040.jpg"',
+    namePtBr: 'Luva de Calor',
   },
   {
     name: 'Dark Glove',
@@ -4750,6 +5063,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3041.jpg"',
+    namePtBr: 'Luva Escura',
   },
   {
     name: 'Novice Gladiator Glove',
@@ -4766,6 +5080,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7006.jpg"',
+    namePtBr: 'Luva de Gladiador Iniciante',
   },
   {
     name: 'Arctic Glove',
@@ -4782,6 +5097,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3042.jpg"',
+    namePtBr: 'Luva Ártica',
   },
   {
     name: 'Humanoid Octopus Glove',
@@ -4798,6 +5114,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7025.jpg"',
+    namePtBr: 'Luva de Polvo Humanoide',
   },
   {
     name: 'Demon Glove',
@@ -4814,6 +5131,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3043.jpg"',
+    namePtBr: 'Luva Demoníaca',
   },
   {
     name: 'Cursed Glove',
@@ -4830,6 +5148,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3047.jpg"',
+    namePtBr: 'Luva Amaldiçoada',
   },
   {
     name: 'Nobles Glove',
@@ -4846,6 +5165,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3055.jpg"',
+    namePtBr: 'Luva Nobre',
   },
   {
     name: 'Intermediate Gladiator Glove',
@@ -4862,6 +5182,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7007.jpg"',
+    namePtBr: 'Luva Gladiador Intermediário',
   },
   {
     name: 'Hell Mage Glove',
@@ -4878,6 +5199,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7022.jpg"',
+    namePtBr: 'Luva de Mago do Inferno',
   },
   {
     name: 'Poison Beetle Glove',
@@ -4894,6 +5216,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7026.jpg"',
+    namePtBr: 'Luva de Besouro Venenoso',
   },
   {
     name: "Clan's Glove",
@@ -4911,6 +5234,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7000.jpg"',
+    namePtBr: 'luva do clã',
   },
   {
     name: 'Chaos Glove',
@@ -4927,6 +5251,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3056.jpg"',
+    namePtBr: 'Luva do Caos',
   },
   {
     name: "Hell's Glove",
@@ -4943,6 +5268,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3068.jpg"',
+    namePtBr: 'luva do inferno',
   },
   {
     name: 'Justice Glove',
@@ -4959,6 +5285,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7010.jpg"',
+    namePtBr: 'Luva da Justiça',
   },
   {
     name: 'Lava Glove',
@@ -4975,6 +5302,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7004.jpg"',
+    namePtBr: 'Luva de lava',
   },
   {
     name: 'Advanced Gladiator Glove',
@@ -4991,6 +5319,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7008.jpg"',
+    namePtBr: 'Luva Gladiadora Avançada',
   },
   {
     name: 'Fire Manipulator Glove',
@@ -5007,6 +5336,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7014.jpg"',
+    namePtBr: 'Luva Manipuladora de Fogo',
   },
   {
     name: 'Abyssal Cultist Glove',
@@ -5023,6 +5353,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7023.jpg"',
+    namePtBr: 'Luva de Cultista Abissal',
   },
   {
     name: 'Righteous Glove',
@@ -5039,6 +5370,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7009.jpg"',
+    namePtBr: 'Luva Justa',
   },
   {
     name: 'Elven Glove',
@@ -5055,6 +5387,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7015.jpg"',
+    namePtBr: 'Luva Élfica',
   },
   {
     name: 'Diabolus Glove',
@@ -5071,6 +5404,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7024.jpg"',
+    namePtBr: 'Luva Diabolus',
   },
   {
     name: 'Fireblaze Glove',
@@ -5087,6 +5421,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7011.jpg"',
+    namePtBr: 'Luva Flamejante',
   },
   {
     name: "Elora's Glove",
@@ -5103,6 +5438,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7016.jpg"',
+    namePtBr: 'Luva de Elora',
   },
   {
     name: 'Elder Vampire Glove',
@@ -5120,6 +5456,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7020.jpg"',
+    namePtBr: 'Luva de Vampiro Ancião',
   },
   {
     name: "Dragon Hunters' Glove",
@@ -5136,6 +5473,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7013.jpg"',
+    namePtBr: 'Luva dos Caçadores de Dragões',
   },
   {
     name: 'Eternal Ice Glove',
@@ -5152,6 +5490,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7017.jpg"',
+    namePtBr: 'Luva de Gelo Eterno',
   },
   {
     name: 'Revenant Glove',
@@ -5168,6 +5507,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7021.jpg"',
+    namePtBr: 'Luva Revenant',
   },
   {
     name: "Reaper's Glove",
@@ -5184,6 +5524,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7012.jpg"',
+    namePtBr: 'Luva do Ceifador',
   },
   {
     name: 'Celestial Glove',
@@ -5200,6 +5541,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7018.jpg"',
+    namePtBr: 'Luva Celestial',
   },
   {
     name: 'Golden Dragon Scale Glove',
@@ -5216,6 +5558,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7001.jpg"',
+    namePtBr: 'Luva de Escama de Dragão Dourado',
   },
   {
     name: 'Chromatic Golden Dragon Scale Glove',
@@ -5232,6 +5575,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7027.jpg"',
+    namePtBr: 'Luva Cromática de Escama de Dragão Dourado',
   },
   {
     name: 'Undead Golden Dragon Scale Glove',
@@ -5248,6 +5592,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/7019.jpg"',
+    namePtBr: 'Luva de escama de dragão dourado morto-vivo',
   },
   {
     name: 'Slingshot',
@@ -5264,6 +5609,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3063.jpg"',
+    namePtBr: 'Estilingue',
   },
   {
     name: 'Wooden Sword',
@@ -5280,6 +5626,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3069.jpg"',
+    namePtBr: 'Espada de madeira',
   },
   {
     name: 'Sharp Axe',
@@ -5296,6 +5643,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3027.jpg"',
+    namePtBr: 'Machado Afiado',
   },
   {
     name: 'Club',
@@ -5312,6 +5660,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8004.jpg"',
+    namePtBr: 'Clube',
   },
   {
     name: 'Double Axe',
@@ -5328,6 +5677,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3028.jpg"',
+    namePtBr: 'Machado Duplo',
   },
   {
     name: 'Halberd',
@@ -5345,6 +5695,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3029.jpg"',
+    namePtBr: 'Alabarda',
   },
   {
     name: 'Morning Star',
@@ -5361,6 +5712,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8005.jpg"',
+    namePtBr: 'Estrela da Manhã',
   },
   {
     name: 'Hatchet',
@@ -5377,6 +5729,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3030.jpg"',
+    namePtBr: 'Machadinha',
   },
   {
     name: 'Silver Axe',
@@ -5393,6 +5746,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3031.jpg"',
+    namePtBr: 'Machado de Prata',
   },
   {
     name: 'Specialist Axe',
@@ -5409,6 +5763,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8007.jpg"',
+    namePtBr: 'Machado Especialista',
   },
   {
     name: "Bielze's Mace",
@@ -5425,6 +5780,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3062.jpg"',
+    namePtBr: 'Maça de Bielze',
   },
   {
     name: 'Tribal Axe',
@@ -5441,6 +5797,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3032.jpg"',
+    namePtBr: 'Machado Tribal',
   },
   {
     name: 'Ritual Spear',
@@ -5457,6 +5814,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8002.jpg"',
+    namePtBr: 'Lança Ritual',
   },
   {
     name: 'Dwarven Axe',
@@ -5473,6 +5831,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3033.jpg"',
+    namePtBr: 'Machado Anão',
   },
   {
     name: 'Golden Axe',
@@ -5489,6 +5848,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3034.jpg"',
+    namePtBr: 'Machado dourado',
   },
   {
     name: 'Novice Gladiator Hammer',
@@ -5505,6 +5865,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8008.jpg"',
+    namePtBr: 'Martelo de Gladiador Iniciante',
   },
   {
     name: 'Demon Axe',
@@ -5521,6 +5882,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3035.jpg"',
+    namePtBr: 'Machado Demoníaco',
   },
   {
     name: 'Crown Axe',
@@ -5537,6 +5899,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3036.jpg"',
+    namePtBr: 'Machado da Coroa',
   },
   {
     name: 'Ice Beetle Axe',
@@ -5553,6 +5916,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8026.jpg"',
+    namePtBr: 'Machado de Besouro de Gelo',
   },
   {
     name: 'War Spear',
@@ -5569,6 +5933,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3048.jpg"',
+    namePtBr: 'Lança de Guerra',
   },
   {
     name: 'Giants Club',
@@ -5585,6 +5950,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3054.jpg"',
+    namePtBr: 'Clube dos Gigantes',
   },
   {
     name: 'The Winter Spear',
@@ -5601,6 +5967,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3064.jpg"',
+    namePtBr: 'A Lança de Inverno',
   },
   {
     name: 'Justice Axe',
@@ -5617,6 +5984,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8012.jpg"',
+    namePtBr: 'Machado da Justiça',
   },
   {
     name: 'Intermediate Gladiator Hammer',
@@ -5633,6 +6001,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8009.jpg"',
+    namePtBr: 'Martelo Gladiador Intermediário',
   },
   {
     name: "Clan's Axe",
@@ -5650,6 +6019,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8000.jpg"',
+    namePtBr: 'Machado do clã',
   },
   {
     name: 'Frost Axe',
@@ -5666,6 +6036,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8006.jpg"',
+    namePtBr: 'Machado de Gelo',
   },
   {
     name: "Devil's Fork",
@@ -5682,6 +6053,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3057.jpg"',
+    namePtBr: 'Garfo do Diabo',
   },
   {
     name: "Clan's Club",
@@ -5699,6 +6071,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8001.jpg"',
+    namePtBr: 'Clube do clã',
   },
   {
     name: 'Advanced Gladiator Hammer',
@@ -5715,6 +6088,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8010.jpg"',
+    namePtBr: 'Martelo Gladiador Avançado',
   },
   {
     name: 'Tidal Bringer',
@@ -5731,6 +6105,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8016.jpg"',
+    namePtBr: 'Portador de maré',
   },
   {
     name: 'Inferno Fork',
@@ -5747,6 +6122,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8025.jpg"',
+    namePtBr: 'Garfo Inferno',
   },
   {
     name: 'Thunder Hammer',
@@ -5763,6 +6139,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8011.jpg"',
+    namePtBr: 'Martelo do Trovão',
   },
   {
     name: 'Elven Axe',
@@ -5779,6 +6156,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8017.jpg"',
+    namePtBr: 'Machado Élfico',
   },
   {
     name: 'Archangel Axe',
@@ -5795,6 +6173,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8024.jpg"',
+    namePtBr: 'Machado do Arcanjo',
   },
   {
     name: "Devil's Scythe",
@@ -5811,6 +6190,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8013.jpg"',
+    namePtBr: 'Foice do Diabo',
   },
   {
     name: "Elora's Axe",
@@ -5827,6 +6207,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8018.jpg"',
+    namePtBr: 'Machado de Elora',
   },
   {
     name: "Dragon Hunters' Hammer",
@@ -5843,6 +6224,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8015.jpg"',
+    namePtBr: 'Martelo dos Caçadores de Dragões',
   },
   {
     name: 'Elder Vampire Axe',
@@ -5860,6 +6242,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8022.jpg"',
+    namePtBr: 'Machado Vampiro Ancião',
   },
   {
     name: 'Eternal Ice Axe',
@@ -5876,6 +6259,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8019.jpg"',
+    namePtBr: 'Machado de Gelo Eterno',
   },
   {
     name: "Reaper's Axe",
@@ -5892,6 +6276,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8014.jpg"',
+    namePtBr: 'Machado do Ceifador',
   },
   {
     name: 'Revenant Axe',
@@ -5908,6 +6293,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8023.jpg"',
+    namePtBr: 'Machado Revenant',
   },
   {
     name: 'Celestial Axe',
@@ -5924,6 +6310,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8020.jpg"',
+    namePtBr: 'Machado Celestial',
   },
   {
     name: 'Golden Dragon Hammer',
@@ -5940,6 +6327,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8003.jpg"',
+    namePtBr: 'Martelo de Dragão Dourado',
   },
   {
     name: 'Chromatic Golden Dragon Axe',
@@ -5956,6 +6344,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8028.jpg"',
+    namePtBr: 'Machado Cromático do Dragão Dourado',
   },
   {
     name: 'Undead Golden Dragon Hammer',
@@ -5972,6 +6361,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/8021.jpg"',
+    namePtBr: 'Martelo de Dragão Dourado Morto-vivo',
   },
   {
     name: 'Wooden Bow',
@@ -5988,6 +6378,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3017.jpg"',
+    namePtBr: 'Arco de madeira',
   },
   {
     name: 'Tin Bow',
@@ -6004,6 +6395,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9004.jpg"',
+    namePtBr: 'Laço de Lata',
   },
   {
     name: 'Reinforced Bow',
@@ -6020,6 +6412,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3018.jpg"',
+    namePtBr: 'Arco Reforçado',
   },
   {
     name: 'Copper Bow',
@@ -6036,6 +6429,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9005.jpg"',
+    namePtBr: 'Arco de cobre',
   },
   {
     name: 'Dark Bow',
@@ -6053,6 +6447,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3019.jpg"',
+    namePtBr: 'Arco Negro',
   },
   {
     name: 'Shuriken',
@@ -6069,6 +6464,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3044.jpg"',
+    namePtBr: 'Shuriken',
   },
   {
     name: 'Arctic Bow',
@@ -6085,6 +6481,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3020.jpg"',
+    namePtBr: 'Arco Ártico',
   },
   {
     name: 'Light Bow',
@@ -6101,6 +6498,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9007.jpg"',
+    namePtBr: 'Arco de Luz',
   },
   {
     name: 'Bronze Bow',
@@ -6117,6 +6515,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3021.jpg"',
+    namePtBr: 'Arco de Bronze',
   },
   {
     name: 'Bones Bow',
@@ -6134,6 +6533,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3022.jpg"',
+    namePtBr: 'Arco de Ossos',
   },
   {
     name: 'Ornamented Bow',
@@ -6150,6 +6550,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3023.jpg"',
+    namePtBr: 'Arco Ornamentado',
   },
   {
     name: 'Novice Gladiator Spear',
@@ -6166,6 +6567,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9008.jpg"',
+    namePtBr: 'Lança de Gladiador Iniciante',
   },
   {
     name: 'Cursed Bow',
@@ -6182,6 +6584,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3024.jpg"',
+    namePtBr: 'Arco Amaldiçoado',
   },
   {
     name: 'Fairy Bow',
@@ -6198,6 +6601,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9027.jpg"',
+    namePtBr: 'Arco de Fada',
   },
   {
     name: 'Vulcana Bow',
@@ -6214,6 +6618,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3025.jpg"',
+    namePtBr: 'Arco Vulcana',
   },
   {
     name: 'Hardrock Bow',
@@ -6230,6 +6635,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9002.jpg"',
+    namePtBr: 'Arco Hardrock',
   },
   {
     name: 'Stardust Bow',
@@ -6246,6 +6652,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3053.jpg"',
+    namePtBr: 'Arco Poeira Estelar',
   },
   {
     name: 'Hellhound Bow',
@@ -6262,6 +6669,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9023.jpg"',
+    namePtBr: 'Arco Hellhound',
   },
   {
     name: "Clan's Bow",
@@ -6279,6 +6687,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9000.jpg"',
+    namePtBr: 'Arco do Clã',
   },
   {
     name: 'Intermediate Gladiator Spear',
@@ -6295,6 +6704,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9009.jpg"',
+    namePtBr: 'Lança de Gladiador Intermediário',
   },
   {
     name: 'Dragon Bow',
@@ -6311,6 +6721,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3067.jpg"',
+    namePtBr: 'Arco do Dragão',
   },
   {
     name: 'Champion Bow',
@@ -6327,6 +6738,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3026.jpg"',
+    namePtBr: 'Arco Campeão',
   },
   {
     name: 'Justice Bow',
@@ -6343,6 +6755,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9012.jpg"',
+    namePtBr: 'Arco da Justiça',
   },
   {
     name: 'Lava Bow',
@@ -6359,6 +6772,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3060.jpg"',
+    namePtBr: 'Arco de lava',
   },
   {
     name: 'Frost Bow',
@@ -6375,6 +6789,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9006.jpg"',
+    namePtBr: 'Arco de Gelo',
   },
   {
     name: 'Poison Beetle Bow',
@@ -6391,6 +6806,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9028.jpg"',
+    namePtBr: 'Arco de Besouro Venenoso',
   },
   {
     name: "Clan's Expertise Bow",
@@ -6408,6 +6824,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9001.jpg"',
+    namePtBr: 'Arco de Perícia do Clã',
   },
   {
     name: 'Advanced Gladiator Spear',
@@ -6424,6 +6841,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9010.jpg"',
+    namePtBr: 'Lança de Gladiador Avançada',
   },
   {
     name: 'Grue Bow',
@@ -6440,6 +6858,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9024.jpg"',
+    namePtBr: 'Arco Grue',
   },
   {
     name: "Nature's Bow",
@@ -6456,6 +6875,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9016.jpg"',
+    namePtBr: 'Arco da Natureza',
   },
   {
     name: 'Bow of the Skies',
@@ -6472,6 +6892,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9011.jpg"',
+    namePtBr: 'Arco dos Céus',
   },
   {
     name: 'Elven Bow',
@@ -6488,6 +6909,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9017.jpg"',
+    namePtBr: 'Arco Élfico',
   },
   {
     name: 'Devil Bow',
@@ -6504,6 +6926,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9025.jpg"',
+    namePtBr: 'Arco do Diabo',
   },
   {
     name: 'Soul Brander',
@@ -6520,6 +6943,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9014.jpg"',
+    namePtBr: 'Marcador de alma',
   },
   {
     name: "Elora's Bow",
@@ -6536,6 +6960,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9018.jpg"',
+    namePtBr: 'Arco de Elora',
   },
   {
     name: 'Void Bow',
@@ -6552,6 +6977,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9026.jpg"',
+    namePtBr: 'Arco Vazio',
   },
   {
     name: "Dragon Hunters' Bow",
@@ -6568,6 +6994,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9015.jpg"',
+    namePtBr: 'Arco dos Caçadores de Dragões',
   },
   {
     name: 'Eternal Ice Bow',
@@ -6584,6 +7011,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9019.jpg"',
+    namePtBr: 'Arco de Gelo Eterno',
   },
   {
     name: 'Elder Vampire Bow',
@@ -6600,6 +7028,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9022.jpg"',
+    namePtBr: 'Arco Vampiro Ancião',
   },
   {
     name: 'Soul Piercer',
@@ -6616,6 +7045,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9013.jpg"',
+    namePtBr: 'Perfurador de Almas',
   },
   {
     name: 'Dragons Tamer Bow',
@@ -6632,6 +7062,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9020.jpg"',
+    namePtBr: 'Arco domador de dragões',
   },
   {
     name: 'Golden Dragon Bow',
@@ -6648,6 +7079,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9003.jpg"',
+    namePtBr: 'Arco do Dragão Dourado',
   },
   {
     name: 'Chromatic Golden Dragon Bow',
@@ -6664,6 +7096,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9029.jpg"',
+    namePtBr: 'Arco de Dragão Dourado Cromático',
   },
   {
     name: 'Undead Golden Dragon Bow',
@@ -6680,6 +7113,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/9021.jpg"',
+    namePtBr: 'Arco do Dragão Dourado Morto-vivo',
   },
   {
     name: 'Candy Staff',
@@ -6696,6 +7130,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3010.jpg"',
+    namePtBr: 'Cajado de Doces',
   },
   {
     name: 'Natural Staff',
@@ -6712,6 +7147,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10002.jpg"',
+    namePtBr: 'Cajado Natural',
   },
   {
     name: 'Iron Staff',
@@ -6728,6 +7164,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3045.jpg"',
+    namePtBr: 'Cajado de Ferro',
   },
   {
     name: 'Voodoo Staff',
@@ -6744,6 +7181,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10003.jpg"',
+    namePtBr: 'Cajado Vodu',
   },
   {
     name: 'Ruby Staff',
@@ -6760,6 +7198,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3011.jpg"',
+    namePtBr: 'Cajado de Rubi',
   },
   {
     name: 'Sapphire Staff',
@@ -6776,6 +7215,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3012.jpg"',
+    namePtBr: 'Cajado de Safira',
   },
   {
     name: 'Amethyst Staff',
@@ -6792,6 +7232,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10005.jpg"',
+    namePtBr: 'Cajado de Ametista',
   },
   {
     name: 'Skull Staff',
@@ -6809,6 +7250,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3013.jpg"',
+    namePtBr: 'Cajado Crânio',
   },
   {
     name: 'Humanoid Fox Wand',
@@ -6825,6 +7267,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10023.jpg"',
+    namePtBr: 'Varinha Humanóide Raposa',
   },
   {
     name: 'Holy Staff',
@@ -6841,6 +7284,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3014.jpg"',
+    namePtBr: 'Cajado Sagrado',
   },
   {
     name: 'Silver Staff',
@@ -6857,6 +7301,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3015.jpg"',
+    namePtBr: 'Cajado de Prata',
   },
   {
     name: 'Novice Gladiator Staff',
@@ -6873,6 +7318,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10006.jpg"',
+    namePtBr: 'Cajado de Gladiadores Iniciantes',
   },
   {
     name: 'Crown Staff',
@@ -6889,6 +7335,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3016.jpg"',
+    namePtBr: 'Cajado da Coroa',
   },
   {
     name: 'Warlock Staff',
@@ -6905,6 +7352,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3049.jpg"',
+    namePtBr: 'Cajado de Bruxo',
   },
   {
     name: 'Spider Wand',
@@ -6921,6 +7369,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10024.jpg"',
+    namePtBr: 'Varinha de Aranha',
   },
   {
     name: 'Golden Sceptre',
@@ -6937,6 +7386,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3052.jpg"',
+    namePtBr: 'Cetro Dourado',
   },
   {
     name: "Clan's Staff",
@@ -6953,6 +7403,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10000.jpg"',
+    namePtBr: 'Cajado do Clã',
   },
   {
     name: 'Hell Mage Wand',
@@ -6969,6 +7420,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10027.jpg"',
+    namePtBr: 'Varinha do Mago do Inferno',
   },
   {
     name: 'Intermediate Gladiator Staff',
@@ -6985,6 +7437,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10007.jpg"',
+    namePtBr: 'Cajado de Gladiador Intermediário',
   },
   {
     name: 'Lava Staff',
@@ -7001,6 +7454,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3059.jpg"',
+    namePtBr: 'Cajado de Lava',
   },
   {
     name: 'Poison Beetle Wand',
@@ -7017,6 +7471,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10025.jpg"',
+    namePtBr: 'Varinha do Besouro Venenoso',
   },
   {
     name: 'Staff of Justice',
@@ -7033,6 +7488,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10010.jpg"',
+    namePtBr: 'Pessoal da Justiça',
   },
   {
     name: "Hell's Staff",
@@ -7049,6 +7505,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3066.jpg"',
+    namePtBr: 'Cajado do Inferno',
   },
   {
     name: 'Mystic Staff',
@@ -7065,6 +7522,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10004.jpg"',
+    namePtBr: 'Cajado Místico',
   },
   {
     name: 'Advanced Gladiator Staff',
@@ -7081,6 +7539,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10008.jpg"',
+    namePtBr: 'Cajado de Gladiador Avançado',
   },
   {
     name: 'The Earthquaker',
@@ -7097,6 +7556,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10014.jpg"',
+    namePtBr: 'O terremoto',
   },
   {
     name: 'Abyssal Cultist Wand',
@@ -7113,6 +7573,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10021.jpg"',
+    namePtBr: 'Varinha do Cultista Abissal',
   },
   {
     name: 'Righteous Staff',
@@ -7129,6 +7590,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10009.jpg"',
+    namePtBr: 'Cajado Justo',
   },
   {
     name: 'Elven Staff',
@@ -7145,6 +7607,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10015.jpg"',
+    namePtBr: 'Cajado Élfico',
   },
   {
     name: 'Sky Elf Wand',
@@ -7161,6 +7624,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10026.jpg"',
+    namePtBr: 'Varinha dos Elfos do Céu',
   },
   {
     name: 'Wand of Doom',
@@ -7177,6 +7641,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10011.jpg"',
+    namePtBr: 'Varinha da Perdição',
   },
   {
     name: "Elora's Staff",
@@ -7193,6 +7658,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10016.jpg"',
+    namePtBr: 'Cajado de Elora',
   },
   {
     name: "Dragon Hunters' Staff",
@@ -7209,6 +7675,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10013.jpg"',
+    namePtBr: 'Cajado dos Caçadores de Dragões',
   },
   {
     name: 'Undead Dragon Wand',
@@ -7225,6 +7692,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10022.jpg"',
+    namePtBr: 'Varinha do Dragão Morto-vivo',
   },
   {
     name: 'Eternal Ice Staff',
@@ -7241,6 +7709,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10017.jpg"',
+    namePtBr: 'Cajado de Gelo Eterno',
   },
   {
     name: 'Elder Vampire Staff',
@@ -7257,6 +7726,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10020.jpg"',
+    namePtBr: 'Cajado do Vampiro Ancião',
   },
   {
     name: 'Wand of Salvation',
@@ -7273,6 +7743,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10012.jpg"',
+    namePtBr: 'Varinha da Salvação',
   },
   {
     name: 'Dragons Tamer Staff',
@@ -7289,6 +7760,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10018.jpg"',
+    namePtBr: 'Cajado do Domador de Dragões',
   },
   {
     name: 'Undead Golden Dragon Staff',
@@ -7305,6 +7777,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10019.jpg"',
+    namePtBr: 'Cajado do Dragão Dourado Morto-vivo',
   },
   {
     name: 'Chromatic Golden Dragon Wand',
@@ -7321,6 +7794,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10028.jpg"',
+    namePtBr: 'Varinha Cromática do Dragão Dourado',
   },
   {
     name: 'Golden Dragon Staff',
@@ -7337,6 +7811,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/10001.jpg"',
+    namePtBr: 'Cajado do Dragão Dourado',
   },
   {
     name: 'Dagger',
@@ -7353,6 +7828,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3000.jpg"',
+    namePtBr: 'Punhal',
   },
   {
     name: 'Rapier',
@@ -7369,6 +7845,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11005.jpg"',
+    namePtBr: 'Rapier',
   },
   {
     name: 'Long Dagger',
@@ -7385,6 +7862,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3001.jpg"',
+    namePtBr: 'Adaga Longa',
   },
   {
     name: 'Katana',
@@ -7401,6 +7879,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3002.jpg"',
+    namePtBr: 'Katana',
   },
   {
     name: 'Sword',
@@ -7417,6 +7896,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11006.jpg"',
+    namePtBr: 'Espada',
   },
   {
     name: 'Long Sword',
@@ -7433,6 +7913,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3003.jpg"',
+    namePtBr: 'Espada Longa',
   },
   {
     name: 'Spike Sword',
@@ -7449,6 +7930,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11008.jpg"',
+    namePtBr: 'Espada Espinhosa',
   },
   {
     name: 'Silver Sword',
@@ -7466,6 +7948,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3004.jpg"',
+    namePtBr: 'Espada de Prata',
   },
   {
     name: 'Humanoid Lizard Sword',
@@ -7482,6 +7965,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11027.jpg"',
+    namePtBr: 'Espada de lagarto humanóide',
   },
   {
     name: 'Bright Sword',
@@ -7498,6 +7982,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3005.jpg"',
+    namePtBr: 'Espada Brilhante',
   },
   {
     name: 'Curved Sword',
@@ -7514,6 +7999,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3006.jpg"',
+    namePtBr: 'Espada Curva',
   },
   {
     name: 'Giant Sword',
@@ -7530,6 +8016,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3007.jpg"',
+    namePtBr: 'Espada Gigante',
   },
   {
     name: 'Novice Gladiator Sword',
@@ -7546,6 +8033,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11009.jpg"',
+    namePtBr: 'Espada de Gladiador Iniciante',
   },
   {
     name: 'Fire Sword',
@@ -7562,6 +8050,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3008.jpg"',
+    namePtBr: 'Espada de fogo',
   },
   {
     name: 'Black Sword',
@@ -7578,6 +8067,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3050.jpg"',
+    namePtBr: 'Espada Negra',
   },
   {
     name: 'Forgotten Sword',
@@ -7594,6 +8084,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11002.jpg"',
+    namePtBr: 'Espada Esquecida',
   },
   {
     name: 'Ice Beetle Sword',
@@ -7610,6 +8101,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11028.jpg"',
+    namePtBr: 'Espada de Besouro de Gelo',
   },
   {
     name: 'Nobles Sword',
@@ -7626,6 +8118,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3051.jpg"',
+    namePtBr: 'Espada dos Nobres',
   },
   {
     name: "Clan's Sword",
@@ -7643,6 +8136,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11000.jpg"',
+    namePtBr: 'Espada do Clã',
   },
   {
     name: 'Intermediate Gladiator Sword',
@@ -7659,6 +8153,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11010.jpg"',
+    namePtBr: 'Espada Gladiadora Intermediária',
   },
   {
     name: 'Dragon Sword',
@@ -7675,6 +8170,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3065.jpg"',
+    namePtBr: 'Espada do Dragão',
   },
   {
     name: 'Winter Rapier',
@@ -7691,6 +8187,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11003.jpg"',
+    namePtBr: 'Espada de Inverno',
   },
   {
     name: 'Mystic Sword',
@@ -7707,6 +8204,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11007.jpg"',
+    namePtBr: 'Espada Mística',
   },
   {
     name: 'Champion Sword',
@@ -7723,6 +8221,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3009.jpg"',
+    namePtBr: 'Espada Campeã',
   },
   {
     name: 'Sword of Justice',
@@ -7739,6 +8238,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11013.jpg"',
+    namePtBr: 'Espada da Justiça',
   },
   {
     name: 'Lava Sword',
@@ -7755,6 +8255,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/3058.jpg"',
+    namePtBr: 'Espada de lava',
   },
   {
     name: 'Poison Beetle Sword',
@@ -7771,6 +8272,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11029.jpg"',
+    namePtBr: 'Espada do Besouro Venenoso',
   },
   {
     name: 'Advanced Gladiator Sword',
@@ -7787,6 +8289,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11011.jpg"',
+    namePtBr: 'Espada Gladiadora Avançada',
   },
   {
     name: 'The Decapitator',
@@ -7803,6 +8306,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11017.jpg"',
+    namePtBr: 'O Decapitador',
   },
   {
     name: 'Void Sword',
@@ -7819,6 +8323,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11025.jpg"',
+    namePtBr: 'Espada do Vazio',
   },
   {
     name: 'Sacred Sword',
@@ -7835,6 +8340,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11012.jpg"',
+    namePtBr: 'Espada Sagrada',
   },
   {
     name: 'Elven Sword',
@@ -7851,6 +8357,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11018.jpg"',
+    namePtBr: 'Espada Élfica',
   },
   {
     name: "Reaper's Sword",
@@ -7867,6 +8374,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11014.jpg"',
+    namePtBr: 'Espada do Ceifador',
   },
   {
     name: 'Sky Elf Blade',
@@ -7883,6 +8391,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11024.jpg"',
+    namePtBr: 'Lâmina do Elfo Celeste',
   },
   {
     name: "Elora's Sword",
@@ -7899,6 +8408,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11019.jpg"',
+    namePtBr: 'Espada de Elora',
   },
   {
     name: 'Undead Dragon Sword',
@@ -7915,6 +8425,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11026.jpg"',
+    namePtBr: 'Espada do Dragão Morto-vivo',
   },
   {
     name: "Dragon Hunters' Sword",
@@ -7931,6 +8442,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11016.jpg"',
+    namePtBr: 'Espada dos Caçadores de Dragões',
   },
   {
     name: 'Eternal Ice Sword',
@@ -7947,6 +8459,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11020.jpg"',
+    namePtBr: 'Espada de Gelo Eterna',
   },
   {
     name: 'Elder Vampire Sword',
@@ -7963,6 +8476,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11023.jpg"',
+    namePtBr: 'Espada do Vampiro Ancião',
   },
   {
     name: 'Sword of Glory',
@@ -7979,6 +8493,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11015.jpg"',
+    namePtBr: 'Espada da Glória',
   },
   {
     name: 'Dragons Tamer Sword',
@@ -7995,6 +8510,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11021.jpg"',
+    namePtBr: 'Espada Domadora de Dragões',
   },
   {
     name: 'Undead Golden Dragon Sword',
@@ -8011,6 +8527,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11022.jpg"',
+    namePtBr: 'Espada do Dragão Dourado Morto-vivo',
   },
   {
     name: 'Chromatic Golden Dragon Sword',
@@ -8027,6 +8544,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11030.jpg"',
+    namePtBr: 'Espada Cromática do Dragão Dourado',
   },
   {
     name: 'Golden Dragon Sword',
@@ -8043,6 +8561,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11004.jpg"',
+    namePtBr: 'Espada Dourada Do Dragão',
   },
   {
     name: 'Warlord Sword',
@@ -8059,6 +8578,7 @@ const weapons = [
     slot: 'weapon',
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11001.jpg"',
+    namePtBr: 'Espada do Senhor da Guerra',
   },
 ];
 
