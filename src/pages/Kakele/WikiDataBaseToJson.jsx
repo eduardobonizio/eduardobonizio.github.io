@@ -3,14 +3,34 @@ import React, { useEffect, useState } from 'react';
 import copy from 'copy-to-clipboard';
 
 import ButtonForKakele from './Componentes/ButtonForKakele';
+import { equipments, weapons } from './kakeleData';
 
 export default function WikiDataBaseToJson() {
   const [wikiType, setWikiType] = useState('equipments');
 
-  const getWeaponsItens = () => {
-    const allTdElements = [...document.getElementsByTagName('tr')];
+  const addPtBrToItens = () => {
+    // Para funcionar tem que traduzir a página com o google tradutor e rolar até o final da página, depois volta para o inicio e clica no botão
+    let newEquipmentData = [];
+    if (wikiType === 'equipments') {
+      newEquipmentData = [...equipments];
+    } else {
+      newEquipmentData = [...weapons];
+    }
+    const allTrElements = [...document.getElementsByTagName('tr')];
 
-    const itensList = allTdElements.map((item, index) => {
+    allTrElements.forEach((item, index) => {
+      if (index === 0) return;
+      newEquipmentData[index - 1].namePtBr =
+        item.getElementsByTagName('td')[0].innerText;
+    });
+
+    copy(JSON.stringify(newEquipmentData));
+  };
+
+  const getWeaponsItens = () => {
+    const allTrElements = [...document.getElementsByTagName('tr')];
+
+    const itensList = allTrElements.map((item, index) => {
       if (index === 0) return;
       const level = Number(
         item.getElementsByTagName('td')[1].innerText.replaceAll(',', ''),
@@ -58,7 +78,7 @@ export default function WikiDataBaseToJson() {
   };
 
   const getEquipmentsItens = () => {
-    const allTdElements = [...document.getElementsByTagName('tr')];
+    const allTrElements = [...document.getElementsByTagName('tr')];
     const slots = [
       'helmet',
       'armor',
@@ -74,7 +94,7 @@ export default function WikiDataBaseToJson() {
     let slotIndex = 0;
     let startLvl = 0;
 
-    const itensList = allTdElements.map((item, index) => {
+    const itensList = allTrElements.map((item, index) => {
       if (index === 0) return;
       const level = Number(
         item.getElementsByTagName('td')[1].innerText.replaceAll(',', ''),
@@ -156,6 +176,10 @@ export default function WikiDataBaseToJson() {
         <ButtonForKakele
           onClick={copyItensToObject}
           text="Copiar como objeto"
+        />
+        <ButtonForKakele
+          onClick={addPtBrToItens}
+          text="Adicionar texto Pt-BR"
         />
 
         <div className="input-group mb-2">
