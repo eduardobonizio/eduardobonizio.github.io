@@ -4,12 +4,8 @@
   position: absolute;
   top: 15px;
   right: 10px;
-  background-color: green;
+  background-color: $equiped-item-tag-color;
   color: white;
   border-radius: 10px;
   padding: 3px;
-}
-
-.card {
-  background-color: $bg-main-color !important;
 }

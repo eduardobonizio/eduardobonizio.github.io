@@ -93,6 +93,39 @@ const filterItensBySlot = (itensList, slot, ignoreItensList) =>
       slot === 'All',
   );
 
+const filterItensByElement = (itensList, element, ignoreElement) =>
+  itensList.filter(
+    item => item.energy === element || element === 'All' || ignoreElement,
+  );
+
+const filterItens = (
+  itensList,
+  slot,
+  ignoreItensList,
+  element,
+  ignoreElement,
+) => {
+  const itensFilteredBySlot = filterItensBySlot(
+    itensList,
+    slot,
+    ignoreItensList,
+  );
+  const itensFilteredByElement = filterItensByElement(
+    itensFilteredBySlot,
+    element,
+    ignoreElement,
+  );
+
+  return itensFilteredByElement;
+};
+
+const getAlternativeStatus = slot => {
+  if (slot === 'weapon') return 'attack';
+  if (slot === 'necklace') return 'magic';
+
+  return 'armor';
+};
+
 const findBestItem = (itensList, status) => {
   if (itensList.length === 0) return;
   const bestItem = itensList
@@ -111,14 +144,25 @@ const findBestItem = (itensList, status) => {
   return false;
 };
 
-const filterItensByElement = (itensList, element) =>
-  itensList.filter(item => item.energy === element || element === 'All');
+const skipItemSlot = (characterClass, slot) => {
+  if (
+    (characterClass === 'Berserker' || characterClass === 'Hunter') &&
+    (slot === 'shield' || slot === 'book')
+  ) {
+    return true;
+  }
 
-const getAlternativeStatus = slot => {
-  if (slot === 'weapon') return 'attack';
-  if (slot === 'necklace') return 'magic';
+  if (
+    (characterClass === 'Mage' || characterClass === 'Alchemist') &&
+    slot === 'shield'
+  ) {
+    return true;
+  }
 
-  return 'armor';
+  if (characterClass === 'Warrior' && slot === 'book') {
+    return true;
+  }
+  return false;
 };
 
 const findBestSet = (
@@ -127,52 +171,31 @@ const findBestSet = (
   slot,
   classe,
   ignoreItensList,
-  ignorarElemento,
+  ignoreElement,
   slotsComElementoIgnorado,
   element,
 ) => {
+  if (skipItemSlot(classe, slot)) return false;
+
   let bestItem = false;
 
-  if (
-    (classe === 'Berserker' || classe === 'Hunter') &&
-    (slot === 'shield' || slot === 'book')
-  ) {
-    return bestItem;
-  }
+  const ignoreThisSlotElement =
+    ignoreElement || slotsComElementoIgnorado.includes(slot);
 
-  if ((classe === 'Mage' || classe === 'Alchemist') && slot === 'shield') {
-    return bestItem;
-  }
-
-  if (classe === 'Warrior' && slot === 'book') {
-    return bestItem;
-  }
-
-  // Pega somente os itens desse slot
-  const onlyRequestedSlotItensList = filterItensBySlot(
+  const filterdItens = filterItens(
     itensList,
     slot,
     ignoreItensList,
+    element,
+    ignoreThisSlotElement,
   );
 
-  // Se um dos filtros de elemento estiver ativo
-  if (ignorarElemento || slotsComElementoIgnorado.includes(slot)) {
-    bestItem = findBestItem(onlyRequestedSlotItensList, status);
-  } else {
-    // Se não, procura um item com elemento específicado
-    const itensListByRequestedElement = filterItensByElement(
-      onlyRequestedSlotItensList,
-      element,
-    );
+  bestItem = findBestItem(filterdItens, status);
 
-    bestItem = findBestItem(itensListByRequestedElement, status);
-  }
-
-  // Se não encontrou nem um item na opção anterior
   if (!bestItem) {
-    const alternativeStatus = getAlternativeStatus(slot);
-    bestItem = findBestItem(onlyRequestedSlotItensList, alternativeStatus);
+    bestItem = findBestItem(filterdItens, getAlternativeStatus(slot));
   }
+
   return bestItem || false;
 };
 
