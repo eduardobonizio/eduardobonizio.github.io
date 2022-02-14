@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
 
 import copy from 'copy-to-clipboard';
 
@@ -8,6 +9,7 @@ import ButtonForKakele from './ButtonForKakele';
 import './css/ItemCard.css';
 
 export default function ItemCard(props) {
+  const navigate = useNavigate();
   const {
     index,
     ignoredItens,
@@ -37,6 +39,7 @@ export default function ItemCard(props) {
             <span className="card-text">Ataque: {attack}</span>
             <span className="card-text">Nivel: {level}</span>
             <span className="card-text">Slot: {slot}</span>
+
             {currentSet[slot] &&
               currentSet[slot].namePtBr === namePtBr &&
               currentSet[slot].name !== '-----------' && (
@@ -91,6 +94,10 @@ export default function ItemCard(props) {
             <ButtonForKakele
               onClick={() => copy(namePtBr)}
               text="Copiar nome"
+            />
+            <ButtonForKakele
+              onClick={() => navigate(`/kakele/item/${namePtBr}`)}
+              text="Ver Item"
             />
             {equipItem && (
               <ButtonForKakele onClick={() => equipItem(item)} text="Equipar" />
