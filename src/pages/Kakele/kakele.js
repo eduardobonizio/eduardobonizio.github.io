@@ -170,15 +170,13 @@ const findBestSet = (
   slot,
   characterClass,
   ignoredItens,
-  ignoreElement,
   ignoreThisSlotsElement,
   element,
 ) => {
   if (skipItemSlot(characterClass, slot)) return false;
   let bestItem = false;
 
-  const ignoreThisSlotElement =
-    ignoreElement || ignoreThisSlotsElement.includes(slot);
+  const ignoreThisSlotElement = ignoreThisSlotsElement.includes(slot);
 
   const { itensFilteredBySlot, itensFilteredBySlotAndElement } = filterItens(
     itensList,

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 
 import './css/ShowStatusFilterAndCards.css';
 
+import {
+  updateCharacterLevel,
+  updateElementFilter,
+} from '../../store/actions/KakeleFilters.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
-import InputCheckBox from './Componentes/InputCheckBox';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
 import {
@@ -16,14 +20,16 @@ import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 
 export default function SetMaker() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { level, element } = useSelector(state => state.currentKakeleFilters);
   const [characterClass, setCharacterClass] = useState('Alchemist');
-  const [element, setElement] = useState('Light');
-  const [level, setLevel] = useState(1);
   const [mainStat, setMainStat] = useState('armor');
-  const [ignoreElement, setIgnoreElement] = useState(false);
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
+
+  const setLevel = newLevel => dispatch(updateCharacterLevel(newLevel));
+  const setElement = newElement => dispatch(updateElementFilter(newElement));
 
   const generateSet = () => {
     const itensList = filterItensByLevelAndClass(
@@ -31,6 +37,7 @@ export default function SetMaker() {
       level,
       characterClass,
     );
+
     const bestItens = ALL_ITENS_SLOTS_LIST.map(slot =>
       findBestSet(
         itensList,
@@ -38,7 +45,6 @@ export default function SetMaker() {
         slot,
         characterClass,
         ignoredItens,
-        ignoreElement,
         ignoreThisSlotsElement,
         element,
       ),
@@ -130,30 +136,22 @@ export default function SetMaker() {
           </select>
         </div>
 
-        {!ignoreElement && (
-          <div className="input-group mb-2">
-            <label className="input-group-text" htmlFor="elemento-do-set">
-              Elemento
-            </label>
-            <select
-              className="form-select"
-              id="elemento-do-set"
-              onChange={e => setElement(e.target.value)}
-            >
-              <option defaultValue value="Light">
-                Luz
-              </option>
-              <option value="Dark">Trevas</option>
-              <option value="Nature">Natureza</option>
-            </select>
-          </div>
-        )}
-        <InputCheckBox
-          labelText="Ignorar Elemento"
-          id="ignore-element"
-          onChangeFunc={setIgnoreElement}
-          changeOnCheck={ignoreElement}
-        />
+        <div className="input-group mb-2">
+          <label className="input-group-text" htmlFor="elemento-do-set">
+            Elemento
+          </label>
+          <select
+            className="form-select"
+            id="elemento-do-set"
+            defaultValue={element}
+            onChange={e => setElement(e.target.value)}
+          >
+            <option value="All">Todos</option>
+            <option value="Light">Luz</option>
+            <option value="Dark">Trevas</option>
+            <option value="Nature">Natureza</option>
+          </select>
+        </div>
 
         <div className="container d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text="Gerar set" />
