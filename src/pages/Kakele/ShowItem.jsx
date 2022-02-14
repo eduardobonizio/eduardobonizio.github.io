@@ -8,6 +8,8 @@ import ItemCard from './Componentes/ItemCard';
 import { genereateLinkToViewSet } from './kakele';
 import { equipments, weapons } from './kakeleData';
 
+import './css/ShowItem.css';
+
 export default function ShowItem() {
   const navigate = useNavigate();
   const currentSet = useSelector(state => state.currentSet);
@@ -38,7 +40,7 @@ export default function ShowItem() {
       ) : (
         <div>Item não encontrado</div>
       )}
-      <div className="d-flex justify-content-around mt-3">
+      <div className="button-container">
         <ButtonForKakele
           text="Anterior"
           onClick={() => changeItem(previowsIndex)}
