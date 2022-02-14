@@ -110,13 +110,13 @@ const filterItens = (
     slot,
     ignoreItensList,
   );
-  const itensFilteredByElement = filterItensByElement(
+  const itensFilteredBySlotAndElement = filterItensByElement(
     itensFilteredBySlot,
     element,
     ignoreElement,
   );
 
-  return itensFilteredByElement;
+  return { itensFilteredBySlot, itensFilteredBySlotAndElement };
 };
 
 const getAlternativeStatus = slot => {
@@ -167,33 +167,32 @@ const skipItemSlot = (characterClass, slot) => {
 
 const findBestSet = (
   itensList,
-  status,
+  mainStat,
   slot,
-  classe,
-  ignoreItensList,
+  characterClass,
+  ignoredItens,
   ignoreElement,
-  slotsComElementoIgnorado,
+  ignoreThisSlotsElement,
   element,
 ) => {
-  if (skipItemSlot(classe, slot)) return false;
-
+  if (skipItemSlot(characterClass, slot)) return false;
   let bestItem = false;
 
   const ignoreThisSlotElement =
-    ignoreElement || slotsComElementoIgnorado.includes(slot);
+    ignoreElement || ignoreThisSlotsElement.includes(slot);
 
-  const filterdItens = filterItens(
+  const { itensFilteredBySlot, itensFilteredBySlotAndElement } = filterItens(
     itensList,
     slot,
-    ignoreItensList,
+    ignoredItens,
     element,
     ignoreThisSlotElement,
   );
 
-  bestItem = findBestItem(filterdItens, status);
+  bestItem = findBestItem(itensFilteredBySlotAndElement, mainStat);
 
   if (!bestItem) {
-    bestItem = findBestItem(filterdItens, getAlternativeStatus(slot));
+    bestItem = findBestItem(itensFilteredBySlot, getAlternativeStatus(slot));
   }
 
   return bestItem || false;
