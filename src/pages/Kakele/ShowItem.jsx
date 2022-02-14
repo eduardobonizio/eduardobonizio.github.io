@@ -10,8 +10,10 @@ export default function ShowItem() {
     e => e.name === name || e.namePtBr === name,
   );
   return (
-    <div className="container d-flex justify-content-center flex-column">
-      <ItemCard item={item} />
+    <div className="container d-flex justify-content-center show-item-container">
+      <div className="row">
+        <ItemCard item={item} />
+      </div>
     </div>
   );
 }
