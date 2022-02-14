@@ -158,7 +158,10 @@ export default function SetMaker() {
         <div className="container d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text="Gerar set" />
           {recomendedSet && (
-            <ButtonForKakele onClick={redirectToShowSetPage} text="Ver set" />
+            <ButtonForKakele
+              onClick={redirectToShowSetPage}
+              text="Equipar tudo"
+            />
           )}
         </div>
         <ButtonForKakele

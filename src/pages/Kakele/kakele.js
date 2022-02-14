@@ -14,7 +14,7 @@ const urlParamsToObject = paramsText => {
   return object;
 };
 
-const genereateLinkToViewSet = (setList, origin) => {
+const genereateLinkToViewSet = setList => {
   if (!setList) return;
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
@@ -26,8 +26,6 @@ const genereateLinkToViewSet = (setList, origin) => {
     }
     return anterior;
   }, '');
-
-  if (origin) return `${origin}/kakele/set/${link}`;
   return `/kakele/set/${link}`;
 };
 

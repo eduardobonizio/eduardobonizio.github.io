@@ -1,27 +1,43 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
 import copy from 'copy-to-clipboard';
 
+import { updateCurrentSet } from '../../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './ButtonForKakele';
 
 import './css/ItemCard.css';
 
 export default function ItemCard(props) {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const {
     index,
     ignoredItens,
     ignoreItens,
     ignoreThisSlotsElement,
     ignoreElementForThisSlot,
-    equipItem,
     item,
-    item: { namePtBr, energy, armor, magic, attack, level, slot, imgUrl },
+    item: {
+      sources,
+      obsPtBr,
+      namePtBr,
+      energy,
+      armor,
+      magic,
+      attack,
+      level,
+      slot,
+      imgUrl,
+    },
   } = props;
 
+  const showDetails = window.location.href.includes('kakele/item/');
   const currentSet = useSelector(state => state.currentSet);
+
+  const equipItem = thisItem => dispatch(updateCurrentSet(thisItem));
+
   return (
     <div className="col">
       <div className="card mb-2 container-fluid">
@@ -39,6 +55,12 @@ export default function ItemCard(props) {
             <span className="card-text">Ataque: {attack}</span>
             <span className="card-text">Nivel: {level}</span>
             <span className="card-text">Slot: {slot}</span>
+            {showDetails && (
+              <>
+                <span className="card-text">Fonte: {sources}</span>
+                <span className="card-text card-info">Info: {obsPtBr}</span>
+              </>
+            )}
 
             {currentSet[slot] &&
               currentSet[slot].namePtBr === namePtBr &&
@@ -95,10 +117,12 @@ export default function ItemCard(props) {
               onClick={() => copy(namePtBr)}
               text="Copiar nome"
             />
-            <ButtonForKakele
-              onClick={() => navigate(`/kakele/item/${namePtBr}`)}
-              text="Ver Item"
-            />
+            {!showDetails && (
+              <ButtonForKakele
+                onClick={() => navigate(`/kakele/item/${namePtBr}`)}
+                text="Ver Item"
+              />
+            )}
             {equipItem && (
               <ButtonForKakele onClick={() => equipItem(item)} text="Equipar" />
             )}
