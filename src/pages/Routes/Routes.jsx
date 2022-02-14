@@ -7,6 +7,7 @@ import Kakele from '../Kakele/Kakele.jsx';
 import OreCalculator from '../Kakele/OreCalculator';
 import SearchItem from '../Kakele/SearchItem';
 import SetMaker from '../Kakele/SetMaker';
+import ShowItem from '../Kakele/ShowItem';
 import ShowSet from '../Kakele/ShowSet';
 import WikiDataBaseToJson from '../Kakele/WikiDataBaseToJson';
 import GameSetup from '../Quiz/GameSetup';
@@ -26,6 +27,7 @@ export default function Rotas() {
 
       <Route path="/kakele/ore-calculator" element={<OreCalculator />} />
       <Route path="/kakele/set/*" element={<ShowSet />} />
+      <Route path="/kakele/item/:name" element={<ShowItem />} />
       <Route path="/WikiDataBaseToJson" element={<WikiDataBaseToJson />} />
 
       <Route
