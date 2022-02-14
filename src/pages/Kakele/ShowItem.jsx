@@ -26,7 +26,6 @@ export default function ShowItem() {
 
   const changeItem = itemIndex => {
     const index = itemIndex >= 0 ? itemIndex : allItens.length - 1;
-    console.log(index);
     navigate(`/kakele/item/${allItens[index].name}`);
   };
 
