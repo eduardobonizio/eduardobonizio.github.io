@@ -4212,7 +4212,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16000.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Lã',
+    namePtBr: 'Calças de Lã',
   },
   {
     name: 'Leather Legs',
@@ -4229,7 +4229,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16001.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de couro',
+    namePtBr: 'Calças de couro',
   },
   {
     name: 'Wizard Legs',
@@ -4246,7 +4246,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16002.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de mago',
+    namePtBr: 'Calças de mago',
   },
   {
     name: 'Humanoid Toad Legs',
@@ -4262,7 +4262,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16027.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Sapo Humanoide',
+    namePtBr: 'Calças de Sapo Humanoide',
   },
   {
     name: 'Chain Legs',
@@ -4279,7 +4279,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16003.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Corrente',
+    namePtBr: 'Calças de Corrente',
   },
   {
     name: 'Ninja Legs',
@@ -4295,7 +4295,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16004.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Ninja',
+    namePtBr: 'Calças Ninja',
   },
   {
     name: 'Heirloom Legs',
@@ -4311,7 +4311,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16005.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de herança',
+    namePtBr: 'Calças de herança',
   },
   {
     name: 'Vampire Legs',
@@ -4327,7 +4327,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16024.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Vampiro',
+    namePtBr: 'Calças de Vampiro',
   },
   {
     name: 'Reinforced Legs',
@@ -4344,7 +4344,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16006.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Reforçadas',
+    namePtBr: 'Calças Reforçadas',
   },
   {
     name: 'Prismatic Legs',
@@ -4360,7 +4360,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16007.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Prismáticas',
+    namePtBr: 'Calças Prismáticas',
   },
   {
     name: 'Fairy Legs',
@@ -4376,7 +4376,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16028.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Fada',
+    namePtBr: 'Calças de Fada',
   },
   {
     name: 'Golden Legs',
@@ -4392,7 +4392,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16008.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Douradas',
+    namePtBr: 'Calças Douradas',
   },
   {
     name: 'Plate Legs',
@@ -4408,7 +4408,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16009.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas da Placa',
+    namePtBr: 'Calças da Placa',
   },
   {
     name: 'Gladiator Legs',
@@ -4424,7 +4424,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16022.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Gladiador',
+    namePtBr: 'Calças de Gladiador',
   },
   {
     name: 'Crystal Legs',
@@ -4441,7 +4441,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16010.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Cristal',
+    namePtBr: 'Calças de Cristal',
   },
   {
     name: 'Abyssal Cultist Legs',
@@ -4457,7 +4457,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16025.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Abissais do Cultista',
+    namePtBr: 'Calças Abissais do Cultista',
   },
   {
     name: 'Clan Legs',
@@ -4474,7 +4474,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16011.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas do clã',
+    namePtBr: 'Calças do clã',
   },
   {
     name: 'Elven Legs',
@@ -4490,7 +4490,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16012.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas élficas',
+    namePtBr: 'Calças élficas',
   },
   {
     name: 'Void Legs',
@@ -4506,7 +4506,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16026.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Vazias',
+    namePtBr: 'Calças Vazias',
   },
   {
     name: 'Noble Legs',
@@ -4522,7 +4522,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16013.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Nobres',
+    namePtBr: 'Calças Nobres',
   },
   {
     name: 'Volcano Legs',
@@ -4538,7 +4538,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16014.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas do Vulcão',
+    namePtBr: 'Calças do Vulcão',
   },
   {
     name: 'Frost Hunter Legs',
@@ -4554,7 +4554,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16023.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas do Caçador de Gelo',
+    namePtBr: 'Calças do Caçador de Gelo',
   },
   {
     name: 'Demon Legs',
@@ -4570,7 +4570,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16015.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Demônio',
+    namePtBr: 'Calças de Demônio',
   },
   {
     name: 'Elemental Legs',
@@ -4586,7 +4586,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16029.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Elementais',
+    namePtBr: 'Calças Elementais',
   },
   {
     name: 'Angelic Legs',
@@ -4602,7 +4602,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16016.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Angélicas',
+    namePtBr: 'Calças Angélicas',
   },
   {
     name: 'Dragons Tamer Legs',
@@ -4618,7 +4618,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16020.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas do Domador de Dragões',
+    namePtBr: 'Calças do Domador de Dragões',
   },
   {
     name: 'Chromatic Legs',
@@ -4634,7 +4634,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16031.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas cromáticas',
+    namePtBr: 'Calças cromáticas',
   },
   {
     name: 'Ethereal Legs',
@@ -4650,7 +4650,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16017.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas Etéreas',
+    namePtBr: 'Calças Etéreas',
   },
   {
     name: 'Chromatic Golden Dragon Scale Legs',
@@ -4666,7 +4666,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16030.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas cromáticas de escama de dragão dourado',
+    namePtBr: 'Calças cromáticas de escama de dragão dourado',
   },
   {
     name: 'Golden Dragon Scale Legs',
@@ -4682,7 +4682,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16018.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Escama de Dragão Dourado',
+    namePtBr: 'Calças de Escama de Dragão Dourado',
   },
   {
     name: 'Undead Golden Dragon Scale Legs',
@@ -4698,7 +4698,7 @@ const equipments = [
     imgUrl:
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/16021.jpg"',
     slot: 'leg',
-    namePtBr: 'Pernas de Escama de Dragão Dourado Morto-vivo',
+    namePtBr: 'Calças de Escama de Dragão Dourado Morto-vivo',
   },
   {
     name: 'Axe',
