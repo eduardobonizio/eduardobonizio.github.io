@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 
-import './css/SetMaker.css';
+import './css/ShowStatusFilterAndCards.css';
 
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import InputCheckBox from './Componentes/InputCheckBox';
@@ -77,8 +77,8 @@ export default function SetMaker() {
   };
 
   return (
-    <div className="container set-maker-container">
-      <div className="d-flex flex-column status-container">
+    <div className="container status-and-card-container">
+      <div className="d-flex flex-column">
         <h3 className="">Gerador de set</h3>
         <div className="input-group mb-2">
           <span className="input-group-text" id="nivel-do-personagem">

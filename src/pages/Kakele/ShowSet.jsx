@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import './css/ShowSet.css';
+import './css/ShowStatusFilterAndCards.css';
 
 import copy from 'copy-to-clipboard';
 
