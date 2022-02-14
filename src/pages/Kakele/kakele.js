@@ -95,15 +95,18 @@ const filterItensBySlot = (itensList, slot, ignoreItensList) =>
 
 const findBestItem = (itensList, status) => {
   if (itensList.length === 0) return;
-  const bestItem = itensList.reduce(
-    (previous, next) => {
-      if (next[status] >= previous[status]) {
-        return next;
-      }
-      return previous;
-    },
-    { [status]: 0 },
-  );
+  const bestItem = itensList
+    .sort((a, b) => a.level - b.level)
+    .reduce(
+      (previous, next) => {
+        if (next[status] >= previous[status]) {
+          return next;
+        }
+
+        return previous;
+      },
+      { [status]: 0 },
+    );
   if (bestItem.name) return bestItem;
   return false;
 };
