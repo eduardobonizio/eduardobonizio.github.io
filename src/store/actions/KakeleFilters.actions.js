@@ -1,3 +1,9 @@
+export function updateCharacterClass(characterClass) {
+  return {
+    type: 'UPDATE_CHARACTER_CLASS',
+    payload: { characterClass },
+  };
+}
 export function updateCharacterLevel(level) {
   return {
     type: 'UPDATE_CHARACTER_LEVEL',

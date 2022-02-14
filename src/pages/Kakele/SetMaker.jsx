@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router';
 import './css/ShowStatusFilterAndCards.css';
 
 import {
+  updateCharacterClass,
   updateCharacterLevel,
   updateElementFilter,
 } from '../../store/actions/KakeleFilters.actions';
@@ -21,8 +22,9 @@ import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 export default function SetMaker() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { level, element } = useSelector(state => state.currentKakeleFilters);
-  const [characterClass, setCharacterClass] = useState('Alchemist');
+  const { level, element, characterClass } = useSelector(
+    state => state.currentKakeleFilters,
+  );
   const [mainStat, setMainStat] = useState('armor');
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
@@ -30,6 +32,8 @@ export default function SetMaker() {
 
   const setLevel = newLevel => dispatch(updateCharacterLevel(newLevel));
   const setElement = newElement => dispatch(updateElementFilter(newElement));
+  const setCharacterClass = newCharacterClass =>
+    dispatch(updateCharacterClass(newCharacterClass));
 
   const generateSet = () => {
     const itensList = filterItensByLevelAndClass(
@@ -107,11 +111,10 @@ export default function SetMaker() {
           <select
             className="form-select"
             id="classe-do-personagem"
+            defaultValue={characterClass}
             onChange={e => setCharacterClass(e.target.value)}
           >
-            <option defaultValue value="Alchemist">
-              Alquemista
-            </option>
+            <option value="Alchemist">Alquemista</option>
             <option value="Hunter">Caçador</option>
             <option value="Berserker">Furioso</option>
             <option value="Warrior">Guerreiro</option>
