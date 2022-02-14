@@ -8380,6 +8380,8 @@ const weapons = [
       '"https://raw.githubusercontent.com/contact-kakele/kakele-data/main/wiki/items/11003.jpg"',
     twoHanded: false,
     namePtBr: 'Espada de Inverno',
+    obs: 'Expire in 10 seconds',
+    obsPtBr: 'Expira em 10 segundos',
   },
   {
     name: 'Mystic Sword',
