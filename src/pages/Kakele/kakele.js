@@ -188,26 +188,23 @@ const findBestSet = (
     ignoreThisSlotElement,
   );
 
-  // Tenta encontrar o melhor item com o status e elmento indicado
+  // Tenta encontrar o melhor item com o status e elemento selecionado
   bestItem = findBestItem(itensFilteredBySlotAndElement, mainStat);
+  if (bestItem && bestItem[mainStat] > 0) return bestItem;
 
-  // Se não retornar item ou o status indicado for zero, ele faz outra busca com um status alternativo
-  if (!bestItem || bestItem[mainStat] === 0) {
-    bestItem = findBestItem(
-      itensFilteredBySlotAndElement,
-      getAlternativeStatus(slot),
-    );
-  }
+  const alternativeStatus = getAlternativeStatus(slot);
 
-  // Se mesmo com o status alternativo ele não encontarar um item do elemento correto, ele vai tentar encontrar um item de qualquer elemento, mas com o status principal
-  if (!bestItem || bestItem[mainStat] === 0) {
-    bestItem = findBestItem(itensFilteredBySlot, mainStat);
-  }
+  // Se não retornar o item ou o valor status selecionado for zero, ele faz outra busca com um status alternativo
+  bestItem = findBestItem(itensFilteredBySlotAndElement, alternativeStatus);
+  if (bestItem && bestItem[alternativeStatus] > 0) return bestItem;
+
+  // Se mesmo com o status alternativo ele não encontarar um item do elemento correto, ele vai tentar encontrar um item de qualquer elemento, mas com o status selecionado
+  bestItem = findBestItem(itensFilteredBySlot, mainStat);
+  if (bestItem && bestItem[mainStat] > 0) return bestItem;
 
   // Por ultimo se não encontrar um item, ele vai procurar o melhor item com o status alternativo
-  if (!bestItem || bestItem[mainStat] === 0) {
-    bestItem = findBestItem(itensFilteredBySlot, getAlternativeStatus(slot));
-  }
+  bestItem = findBestItem(itensFilteredBySlot, alternativeStatus);
+  if (bestItem && bestItem[alternativeStatus] > 0) return bestItem;
 
   return bestItem || false;
 };
