@@ -7,7 +7,7 @@ export default function ButtonForKakele(props) {
   return (
     <button
       type="button"
-      className="btn btn-light mb-2 button-for-kakele"
+      className="button-for-kakele"
       onClick={() => onClick()}
     >
       {text}

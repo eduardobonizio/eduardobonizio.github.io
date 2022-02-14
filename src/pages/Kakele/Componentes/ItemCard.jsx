@@ -40,7 +40,7 @@ export default function ItemCard(props) {
 
   return (
     <div className="col">
-      <div className="card mb-2 container-fluid">
+      <div className="card mb-2">
         <div className="card-body pb-0">
           <h6 className="card-title">{namePtBr}</h6>
           <div className="d-flex flex-column">
@@ -112,7 +112,7 @@ export default function ItemCard(props) {
               </div>
             </>
           )}
-          <div className="d-flex justify-content-between mt-1">
+          <div className="d-flex button-container">
             <ButtonForKakele
               onClick={() => copy(namePtBr)}
               text="Copiar nome"
@@ -123,9 +123,8 @@ export default function ItemCard(props) {
                 text="Ver Item"
               />
             )}
-            {equipItem && (
-              <ButtonForKakele onClick={() => equipItem(item)} text="Equipar" />
-            )}
+
+            <ButtonForKakele onClick={() => equipItem(item)} text="Equipar" />
           </div>
         </div>
       </div>

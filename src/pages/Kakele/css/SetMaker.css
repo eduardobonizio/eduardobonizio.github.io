@@ -11,6 +11,10 @@
             justify-content: center;
     margin: 0px;
   }
+  .set-maker-container .col {
+    width: 90%;
+    padding: 0;
+  }
   .set-maker-container .card {
     margin-bottom: 5px;
   }
@@ -40,8 +44,7 @@
   .set-maker-container .card {
     padding: 0px;
     margin-bottom: 5px;
-    width: auto;
-    width: 265px;
+    width: 290px;
   }
   .set-maker-container .card .card-body {
     display: -webkit-box;

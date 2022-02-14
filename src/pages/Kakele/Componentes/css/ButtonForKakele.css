@@ -1,10 +1,15 @@
 .button-for-kakele {
-  background-color: #e9ecef;
-  border: 20px solid black;
-  color: #212529;
-  padding: 8px 18px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  margin-bottom: 5px;
+  border: none;
+  background-color: none;
+  border-radius: 5px;
+  padding: 5px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.button-for-kakele:hover {
+  background-color: black;
+  color: white;
 }
 /*# sourceMappingURL=ButtonForKakele.css.map */
