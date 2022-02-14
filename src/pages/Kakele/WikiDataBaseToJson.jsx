@@ -20,8 +20,9 @@ export default function WikiDataBaseToJson() {
 
     allTrElements.forEach((item, index) => {
       if (index === 0) return;
-      newEquipmentData[index - 1].namePtBr =
-        item.getElementsByTagName('td')[0].innerText;
+      newEquipmentData[index - 1].namePtBr = item
+        .getElementsByTagName('td')[0]
+        .innerText.replace('Pernas', 'Calças');
     });
 
     copy(JSON.stringify(newEquipmentData));
