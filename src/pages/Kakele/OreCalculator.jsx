@@ -14,7 +14,7 @@ import {
 
 export default function OreCalculator() {
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
-  const [finishUpgradeLvl, setFinishUpgradeLvl] = useState(0);
+  const [desiredUpgradeLvl, setDesiredUpgradeLvl] = useState(0);
   const [necessaryItens, setNecessaryItens] = useState();
   const [showAlert, setShowAlert] = useState(false);
   const [addOrePriceToTotal, setAddOrePriceToTotal] = useState(false);
@@ -27,23 +27,21 @@ export default function OreCalculator() {
   });
 
   const calculateOres = () => {
-    if (startUpgradeLvl >= finishUpgradeLvl) {
+    if (startUpgradeLvl >= desiredUpgradeLvl) {
       if (!showAlert) activateAlert(setShowAlert);
       setNecessaryItens();
       return;
     }
 
-    const totalOres = calculateOreQuantityAndPrice(
-      startUpgradeLvl,
-      finishUpgradeLvl,
-    );
+    const totalOres = calculateOreQuantityAndPrice(desiredUpgradeLvl);
 
     if (addOrePriceToTotal) {
       const newTotalPrice = calculateUpgradePriceWithOresPrice(
         totalOres,
         oresPrice,
       );
-      totalOres.kks = newTotalPrice;
+      setNecessaryItens(newTotalPrice);
+      return;
     }
     setNecessaryItens(totalOres);
   };
@@ -65,7 +63,7 @@ export default function OreCalculator() {
         <UpgradeSelector
           elementId="upgrade-final"
           labelText="Upgrade desejado"
-          onChange={setFinishUpgradeLvl}
+          onChange={setDesiredUpgradeLvl}
         />
         <InputCheckBox
           labelText="Vou comprar os minérios"

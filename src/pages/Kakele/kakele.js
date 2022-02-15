@@ -55,7 +55,7 @@ const calculateUpgradePriceWithOresPrice = (totalOres, oresPrice) => {
     totalIronPrice +
     totalGoldPrice;
 
-  return totalPrice;
+  return { ...totalOres, kks: totalPrice };
 };
 
 const calculateOreQuantityAndPrice = (startUpgradeLvl, finishUpgradeLvl) => {
