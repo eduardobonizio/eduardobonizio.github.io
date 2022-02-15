@@ -64,8 +64,12 @@ const calculateOreQuantityAndPrice = (startUpgradeLvl, finishUpgradeLvl) => {
   const result = UPGRADES_DATA.reduce(
     (current, next, index) => {
       const currentUpgradeIndex = upgradeXTimes - index;
+      if (currentUpgradeIndex < 0) return current;
+      const x = index * 5;
+      const currentUpgradeKey = finishUpgradeLvl - x;
       const { cobre, estanho, prata, ferro, ouro, kks } =
-        UPGRADES_DATA[currentUpgradeIndex];
+        UPGRADES_DATA[currentUpgradeIndex][currentUpgradeKey];
+
       return {
         cobre: current.cobre + cobre,
         estanho: current.estanho + estanho,

@@ -8800,6 +8800,7 @@ const weapons = [
 ];
 
 const UPGRADES_DATA = [
+  { 0: { cobre: 0, estanho: 0, prata: 0, ferro: 0, ouro: 0, kks: 0 } },
   { 5: { cobre: 5, estanho: 0, prata: 0, ferro: 0, ouro: 0, kks: 10000 } },
   { 10: { cobre: 10, estanho: 5, prata: 0, ferro: 0, ouro: 0, kks: 20000 } },
   { 15: { cobre: 15, estanho: 10, prata: 5, ferro: 0, ouro: 0, kks: 40000 } },
