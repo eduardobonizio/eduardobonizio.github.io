@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -24,57 +23,51 @@ export default function ShowSet() {
   const dispatch = useDispatch();
   const currentSet = useSelector(state => state.currentSet);
   const urlParams = useParams();
-  const itensOnUrl = urlParamsToObject(urlParams);
 
   const normalizeSet = setItems => {
-    const usableSet = { ...setItems };
+    const shield =
+      setItems.weapon.twoHanded || setItems.book.name !== '-----------'
+        ? { ...FAKE_ITEM, slot: 'shield' }
+        : { ...setItems.shield };
+    const book =
+      setItems.weapon.twoHanded || setItems.shield.name !== '-----------'
+        ? { ...FAKE_ITEM, slot: 'book' }
+        : { ...setItems.book };
 
-    if (setItems.weapon && setItems.weapon.twoHanded) {
-      usableSet.shield = { ...FAKE_ITEM, slot: 'shield' };
-      usableSet.book = { ...FAKE_ITEM, slot: 'book' };
-    }
-
-    if (setItems.shield) {
-      usableSet.book = { ...FAKE_ITEM, slot: 'book' };
-    }
-
-    if (setItems.book) {
-      usableSet.shield = { ...FAKE_ITEM, slot: 'shield' };
-    }
-
-    return usableSet;
+    return { ...setItems, shield: { ...shield }, book: { ...book } };
   };
 
-  const addMissingItens = selectedItems => {
-    const fakeItem = { ...FAKE_ITEM };
-    const updatedCurrentSet = selectedItems;
-    ALL_ITENS_SLOTS_LIST.forEach(slot => {
-      if (!selectedItems[slot]) {
-        fakeItem.slot = slot;
-        updatedCurrentSet[slot] = { ...fakeItem, slot };
-      }
-      dispatch(updateCurrentSet(updatedCurrentSet[slot]));
-    });
-  };
+  const addMissingItens = (selectedItems, fakeItem) =>
+    ALL_ITENS_SLOTS_LIST.reduce(
+      (current, next, index) => {
+        const currentSlot = ALL_ITENS_SLOTS_LIST[index];
+        if (!current[currentSlot]) {
+          return {
+            ...current,
+            [currentSlot]: { ...fakeItem },
+          };
+        }
+        return current;
+      },
+      { ...selectedItems },
+    );
 
-  const itensOnUrlToItensList = () => {
-    const allItens = [...equipments, ...weapons];
-    const selectedItems = {};
-    if (itensOnUrl) {
-      const itensList = Object.values(itensOnUrl).map(itemName =>
-        allItens.forEach(item => {
-          if (item.name === itemName) selectedItems[item.slot] = item;
-        }),
-      );
-    }
+  const itensOnUrlToItensList = (urlText, allItens) => {
+    const itensOnUrl = urlParamsToObject(urlText);
 
-    const normalizedItemSet = normalizeSet(selectedItems);
+    const itensList = Object.values(itensOnUrl).map(itemName =>
+      allItens.find(item => item.name === itemName),
+    );
 
-    addMissingItens(normalizedItemSet);
+    const allSlotItens = addMissingItens(itensList);
+
+    const normalizedSet = normalizeSet(allSlotItens);
+
+    dispatch(updateCurrentSet(normalizedSet));
   };
 
   useEffect(() => {
-    itensOnUrlToItensList();
+    itensOnUrlToItensList(urlParams, [...equipments, ...weapons]);
   }, []);
 
   const copyLink = () => {

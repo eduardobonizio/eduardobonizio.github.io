@@ -39,6 +39,8 @@
     "immutable/no-this": "error",
     "immutable/no-mutation": "error",
     "react/jsx-no-bind": "off",
+    "jsx-a11y/label-has-associated-control": "Off",
+    "default-param-last": "off",
     "import-helpers/order-imports": [
       "warn",
       {
@@ -61,7 +63,7 @@
     ],
     "global-require": "error",
     "no-console": "warn",
-    "import/prefer-default-export": "error",
+    "import/prefer-default-export": "off",
     "react/button-has-type": "error",
     "react/no-access-state-in-setstate": "error",
     "react/no-deprecated": "error",

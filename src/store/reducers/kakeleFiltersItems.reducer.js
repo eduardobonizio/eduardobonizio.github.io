@@ -5,7 +5,7 @@ const CURRENT_FILTERS = {
   element: 'All',
 };
 
-export default function reducer(action, state = CURRENT_FILTERS) {
+export default function reducer(state = CURRENT_FILTERS, action) {
   const { type, payload } = action;
 
   switch (type) {

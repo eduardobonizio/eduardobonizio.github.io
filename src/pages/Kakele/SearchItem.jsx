@@ -114,7 +114,7 @@ export default function SearchItem() {
           />
         </div>
         <div className="input-group mb-2">
-          <label className="input-group-text" htmlFor="classe-do-personagem">
+          <label className="input-group-text" htmlFor="classedo-personagem">
             Classe
           </label>
           <select
@@ -122,8 +122,8 @@ export default function SearchItem() {
             id="classe-do-personagem"
             onChange={e => setCharacterClass(e.target.value)}
           >
-            {CHARACTER_CLASS.map((charClass, i) => (
-              <option value={charClass} key={i}>
+            {CHARACTER_CLASS.map(charClass => (
+              <option value={charClass} key={charClass}>
                 {CHARACTER_CLASS_PT_BR[charClass]}
               </option>
             ))}
@@ -142,8 +142,8 @@ export default function SearchItem() {
             <option defaultValue value="All">
               Todos
             </option>
-            {ALL_ITENS_SLOTS_LIST.map((slot, i) => (
-              <option value={slot} key={i}>
+            {ALL_ITENS_SLOTS_LIST.map(slot => (
+              <option value={slot} key={slot}>
                 {ALL_ITENS_SLOTS_LIST_PT_BR[slot]}
               </option>
             ))}
@@ -179,8 +179,8 @@ export default function SearchItem() {
             id="filtro"
             onChange={e => setOrderBy(e.target.value)}
           >
-            {ITEM_FILTERS.map((status, i) => (
-              <option value={status} key={i}>
+            {ITEM_FILTERS.map(status => (
+              <option value={status} key={status}>
                 {ITEM_FILTERS_PT_BR[status]}
               </option>
             ))}
@@ -194,9 +194,15 @@ export default function SearchItem() {
           foundItens.map((item, i) => {
             if (item) {
               return (
-                <ItemCard index={i} item={item} key={i} equipItem={equipItem} />
+                <ItemCard
+                  index={i}
+                  item={item}
+                  key={item.name}
+                  equipItem={equipItem}
+                />
               );
             }
+            return false;
           })
         ) : (
           <span>Nem um item encontrado</span>
