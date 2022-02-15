@@ -110,10 +110,11 @@ export default function SetMaker() {
                   ignoreThisSlotsElement={ignoreThisSlotsElement}
                   ignoreElementForThisSlot={ignoreElementForThisSlot}
                   item={item}
-                  key={i}
+                  key={item.name}
                 />
               );
             }
+            return false;
           })}
       </div>
     </div>
