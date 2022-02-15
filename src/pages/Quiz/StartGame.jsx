@@ -1,3 +1,4 @@
+/* eslint-disable immutable/no-mutation */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -54,7 +55,7 @@ export default function StartGame() {
       const answeredQuestions = gameConfig.answered
         ? [...gameConfig.answered, id].sort((a, b) => a - b)
         : [id];
-      dispatch(userSetup.updateScore((gameConfig.score += 1)));
+      dispatch(userSetup.updateScore(gameConfig.score + 1));
       dispatch(userSetup.updateAnswerdQuestions(answeredQuestions));
     }
     if (!rightAnswer) {

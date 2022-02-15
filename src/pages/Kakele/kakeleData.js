@@ -8799,24 +8799,95 @@ const weapons = [
   },
 ];
 
-const upgrades = {
-  5: { cobre: 5, estanho: 0, prata: 0, ferro: 0, ouro: 0, kks: 10000 },
-  10: { cobre: 10, estanho: 5, prata: 0, ferro: 0, ouro: 0, kks: 20000 },
-  15: { cobre: 15, estanho: 10, prata: 5, ferro: 0, ouro: 0, kks: 40000 },
-  20: { cobre: 20, estanho: 15, prata: 10, ferro: 5, ouro: 0, kks: 80000 },
-  25: { cobre: 25, estanho: 20, prata: 15, ferro: 10, ouro: 5, kks: 160000 },
-  30: { cobre: 30, estanho: 25, prata: 20, ferro: 15, ouro: 10, kks: 320000 },
-  35: { cobre: 35, estanho: 30, prata: 25, ferro: 20, ouro: 15, kks: 640000 },
-  40: { cobre: 40, estanho: 35, prata: 30, ferro: 25, ouro: 20, kks: 1280000 },
-  45: { cobre: 45, estanho: 40, prata: 35, ferro: 30, ouro: 25, kks: 2560000 },
-  50: { cobre: 50, estanho: 45, prata: 40, ferro: 35, ouro: 30, kks: 5120000 },
-  55: { cobre: 55, estanho: 50, prata: 45, ferro: 40, ouro: 35, kks: 10240000 },
-  60: { cobre: 60, estanho: 55, prata: 50, ferro: 45, ouro: 40, kks: 20480000 },
-  65: { cobre: 65, estanho: 60, prata: 55, ferro: 50, ouro: 45, kks: 40960000 },
-  70: { cobre: 70, estanho: 65, prata: 60, ferro: 55, ouro: 50, kks: 81920000 },
-};
+const UPGRADES_DATA = [
+  { 5: { cobre: 5, estanho: 0, prata: 0, ferro: 0, ouro: 0, kks: 10000 } },
+  { 10: { cobre: 10, estanho: 5, prata: 0, ferro: 0, ouro: 0, kks: 20000 } },
+  { 15: { cobre: 15, estanho: 10, prata: 5, ferro: 0, ouro: 0, kks: 40000 } },
+  { 20: { cobre: 20, estanho: 15, prata: 10, ferro: 5, ouro: 0, kks: 80000 } },
+  {
+    25: { cobre: 25, estanho: 20, prata: 15, ferro: 10, ouro: 5, kks: 160000 },
+  },
+  {
+    30: { cobre: 30, estanho: 25, prata: 20, ferro: 15, ouro: 10, kks: 320000 },
+  },
+  {
+    35: { cobre: 35, estanho: 30, prata: 25, ferro: 20, ouro: 15, kks: 640000 },
+  },
+  {
+    40: {
+      cobre: 40,
+      estanho: 35,
+      prata: 30,
+      ferro: 25,
+      ouro: 20,
+      kks: 1280000,
+    },
+  },
+  {
+    45: {
+      cobre: 45,
+      estanho: 40,
+      prata: 35,
+      ferro: 30,
+      ouro: 25,
+      kks: 2560000,
+    },
+  },
+  {
+    50: {
+      cobre: 50,
+      estanho: 45,
+      prata: 40,
+      ferro: 35,
+      ouro: 30,
+      kks: 5120000,
+    },
+  },
+  {
+    55: {
+      cobre: 55,
+      estanho: 50,
+      prata: 45,
+      ferro: 40,
+      ouro: 35,
+      kks: 10240000,
+    },
+  },
+  {
+    60: {
+      cobre: 60,
+      estanho: 55,
+      prata: 50,
+      ferro: 45,
+      ouro: 40,
+      kks: 20480000,
+    },
+  },
+  {
+    65: {
+      cobre: 65,
+      estanho: 60,
+      prata: 55,
+      ferro: 50,
+      ouro: 45,
+      kks: 40960000,
+    },
+  },
+  {
+    70: {
+      cobre: 70,
+      estanho: 65,
+      prata: 60,
+      ferro: 55,
+      ouro: 50,
+      kks: 81920000,
+    },
+  },
+];
 
-const UPGRADES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
+const UPGRADES_STAGES = [
+  0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70,
+];
 
 const ALL_ITENS_SLOTS_LIST = [
   'necklace',
@@ -8882,8 +8953,8 @@ const FAKE_ITEM = {
 export {
   equipments,
   weapons,
-  upgrades,
-  UPGRADES,
+  UPGRADES_DATA,
+  UPGRADES_STAGES,
   ALL_ITENS_SLOTS_LIST,
   ALL_ITENS_SLOTS_LIST_PT_BR,
   ITEM_FILTERS,

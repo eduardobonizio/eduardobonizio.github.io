@@ -1,21 +1,21 @@
-import { upgrades } from './kakeleData';
+import { UPGRADES_DATA } from './kakeleData';
 
 const FIVE_SECONDS = 5000;
 
 const urlParamsToObject = paramsText => {
   // Ex.: /Item=Sowrd-of-Fire Item2=Shield-of-Darkness
-  if (paramsText['*'] === '') return;
+  if (paramsText['*'] === '') return false;
   const formatedText = `{"${paramsText['*']
     .replace('_', '')
     .replaceAll('_', '","')
     .replaceAll('=', '":"')
     .replaceAll('-', ' ')}"}`;
-  const object = JSON.parse(formatedText);
-  return object;
+
+  return JSON.parse(formatedText);
 };
 
 const genereateLinkToViewSet = setList => {
-  if (!setList) return;
+  if (!setList) return false;
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
       const adicionarTexto = `${proximo.slot}=${proximo.name}`.replaceAll(
@@ -59,24 +59,32 @@ const calculateUpgradePriceWithOresPrice = (totalOres, oresPrice) => {
 };
 
 const calculateOreQuantityAndPrice = (startUpgradeLvl, finishUpgradeLvl) => {
-  const totalOres = {
-    cobre: 0,
-    estanho: 0,
-    prata: 0,
-    ferro: 0,
-    ouro: 0,
-    kks: 0,
-  };
-  for (let i = startUpgradeLvl + 5; i <= finishUpgradeLvl; i += 5) {
-    const { cobre, estanho, prata, ferro, ouro, kks } = upgrades[i];
-    totalOres.cobre += cobre;
-    totalOres.estanho += estanho;
-    totalOres.prata += prata;
-    totalOres.ferro += ferro;
-    totalOres.ouro += ouro;
-    totalOres.kks += kks;
-  }
-  return totalOres;
+  const upgradeXTimes = finishUpgradeLvl / 5;
+
+  const result = UPGRADES_DATA.reduce(
+    (current, next, index) => {
+      const currentUpgradeIndex = upgradeXTimes - index;
+      const { cobre, estanho, prata, ferro, ouro, kks } =
+        UPGRADES_DATA[currentUpgradeIndex];
+      return {
+        cobre: current.cobre + cobre,
+        estanho: current.estanho + estanho,
+        prata: current.prata + prata,
+        ferro: current.ferro + ferro,
+        ouro: current.ouro + ouro,
+        kks: current.kks + kks,
+      };
+    },
+    {
+      cobre: 0,
+      estanho: 0,
+      prata: 0,
+      ferro: 0,
+      ouro: 0,
+      kks: 0,
+    },
+  );
+  return result;
 };
 
 const addDotToKks = number =>
@@ -125,7 +133,7 @@ const getAlternativeStatus = slot => {
 };
 
 const findBestItem = (itensList, status) => {
-  if (itensList.length === 0) return;
+  if (itensList.length === 0) return false;
   const bestItem = itensList
     .sort((a, b) => a.level - b.level)
     .sort((a, b) => a.status - b.status)
@@ -139,7 +147,9 @@ const findBestItem = (itensList, status) => {
       },
       { [status]: 0 },
     );
-  if (bestItem.name) return bestItem;
+
+  if (bestItem[status] > 0) return bestItem;
+
   return false;
 };
 
@@ -170,39 +180,43 @@ const findBestSet = (
   slot,
   characterClass,
   ignoredItens,
-  ignoreThisSlotsElement,
+  ignoreSlotElementList,
   element,
 ) => {
   if (skipItemSlot(characterClass, slot)) return false;
-  let bestItem = false;
 
-  const ignoreThisSlotElement = ignoreThisSlotsElement.includes(slot);
+  const ignoreElement = ignoreSlotElementList.includes(slot);
 
   const { itensFilteredBySlot, itensFilteredBySlotAndElement } = filterItens(
     itensList,
     slot,
     ignoredItens,
     element,
-    ignoreThisSlotElement,
+    ignoreElement,
   );
-
-  // Tenta encontrar o melhor item com o status e elemento selecionado
-  bestItem = findBestItem(itensFilteredBySlotAndElement, mainStat);
-  if (bestItem && bestItem[mainStat] > 0) return bestItem;
 
   const alternativeStatus = getAlternativeStatus(slot);
 
-  // Se não retornar o item ou o valor status selecionado for zero, ele faz outra busca com um status alternativo
-  bestItem = findBestItem(itensFilteredBySlotAndElement, alternativeStatus);
-  if (bestItem && bestItem[alternativeStatus] > 0) return bestItem;
+  const bestItem = findBestItem(itensFilteredBySlotAndElement, mainStat);
+  if (bestItem) return bestItem;
 
-  // Se mesmo com o status alternativo ele não encontarar um item do elemento correto, ele vai tentar encontrar um item de qualquer elemento, mas com o status selecionado
-  bestItem = findBestItem(itensFilteredBySlot, mainStat);
-  if (bestItem && bestItem[mainStat] > 0) return bestItem;
+  const bestItemWithAlternativeStatus = findBestItem(
+    itensFilteredBySlotAndElement,
+    alternativeStatus,
+  );
+  if (bestItemWithAlternativeStatus) return bestItem;
 
-  // Por ultimo se não encontrar um item, ele vai procurar o melhor item com o status alternativo
-  bestItem = findBestItem(itensFilteredBySlot, alternativeStatus);
-  if (bestItem && bestItem[alternativeStatus] > 0) return bestItem;
+  const bestItemWithAlternativeElement = findBestItem(
+    itensFilteredBySlot,
+    mainStat,
+  );
+  if (bestItemWithAlternativeElement) return bestItem;
+
+  const bestItemWithAlternativeStatusAndElement = findBestItem(
+    itensFilteredBySlot,
+    alternativeStatus,
+  );
+  if (bestItemWithAlternativeStatusAndElement) return bestItem;
 
   return bestItem || false;
 };
@@ -218,14 +232,26 @@ const elementQuantityInSet = (itensList, element) =>
   itensList.filter(item => item.energy === element).length;
 
 const checkSetElement = itens => {
-  const luz = elementQuantityInSet(itens, 'Light');
-  const natureza = elementQuantityInSet(itens, 'Nature');
-  const trevas = elementQuantityInSet(itens, 'Dark');
-  let element = 'Neutral';
-  if (luz >= 5) element = 'Light';
-  if (natureza >= 5) element = 'Nature';
-  if (trevas >= 5) element = 'Dark';
-  const text = `Luz: ${luz}, Natureza: ${natureza}, Trevas: ${trevas}`;
+  const elements = {
+    light: {
+      name: 'Light',
+      quantity: elementQuantityInSet(itens, 'Light'),
+    },
+    nature: {
+      name: 'Nature',
+      quantity: elementQuantityInSet(itens, 'Nature'),
+    },
+    dark: {
+      name: 'Dark',
+      quantity: elementQuantityInSet(itens, 'Dark'),
+    },
+  };
+
+  const element = Object.values(elements).sort(
+    (a, b) => b.quantity - a.quantity,
+  )[0].name;
+
+  const text = `Luz: ${elements.light.quantity}, Natureza: ${elements.nature.quantity}, Trevas: ${elements.dark.quantity}`;
 
   return { text, element };
 };

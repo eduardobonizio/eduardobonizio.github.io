@@ -38,6 +38,7 @@
     "immutable/no-let": "error",
     "immutable/no-this": "error",
     "immutable/no-mutation": "error",
+    "react/jsx-no-bind": "off",
     "import-helpers/order-imports": [
       "warn",
       {

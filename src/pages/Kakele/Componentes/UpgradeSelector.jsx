@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { UPGRADES } from '../kakeleData';
+import { UPGRADES_STAGES } from '../kakeleData';
 
 export default function UpgradeSelector(props) {
   const { elementId, labelText, onChange } = props;
@@ -14,8 +14,8 @@ export default function UpgradeSelector(props) {
         id={elementId}
         onChange={e => onChange(Number(e.target.value))}
       >
-        {UPGRADES.map((upgradeValue, i) => (
-          <option key={i} value={upgradeValue}>
+        {UPGRADES_STAGES.map(upgradeValue => (
+          <option key={upgradeValue} value={upgradeValue}>
             {upgradeValue}
           </option>
         ))}

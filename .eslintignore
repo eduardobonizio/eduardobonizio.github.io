@@ -35,4 +35,4 @@ old
 *.stories.js
 .storybook
 /*.js
-src/old-projects
+src/learning-projects

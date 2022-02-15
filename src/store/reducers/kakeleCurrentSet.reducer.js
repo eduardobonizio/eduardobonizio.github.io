@@ -11,7 +11,7 @@ const CURRENT_SET = {
   shoe: {},
 };
 
-export default function reducer(state = CURRENT_SET, action) {
+export default function reducer(action, state = CURRENT_SET) {
   const { type, payload } = action;
 
   switch (type) {
