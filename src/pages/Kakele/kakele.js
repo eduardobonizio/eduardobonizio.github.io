@@ -58,7 +58,7 @@ const calculateUpgradePriceWithOresPrice = (totalOres, oresPrice) => {
   return { ...totalOres, kks: totalPrice };
 };
 
-const calculateOreQuantityAndPrice = (startUpgradeLvl, finishUpgradeLvl) => {
+const calculateOreQuantityAndPrice = finishUpgradeLvl => {
   const upgradeXTimes = finishUpgradeLvl / 5;
 
   const result = UPGRADES_DATA.reduce(
