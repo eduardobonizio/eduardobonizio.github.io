@@ -8,6 +8,7 @@ import {
   updateCharacterClass,
   updateCharacterLevel,
   updateElementFilter,
+  updateStatFilter,
 } from '../../store/actions/KakeleFilters.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
@@ -22,15 +23,17 @@ import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
 export default function SetMaker() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { level, element, characterClass } = useSelector(
+  const { level, element, characterClass, mainStat } = useSelector(
     state => state.currentKakeleFilters,
   );
-  const [mainStat, setMainStat] = useState('armor');
+  console.log(mainStat);
+
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
 
   const setLevel = newLevel => dispatch(updateCharacterLevel(newLevel));
+  const setMainStat = newStat => dispatch(updateStatFilter(newStat));
   const setElement = newElement => dispatch(updateElementFilter(newElement));
   const setCharacterClass = newCharacterClass =>
     dispatch(updateCharacterClass(newCharacterClass));
@@ -129,11 +132,10 @@ export default function SetMaker() {
           <select
             className="form-select"
             id="status-principal"
+            defaultValue={mainStat}
             onChange={e => setMainStat(e.target.value)}
           >
-            <option defaultValue value="armor">
-              Amadura
-            </option>
+            <option value="armor">Amadura</option>
             <option value="magic">Magia</option>
             <option value="attack">Ataque</option>
           </select>

@@ -16,3 +16,10 @@ export function updateElementFilter(element) {
     payload: { element },
   };
 }
+export function updateStatFilter(mainStat) {
+  console.log(mainStat);
+  return {
+    type: 'UPDATE_STAT_FILTER',
+    payload: { mainStat },
+  };
+}

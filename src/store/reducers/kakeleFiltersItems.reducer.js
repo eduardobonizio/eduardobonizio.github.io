@@ -1,7 +1,7 @@
 const CURRENT_FILTERS = {
   level: 1,
   characterClass: 'Alchemist',
-  itemMainStatus: 'armor',
+  mainStat: 'armor',
   element: 'All',
 };
 
@@ -16,6 +16,9 @@ export default function reducer(state = CURRENT_FILTERS, action) {
       return { ...state, ...payload };
 
     case 'UPDATE_ELEMENT_FILTER':
+      return { ...state, ...payload };
+
+    case 'UPDATE_STAT_FILTER':
       return { ...state, ...payload };
 
     default:
