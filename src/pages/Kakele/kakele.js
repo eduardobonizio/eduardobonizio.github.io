@@ -129,11 +129,36 @@ const filterItens = (
   return { itensFilteredBySlot, itensFilteredBySlotAndElement };
 };
 
-const getAlternativeStatus = slot => {
-  if (slot === 'weapon') return 'attack';
-  if (slot === 'necklace') return 'magic';
+const getAlternativeStatus = (characterClass, mainStat) => {
+  const priority = {
+    Alchemist: {
+      magic: 'armor',
+      armor: 'attack',
+      attack: 'magic',
+    },
+    Berserker: {
+      attack: 'armor',
+      armor: 'magic',
+      magic: 'attack',
+    },
+    Hunter: {
+      attack: 'armor',
+      armor: 'magic',
+      magic: 'attack',
+    },
+    Mage: {
+      magic: 'armor',
+      armor: 'attack',
+      attack: 'magic',
+    },
+    Warrior: {
+      armor: 'attack',
+      attack: 'magic',
+      magic: 'armor',
+    },
+  };
 
-  return 'armor';
+  return priority[characterClass][mainStat];
 };
 
 const findBestItem = (itensList, status) => {
@@ -199,7 +224,7 @@ const findBestSet = (
     ignoreElement,
   );
 
-  const alternativeStatus = getAlternativeStatus(slot);
+  const alternativeStatus = getAlternativeStatus(characterClass, mainStat);
 
   const bestItem = findBestItem(itensFilteredBySlotAndElement, mainStat);
   if (bestItem) return bestItem;
@@ -208,19 +233,32 @@ const findBestSet = (
     itensFilteredBySlotAndElement,
     alternativeStatus,
   );
-  if (bestItemWithAlternativeStatus) return bestItem;
+
+  if (bestItemWithAlternativeStatus) return bestItemWithAlternativeStatus;
 
   const bestItemWithAlternativeElement = findBestItem(
     itensFilteredBySlot,
     mainStat,
   );
-  if (bestItemWithAlternativeElement) return bestItem;
+  if (bestItemWithAlternativeElement) return bestItemWithAlternativeElement;
 
   const bestItemWithAlternativeStatusAndElement = findBestItem(
     itensFilteredBySlot,
     alternativeStatus,
   );
-  if (bestItemWithAlternativeStatusAndElement) return bestItem;
+  if (bestItemWithAlternativeStatusAndElement)
+    return bestItemWithAlternativeStatusAndElement;
+
+  const lastAlternativeStatus = getAlternativeStatus(
+    characterClass,
+    alternativeStatus,
+  );
+
+  const lastChanceToFindItem = findBestItem(
+    itensFilteredBySlot,
+    lastAlternativeStatus,
+  );
+  if (lastChanceToFindItem) return lastChanceToFindItem;
 
   return bestItem || false;
 };
