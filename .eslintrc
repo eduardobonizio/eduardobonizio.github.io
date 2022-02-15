@@ -30,14 +30,14 @@
   ],
   "rules": {
     "no-mixed-operators/no-mixed-operators": "error",
-    "more/prefer-includes": 2,
-    "more/no-void-map": 2,
-    "more/no-window": "off",
-    "more/no-filter-instead-of-find": 2,
-    "more/no-numeric-endings-for-variables": 2,
-    "prefer-object-spread/prefer-object-spread": 2,
-    "immutable/no-let": "off",
-    "immutable/no-this": 2,
+    "more/prefer-includes": "error",
+    "more/no-void-map": "error",
+    "more/no-filter-instead-of-find": "error",
+    "more/no-numeric-endings-for-variables": "error",
+    "prefer-object-spread/prefer-object-spread": "error",
+    "immutable/no-let": "error",
+    "immutable/no-this": "error",
+    "immutable/no-mutation": "error",
     "import-helpers/order-imports": [
       "warn",
       {
@@ -59,12 +59,12 @@
       }
     ],
     "global-require": "error",
-    "no-console": "off",
-    "import/prefer-default-export": "off",
+    "no-console": "warn",
+    "import/prefer-default-export": "error",
     "react/button-has-type": "error",
     "react/no-access-state-in-setstate": "error",
-    "react/no-deprecated": 2,
-    "react/state-in-constructor": "off",
+    "react/no-deprecated": "error",
+    "react/state-in-constructor": "error",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-filename-extension": [
@@ -72,13 +72,6 @@
       {
         "extensions": [".jsx", ".js"]
       }
-    ],
-    "react/static-property-placement": "off",
-    "react/jsx-no-bind": "off",
-    "array-callback-return": "off",
-    "react/no-array-index-key": "off",
-    "consistent-return": "off",
-    "jsx-a11y/label-has-associated-control": "off",
-    "default-param-last": "off"
+    ]
   }
 }

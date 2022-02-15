@@ -11,7 +11,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc . --ext .js .jsx"
   },
   "eslintConfig": {
     "extends": [
@@ -57,7 +58,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "eslint": "8.8.0",
+    "eslint": "^8.8.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-immutable": "1.0.0",
