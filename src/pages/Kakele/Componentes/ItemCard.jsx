@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 
 import copy from 'copy-to-clipboard';
 
-import { updateCurrentSet } from '../../../store/actions/kakeleCurrentSet.actions';
+import { udateOneEquipment } from '../../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './ButtonForKakele';
 
 import './css/ItemCard.css';
@@ -36,7 +36,9 @@ export default function ItemCard(props) {
   const showDetails = window.location.href.includes('kakele/item/');
   const currentSet = useSelector(state => state.currentSet);
 
-  const equipItem = thisItem => dispatch(updateCurrentSet(thisItem));
+  const equipItem = thisItem => {
+    if (thisItem.name !== '-----------') dispatch(udateOneEquipment(thisItem));
+  };
 
   return (
     <div className="col">

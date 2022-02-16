@@ -18,6 +18,9 @@ export default function reducer(state = CURRENT_SET, action) {
     case 'UPDATE_CURRENT_SET':
       return { ...state, ...payload };
 
+    case 'UPDATE_SET_ITEM':
+      return { ...state, [payload.slot]: payload };
+
     default:
       return state;
   }
