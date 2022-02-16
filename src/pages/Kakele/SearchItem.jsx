@@ -12,7 +12,7 @@ import {
   filterItensByElement,
   filterItensByLevelAndClass,
   filterItensBySlot,
-  findItemByName,
+  findItemsByName,
   genereateLinkToViewSet,
 } from './kakele';
 import { equipments, weapons, FAKE_ITEM } from './kakeleData';
@@ -22,7 +22,7 @@ export default function SearchItem() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const currentSet = useSelector(state => state.currentSet);
-  const { level, itemName, element, slotToFilter, characterClass, orderBy } =
+  const { level, itemName, element, slot, characterClass, orderBy } =
     useSelector(state => state.currentKakeleFilters);
 
   const [foundItens, setFoundItens] = useState(false);
@@ -34,15 +34,17 @@ export default function SearchItem() {
       characterClass,
     );
 
-    const itensListBySlot = filterItensBySlot(itensList, slotToFilter, [])
+    const itensListBySlot = filterItensBySlot(itensList, slot, [])
       .sort((a, b) => b.level - a.level)
       .sort((a, b) => b[orderBy] - a[orderBy]);
 
     const itensListByElement = filterItensByElement(itensListBySlot, element);
 
-    const itensListByName = findItemByName(itensListByElement, itemName);
+    const itensListByName = findItemsByName(itensListByElement, itemName);
 
-    setFoundItens(itensListByName);
+    const result = itensListByName || itensListByElement;
+
+    setFoundItens(result);
   };
 
   const equipItem = item => {
