@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import PrivateRoute from '../../api/PrivateRoute';
 import Home from '../Home/Home';
@@ -16,9 +16,23 @@ import StartGame from '../Quiz/StartGame';
 import Login from '../UserControll/Login';
 import SignUp from '../UserControll/SignUp';
 
+function usePageViews() {
+  // eslint-disable-next-line immutable/no-let
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.GA_INITIALIZED) {
+      ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_CODE);
+      // eslint-disable-next-line immutable/no-mutation
+      window.GA_INITIALIZED = true;
+    }
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  }, [location]);
+}
+
 export default function Rotas() {
-  ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_CODE);
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  usePageViews();
 
   return (
     <Routes>
