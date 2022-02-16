@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import { Routes, Route } from 'react-router-dom';
 
 import PrivateRoute from '../../api/PrivateRoute';
@@ -16,6 +17,9 @@ import Login from '../UserControll/Login';
 import SignUp from '../UserControll/SignUp';
 
 export default function Rotas() {
+  ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_CODE);
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
