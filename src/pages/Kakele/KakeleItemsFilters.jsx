@@ -12,9 +12,8 @@ import {
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters } = props;
   const dispatch = useDispatch();
-  const { level, element, characterClass, mainStat, itemName } = useSelector(
-    state => state.currentKakeleFilters,
-  );
+  const { level, element, characterClass, mainStat, itemName, slot, orderBy } =
+    useSelector(state => state.currentKakeleFilters);
 
   const updateFilter = (action, newFilterValue) =>
     dispatch(updateItensFilter(action, newFilterValue));
@@ -114,14 +113,13 @@ export default function KakeleItemsFilters(props) {
             <select
               className="form-select"
               id="slot-do-item"
+              defaultValue={slot}
               onChange={e => updateFilter('UPDATE_SLOT_FILTER', e.target.value)}
             >
-              <option defaultValue value="All">
-                Todos
-              </option>
-              {ALL_ITENS_SLOTS_LIST.map(slot => (
-                <option value={slot} key={slot}>
-                  {ALL_ITENS_SLOTS_LIST_PT_BR[slot]}
+              <option value="All">Todos</option>
+              {ALL_ITENS_SLOTS_LIST.map(curSlot => (
+                <option value={curSlot} key={curSlot}>
+                  {ALL_ITENS_SLOTS_LIST_PT_BR[curSlot]}
                 </option>
               ))}
             </select>
@@ -133,6 +131,7 @@ export default function KakeleItemsFilters(props) {
             <select
               className="form-select"
               id="filtro"
+              defaultValue={orderBy}
               onChange={e =>
                 updateFilter('UPDATE_ORDER_FILTER', e.target.value)
               }
