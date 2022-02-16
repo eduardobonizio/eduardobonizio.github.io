@@ -1,27 +1,43 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { updateItensFilter } from '../../store/actions/KakeleFilters.actions';
 import {
-  updateCharacterClass,
-  updateCharacterLevel,
-  updateElementFilter,
-  updateStatFilter,
-} from '../../store/actions/KakeleFilters.actions';
+  ALL_ITENS_SLOTS_LIST,
+  ALL_ITENS_SLOTS_LIST_PT_BR,
+  ITEM_FILTERS,
+  ITEM_FILTERS_PT_BR,
+} from './kakeleData';
 
-export default function KakeleItemsFilters() {
+export default function KakeleItemsFilters(props) {
+  const { statusPrincipal, manualFilters } = props;
   const dispatch = useDispatch();
-  const { level, element, characterClass, mainStat } = useSelector(
+  const { level, element, characterClass, mainStat, itemName } = useSelector(
     state => state.currentKakeleFilters,
   );
 
-  const setLevel = newLevel => dispatch(updateCharacterLevel(newLevel));
-  const setMainStat = newStat => dispatch(updateStatFilter(newStat));
-  const setElement = newElement => dispatch(updateElementFilter(newElement));
-  const setCharacterClass = newCharacterClass =>
-    dispatch(updateCharacterClass(newCharacterClass));
+  const updateFilter = (action, newFilterValue) =>
+    dispatch(updateItensFilter(action, newFilterValue));
+
   return (
     <>
       <div className="input-group mb-2">
+        {manualFilters && (
+          <div className="input-group mb-2">
+            <span className="input-group-text" id="nome-do-item">
+              Nome do item
+            </span>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Nome do item"
+              aria-label="Nome do item"
+              aria-describedby="nome-do-item"
+              value={itemName}
+              onChange={e => updateFilter('UPDATE_NAME_FILTER', e.target.value)}
+            />
+          </div>
+        )}
         <span className="input-group-text" id="nivel-do-personagem">
           Nivel do personagem
         </span>
@@ -32,7 +48,9 @@ export default function KakeleItemsFilters() {
           aria-label="Nivel do Personagem"
           aria-describedby="nivel-do-personagem"
           value={level}
-          onChange={e => setLevel(Number(e.target.value))}
+          onChange={e =>
+            updateFilter('UPDATE_CHARACTER_LEVEL', Number(e.target.value))
+          }
         />
       </div>
       <div className="input-group mb-2">
@@ -43,7 +61,7 @@ export default function KakeleItemsFilters() {
           className="form-select"
           id="classe-do-personagem"
           defaultValue={characterClass}
-          onChange={e => setCharacterClass(e.target.value)}
+          onChange={e => updateFilter('UPDATE_CHARACTER_CLASS', e.target.value)}
         >
           <option value="Alchemist">Alquemista</option>
           <option value="Hunter">Caçador</option>
@@ -53,21 +71,23 @@ export default function KakeleItemsFilters() {
         </select>
       </div>
 
-      <div className="input-group mb-2">
-        <label className="input-group-text" htmlFor="status-principal">
-          Status principal
-        </label>
-        <select
-          className="form-select"
-          id="status-principal"
-          defaultValue={mainStat}
-          onChange={e => setMainStat(e.target.value)}
-        >
-          <option value="armor">Amadura</option>
-          <option value="magic">Magia</option>
-          <option value="attack">Ataque</option>
-        </select>
-      </div>
+      {statusPrincipal && (
+        <div className="input-group mb-2">
+          <label className="input-group-text" htmlFor="status-principal">
+            Status principal
+          </label>
+          <select
+            className="form-select"
+            id="status-principal"
+            defaultValue={mainStat}
+            onChange={e => updateFilter('UPDATE_STAT_FILTER', e.target.value)}
+          >
+            <option value="armor">Amadura</option>
+            <option value="magic">Magia</option>
+            <option value="attack">Ataque</option>
+          </select>
+        </div>
+      )}
 
       <div className="input-group mb-2">
         <label className="input-group-text" htmlFor="elemento-do-set">
@@ -77,7 +97,7 @@ export default function KakeleItemsFilters() {
           className="form-select"
           id="elemento-do-set"
           defaultValue={element}
-          onChange={e => setElement(e.target.value)}
+          onChange={e => updateFilter('UPDATE_ELEMENT_FILTER', e.target.value)}
         >
           <option value="All">Todos</option>
           <option value="Light">Luz</option>
@@ -85,6 +105,47 @@ export default function KakeleItemsFilters() {
           <option value="Nature">Natureza</option>
         </select>
       </div>
+      {manualFilters && (
+        <>
+          <div className="input-group mb-2">
+            <label className="input-group-text" htmlFor="slot-do-item">
+              Slot do item
+            </label>
+            <select
+              className="form-select"
+              id="slot-do-item"
+              onChange={e => updateFilter('UPDATE_SLOT_FILTER', e.target.value)}
+            >
+              <option defaultValue value="All">
+                Todos
+              </option>
+              {ALL_ITENS_SLOTS_LIST.map(slot => (
+                <option value={slot} key={slot}>
+                  {ALL_ITENS_SLOTS_LIST_PT_BR[slot]}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="input-group mb-2">
+            <label className="input-group-text" htmlFor="filtro">
+              Ordenar por
+            </label>
+            <select
+              className="form-select"
+              id="filtro"
+              onChange={e =>
+                updateFilter('UPDATE_ORDER_FILTER', e.target.value)
+              }
+            >
+              {ITEM_FILTERS.map(status => (
+                <option value={status} key={status}>
+                  {ITEM_FILTERS_PT_BR[status]}
+                </option>
+              ))}
+            </select>
+          </div>
+        </>
+      )}
     </>
   );
 }

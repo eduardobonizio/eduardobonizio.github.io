@@ -81,7 +81,7 @@ export default function SetMaker() {
       <div className="d-flex flex-column">
         <h3 className="">Gerador de set</h3>
 
-        <KakeleItemsFilters />
+        <KakeleItemsFilters statusPrincipal />
         <div className="container d-flex justify-content-around">
           <ButtonForKakele onClick={generateSet} text="Gerar set" />
           {recomendedSet && (
