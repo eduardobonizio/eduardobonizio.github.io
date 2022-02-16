@@ -289,9 +289,11 @@ const checkSetElement = itens => {
     },
   };
 
-  const element = Object.values(elements).sort(
+  const elementResult = Object.values(elements).sort(
     (a, b) => b.quantity - a.quantity,
-  )[0].name;
+  )[0];
+
+  const element = elementResult.quantity >= 5 ? elementResult.name : 'None';
 
   const text = `Luz: ${elements.light.quantity}, Natureza: ${elements.nature.quantity}, Trevas: ${elements.dark.quantity}`;
 
