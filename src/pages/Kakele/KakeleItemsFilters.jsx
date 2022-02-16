@@ -54,7 +54,7 @@ export default function KakeleItemsFilters(props) {
       </div>
       <div className="input-group mb-2">
         <label className="input-group-text" htmlFor="classe-do-personagem">
-          Classe do personagem
+          Classe
         </label>
         <select
           className="form-select"
