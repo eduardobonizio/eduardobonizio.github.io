@@ -21,7 +21,7 @@ function usePageViews() {
   const location = useLocation();
 
   useEffect(() => {
-    if (window.GA_INITIALIZED) {
+    if (!window.GA_INITIALIZED) {
       ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_CODE);
       // eslint-disable-next-line immutable/no-mutation
       window.GA_INITIALIZED = true;
