@@ -10,6 +10,7 @@
   }
   .kakele-search-item .kakele-search-item-filters {
     min-width: 320px;
+    max-width: 320px;
   }
   .kakele-search-item .row {
     margin-left: 0 !important;

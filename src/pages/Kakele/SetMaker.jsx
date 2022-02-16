@@ -78,7 +78,7 @@ export default function SetMaker() {
 
   return (
     <div className="container status-and-card-container">
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column set-maker-filters-container">
         <h3 className="">Gerador de set</h3>
 
         <KakeleItemsFilters statusPrincipal />

@@ -26,8 +26,9 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .status-and-card-container .status-container {
+  .status-and-card-container .set-maker-filters-container {
     min-width: 320px;
+    max-width: 320px;
   }
   .status-and-card-container .row {
     margin-left: 0 !important;
