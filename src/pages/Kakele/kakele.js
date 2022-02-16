@@ -14,7 +14,7 @@ const urlParamsToObject = paramsText => {
   return JSON.parse(formatedText);
 };
 
-const genereateLinkToViewSet = setList => {
+const genereateLinkToViewSet = (setList, origin) => {
   if (!setList) return false;
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
@@ -26,7 +26,7 @@ const genereateLinkToViewSet = setList => {
     }
     return anterior;
   }, '');
-  return `/kakele/set/${link}`;
+  return `${origin}/kakele/set/${link}`;
 };
 
 const activateAlert = setShowAlert => {

@@ -21,13 +21,14 @@ export default function Rotas() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/kakele" element={<Kakele />} />
-      <Route path="/kakele/set-maker" element={<SetMaker />} />
-      <Route path="/kakele/search-item" element={<SearchItem />} />
+      <Route path="/kakele" element={<Kakele />}>
+        <Route path="set-maker" element={<SetMaker />} />
+        <Route path="search-item" element={<SearchItem />} />
 
-      <Route path="/kakele/ore-calculator" element={<OreCalculator />} />
-      <Route path="/kakele/set/*" element={<ShowSet />} />
-      <Route path="/kakele/item/:name" element={<ShowItem />} />
+        <Route path="ore-calculator" element={<OreCalculator />} />
+        <Route path="set/*" element={<ShowSet />} />
+        <Route path="item/:name" element={<ShowItem />} />
+      </Route>
       <Route path="/WikiDataBaseToJson" element={<WikiDataBaseToJson />} />
 
       <Route
