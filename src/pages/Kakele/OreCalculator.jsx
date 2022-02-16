@@ -52,9 +52,6 @@ export default function OreCalculator() {
         <Alert message="O upgrade desejado tem que ser maior que o upgrade atual" />
       )}
       <div className="d-flex flex-column">
-        <span className="mb-2">
-          Selecione o upgrade atual e o upgrade desejado
-        </span>
         <UpgradeSelector
           elementId="upgrade-inicial"
           labelText="Upgrade atual"
