@@ -34,6 +34,7 @@ function QuestionCard(prop) {
       e.classList.remove('btn-danger');
       e.classList.remove('btn-success');
       e.classList.add('btn-light');
+      // eslint-disable-next-line immutable/no-mutation
       e.disabled = false;
     });
   }

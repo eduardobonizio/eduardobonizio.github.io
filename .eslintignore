@@ -36,3 +36,4 @@ old
 .storybook
 /*.js
 src/learning-projects
+WikiDataBaseToJson.jsx
