@@ -16,7 +16,7 @@ export default function reducer(state = CURRENT_SET, action) {
 
   switch (type) {
     case 'UPDATE_CURRENT_SET':
-      return { ...state, [payload.slot]: payload };
+      return { ...state, ...payload };
 
     default:
       return state;
