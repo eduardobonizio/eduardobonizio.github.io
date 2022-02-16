@@ -10,7 +10,11 @@ import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
-import { genereateLinkToViewSet, urlParamsToObject } from './kakele';
+import {
+  findItemByName,
+  genereateLinkToViewSet,
+  urlParamsToObject,
+} from './kakele';
 import {
   equipments,
   weapons,
@@ -37,17 +41,17 @@ export default function ShowSet() {
     return { ...setItems, shield: { ...shield }, book: { ...book } };
   };
 
-  const addMissingItens = (selectedItems, fakeItem) =>
+  const addMissingItens = (selectedItems, allItens) =>
     ALL_ITENS_SLOTS_LIST.reduce(
       (current, next, index) => {
         const currentSlot = ALL_ITENS_SLOTS_LIST[index];
-        if (!current[currentSlot]) {
-          return {
-            ...current,
-            [currentSlot]: { ...fakeItem },
-          };
-        }
-        return current;
+        const item =
+          findItemByName(allItens, selectedItems[currentSlot]) || FAKE_ITEM;
+
+        return {
+          ...current,
+          [currentSlot]: { ...item },
+        };
       },
       { ...selectedItems },
     );
@@ -55,11 +59,7 @@ export default function ShowSet() {
   const itensOnUrlToItensList = (urlText, allItens) => {
     const itensOnUrl = urlParamsToObject(urlText);
 
-    const itensList = Object.values(itensOnUrl).map(itemName =>
-      allItens.find(item => item.name === itemName),
-    );
-
-    const allSlotItens = addMissingItens(itensList);
+    const allSlotItens = addMissingItens(itensOnUrl, allItens);
 
     const normalizedSet = normalizeSet(allSlotItens);
 

@@ -298,12 +298,14 @@ const checkSetElement = itens => {
   return { text, element };
 };
 
-const findItemByName = (itemList, itemName) =>
-  itemList.filter(
+const findItemByName = (itemList, itemName) => {
+  if (!itemName) return false;
+  return itemList.find(
     item =>
       item.name.toLowerCase().includes(itemName.toLowerCase()) ||
       item.namePtBr.toLowerCase().includes(itemName.toLowerCase()),
   );
+};
 
 export {
   urlParamsToObject,
