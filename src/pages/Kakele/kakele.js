@@ -309,7 +309,7 @@ const findItemByName = (itemList, itemName) => {
 
 const findItemsByName = (itemList, itemName) => {
   if (!itemName) return false;
-  return itemList.map(
+  return itemList.filter(
     item =>
       item.name.toLowerCase().includes(itemName.toLowerCase()) ||
       item.namePtBr.toLowerCase().includes(itemName.toLowerCase()),
