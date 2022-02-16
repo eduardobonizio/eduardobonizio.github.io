@@ -4,7 +4,11 @@ import { useNavigate } from 'react-router';
 
 import copy from 'copy-to-clipboard';
 
-import { udateOneEquipment } from '../../../store/actions/kakeleCurrentSet.actions';
+import {
+  udateOneEquipment,
+  updateCurrentSet,
+} from '../../../store/actions/kakeleCurrentSet.actions';
+import { FAKE_ITEM } from '../kakeleData';
 import ButtonForKakele from './ButtonForKakele';
 
 import './css/ItemCard.css';
@@ -37,7 +41,66 @@ export default function ItemCard(props) {
   const currentSet = useSelector(state => state.currentSet);
 
   const equipItem = thisItem => {
-    if (thisItem.name !== '-----------') dispatch(udateOneEquipment(thisItem));
+    if (thisItem.name !== '-----------') {
+      if (thisItem.slot === 'weapon') {
+        if (thisItem.twoHanded) {
+          dispatch(
+            updateCurrentSet({
+              ...currentSet,
+              weapon: thisItem,
+              book: { ...FAKE_ITEM, sloot: 'book' },
+              shield: { ...FAKE_ITEM, slot: 'shield' },
+            }),
+          );
+          return;
+        }
+        dispatch(udateOneEquipment(thisItem));
+        return;
+      }
+      if (thisItem.slot === 'shield') {
+        if (currentSet.weapon.twoHanded) {
+          dispatch(
+            updateCurrentSet({
+              ...currentSet,
+              shield: thisItem,
+              weapon: { ...FAKE_ITEM, slot: 'weapon' },
+              book: { ...FAKE_ITEM, sloot: 'book' },
+            }),
+          );
+          return;
+        }
+        dispatch(
+          updateCurrentSet({
+            ...currentSet,
+            shield: thisItem,
+            book: { ...FAKE_ITEM, sloot: 'book' },
+          }),
+        );
+        return;
+      }
+      if (thisItem.slot === 'book') {
+        if (currentSet.weapon.twoHanded) {
+          dispatch(
+            updateCurrentSet({
+              ...currentSet,
+              book: thisItem,
+              weapon: { ...FAKE_ITEM, slot: 'weapon' },
+              shield: { ...FAKE_ITEM, sloot: 'shield' },
+            }),
+          );
+          return;
+        }
+        dispatch(
+          updateCurrentSet({
+            ...currentSet,
+            book: thisItem,
+            shield: { ...FAKE_ITEM, sloot: 'shield' },
+          }),
+        );
+        return;
+      }
+      dispatch(udateOneEquipment(thisItem));
+    }
   };
 
   return (

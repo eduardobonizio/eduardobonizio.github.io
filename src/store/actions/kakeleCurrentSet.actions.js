@@ -6,7 +6,6 @@ export function updateCurrentSet(items) {
 }
 
 export function udateOneEquipment(item) {
-  console.log(item);
   return {
     type: 'UPDATE_SET_ITEM',
     payload: item,
