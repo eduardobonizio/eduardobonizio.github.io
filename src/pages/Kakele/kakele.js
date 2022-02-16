@@ -307,6 +307,15 @@ const findItemByName = (itemList, itemName) => {
   );
 };
 
+const findItemsByName = (itemList, itemName) => {
+  if (!itemName) return false;
+  return itemList.map(
+    item =>
+      item.name.toLowerCase().includes(itemName.toLowerCase()) ||
+      item.namePtBr.toLowerCase().includes(itemName.toLowerCase()),
+  );
+};
+
 export {
   urlParamsToObject,
   activateAlert,
@@ -320,4 +329,5 @@ export {
   findItemByName,
   filterItensBySlot,
   filterItensByElement,
+  findItemsByName,
 };
