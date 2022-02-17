@@ -134,7 +134,44 @@ const kakeleItemsFiltersJsx = {
     orderBy: 'Ordenar por',
   },
 };
-const e = { EN: {}, PTBR: {} };
+const oreCalculatorJsx = {
+  EN: {
+    startUpgrade: 'Current forge',
+    finishUpgrade: 'Desired forge',
+    buyOres: 'Add ore prices',
+    calculate: 'Calculate',
+    necessaryItens: 'Necessary itens',
+    kks: 'Gold (kks)',
+    copperOre: 'Copper ore',
+    tinOre: 'Tin ore',
+    silverOre: 'Silver ore',
+    ironOre: 'Iron ore',
+    goldOre: 'Gold ore',
+    copperPrice: 'Copper ore price',
+    tinPrice: 'Tin ore price',
+    silverPrice: 'Silver ore price',
+    ironPrice: 'Iron ore price',
+    goldPrice: 'Gold ore price',
+  },
+  PTBR: {
+    startUpgrade: 'Forja atual',
+    finishUpgrade: 'Forja desejada',
+    buyOres: 'Vou comprar os minérios',
+    calculate: 'Calcular',
+    necessaryItens: 'Itens necessários',
+    kks: 'Ouro (kks)',
+    copperOre: 'Cobre Bruto',
+    tinOre: 'Estanho Bruto',
+    silverOre: 'Prata Bruta',
+    ironOre: 'Ferro Bruto',
+    goldOre: 'Ouro Bruto',
+    copperPrice: 'Preço Cobre Bruto',
+    tinPrice: 'Preço Estanho Bruto',
+    silverPrice: 'Preço Prata Bruta',
+    ironPrice: 'Preço Ferro Bruto',
+    goldPrice: 'Preço Ouro Bruto',
+  },
+};
 
 export {
   kakeleJsx,
@@ -143,4 +180,5 @@ export {
   showSetStatusJsx,
   searchItemJsx,
   kakeleItemsFiltersJsx,
+  oreCalculatorJsx,
 };

@@ -1,14 +1,7 @@
 import React from 'react';
 
 export default function OrePriceUpdater(props) {
-  const { oresPrice, setOresPrice } = props;
-  const message = {
-    copperPrice: 'Preço Cobre Bruto',
-    tinPrice: 'Preço Estanho Bruto',
-    silverPrice: 'Preço Prata Bruta',
-    ironPrice: 'Preço Ferro Bruto',
-    goldPrice: 'Preço Ouro Bruto',
-  };
+  const { oresPrice, setOresPrice, text } = props;
 
   const ores = Object.keys(oresPrice);
 
@@ -17,13 +10,13 @@ export default function OrePriceUpdater(props) {
       {ores.map(key => (
         <div className="input-group mb-2" key={key}>
           <span className="input-group-text" id={`preco-${key}-bruto`}>
-            {message[key]}
+            {text[key]}
           </span>
           <input
             type="number"
             className="form-control"
-            placeholder={message}
-            aria-label={message}
+            placeholder={text}
+            aria-label={text}
             aria-describedby={`preco-${key}-bruto`}
             value={oresPrice[key]}
             onChange={e =>

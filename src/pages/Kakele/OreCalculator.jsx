@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import Alert from './Componentes/Alert';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import InputCheckBox from './Componentes/InputCheckBox';
 import OrePriceUpdater from './Componentes/OrePriceUpdater';
 import UpgradeSelector from './Componentes/UpgradeSelector';
+import { oreCalculatorJsx as textOptions } from './Data/dataLanguages';
 import {
   activateAlert,
   addDotToKks,
@@ -13,6 +15,9 @@ import {
 } from './Data/kakele';
 
 export default function OreCalculator() {
+  const { language } = useSelector(state => state.currentKakeleFilters);
+  const text = textOptions[language];
+
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);
   const [desiredUpgradeLvl, setDesiredUpgradeLvl] = useState(0);
   const [necessaryItens, setNecessaryItens] = useState();
@@ -54,33 +59,49 @@ export default function OreCalculator() {
       <div className="d-flex flex-column">
         <UpgradeSelector
           elementId="upgrade-inicial"
-          labelText="Upgrade atual"
+          labelText={text.startUpgrade}
           onChange={setStartUpgradeLvl}
         />
         <UpgradeSelector
           elementId="upgrade-final"
-          labelText="Upgrade desejado"
+          labelText={text.finishUpgrade}
           onChange={setDesiredUpgradeLvl}
         />
         <InputCheckBox
-          labelText="Vou comprar os minérios"
+          labelText={text.buyOres}
           id="adicionarPrecoMinerios"
           onChangeFunc={setAddOrePriceToTotal}
           changeOnCheck={addOrePriceToTotal}
         />
         {addOrePriceToTotal && (
-          <OrePriceUpdater oresPrice={oresPrice} setOresPrice={setOresPrice} />
+          <OrePriceUpdater
+            oresPrice={oresPrice}
+            setOresPrice={setOresPrice}
+            text={text}
+          />
         )}
         <ButtonForKakele onClick={calculateOres} text="Calcular" />
         {necessaryItens && (
           <div>
-            <h3>Itens necessários:</h3>
-            <div>Ouro (kks): {addDotToKks(necessaryItens.kks)}</div>
-            <div>Cobre Bruto: {necessaryItens.cobre}</div>
-            <div>Estanho Bruto: {necessaryItens.estanho}</div>
-            <div>Prata Bruta: {necessaryItens.prata}</div>
-            <div>Ferro Bruto: {necessaryItens.ferro}</div>
-            <div>Ouro Bruto: {necessaryItens.ouro}</div>
+            <h3>{text.necessaryItens}:</h3>
+            <div>
+              {text.kks}: {addDotToKks(necessaryItens.kks)}
+            </div>
+            <div>
+              {text.copperOre}: {necessaryItens.cobre}
+            </div>
+            <div>
+              {text.tinOre}: {necessaryItens.estanho}
+            </div>
+            <div>
+              {text.silverOre}: {necessaryItens.prata}
+            </div>
+            <div>
+              {text.ironOre}: {necessaryItens.ferro}
+            </div>
+            <div>
+              {text.goldOre}: {necessaryItens.ouro}
+            </div>
           </div>
         )}
       </div>
