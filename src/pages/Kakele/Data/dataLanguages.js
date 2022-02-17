@@ -90,7 +90,57 @@ const searchItemJsx = {
     notFound: 'Nem um item encontrado',
   },
 };
-const d = { EN: {}, PTBR: {} };
+const kakeleItemsFiltersJsx = {
+  EN: {
+    itemName: 'Item name',
+    characterLevel: 'Level',
+    characterClass: 'Class',
+    alchemist: 'Alchemist',
+    hunter: 'Hunter',
+    berserker: 'Berserker',
+    warrior: 'Warrior',
+    mage: 'Mage',
+    mainStat: 'Main stat',
+    armor: 'Armor',
+    magic: 'Magic',
+    attack: 'Attack',
+    element: 'Element',
+    all: 'All',
+    light: 'Light',
+    dark: 'Dark',
+    nature: 'Nature',
+    itemSlot: 'Item slot',
+    orderBy: 'Order by',
+  },
+  PTBR: {
+    itemName: 'Nome do item',
+    characterLevel: 'Nivel',
+    characterClass: 'Classe',
+    alchemist: 'Alquemista',
+    hunter: 'Caçador',
+    berserker: 'Furioso',
+    warrior: 'Guerreiro',
+    mage: 'Mago',
+    mainStat: 'Status principal',
+    armor: 'Amadura',
+    magic: 'Magia',
+    attack: 'Ataque',
+    element: 'Elemento',
+    all: 'Todos',
+    light: 'Luz',
+    dark: 'Trevas',
+    nature: 'Natureza',
+    itemSlot: 'Slot do item',
+    orderBy: 'Ordenar por',
+  },
+};
 const e = { EN: {}, PTBR: {} };
 
-export { kakeleJsx, itemCardJsx, setMakerJsx, showSetStatusJsx, searchItemJsx };
+export {
+  kakeleJsx,
+  itemCardJsx,
+  setMakerJsx,
+  showSetStatusJsx,
+  searchItemJsx,
+  kakeleItemsFiltersJsx,
+};

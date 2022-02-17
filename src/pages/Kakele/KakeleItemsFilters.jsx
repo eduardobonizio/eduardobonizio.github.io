@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { updateItensFilter } from '../../store/actions/KakeleFilters.actions';
+import { kakeleItemsFiltersJsx as textOptions } from './Data/dataLanguages';
 import {
   ALL_ITENS_SLOTS_LIST,
   ALL_ITENS_SLOTS_LIST_PT_BR,
@@ -12,8 +13,17 @@ import {
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters } = props;
   const dispatch = useDispatch();
-  const { level, element, characterClass, mainStat, itemName, slot, orderBy } =
-    useSelector(state => state.currentKakeleFilters);
+  const {
+    level,
+    element,
+    characterClass,
+    mainStat,
+    itemName,
+    slot,
+    orderBy,
+    language,
+  } = useSelector(state => state.currentKakeleFilters);
+  const text = textOptions[language];
 
   const updateFilter = (action, newFilterValue) =>
     dispatch(updateItensFilter(action, newFilterValue));
@@ -24,12 +34,12 @@ export default function KakeleItemsFilters(props) {
         {manualFilters && (
           <div className="input-group mb-2">
             <span className="input-group-text" id="nome-do-item">
-              Nome do item
+              {text.itemName}
             </span>
             <input
               type="text"
               className="form-control"
-              placeholder="Nome do item"
+              placeholder={text.itemName}
               aria-label="Nome do item"
               aria-describedby="nome-do-item"
               value={itemName}
@@ -38,7 +48,7 @@ export default function KakeleItemsFilters(props) {
           </div>
         )}
         <span className="input-group-text" id="nivel-do-personagem">
-          Nivel do personagem
+          {text.characterLevel}
         </span>
         <input
           type="number"
@@ -54,7 +64,7 @@ export default function KakeleItemsFilters(props) {
       </div>
       <div className="input-group mb-2">
         <label className="input-group-text" htmlFor="classe-do-personagem">
-          Classe
+          {text.characterClass}
         </label>
         <select
           className="form-select"
@@ -62,18 +72,18 @@ export default function KakeleItemsFilters(props) {
           defaultValue={characterClass}
           onChange={e => updateFilter('UPDATE_CHARACTER_CLASS', e.target.value)}
         >
-          <option value="Alchemist">Alquemista</option>
-          <option value="Hunter">Caçador</option>
-          <option value="Berserker">Furioso</option>
-          <option value="Warrior">Guerreiro</option>
-          <option value="Mage">Mago</option>
+          <option value="Alchemist">{text.alchemist}</option>
+          <option value="Hunter">{text.hunter}</option>
+          <option value="Berserker">{text.berserker}</option>
+          <option value="Warrior">{text.warrior}</option>
+          <option value="Mage">{text.mage}</option>
         </select>
       </div>
 
       {statusPrincipal && (
         <div className="input-group mb-2">
           <label className="input-group-text" htmlFor="status-principal">
-            Status principal
+            {text.mainStat}
           </label>
           <select
             className="form-select"
@@ -81,16 +91,16 @@ export default function KakeleItemsFilters(props) {
             defaultValue={mainStat}
             onChange={e => updateFilter('UPDATE_STAT_FILTER', e.target.value)}
           >
-            <option value="armor">Amadura</option>
-            <option value="magic">Magia</option>
-            <option value="attack">Ataque</option>
+            <option value="armor">{text.armor}</option>
+            <option value="magic">{text.magic}</option>
+            <option value="attack">{text.attack}</option>
           </select>
         </div>
       )}
 
       <div className="input-group mb-2">
         <label className="input-group-text" htmlFor="elemento-do-set">
-          Elemento
+          {text.element}
         </label>
         <select
           className="form-select"
@@ -98,17 +108,17 @@ export default function KakeleItemsFilters(props) {
           defaultValue={element}
           onChange={e => updateFilter('UPDATE_ELEMENT_FILTER', e.target.value)}
         >
-          <option value="All">Todos</option>
-          <option value="Light">Luz</option>
-          <option value="Dark">Trevas</option>
-          <option value="Nature">Natureza</option>
+          <option value="All">{text.all}</option>
+          <option value="Light">{text.light}</option>
+          <option value="Dark">{text.dark}</option>
+          <option value="Nature">{text.nature}</option>
         </select>
       </div>
       {manualFilters && (
         <>
           <div className="input-group mb-2">
             <label className="input-group-text" htmlFor="slot-do-item">
-              Slot do item
+              {text.itemSlot}
             </label>
             <select
               className="form-select"
@@ -116,7 +126,7 @@ export default function KakeleItemsFilters(props) {
               defaultValue={slot}
               onChange={e => updateFilter('UPDATE_SLOT_FILTER', e.target.value)}
             >
-              <option value="All">Todos</option>
+              <option value="All">{text.all}</option>
               {ALL_ITENS_SLOTS_LIST.map(curSlot => (
                 <option value={curSlot} key={curSlot}>
                   {ALL_ITENS_SLOTS_LIST_PT_BR[curSlot]}
@@ -126,7 +136,7 @@ export default function KakeleItemsFilters(props) {
           </div>
           <div className="input-group mb-2">
             <label className="input-group-text" htmlFor="filtro">
-              Ordenar por
+              {text.orderBy}
             </label>
             <select
               className="form-select"
