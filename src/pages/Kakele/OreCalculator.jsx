@@ -52,9 +52,8 @@ export default function OreCalculator() {
   };
 
   return (
-    <div className="container d-flex justify-content-center">
-      {showAlert && <Alert message={text.alert} />}
-      <div className="d-flex flex-column">
+    <div className="container ore-upgrader-container">
+      <div className="d-flex flex-column ore-upgrader-filter-container">
         <UpgradeSelector
           elementId="upgrade-inicial"
           labelText={text.startUpgrade}
@@ -102,6 +101,7 @@ export default function OreCalculator() {
             </div>
           </div>
         )}
+        {showAlert && <Alert message={text.alert} />}
       </div>
     </div>
   );

@@ -23,12 +23,6 @@
   color: gold;
 }
 
-.alert-fixed {
-  padding: 10px !important;
-  border-radius: 15px !important;
-  z-index: 9999;
-}
-
 .footer-container a {
   margin-right: 10px;
   color: inherit;
@@ -46,6 +40,24 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
+  }
+  .ore-upgrader-container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ore-upgrader-container .ore-upgrader-filter-container {
+    min-width: 312px;
   }
 }
 /*# sourceMappingURL=App.css.map */
