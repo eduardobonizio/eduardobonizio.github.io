@@ -73,7 +73,7 @@ export default function SetMaker() {
   };
 
   const redirectToShowSetPage = () => {
-    const link = genereateLinkToViewSet(recomendedSet, false);
+    const link = genereateLinkToViewSet(recomendedSet, false, language);
     if (link) navigate(link);
   };
 

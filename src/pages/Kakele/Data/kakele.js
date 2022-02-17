@@ -14,11 +14,12 @@ const urlParamsToObject = paramsText => {
   return JSON.parse(formatedText);
 };
 
-const genereateLinkToViewSet = (setList, origin) => {
+const genereateLinkToViewSet = (setList, origin, language) => {
   if (!setList) return false;
+  const name = `name${language}`;
   const link = setList.reduce((anterior, proximo) => {
     if (proximo.level > 0) {
-      const adicionarTexto = `${proximo.slot}=${proximo.name}`.replaceAll(
+      const adicionarTexto = `${proximo.slot}=${proximo[name]}`.replaceAll(
         ' ',
         '-',
       );
