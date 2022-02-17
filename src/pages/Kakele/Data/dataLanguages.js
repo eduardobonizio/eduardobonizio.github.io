@@ -156,7 +156,7 @@ const oreCalculatorJsx = {
   PTBR: {
     startUpgrade: 'Forja atual',
     finishUpgrade: 'Forja desejada',
-    buyOres: 'Vou comprar os minérios',
+    buyOres: 'Adicionar preço dos minérios',
     calculate: 'Calcular',
     necessaryItens: 'Itens necessários',
     kks: 'Ouro (kks)',
