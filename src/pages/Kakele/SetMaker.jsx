@@ -42,6 +42,7 @@ export default function SetMaker() {
         ignoredItens,
         ignoreThisSlotsElement,
         element,
+        language,
       ),
     );
 

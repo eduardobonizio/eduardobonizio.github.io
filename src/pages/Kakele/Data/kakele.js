@@ -96,15 +96,15 @@ const calculateOreQuantityAndPrice = finishUpgradeLvl => {
 const addDotToKks = number =>
   number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
-const filterItensBySlot = (itensList, slot, ignoreItensList) =>
-  itensList.filter(
+const filterItensBySlot = (itensList, slot, ignoreItensList, language) => {
+  const name = `name${language}`;
+
+  return itensList.filter(
     item =>
-      (item.slot === slot &&
-        !ignoreItensList.includes(item.name) &&
-        !ignoreItensList.includes(item.namePtBr)) ||
+      (item.slot === slot && !ignoreItensList.includes(item[name])) ||
       slot === 'All',
   );
-
+};
 const filterItensByElement = (itensList, element, ignoreElement) =>
   itensList.filter(
     item => item.energy === element || element === 'All' || ignoreElement,
@@ -116,11 +116,13 @@ const filterItens = (
   ignoreItensList,
   element,
   ignoreElement,
+  language,
 ) => {
   const itensFilteredBySlot = filterItensBySlot(
     itensList,
     slot,
     ignoreItensList,
+    language,
   );
   const itensFilteredBySlotAndElement = filterItensByElement(
     itensFilteredBySlot,
@@ -213,6 +215,7 @@ const findBestSet = (
   ignoredItens,
   ignoreSlotElementList,
   element,
+  language,
 ) => {
   if (skipItemSlot(characterClass, slot)) return false;
 
@@ -224,6 +227,7 @@ const findBestSet = (
     ignoredItens,
     element,
     ignoreElement,
+    language,
   );
 
   const alternativeStatus = getAlternativeStatus(characterClass, mainStat);
