@@ -164,9 +164,7 @@ export default function ItemCard(props) {
                     id={`exclude-item-${index}`}
                     checked={ignoredItens.includes(item[`name${language}`])}
                     aria-label="Checkbox for following text input"
-                    onChange={e =>
-                      ignoreItens(e.target.nameEN, e.target.checked)
-                    }
+                    onChange={e => ignoreItens(e.target.name, e.target.checked)}
                   />
                 </div>
                 <label
@@ -186,10 +184,7 @@ export default function ItemCard(props) {
                     checked={ignoreThisSlotsElement.includes(slot)}
                     aria-label="Checkbox for following text input"
                     onChange={e =>
-                      ignoreElementForThisSlot(
-                        e.target.nameEN,
-                        e.target.checked,
-                      )
+                      ignoreElementForThisSlot(e.target.name, e.target.checked)
                     }
                   />
                 </div>
