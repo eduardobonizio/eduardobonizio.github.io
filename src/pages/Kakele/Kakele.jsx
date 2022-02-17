@@ -5,6 +5,21 @@ import { Link, Outlet } from 'react-router-dom';
 import { updateItensFilter } from '../../store/actions/KakeleFilters.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 
+const textOptions = {
+  EN: {
+    showSet: 'Show Set',
+    generateSet: 'Generate Set',
+    searchItem: 'Search Item',
+    oreCalculator: 'Upgrades',
+  },
+  PTBR: {
+    showSet: 'Ver Set',
+    generateSet: 'Gerar Set',
+    searchItem: 'Procurar Item',
+    oreCalculator: 'Forja',
+  },
+};
+
 export default function Kakele() {
   const dispatch = useDispatch();
   const { language } = useSelector(state => state.currentKakeleFilters);
@@ -20,9 +35,9 @@ export default function Kakele() {
   if (!language)
     return (
       <div className="container d-flex flex-column align-items-center">
-        <ButtonForKakele onClick={() => changeLanguage('En')} text="English" />
+        <ButtonForKakele onClick={() => changeLanguage('EN')} text="English" />
         <ButtonForKakele
-          onClick={() => changeLanguage('PtBr')}
+          onClick={() => changeLanguage('PTBR')}
           text="Português"
         />
       </div>
@@ -31,10 +46,10 @@ export default function Kakele() {
   return (
     <div className="container d-flex justify-content-center flex-column">
       <div className="container d-flex justify-content-around mb-2">
-        <Link to="set">Ver Set</Link>
-        <Link to="set-maker">Gerar set</Link>
-        <Link to="search-item">Procurar Item</Link>
-        <Link to="ore-calculator">Minérios</Link>
+        <Link to="set">{textOptions[language].showSet}</Link>
+        <Link to="set-maker">{textOptions[language].generateSet}</Link>
+        <Link to="search-item">{textOptions[language].searchItem}</Link>
+        <Link to="ore-calculator">{textOptions[language].oreCalculator}</Link>
       </div>
       <Outlet />
     </div>
