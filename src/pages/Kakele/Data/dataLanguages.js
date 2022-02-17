@@ -217,6 +217,17 @@ const ITEM_FILTERS_NAME = {
   },
 };
 
+const showSetJsx = {
+  EN: {
+    searchItems: 'Search items',
+    copy: 'Copy link',
+  },
+  PTBR: {
+    searchItems: 'Procurar itens',
+    copy: 'Copiar link',
+  },
+};
+
 export {
   kakeleJsx,
   itemCardJsx,
@@ -225,6 +236,7 @@ export {
   searchItemJsx,
   kakeleItemsFiltersJsx,
   oreCalculatorJsx,
+  showSetJsx,
   SLOTS_NAMES,
   ITEM_FILTERS_NAME,
 };

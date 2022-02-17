@@ -10,6 +10,7 @@ import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
+import { showSetJsx as textOptions } from './Data/dataLanguages';
 import {
   findItemByName,
   genereateLinkToViewSet,
@@ -25,9 +26,10 @@ import {
 export default function ShowSet() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const urlParams = useParams();
   const currentSet = useSelector(state => state.currentSet);
   const { language } = useSelector(state => state.currentKakeleFilters);
-  const urlParams = useParams();
+  const text = textOptions[language];
 
   const normalizeSet = setItems => {
     const shield =
@@ -84,9 +86,9 @@ export default function ShowSet() {
         {currentSet && <ShowSetStatus itensListToShowStatus={currentSet} />}
         <ButtonForKakele
           onClick={() => navigate('/kakele/search-item')}
-          text="Procurar itens"
+          text={text.searchItems}
         />
-        <ButtonForKakele onClick={copyLink} text="Copiar link" />
+        <ButtonForKakele onClick={copyLink} text={text.copy} />
       </div>
       {currentSet && (
         <div className="row row-cols-auto d-flex justify-content-center">
