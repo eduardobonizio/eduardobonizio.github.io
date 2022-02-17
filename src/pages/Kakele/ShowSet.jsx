@@ -26,6 +26,7 @@ export default function ShowSet() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const currentSet = useSelector(state => state.currentSet);
+  const { language } = useSelector(state => state.currentKakeleFilters);
   const urlParams = useParams();
 
   const normalizeSet = setItems => {
@@ -73,7 +74,7 @@ export default function ShowSet() {
   const copyLink = () => {
     const origin = window.location.origin.toString();
     const setToArray = Object.values(currentSet).map(item => item);
-    const link = genereateLinkToViewSet(setToArray, origin);
+    const link = genereateLinkToViewSet(setToArray, origin, language);
     if (link) copy(link);
   };
 

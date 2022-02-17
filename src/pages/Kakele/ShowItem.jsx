@@ -13,6 +13,8 @@ import './css/ShowItem.css';
 export default function ShowItem() {
   const navigate = useNavigate();
   const currentSet = useSelector(state => state.currentSet);
+  const { language } = useSelector(state => state.currentKakeleFilters);
+
   const { name } = useParams(); // Unpacking and retrieve id
   const allItens = [...equipments, ...weapons];
   const item =
@@ -22,7 +24,7 @@ export default function ShowItem() {
 
   const redirectToShowSetPage = () => {
     const setToArray = Object.values(currentSet).map(i => i);
-    const link = genereateLinkToViewSet(setToArray, '');
+    const link = genereateLinkToViewSet(setToArray, false, language);
     if (link) navigate(link);
   };
 
