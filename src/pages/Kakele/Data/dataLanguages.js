@@ -48,8 +48,21 @@ const itemCardJsx = {
     copy: 'Copiar',
   },
 };
-const a = { EN: {}, PTBR: {} };
+const setMakerJsx = {
+  EN: {
+    title: 'Set generator',
+    generateSet: 'Generate set',
+    equipAll: 'Equip all',
+    searchItens: 'Search itens',
+  },
+  PTBR: {
+    title: 'Gerador de set',
+    generateSet: 'Gerar set',
+    equipAll: 'Equipar tudo',
+    searchItens: 'Procurar itens',
+  },
+};
 const b = { EN: {}, PTBR: {} };
 const c = { EN: {}, PTBR: {} };
 
-export { kakeleJsx, itemCardJsx };
+export { kakeleJsx, itemCardJsx, setMakerJsx };

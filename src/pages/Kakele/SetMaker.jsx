@@ -7,6 +7,7 @@ import './css/ShowStatusFilterAndCards.css';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import ShowSetStatus from './Componentes/ShowSetStatus';
+import { setMakerJsx as textOptions } from './Data/dataLanguages';
 import {
   filterItensByLevelAndClass,
   findBestSet,
@@ -17,10 +18,10 @@ import KakeleItemsFilters from './KakeleItemsFilters';
 
 export default function SetMaker() {
   const navigate = useNavigate();
-  const { level, element, characterClass, mainStat } = useSelector(
+  const { level, element, characterClass, mainStat, language } = useSelector(
     state => state.currentKakeleFilters,
   );
-
+  const text = textOptions[language];
   const [recomendedSet, setRecomendedSet] = useState(false);
   const [ignoredItens, setIgnoredItens] = useState([]);
   const [ignoreThisSlotsElement, setIgnoreThisSlotsElement] = useState([]);
@@ -79,21 +80,21 @@ export default function SetMaker() {
   return (
     <div className="container status-and-card-container">
       <div className="d-flex flex-column set-maker-filters-container">
-        <h3 className="">Gerador de set</h3>
+        <h3 className="">{text.title}</h3>
 
         <KakeleItemsFilters statusPrincipal />
         <div className="container d-flex justify-content-around">
-          <ButtonForKakele onClick={generateSet} text="Gerar set" />
+          <ButtonForKakele onClick={generateSet} text={text.generateSet} />
           {recomendedSet && (
             <ButtonForKakele
               onClick={redirectToShowSetPage}
-              text="Equipar tudo"
+              text={text.equipAll}
             />
           )}
         </div>
         <ButtonForKakele
           onClick={() => navigate('/kakele/search-item')}
-          text="Escolher itens manualmente"
+          text={text.searchItens}
         />
 
         <ShowSetStatus itensListToShowStatus={recomendedSet} />
