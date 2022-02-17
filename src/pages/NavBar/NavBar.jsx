@@ -35,7 +35,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/select-language" className="nav-link">
+              <Link to="/kakele" className="nav-link">
                 Kakele
               </Link>
             </li>
