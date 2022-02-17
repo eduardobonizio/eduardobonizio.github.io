@@ -62,7 +62,24 @@ const setMakerJsx = {
     searchItens: 'Procurar itens',
   },
 };
-const b = { EN: {}, PTBR: {} };
+const showSetStatusJsx = {
+  EN: {
+    attributes: 'Set attributes',
+    armor: 'Armor',
+    magic: 'Magic',
+    attack: 'Attack',
+    element: 'Element',
+  },
+  PTBR: {
+    attributes: 'Atributos do set',
+    armor: 'Armadura',
+    magic: 'Magia',
+    attack: 'Ataque',
+    element: 'Elemento',
+  },
+};
 const c = { EN: {}, PTBR: {} };
+const d = { EN: {}, PTBR: {} };
+const e = { EN: {}, PTBR: {} };
 
-export { kakeleJsx, itemCardJsx, setMakerJsx };
+export { kakeleJsx, itemCardJsx, setMakerJsx, showSetStatusJsx };

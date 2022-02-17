@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
+import { showSetStatusJsx as textOptions } from '../Data/dataLanguages';
 import { checkSetElement } from '../Data/kakele';
 
 export default function ShowSetStatus(props) {
   const { itensListToShowStatus } = props;
   const [element, setElement] = useState(false);
   const [itensList, setItensList] = useState(false);
+  const { language } = useSelector(state => state.currentKakeleFilters);
+  const text = textOptions[language];
 
   useEffect(() => {
     const newItensList = [
@@ -13,16 +17,16 @@ export default function ShowSetStatus(props) {
     ];
     setItensList(newItensList);
 
-    const elementQuantity = checkSetElement(newItensList);
+    const elementQuantity = checkSetElement(newItensList, language);
 
     setElement(elementQuantity);
   }, [itensListToShowStatus]);
 
   return (
     <div className="status-container">
-      <h3>Atributos do set</h3>
+      <h3>{text.attributes}</h3>
       <p>
-        Armadura:{' '}
+        {text.armor}:{' '}
         {itensList &&
           itensList.reduce(
             (anterior, proximo) => anterior + (proximo.armor || 0),
@@ -30,7 +34,7 @@ export default function ShowSetStatus(props) {
           )}
       </p>
       <p>
-        Magia:{' '}
+        {text.magic}:{' '}
         {itensList &&
           itensList.reduce(
             (anterior, proximo) => anterior + (proximo.magic || 0),
@@ -38,7 +42,7 @@ export default function ShowSetStatus(props) {
           )}
       </p>
       <p>
-        Ataque:{' '}
+        {text.attack}:{' '}
         {itensList &&
           itensList.reduce(
             (anterior, proximo) => anterior + (proximo.attack || 0),
@@ -48,7 +52,8 @@ export default function ShowSetStatus(props) {
       {itensList && (
         <>
           <p>
-            Elemento: <span className={element.element}>{element.element}</span>
+            {text.element}:{' '}
+            <span className={element.element}>{element.element}</span>
           </p>
           <p>{element.text}</p>
         </>

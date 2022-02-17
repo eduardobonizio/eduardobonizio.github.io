@@ -274,18 +274,22 @@ const filterItensByLevelAndClass = (listaDeItens, level, classe) =>
 const elementQuantityInSet = (itensList, element) =>
   itensList.filter(item => item.energy === element).length;
 
-const checkSetElement = itens => {
+const checkSetElement = (itens, language) => {
+  const name = `name${language}`;
   const elements = {
     light: {
-      name: 'Light',
+      nameEN: 'Light',
+      namePTBR: 'Luz',
       quantity: elementQuantityInSet(itens, 'Light'),
     },
     nature: {
-      name: 'Nature',
+      nameEN: 'Nature',
+      namePTBR: 'Natureza',
       quantity: elementQuantityInSet(itens, 'Nature'),
     },
     dark: {
-      name: 'Dark',
+      nameEN: 'Dark',
+      namePTBR: 'Trevas',
       quantity: elementQuantityInSet(itens, 'Dark'),
     },
   };
@@ -296,7 +300,9 @@ const checkSetElement = itens => {
 
   const element = elementResult.quantity >= 5 ? elementResult.name : 'None';
 
-  const text = `Luz: ${elements.light.quantity}, Natureza: ${elements.nature.quantity}, Trevas: ${elements.dark.quantity}`;
+  const { light, nature, dark } = elements;
+
+  const text = `${light[name]}: ${light.quantity}, ${nature[name]}: ${nature.quantity}, ${dark[name]}: ${dark.quantity}`;
 
   return { text, element };
 };
