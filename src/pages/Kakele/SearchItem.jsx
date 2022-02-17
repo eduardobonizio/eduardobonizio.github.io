@@ -15,7 +15,7 @@ import {
   findItemsByName,
   genereateLinkToViewSet,
 } from './kakele';
-import { equipments, weapons, FAKE_ITEM } from './kakeleData';
+import { equipments, weapons, FAKE_ITEM } from './Data/kakeleData';
 import KakeleItemsFilters from './KakeleItemsFilters';
 
 export default function SearchItem() {

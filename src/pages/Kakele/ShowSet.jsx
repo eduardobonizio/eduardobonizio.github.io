@@ -20,7 +20,7 @@ import {
   weapons,
   ALL_ITENS_SLOTS_LIST,
   FAKE_ITEM,
-} from './kakeleData';
+} from './Data/kakeleData';
 
 export default function ShowSet() {
   const navigate = useNavigate();

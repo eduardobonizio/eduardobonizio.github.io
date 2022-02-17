@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
 import { genereateLinkToViewSet } from './kakele';
-import { equipments, weapons } from './kakeleData';
+import { equipments, weapons } from './Data/kakeleData';
 
 import './css/ShowItem.css';
 

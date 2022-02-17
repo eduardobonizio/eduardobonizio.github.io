@@ -7,7 +7,7 @@ import {
   ALL_ITENS_SLOTS_LIST_PT_BR,
   ITEM_FILTERS,
   ITEM_FILTERS_PT_BR,
-} from './kakeleData';
+} from './Data/kakeleData';
 
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters } = props;

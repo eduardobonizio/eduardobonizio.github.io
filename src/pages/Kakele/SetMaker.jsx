@@ -12,7 +12,7 @@ import {
   findBestSet,
   genereateLinkToViewSet,
 } from './kakele';
-import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './kakeleData';
+import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './Data/kakeleData';
 import KakeleItemsFilters from './KakeleItemsFilters';
 
 export default function SetMaker() {

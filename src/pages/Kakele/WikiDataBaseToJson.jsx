@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import copy from 'copy-to-clipboard';
 
 import ButtonForKakele from './Componentes/ButtonForKakele';
-import { equipments, weapons } from './kakeleData';
+import { equipments, weapons } from './Data/kakeleData';
 
 export default function WikiDataBaseToJson() {
   const [wikiType, setWikiType] = useState('equipments');

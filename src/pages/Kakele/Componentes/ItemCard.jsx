@@ -8,7 +8,7 @@ import {
   udateOneEquipment,
   updateCurrentSet,
 } from '../../../store/actions/kakeleCurrentSet.actions';
-import { FAKE_ITEM } from '../kakeleData';
+import { FAKE_ITEM } from '../Data/kakeleData';
 import ButtonForKakele from './ButtonForKakele';
 
 import './css/ItemCard.css';
