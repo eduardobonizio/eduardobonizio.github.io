@@ -8,6 +8,7 @@ import {
   udateOneEquipment,
   updateCurrentSet,
 } from '../../../store/actions/kakeleCurrentSet.actions';
+import { itemCardJsx as textOptions } from '../Data/dataLanguages';
 import { FAKE_ITEM } from '../Data/kakeleData';
 import ButtonForKakele from './ButtonForKakele';
 
@@ -16,6 +17,7 @@ import './css/ItemCard.css';
 export default function ItemCard(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const {
     index,
     ignoredItens,
@@ -39,6 +41,8 @@ export default function ItemCard(props) {
 
   const showDetails = window.location.href.includes('kakele/item/');
   const currentSet = useSelector(state => state.currentSet);
+  const { language } = useSelector(state => state.currentKakeleFilters);
+  const text = textOptions[language];
 
   const equipItem = thisItem => {
     if (thisItem.name !== '-----------') {
@@ -113,24 +117,38 @@ export default function ItemCard(props) {
               {imgUrl && (
                 <img alt={namePtBr} src={imgUrl.replaceAll('"', '')} />
               )}
-              Elemento: <span className={energy}>{energy}</span>
+              {text.element}: <span className={energy}>{energy}</span>
             </span>
-            <span className="card-text">Armadura: {armor}</span>
-            <span className="card-text">Magia: {magic}</span>
-            <span className="card-text">Ataque: {attack}</span>
-            <span className="card-text">Nivel: {level}</span>
-            <span className="card-text">Slot: {slot}</span>
+            <span className="card-text">
+              {text.armor}: {armor}
+            </span>
+            <span className="card-text">
+              {text.magic}: {magic}
+            </span>
+            <span className="card-text">
+              {text.attack}: {attack}
+            </span>
+            <span className="card-text">
+              {text.level}: {level}
+            </span>
+            <span className="card-text">
+              {text.slot}: {slot}
+            </span>
             {showDetails && (
               <>
-                <span className="card-text">Fonte: {sources}</span>
-                <span className="card-text card-info">Info: {obsPtBr}</span>
+                <span className="card-text">
+                  {text.sources}: {sources}
+                </span>
+                <span className="card-text card-info">
+                  {text.info}: {obsPtBr}
+                </span>
               </>
             )}
 
             {currentSet[slot] &&
               currentSet[slot].namePtBr === namePtBr &&
               currentSet[slot].name !== '-----------' && (
-                <span className="equiped-item">Equipado</span>
+                <span className="equiped-item">{text.equiped}</span>
               )}
           </div>
           {ignoredItens && (
@@ -151,7 +169,7 @@ export default function ItemCard(props) {
                   htmlFor={`exclude-item-${index}`}
                   className="input-group-text"
                 >
-                  Não incluir
+                  {text.ignoreItem}
                 </label>
               </div>
               <div className="input-group mb-2">
@@ -172,24 +190,24 @@ export default function ItemCard(props) {
                   htmlFor={`ignore-slot-element-${index}`}
                   className="input-group-text"
                 >
-                  Ignora este elemento
+                  {text.ignoreElement}
                 </label>
               </div>
             </>
           )}
           <div className="d-flex button-container">
-            <ButtonForKakele
-              onClick={() => copy(namePtBr)}
-              text="Copiar nome"
-            />
+            <ButtonForKakele onClick={() => copy(namePtBr)} text={text.copy} />
             {!showDetails && (
               <ButtonForKakele
                 onClick={() => navigate(`/kakele/item/${namePtBr}`)}
-                text="Ver Item"
+                text={text.showItem}
               />
             )}
 
-            <ButtonForKakele onClick={() => equipItem(item)} text="Equipar" />
+            <ButtonForKakele
+              onClick={() => equipItem(item)}
+              text={text.equipItem}
+            />
           </div>
         </div>
       </div>
