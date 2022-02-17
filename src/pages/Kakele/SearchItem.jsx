@@ -8,7 +8,7 @@ import './css/SearchItem.css';
 import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
-import { setMakerJsx as textOptions } from './Data/dataLanguages';
+import { searchItemJsx as textOptions } from './Data/dataLanguages';
 import {
   filterItensByElement,
   filterItensByLevelAndClass,
@@ -26,7 +26,6 @@ export default function SearchItem() {
   const { level, itemName, element, slot, characterClass, orderBy, language } =
     useSelector(state => state.currentKakeleFilters);
   const text = textOptions[language];
-  console.log(text);
   const [foundItens, setFoundItens] = useState(false);
 
   const lookForItens = () => {
@@ -78,8 +77,8 @@ export default function SearchItem() {
     <div className="container d-flex kakele-search-item">
       <div className="d-flex d-flex flex-column kakele-search-item-filters">
         <KakeleItemsFilters manualFilters />
-        <ButtonForKakele onClick={lookForItens} text="Procurar" />
-        <ButtonForKakele onClick={redirectToShowSetPage} text="Ver set" />
+        <ButtonForKakele onClick={lookForItens} text={text.search} />
+        <ButtonForKakele onClick={redirectToShowSetPage} text={text.showSet} />
       </div>
       <div className="row row-cols-auto">
         {foundItens.length > 0 ? (
@@ -89,7 +88,7 @@ export default function SearchItem() {
                 <ItemCard
                   index={i}
                   item={item}
-                  key={item.name}
+                  key={item.nameEN}
                   equipItem={equipItem}
                 />
               );
@@ -97,7 +96,7 @@ export default function SearchItem() {
             return false;
           })
         ) : (
-          <span>Nem um item encontrado</span>
+          <span>{text.notFound}</span>
         )}
       </div>
     </div>

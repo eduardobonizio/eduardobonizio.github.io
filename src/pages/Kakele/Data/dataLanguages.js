@@ -78,8 +78,19 @@ const showSetStatusJsx = {
     element: 'Elemento',
   },
 };
-const c = { EN: {}, PTBR: {} };
+const searchItemJsx = {
+  EN: {
+    search: 'Search',
+    showSet: 'Show set',
+    notFound: 'No item found',
+  },
+  PTBR: {
+    search: 'Procurar',
+    showSet: 'Ver set',
+    notFound: 'Nem um item encontrado',
+  },
+};
 const d = { EN: {}, PTBR: {} };
 const e = { EN: {}, PTBR: {} };
 
-export { kakeleJsx, itemCardJsx, setMakerJsx, showSetStatusJsx };
+export { kakeleJsx, itemCardJsx, setMakerJsx, showSetStatusJsx, searchItemJsx };
