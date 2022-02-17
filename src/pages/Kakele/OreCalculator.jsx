@@ -53,9 +53,7 @@ export default function OreCalculator() {
 
   return (
     <div className="container d-flex justify-content-center">
-      {showAlert && (
-        <Alert message="O upgrade desejado tem que ser maior que o upgrade atual" />
-      )}
+      {showAlert && <Alert message={text.alert} />}
       <div className="d-flex flex-column">
         <UpgradeSelector
           elementId="upgrade-inicial"

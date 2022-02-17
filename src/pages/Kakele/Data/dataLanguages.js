@@ -152,6 +152,7 @@ const oreCalculatorJsx = {
     silverPrice: 'Silver ore price',
     ironPrice: 'Iron ore price',
     goldPrice: 'Gold ore price',
+    alert: 'Current upgrade must be greater then desired upgrade',
   },
   PTBR: {
     startUpgrade: 'Forja atual',
@@ -170,6 +171,7 @@ const oreCalculatorJsx = {
     silverPrice: 'Preço Prata Bruta',
     ironPrice: 'Preço Ferro Bruto',
     goldPrice: 'Preço Ouro Bruto',
+    alert: 'A forja desejada tem que ser maior que a forja atual',
   },
 };
 
