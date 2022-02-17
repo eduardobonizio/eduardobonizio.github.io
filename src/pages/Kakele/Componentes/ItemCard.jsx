@@ -28,7 +28,6 @@ export default function ItemCard(props) {
     item: {
       sources,
       obsPtBr,
-      namePtBr,
       energy,
       armor,
       magic,
@@ -45,7 +44,7 @@ export default function ItemCard(props) {
   const text = textOptions[language];
 
   const equipItem = thisItem => {
-    if (thisItem.name !== '-----------') {
+    if (thisItem.nameEN !== '-----------') {
       if (thisItem.slot === 'weapon') {
         if (thisItem.twoHanded) {
           dispatch(
@@ -111,11 +110,14 @@ export default function ItemCard(props) {
     <div className="col">
       <div className="card mb-2">
         <div className="card-body pb-0">
-          <h6 className="card-title">{namePtBr}</h6>
+          <h6 className="card-title">{item[`name${language}`]}</h6>
           <div className="d-flex flex-column">
             <span className="card-text">
               {imgUrl && (
-                <img alt={namePtBr} src={imgUrl.replaceAll('"', '')} />
+                <img
+                  alt={item[`name${language}`]}
+                  src={imgUrl.replaceAll('"', '')}
+                />
               )}
               {text.element}: <span className={energy}>{energy}</span>
             </span>
@@ -146,8 +148,8 @@ export default function ItemCard(props) {
             )}
 
             {currentSet[slot] &&
-              currentSet[slot].namePtBr === namePtBr &&
-              currentSet[slot].name !== '-----------' && (
+              currentSet[slot][`name${language}`] === item[`name${language}`] &&
+              currentSet[slot].nameEN !== '-----------' && (
                 <span className="equiped-item">{text.equiped}</span>
               )}
           </div>
@@ -158,11 +160,13 @@ export default function ItemCard(props) {
                   <input
                     className="form-check-input"
                     type="checkbox"
-                    name={namePtBr}
+                    name={item[`name${language}`]}
                     id={`exclude-item-${index}`}
-                    checked={ignoredItens.includes(namePtBr)}
+                    checked={ignoredItens.includes(item[`name${language}`])}
                     aria-label="Checkbox for following text input"
-                    onChange={e => ignoreItens(e.target.name, e.target.checked)}
+                    onChange={e =>
+                      ignoreItens(e.target.nameEN, e.target.checked)
+                    }
                   />
                 </div>
                 <label
@@ -182,7 +186,10 @@ export default function ItemCard(props) {
                     checked={ignoreThisSlotsElement.includes(slot)}
                     aria-label="Checkbox for following text input"
                     onChange={e =>
-                      ignoreElementForThisSlot(e.target.name, e.target.checked)
+                      ignoreElementForThisSlot(
+                        e.target.nameEN,
+                        e.target.checked,
+                      )
                     }
                   />
                 </div>
@@ -196,10 +203,15 @@ export default function ItemCard(props) {
             </>
           )}
           <div className="d-flex button-container">
-            <ButtonForKakele onClick={() => copy(namePtBr)} text={text.copy} />
+            <ButtonForKakele
+              onClick={() => copy(item[`name${language}`])}
+              text={text.copy}
+            />
             {!showDetails && (
               <ButtonForKakele
-                onClick={() => navigate(`/kakele/item/${namePtBr}`)}
+                onClick={() =>
+                  navigate(`/kakele/item/${item[`name${language}`]}`)
+                }
                 text={text.showItem}
               />
             )}

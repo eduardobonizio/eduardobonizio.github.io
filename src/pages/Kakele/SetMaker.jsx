@@ -110,7 +110,7 @@ export default function SetMaker() {
                   ignoreThisSlotsElement={ignoreThisSlotsElement}
                   ignoreElementForThisSlot={ignoreElementForThisSlot}
                   item={item}
-                  key={item.name}
+                  key={item.nameEN}
                 />
               );
             }
