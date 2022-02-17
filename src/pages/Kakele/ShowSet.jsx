@@ -31,11 +31,11 @@ export default function ShowSet() {
 
   const normalizeSet = setItems => {
     const shield =
-      setItems.weapon.twoHanded || setItems.book.name !== '-----------'
+      setItems.weapon.twoHanded || setItems.book.nameEN !== '-----------'
         ? { ...FAKE_ITEM, slot: 'shield' }
         : { ...setItems.shield };
     const book =
-      setItems.weapon.twoHanded || setItems.shield.name !== '-----------'
+      setItems.weapon.twoHanded || setItems.shield.nameEN !== '-----------'
         ? { ...FAKE_ITEM, slot: 'book' }
         : { ...setItems.book };
 
@@ -93,50 +93,56 @@ export default function ShowSet() {
           {currentSet.necklace && (
             <ItemCard
               item={currentSet.necklace}
-              index={currentSet.necklace.name}
+              index={currentSet.necklace.nameEN}
             />
           )}
 
           {currentSet.helmet && (
-            <ItemCard item={currentSet.helmet} index={currentSet.helmet.name} />
-          )}
-
-          {currentSet.ring && (
-            <ItemCard item={currentSet.ring} index={currentSet.ring.name} />
-          )}
-
-          {currentSet.weapon && (
-            <ItemCard item={currentSet.weapon} index={currentSet.weapon.name} />
-          )}
-
-          {currentSet.armor && (
-            <ItemCard item={currentSet.armor} index={currentSet.armor.name} />
-          )}
-
-          {currentSet.shield && currentSet.shield.name !== '-----------' && (
             <ItemCard
-              item={currentSet.shield || currentSet.book}
-              index={currentSet.shield.name || currentSet.book.name}
+              item={currentSet.helmet}
+              index={currentSet.helmet.nameEN}
             />
           )}
 
-          {currentSet.book && currentSet.book.name !== '-----------' && (
-            <ItemCard item={currentSet.book} index={currentSet.book.name} />
+          {currentSet.ring && (
+            <ItemCard item={currentSet.ring} index={currentSet.ring.nameEN} />
+          )}
+
+          {currentSet.weapon && (
+            <ItemCard
+              item={currentSet.weapon}
+              index={currentSet.weapon.nameEN}
+            />
+          )}
+
+          {currentSet.armor && (
+            <ItemCard item={currentSet.armor} index={currentSet.armor.nameEN} />
+          )}
+
+          {currentSet.shield && currentSet.shield.nameEN !== '-----------' && (
+            <ItemCard
+              item={currentSet.shield || currentSet.book}
+              index={currentSet.shield.nameEN || currentSet.book.nameEN}
+            />
+          )}
+
+          {currentSet.book && currentSet.book.nameEN !== '-----------' && (
+            <ItemCard item={currentSet.book} index={currentSet.book.nameEN} />
           )}
 
           {currentSet.accessorie && (
             <ItemCard
               item={currentSet.accessorie}
-              index={currentSet.accessorie.name}
+              index={currentSet.accessorie.nameEN}
             />
           )}
 
           {currentSet.leg && (
-            <ItemCard item={currentSet.leg} index={currentSet.leg.name} />
+            <ItemCard item={currentSet.leg} index={currentSet.leg.nameEN} />
           )}
 
           {currentSet.shoe && (
-            <ItemCard item={currentSet.shoe} index={currentSet.shoe.name} />
+            <ItemCard item={currentSet.shoe} index={currentSet.shoe.nameEN} />
           )}
         </div>
       )}
