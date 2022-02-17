@@ -14,7 +14,7 @@ import {
   filterItensBySlot,
   findItemsByName,
   genereateLinkToViewSet,
-} from './kakele';
+} from './Data/kakele';
 import { equipments, weapons, FAKE_ITEM } from './Data/kakeleData';
 import KakeleItemsFilters from './KakeleItemsFilters';
 

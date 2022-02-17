@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { checkSetElement } from '../kakele';
+import { checkSetElement } from '../Data/kakele';
 
 export default function ShowSetStatus(props) {
   const { itensListToShowStatus } = props;

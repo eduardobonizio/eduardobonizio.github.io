@@ -11,7 +11,7 @@ import {
   filterItensByLevelAndClass,
   findBestSet,
   genereateLinkToViewSet,
-} from './kakele';
+} from './Data/kakele';
 import { equipments, weapons, ALL_ITENS_SLOTS_LIST } from './Data/kakeleData';
 import KakeleItemsFilters from './KakeleItemsFilters';
 

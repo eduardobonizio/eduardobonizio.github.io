@@ -10,7 +10,7 @@ import {
   addDotToKks,
   calculateOreQuantityAndPrice,
   calculateUpgradePriceWithOresPrice,
-} from './kakele';
+} from './Data/kakele';
 
 export default function OreCalculator() {
   const [startUpgradeLvl, setStartUpgradeLvl] = useState(0);

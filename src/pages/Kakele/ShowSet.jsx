@@ -14,7 +14,7 @@ import {
   findItemByName,
   genereateLinkToViewSet,
   urlParamsToObject,
-} from './kakele';
+} from './Data/kakele';
 import {
   equipments,
   weapons,

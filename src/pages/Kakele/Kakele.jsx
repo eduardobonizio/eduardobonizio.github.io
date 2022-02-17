@@ -4,21 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 import { updateItensFilter } from '../../store/actions/KakeleFilters.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
-
-const textOptions = {
-  EN: {
-    showSet: 'Show Set',
-    generateSet: 'Generate Set',
-    searchItem: 'Search Item',
-    oreCalculator: 'Upgrades',
-  },
-  PTBR: {
-    showSet: 'Ver Set',
-    generateSet: 'Gerar Set',
-    searchItem: 'Procurar Item',
-    oreCalculator: 'Forja',
-  },
-};
+import { kakeleJsx as textOptions } from './Data/dataLanguages';
 
 export default function Kakele() {
   const dispatch = useDispatch();
