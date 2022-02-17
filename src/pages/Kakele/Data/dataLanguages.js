@@ -175,6 +175,48 @@ const oreCalculatorJsx = {
   },
 };
 
+const SLOTS_NAMES = {
+  EN: {
+    accessorie: 'Accessory',
+    ring: 'Ring',
+    weapon: 'Weapon',
+    armor: 'Armor',
+    leg: 'Pants',
+    necklace: 'Necklace',
+    helmet: 'Helmet',
+    shield: 'Shield',
+    book: 'Book',
+    shoe: 'Shoes',
+  },
+  PTBR: {
+    accessorie: 'Acessório',
+    ring: 'Anel',
+    weapon: 'Arma',
+    armor: 'Armadura',
+    leg: 'Calças',
+    necklace: 'Colar',
+    helmet: 'Elmo',
+    shield: 'Escudo',
+    book: 'Livro',
+    shoe: 'Sapatos',
+  },
+};
+
+const ITEM_FILTERS_NAME = {
+  EN: {
+    attack: 'Attack',
+    armor: 'Armor',
+    level: 'Level',
+    magic: 'Magic',
+  },
+  PTBR: {
+    attack: 'Ataque',
+    armor: 'Armadura',
+    level: 'Level',
+    magic: 'Magia',
+  },
+};
+
 export {
   kakeleJsx,
   itemCardJsx,
@@ -183,4 +225,6 @@ export {
   searchItemJsx,
   kakeleItemsFiltersJsx,
   oreCalculatorJsx,
+  SLOTS_NAMES,
+  ITEM_FILTERS_NAME,
 };

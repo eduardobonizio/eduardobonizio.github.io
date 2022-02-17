@@ -2,13 +2,12 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { updateItensFilter } from '../../store/actions/KakeleFilters.actions';
-import { kakeleItemsFiltersJsx as textOptions } from './Data/dataLanguages';
 import {
-  ALL_ITENS_SLOTS_LIST,
-  ALL_ITENS_SLOTS_LIST_PT_BR,
-  ITEM_FILTERS,
-  ITEM_FILTERS_PT_BR,
-} from './Data/kakeleData';
+  ITEM_FILTERS_NAME,
+  kakeleItemsFiltersJsx as textOptions,
+  SLOTS_NAMES,
+} from './Data/dataLanguages';
+import { ALL_ITENS_SLOTS_LIST, ITEM_FILTERS } from './Data/kakeleData';
 
 export default function KakeleItemsFilters(props) {
   const { statusPrincipal, manualFilters } = props;
@@ -129,7 +128,7 @@ export default function KakeleItemsFilters(props) {
               <option value="All">{text.all}</option>
               {ALL_ITENS_SLOTS_LIST.map(curSlot => (
                 <option value={curSlot} key={curSlot}>
-                  {ALL_ITENS_SLOTS_LIST_PT_BR[curSlot]}
+                  {SLOTS_NAMES[language][curSlot]}
                 </option>
               ))}
             </select>
@@ -148,7 +147,7 @@ export default function KakeleItemsFilters(props) {
             >
               {ITEM_FILTERS.map(status => (
                 <option value={status} key={status}>
-                  {ITEM_FILTERS_PT_BR[status]}
+                  {ITEM_FILTERS_NAME[language][status]}
                 </option>
               ))}
             </select>
