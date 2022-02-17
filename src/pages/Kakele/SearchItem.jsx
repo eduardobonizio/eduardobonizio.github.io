@@ -8,6 +8,7 @@ import './css/SearchItem.css';
 import { updateCurrentSet } from '../../store/actions/kakeleCurrentSet.actions';
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
+import { setMakerJsx as textOptions } from './Data/dataLanguages';
 import {
   filterItensByElement,
   filterItensByLevelAndClass,
@@ -22,9 +23,10 @@ export default function SearchItem() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const currentSet = useSelector(state => state.currentSet);
-  const { level, itemName, element, slot, characterClass, orderBy } =
+  const { level, itemName, element, slot, characterClass, orderBy, language } =
     useSelector(state => state.currentKakeleFilters);
-
+  const text = textOptions[language];
+  console.log(text);
   const [foundItens, setFoundItens] = useState(false);
 
   const lookForItens = () => {
@@ -68,7 +70,7 @@ export default function SearchItem() {
 
   const redirectToShowSetPage = () => {
     const setToArray = Object.values(currentSet).map(item => item);
-    const link = genereateLinkToViewSet(setToArray, false);
+    const link = genereateLinkToViewSet(setToArray, false, language);
     if (link) navigate(link);
   };
 
