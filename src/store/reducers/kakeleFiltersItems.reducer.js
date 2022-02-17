@@ -6,6 +6,7 @@ const CURRENT_FILTERS = {
   itemName: '',
   slot: 'All',
   orderBy: 'level',
+  language: false,
 };
 
 export default function reducer(state = CURRENT_FILTERS, action) {
@@ -32,6 +33,9 @@ export default function reducer(state = CURRENT_FILTERS, action) {
 
     case 'UPDATE_ORDER_FILTER':
       return { ...state, orderBy: payload };
+
+    case 'CHANGE_LANGUAGE':
+      return { ...state, language: payload };
 
     default:
       return state;
