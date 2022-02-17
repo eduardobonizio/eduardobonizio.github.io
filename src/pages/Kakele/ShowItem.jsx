@@ -5,15 +5,16 @@ import { useParams } from 'react-router-dom';
 
 import ButtonForKakele from './Componentes/ButtonForKakele';
 import ItemCard from './Componentes/ItemCard';
+import { showItemJsx as textOptions } from './Data/dataLanguages';
 import { genereateLinkToViewSet } from './Data/kakele';
 import { equipments, weapons } from './Data/kakeleData';
-
 import './css/ShowItem.css';
 
 export default function ShowItem() {
   const navigate = useNavigate();
   const currentSet = useSelector(state => state.currentSet);
   const { language } = useSelector(state => state.currentKakeleFilters);
+  const text = textOptions[language];
 
   const { name } = useParams(); // Unpacking and retrieve id
   const allItens = [...equipments, ...weapons];
@@ -44,11 +45,14 @@ export default function ShowItem() {
       )}
       <div className="button-container">
         <ButtonForKakele
-          text="Anterior"
+          text={text.previous}
           onClick={() => changeItem(previowsIndex)}
         />
-        <ButtonForKakele text="Ver set" onClick={redirectToShowSetPage} />
-        <ButtonForKakele text="Próximo" onClick={() => changeItem(nextIndex)} />
+        <ButtonForKakele text={text.showSet} onClick={redirectToShowSetPage} />
+        <ButtonForKakele
+          text={text.next}
+          onClick={() => changeItem(nextIndex)}
+        />
       </div>
     </div>
   );

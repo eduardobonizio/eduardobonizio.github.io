@@ -228,6 +228,19 @@ const showSetJsx = {
   },
 };
 
+const showItemJsx = {
+  EN: {
+    previous: 'Previous',
+    next: 'Next',
+    showSet: 'Show set',
+  },
+  PTBR: {
+    previous: 'Anterior',
+    next: 'Próximo',
+    showSet: 'Ver set',
+  },
+};
+
 export {
   kakeleJsx,
   itemCardJsx,
@@ -237,6 +250,7 @@ export {
   kakeleItemsFiltersJsx,
   oreCalculatorJsx,
   showSetJsx,
+  showItemJsx,
   SLOTS_NAMES,
   ITEM_FILTERS_NAME,
 };
