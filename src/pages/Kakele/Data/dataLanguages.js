@@ -3,7 +3,7 @@ const kakeleJsx = {
   EN: {
     showSet: 'Show Set',
     generateSet: 'Generate Set',
-    searchItem: 'Search Item',
+    searchItem: 'Search',
     oreCalculator: 'Upgrades',
   },
   PTBR: {
