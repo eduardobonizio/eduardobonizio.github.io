@@ -19,7 +19,7 @@ export default function ShowItem() {
   const { name } = useParams(); // Unpacking and retrieve id
   const allItens = [...equipments, ...weapons];
   const item =
-    allItens.find(e => e.name === name || e.namePtBr === name) || allItens[0];
+    allItens.find(e => e.nameEN === name || e.namePTBR === name) || allItens[0];
   const nextIndex = allItens.indexOf(item) + 1;
   const previowsIndex = allItens.indexOf(item) - 1;
 
@@ -31,7 +31,7 @@ export default function ShowItem() {
 
   const changeItem = itemIndex => {
     const index = itemIndex >= 0 ? itemIndex : allItens.length - 1;
-    navigate(`/kakele/item/${allItens[index].name}`);
+    navigate(`/kakele/item/${allItens[index].nameEN}`);
   };
 
   return (
