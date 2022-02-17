@@ -137,8 +137,8 @@ const getAlternativeStatus = (characterClass, mainStat) => {
   const priority = {
     Alchemist: {
       magic: 'armor',
-      armor: 'attack',
-      attack: 'magic',
+      armor: 'magic',
+      attack: 'armor',
     },
     Berserker: {
       attack: 'armor',
@@ -152,8 +152,8 @@ const getAlternativeStatus = (characterClass, mainStat) => {
     },
     Mage: {
       magic: 'armor',
-      armor: 'attack',
-      attack: 'magic',
+      armor: 'magic',
+      attack: 'armor',
     },
     Warrior: {
       armor: 'attack',
@@ -165,7 +165,7 @@ const getAlternativeStatus = (characterClass, mainStat) => {
   return priority[characterClass][mainStat];
 };
 
-const findBestItem = (itensList, status) => {
+const findBestItem = (itensList, status, lastChance = false) => {
   if (itensList.length === 0) return false;
   const bestItem = itensList
     .sort((a, b) => a.level - b.level)
@@ -181,7 +181,7 @@ const findBestItem = (itensList, status) => {
       { [status]: 0 },
     );
 
-  if (bestItem[status] > 0) return bestItem;
+  if (bestItem[status] > 0 || lastChance) return bestItem;
 
   return false;
 };
@@ -255,14 +255,12 @@ const findBestSet = (
   if (bestItemWithAlternativeStatusAndElement)
     return bestItemWithAlternativeStatusAndElement;
 
-  const lastAlternativeStatus = getAlternativeStatus(
-    characterClass,
-    alternativeStatus,
-  );
+  const lastChance = true;
 
   const lastChanceToFindItem = findBestItem(
     itensFilteredBySlot,
-    lastAlternativeStatus,
+    mainStat,
+    lastChance,
   );
   if (lastChanceToFindItem) return lastChanceToFindItem;
 
