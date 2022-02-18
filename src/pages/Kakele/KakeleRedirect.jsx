@@ -8,12 +8,11 @@ export default function KakeleRedirect() {
   );
 
   return (
-    <div>
-      <a href={newLink}>
-        <span>
-          Este link foi movido permamentemente, clique para ser redirecionado
-        </span>
-      </a>
+    <div className="container d-flex justify-content-center">
+      <span>
+        Este link foi movido, <a href={newLink}>clique aqui</a> para ser
+        redirecionado
+      </span>
     </div>
   );
 }
