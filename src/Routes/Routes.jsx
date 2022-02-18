@@ -1,20 +1,20 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import PrivateRoute from '../../api/PrivateRoute';
-import Home from '../Home/Home';
-import Kakele from '../Kakele/Kakele.jsx';
-import OreCalculator from '../Kakele/OreCalculator';
-import SearchItem from '../Kakele/SearchItem';
-import SetMaker from '../Kakele/SetMaker';
-import ShowItem from '../Kakele/ShowItem';
-import ShowSet from '../Kakele/ShowSet';
-import WikiDataBaseToJson from '../Kakele/WikiDataBaseToJson';
-import NotFound from '../NotFound/NotFound';
-import GameSetup from '../Quiz/GameSetup';
-import StartGame from '../Quiz/StartGame';
-import Login from '../UserControll/Login';
-import SignUp from '../UserControll/SignUp';
+import PrivateRoute from '../api/PrivateRoute';
+import Home from '../pages/Home/Home';
+import Kakele from '../pages/Kakele/Kakele';
+import OreCalculator from '../pages/Kakele/OreCalculator';
+import SearchItem from '../pages/Kakele/SearchItem';
+import SetMaker from '../pages/Kakele/SetMaker';
+import ShowItem from '../pages/Kakele/ShowItem';
+import ShowSet from '../pages/Kakele/ShowSet';
+import WikiDataBaseToJson from '../pages/Kakele/WikiDataBaseToJson';
+import NotFound from '../pages/NotFound/NotFound';
+import GameSetup from '../pages/Quiz/GameSetup';
+import StartGame from '../pages/Quiz/StartGame';
+import Login from '../pages/UserControll/Login';
+import SignUp from '../pages/UserControll/SignUp';
 
 export default function Rotas() {
   return (
