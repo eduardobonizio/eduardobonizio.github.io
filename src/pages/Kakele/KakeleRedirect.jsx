@@ -3,7 +3,7 @@ import React from 'react';
 export default function KakeleRedirect() {
   const link = window.location.href;
   const newLink = link.replace(
-    'http://localhost:3000/kakele',
+    'https://eduardobonizio.github.io/kakele',
     'https://eduardobonizio.github.io/kakele-db',
   );
 
