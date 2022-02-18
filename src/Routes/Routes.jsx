@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Home from '../pages/Home/Home';
 import KakeleRedirect from '../pages/Kakele/KakeleRedirect';
-import NotFound from '../pages/NotFound/NotFound';
+// import NotFound from '../pages/NotFound/NotFound';
 // import PrivateRoute from '../api/PrivateRoute';
 // import GameSetup from '../pages/Quiz/GameSetup';
 // import StartGame from '../pages/Quiz/StartGame';
@@ -16,7 +16,6 @@ export default function Rotas() {
       <Route path="/" element={<Home />} />
 
       <Route path="kakele/*" element={<KakeleRedirect />} />
-      <Route path="*" element={<NotFound />} />
 
       {/* <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} /> */}
