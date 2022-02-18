@@ -1,11 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import app from '../../api/Firebase';
+// import app from '../../api/Firebase';
 
 function NavBar() {
-  const globalUser = useSelector(state => state.globalUser);
+  // const globalUser = useSelector(state => state.globalUser);
 
   return (
     <div
@@ -28,7 +28,7 @@ function NavBar() {
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbar-itens">
-          <ul className="navbar-nav">
+          {/* <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/quiz" className="nav-link">
                 Quiz
@@ -39,8 +39,8 @@ function NavBar() {
                 Kakele
               </Link>
             </li>
-          </ul>
-          <ul className="navbar-nav">
+          </ul> */}
+          {/* <ul className="navbar-nav">
             {globalUser && (
               <>
                 <li className="nav-item">
@@ -72,7 +72,7 @@ function NavBar() {
                 </li>
               </>
             )}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </div>
