@@ -16,6 +16,7 @@ export default function Rotas() {
       <Route path="/" element={<Home />} />
 
       <Route path="kakele/*" element={<KakeleRedirect />} />
+      <Route path="kakele-db/*" element={<KakeleRedirect />} />
 
       {/* <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} /> */}
