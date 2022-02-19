@@ -2,10 +2,13 @@ import React from 'react';
 
 export default function KakeleRedirect() {
   const link = window.location.href;
-  const newLink = link.replace(
-    'https://eduardobonizio.github.io/kakele',
-    'https://www.kakeletools.com/',
-  );
+  const replaceText = link.includes(
+    'https://eduardobonizio.github.io/kakele-db',
+  )
+    ? 'https://eduardobonizio.github.io/kakele-db'
+    : 'https://eduardobonizio.github.io/kakele';
+
+  const newLink = link.replace(replaceText, 'https://www.kakeletools.com/');
 
   return (
     <div className="container d-flex justify-content-center">
